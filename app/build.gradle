@@ -1,0 +1,419 @@
+import com.apemans.build.*
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+apply plugin: 'kotlin-android'
+
+def currentBuildType = "release" //library默认使用buildType为release
+def keystorePropertiesFile = rootProject.file("app/keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+android {
+    compileSdkVersion rootProject.compileSdkVersion
+    buildToolsVersion rootProject.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.afar.osaio"
+        minSdkVersion rootProject.minSdkVersion
+        targetSdkVersion rootProject.targetSdkVersion
+        versionCode 1
+        versionName "1.3.3"
+
+        multiDexEnabled true // Enable MultiDex.
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file('tuya.properties').newDataInputStream())
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "8cd53f360689f1297875d56f", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+                TUYA_SMART_APPKEY: "${properties.getProperty("appkey")}",
+                TUYA_SMART_SECRET: "${properties.getProperty("appsecret")}"
+        ]
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    signingConfigs {
+        config {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    
+    buildTypes {
+        def proguardEnableDebug = false
+        debug {
+            versionNameSuffix "_debug"  //versionName的后缀
+            minifyEnabled proguardEnableDebug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled proguardEnableDebug
+            shrinkResources proguardEnableDebug
+            buildConfigField "boolean", "LOG_DEBUG", "true" //不显示Log
+            signingConfig signingConfigs.config
+        }
+        def proguardEnableRelease = false
+        release {
+            //versionNameSuffix "_release"  //versionName的后缀
+            minifyEnabled proguardEnableRelease
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            zipAlignEnabled proguardEnableRelease
+            shrinkResources proguardEnableRelease  // 移除无用的resource文件
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            signingConfig signingConfigs.config
+        }
+    }
+
+    // multiple channel package
+    flavorDimensions "default"
+    productFlavors {
+        google {}
+        //wandoujia {}
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    // package name
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "osaio_${variant.productFlavors[0].name}_v${variant.versionName}_${variant.versionCode}_${getTime()}.apk"
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs', 'aars'
+        }
+    }
+
+    sourceSets {
+        main {
+            //jni.srcDirs = ['src/jni','src/jni/andfix','src/jni/bspatch', 'src/main/jni/']
+            jniLibs.srcDirs = ['src/libs', 'src/libs/armeabi', 'libs', 'libs/armeabi']
+            assets.srcDirs = ['src/main/assets']
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds true
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError true
+        disable 'MissingTranslation'
+    }
+
+    packagingOptions {
+        pickFirst 'lib/*/libc++_shared.so'
+        pickFirst 'lib/*/libgnustl_shared.so'
+        exclude 'META-INF/rxjava.properties'
+        exclude 'build-data.properties'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    //tuya
+    implementation 'com.alibaba:fastjson:1.1.67.android'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:4.9.1'
+
+    // App SDK 最新稳定安卓版：
+    implementation 'com.tuya.smart:tuyasmart:3.28.5'
+    api ('com.tuya.smart:tuyasmart-bizbundle-panel:3.27.5-4'){
+        exclude group: 'com.tuya.smart', module: 'tuyasmart-panel'
+    }
+
+    //implementation "$rootProject.core_ktx"
+    implementation "$rootProject.kotlin_stdlib"
+
+    implementation "$rootProject.appcompat"
+    implementation "$rootProject.design"
+    implementation "$rootProject.constraint_layout"
+    implementation "$rootProject.recycleview"
+    implementation "$rootProject.flexbox"
+    implementation "$rootProject.localbroadcastmanager"
+    implementation "$rootProject.multidex"
+    testImplementation "$rootProject.junit"
+    testImplementation "$rootProject.espresso_core"
+
+    implementation "$rootProject.tinypinyin"
+
+    //eventbus
+    implementation "$rootProject.event_bus"
+    //greendao
+    implementation "$rootProject.greendao"
+    implementation "$rootProject.sqlcipher"
+    implementation "$rootProject.mmkv"
+    implementation "$rootProject.protobuf"
+
+    // Http
+    implementation "$rootProject.okhttp"
+    implementation "$rootProject.okhttp_log_interceptor"
+    implementation "$rootProject.retrofit"
+    implementation "$rootProject.retrofit_converter"
+    implementation "$rootProject.retrofit_adapter"
+    implementation "$rootProject.rxjava"
+    implementation "$rootProject.rxandroid"
+    implementation "$rootProject.gson"
+
+    implementation "$rootProject.butterknife"
+    annotationProcessor "$rootProject.butterknife_processor"
+    implementation "$rootProject.glide"
+    annotationProcessor "$rootProject.glide_processor"
+
+    // FCM -> Firebase Cloud Message
+    implementation platform('com.google.firebase:firebase-bom:26.7.0')
+    implementation "$rootProject.firebase_core"
+    implementation "$rootProject.firebase_messaging"
+    implementation "$rootProject.firebase_auth"
+    implementation "$rootProject.firebase_analytics"
+
+    //PushSDK必须依赖基础组件库，所以需要加入对应依赖
+    implementation "$rootProject.umsdk_common"
+    //PushSDK必须依赖utdid库，所以需要加入对应依赖
+    implementation "$rootProject.umsdk_utdid"
+    //PushSDK
+    implementation "$rootProject.umsdk_push"
+
+    //基础组件库依赖(必须) Push 6.2.0版本必须升级新版本Common SDK
+    //implementation 'com.umeng.umsdk:common:9.3.0'
+    //implementation 'com.umeng.umsdk:utdid:1.5.2'
+    //implementation  'com.umeng.umsdk:asms:1.1.3'
+    //implementation 'com.umeng.umsdk:crash:0.0.5'
+    //友盟push相关依赖(必须)
+    //implementation 'com.umeng.umsdk:push:6.2.0'
+    //implementation 'com.umeng.umsdk:alicloud-httpdns:1.2.5'
+    //implementation 'com.umeng.umsdk:alicloud-utils:1.1.5'
+    //implementation 'com.umeng.umsdk:alicloud_beacon:1.0.1'
+    //implementation 'com.umeng.umsdk:agoo-accs:3.3.9.7-open'
+    //implementation 'com.umeng.umsdk:agoo_networksdk:3.5.5'
+    //implementation 'com.umeng.umsdk:agoo_tlog:3.0.0.17'
+    //implementation 'com.umeng.umsdk:agoo_tnet4android:3.1.14.9'
+    //implementation files('libs/aranger-1.0.6')
+
+    //https://github.com/koral--/android-gif-drawable
+    //recommend ver 1.2.7, update must be care about the abi for platform
+    implementation "$rootProject.android_gif_drawable"
+    // 65535
+    implementation "$rootProject.dexoptfix"
+    //Alerter
+    implementation "$rootProject.alerter"
+    // Brings the new BluetoothLeScanner API to older platforms
+    implementation "$rootProject.nordicsemi_scanner"
+    // Log Bluetooth LE events in nRF Logger
+    implementation "$rootProject.nordicsemi_log"
+    // BLE library
+    implementation "$rootProject.nordicsemi_ble_common"
+    implementation "$rootProject.nordicsemi_ble"
+    implementation "$rootProject.nordicsemi_dfu"
+    implementation "$rootProject.immersionbar"
+    implementation "$rootProject.pager_lib"
+    implementation 'com.yanzhenjie:recyclerview-swipe:1.1.4'
+    implementation files('libs/commons-codec-1.15.jar')
+
+    //JsBridge
+    implementation "$rootProject.js_bridge"
+
+    //https://github.com/leehong2005/SlideBack
+    implementation project(':lib-slider-back')
+    //Zxing-lib
+    implementation project(':lib-zxing')
+    implementation project(':lib-TimeAxis')
+    implementation project(':lib-wheelview')
+    implementation project(':lib-switch-button')
+    //implementation 'com.github.Aspsine:SwipeToLoadLayout:1.0.4'
+    implementation project(':lib-swip-to-load')
+    //implementation 'pub.devrel:easypermissions:1.2.0'
+    implementation project(':lib-easypermissions')
+    //implementation 'com.bigkoo:ConvenientBanner:2.1.4'
+    //https://github.com/Bigkoo/Android-ConvenientBanner
+    implementation project(':lib-convenientbanner')
+    implementation project(':lib-swipemenu')
+    implementation project(':lib-eventbus-activity-scope')
+    implementation project(':lib-photoview')
+    implementation project(':lib-bdvideoplayer')
+    implementation project(':lib-pager-bottom-tab-strip')
+    implementation project(':nooie_guideview')
+    implementation project(':nooie_fragmentation_core')
+    implementation project(':nooie_ucrop')
+    implementation project(':nooie_cropiwa')
+    implementation project(':nooie_fragmentation_core')
+    implementation project(':nooie_bluetooth')
+    //implementation project(':nooie_encrypt_sdk')
+    implementation project(':nooie_widget')
+
+    implementation(name: 'nooie_common', ext: 'aar')
+    implementation(name: 'nooie_event_tracking', ext: 'aar')
+    implementation(name: 'smartipcsdk', ext: 'aar')
+    implementation(name: 'nooie_sdk', ext: 'aar')
+    implementation(name: 'android-debug', ext: 'aar')
+//    implementation(name: 'YRUserComponentImpl-1.0', ext: 'aar')
+
+    implementation 'com.scwang.smart:refresh-layout-kernel:2.0.3'
+    implementation 'com.scwang.smart:refresh-header-classics:2.0.3'
+    implementation 'com.github.LillteZheng:FlowHelper:v1.30'
+    implementation 'io.github.csdn-mobile:RoundView:1.7.1'
+
+    //Core
+    implementation project(':YRPlatformBridge')
+    implementation ("com.apemans:YRUIBusiness:+")
+    implementation("com.apemans:YRRouter:+")
+    annotationProcessor ARouterDependency.arouter_compiler
+    implementation("com.apemans:YRXMessage:+")
+    implementation("com.apemans:YREncryptSdk:+")
+    implementation ("com.apemans:YRCXSDK:+")
+//    implementation ("com.apemans:YRUserComponentImpl:1.0")
+    implementation("com.apemans:YRTuyaComponentApi:+")
+    implementation("com.apemans:YRTuyaComponentImpl:+")
+//    runtimeOnly("com.apemans:YRTuyaComponentImpl:+")
+    implementation project(':YRUserComponentImpl')
+
+//    implementation("com.apemans:YRRNAsyncstorage:+")
+//    implementation("com.apemans:YRRNDatetimepicker:+")
+//    implementation("com.apemans:YRRNDatepicker:+")
+//    implementation("com.apemans:YRRNLocalization:+")
+//    implementation("com.apemans:YRRNLocalize:+")
+//    implementation("com.apemans:YRRNSafeareacontext:+")
+//    implementation("com.apemans:YRRNScreens:+")
+//    implementation("com.apemans:YRRNSvg:+")
+//    implementation("com.apemans:YRRNDeviceInfo:+")
+//    implementation("com.apemans:YRRNMaskedview:+")
+//    implementation("com.apemans:YRRNGestureHandler:+")
+    implementation(name: 'YRRNAsyncstorage', ext: 'aar')
+    implementation(name: 'YRRNDatepicker', ext: 'aar')
+    implementation(name: 'YRRNDatetimepicker', ext: 'aar')
+    implementation(name: 'YRRNDeviceInfo', ext: 'aar')
+    implementation(name: 'YRRNGestureHandler', ext: 'aar')
+    implementation(name: 'YRRNLocalization', ext: 'aar')
+    implementation(name: 'YRRNLocalize', ext: 'aar')
+    implementation(name: 'YRRNMaskedview', ext: 'aar')
+    implementation(name: 'YRRNSafeareacontext', ext: 'aar')
+    implementation(name: 'YRRNScreens', ext: 'aar')
+    implementation(name: 'YRRNSvg', ext: 'aar')
+    implementation(name: 'YRRNBridge', ext: 'aar')
+    // device-info 需要用到
+    implementation "com.android.installreferrer:installreferrer:1.1.2"
+    // date-picker 需要用到
+    implementation 'com.henninghall.android:NumberPickerView:1.1.2'
+//    implementation 'com.tuya.smart:react-native:0.51.3-rc.5' // From node_modules
+//    implementation "com.facebook.react:react-native:+" // From node_modules
+    implementation "org.webkit:android-jsc:+"
+}
+
+def getTime() {
+    String today = new Date().format("YYYY-MM-dd")
+    return today
+}
+
+//1. 从命令行中解析出buildType
+gradle.startParameter.taskNames.each({
+    String taskNameL = it.toLowerCase();
+    if (taskNameL.contains("assemble") || taskNameL.contains("install")) {
+        if (taskNameL.contains("debug")) {
+            currentBuildType = "debug"
+            return;
+        } else if (taskNameL.contains("release")) {
+            currentBuildType = "release"
+            return;
+        }
+    }
+})
+
+//configurations.all {
+//    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+//        def requested = details.requested
+//        if (requested.group == 'androidx.lifecycle') {
+//            if (requested.name.startsWith("lifecycle-runtime")) {
+//                details.useVersion '2.2.0'
+//            }
+//        }
+//        if (requested.group == 'androidx.transition') {
+//            if (requested.name.startsWith("transition")) {
+//                details.useVersion '1.3.1'
+//            }
+//        }
+//        if (requested.group == 'androidx.exifinterface') {
+//            if (requested.name.startsWith("exifinterface")) {
+//                details.useVersion '1.3.2'
+//            }
+//        }
+//    }
+//}
+
+//------------以下代码用于配置一键上传蒲公英----------------
+//获取apk路径，请自行确认路径是否与实际工程一致
+def getApkFullPath() {
+    return rootDir.getAbsolutePath() + "/app/build/outputs/apk/google/debug/" + getApkName()
+}
+
+//此处可修改所打包的apk文件名，请自行确认路径是否与实际工程一致
+def getApkName() {
+    return "osaio_${android.productFlavors[0].name}_v${android.defaultConfig.versionName}_debug_${android.defaultConfig.versionCode}_${getTime()}.apk"
+}
+
+//设定添加打包时间
+static def releaseTime() {
+    //return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+    return getTime()
+}
+
+//将密钥存在本地 防止泄露 local.properties 在Git的时候不会被上传
+def readProperties(key) {
+    File file = rootProject.file('local.properties')
+    if (file.exists()) {
+        InputStream inputStream = rootProject.file('local.properties').newDataInputStream()
+        Properties properties = new Properties()
+        properties.load(inputStream)
+        if (properties.containsKey(key)) {
+            return properties.getProperty(key)
+        }
+    }
+}
+
+//描述log
+def getUpdateDescription() {
+    return "Android Ssaio ${android.defaultConfig.versionName}（${android.defaultConfig.versionCode}）测试版本更新"
+}
+
+//执行打包上传任务
+task("uploadApk") {
+    doLast {
+        try {
+            println "Start uploading apk"
+            println getApkFullPath()
+            exec {
+                ExecSpec execSpec ->
+                    executable 'curl'
+                    args = ['-F', "file=@${getApkFullPath()}", '-F', "uKey=${readProperties('pgyer.userKey')}", '-F', "_api_key=${readProperties('pgyer.apiKey')}", '-F', "buildUpdateDescription=${getUpdateDescription()}", "${readProperties('pgyer.uploadurl')}"]
+            }
+            println "\nuploadApk success~"
+        } catch (Exception e) {
+            e.printStackTrace()
+        }
+    }
+}
+
+uploadApk.dependsOn("assembleDebug")
+
+// FCM -> Firebase Cloud Message
+apply plugin: 'com.google.gms.google-services'

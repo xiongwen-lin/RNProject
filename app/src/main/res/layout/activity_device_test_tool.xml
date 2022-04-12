@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/mbDeviceTestTool"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mbDeviceTestTool">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/vAutoUpgradeTestContainer"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvTestDeviceInfo"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    />
+
+                <com.afar.osaio.widget.FButton
+                    android:id="@+id/btnTestAutoUpgrade"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:text="开始自动升级（仅用于压测，慎用）"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTestDeviceInfo"/>
+
+                <TextView
+                    android:id="@+id/tvTestAutoUpgradeState"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:text="当前设备升级状态：0"
+                    android:textColor="@color/red_eb1510"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnTestAutoUpgrade"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    />
+
+                <TextView
+                    android:id="@+id/tvTestAutoUpgradeStateTip"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:text="1、设备升级每8分钟查询一次版本的最新信息，如果发现有可升级版本，就进行升级。\n2、如果设备自动升级测试按钮点击无效，请尝试长按按钮重置升级功能或者退出页面重新进入。\n3、如果进行自动升级测试，请勿在详情页进行设备升级、退出测试升级页面或挂后台。"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTestAutoUpgradeState"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/vGatewayContainer"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vAutoUpgradeTestContainer"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="相机升级"
+                    android:textColor="@color/rea_FF0000"
+                    android:textSize="@dimen/sp_30"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    />
+
+                <EditText
+                    android:id="@+id/etUpgradeModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60"
+                    android:hint="请输入版本型号"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    />
+
+                <EditText
+                    android:id="@+id/etUpgradeVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60"
+                    android:hint="请输入版本号"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    />
+
+                <EditText
+                    android:id="@+id/etUpgradePtk"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60"
+                    android:hint="请输入ptk"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    />
+
+                <EditText
+                    android:id="@+id/etUpgradeMd5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60"
+                    android:hint="请输入Md5"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    />
+
+                <com.afar.osaio.widget.FButton
+                    android:id="@+id/btnTestCamDownUpgrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:text="低功耗相机降级" />
+
+                <com.afar.osaio.widget.FButton
+                    android:id="@+id/btnTestGatewayDownUpgrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_60"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:visibility="gone"
+                    android:text="网关降级" />
+
+                <TextView
+                    android:id="@+id/tvTestDeviceDownUpgradeStateTip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="1、升级前请先检查设备是否在线，发送命令是否正常,输入框版本升级参数是否正确。\n2、低功耗设备降级不可以同时进行，如果网关降级中，必须等网关降级完成再降级相机。\n3、降级命令发送，请查看设备日志输出。"
+                    android:textColor="@color/rea_FF0000"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:layout_marginTop="@dimen/dp_20"
+                    />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/mbGatewayUpgrade"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mbGatewayUpgrade">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.nooie.common.widget.ProgressWheel
+                android:id="@+id/pbGatewayUpgrade"
+                android:layout_width="@dimen/dp_170"
+                android:layout_height="@dimen/dp_170"
+                android:layout_marginTop="@dimen/dp_125"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:pwBarColor="@color/theme_green"
+                app:pwBarLength="@dimen/dp_0"
+                app:pwBarWidth="@dimen/dp_10"
+                app:pwCircleColor="@color/transparent"
+                app:pwContourColor="@color/gray_eceff4"
+                app:pwRimColor="@color/gray_eceff4"
+                app:pwRimWidth="@dimen/dp_10"
+                app:pwTextColor="@color/theme_text_color"
+                app:pwTextSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/tvGatewayUpgradeTip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_21"
+                android:layout_marginTop="@dimen/dp_92"
+                android:layout_marginEnd="@dimen/dp_21"
+                android:layout_marginBottom="@dimen/dp_0"
+                android:gravity="center"
+                android:text="@string/gateway_upgrade_upgrading_tip"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_14"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pbGatewayUpgrade" />
+
+            <TextView
+                android:id="@+id/tvGatewayUpgradeRestartTip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_38"
+                android:layout_marginEnd="@dimen/dp_50"
+                android:text="@string/gateway_upgrade_failed_tip"
+                android:gravity="center"
+                android:textSize="@dimen/sp_16"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pbGatewayUpgrade" />
+
+            <com.afar.osaio.widget.FButton
+                android:id="@+id/btnDone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:layout_marginStart="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_55"
+                android:layout_marginEnd="@dimen/dp_50"
+                android:paddingLeft="@dimen/dp_21"
+                android:paddingRight="@dimen/dp_21"
+                android:text="@string/confirm"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvGatewayUpgradeRestartTip" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

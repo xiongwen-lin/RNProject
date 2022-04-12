@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="isHorizontal" format="boolean" />
+
+    <declare-styleable name="DateSelect">
+        <attr name="isHorizontal" />
+    </declare-styleable>
+
+    <declare-styleable name="NiceSpinner">
+        <attr name="arrowTint" format="color" />
+        <attr name="hideArrow" format="boolean" />
+        <attr name="arrowDrawable" format="reference|color"/>
+        <attr name="dropDownListPaddingBottom" format="dimension"/>
+        <attr name="backgroundSelector" format="integer"/>
+        <attr name="textTint" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="InputFrameView">
+        <attr name="input_theme" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="LabelItemView">
+        <attr name="title" format="string" />
+        <attr name="color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ExternalAttr">
+        <attr name="textColorError" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="TeckinRoundProgressBar">
+        <!--外弧的宽度-->
+        <attr name="rpb_sweepStrokeWidth" format="dimension|reference" />
+        <!--外弧的颜色-->
+        <attr name="rpb_sweepStrokeColor" format="color|reference" />
+        <!--外弧的起始位置默认是-90-->
+        <attr name="rpb_sweepStartAngle" format="integer" />
+        <!--中间的文本-->
+        <attr name="rpb_centerText" format="string|reference" />
+        <!--中间文本的大小-->
+        <attr name="rpb_centerTextSize" format="dimension|reference" />
+        <!--中间文本的颜色-->
+        <attr name="rpb_centerTextColor" format="color|reference" />
+        <!--中间的图片-->
+        <attr name="rpb_centerPicture" format="integer" />
+        <!--中间的背景颜色-->
+        <attr name="rpb_centerBackgroundColor" format="color|reference" />
+        <!--倒计时的总时间(毫秒)-->
+        <attr name="rpb_countDownTimeInMillis" format="integer" />
+        <!--是否自动开始计时-->
+        <attr name="rpb_autoStart" format="boolean" />
+        <attr name="rpb_progressDirection" format="enum">
+            <enum name="forward" value="0" /><!--正-->
+            <enum name="reverse" value="1" /><!--反-->
+        </attr>
+        <!--是否绘制外层wrapper-->
+        <attr name="rpb_drawOutsideWrapper" format="boolean" />
+        <!--外層wrapper的顔色-->
+        <attr name="rpb_outsideWrapperColor" format="color|reference" />
+        <!--是否支持end to start-->
+        <attr name="rpb_supportEndToStart" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color"/>
+        <attr name="roundProgressColor" format="color"/>
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="roundtextColor" format="color" />
+        <attr name="roundtextSize" format="dimension" />
+        <attr name="max" format="integer"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+</resources>

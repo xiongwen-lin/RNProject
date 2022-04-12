@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/mbBluetoothScan"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvBluetoothScanState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:maxLines="2"
+        android:text="@string/bluetooth_scan_state_waiting"
+        android:gravity="start"
+        android:textColor="@color/theme_text_color"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/ivBluetoothScanState"
+        app:layout_constraintHorizontal_bias="00"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mbBluetoothScan" />
+
+    <ImageView
+        android:id="@+id/ivBluetoothScanState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:src="@drawable/small_loading"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tvBluetoothScanState"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvBluetoothScanState"
+        app:layout_constraintTop_toTopOf="@id/tvBluetoothScanState" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBluetoothScanList"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBluetoothScanState" />
+
+    <ScrollView
+        android:id="@+id/vBluetoothScanNone"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBluetoothScanState">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivBluetoothScanWaiting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_130"
+                android:src="@drawable/bluetooth_scan_waiting"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvBluetoothScanWaitingTip"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_60"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_100"
+                android:text="@string/bluetooth_scan_state_waiting"
+                android:gravity="center"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivBluetoothScanWaiting" />
+
+            <TextView
+                android:id="@+id/tvBluetoothScanNoneTip"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_45"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:text=""
+                android:gravity="center"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivBluetoothScanNone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_40"
+                android:src="@drawable/bluetooth_no_found"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBluetoothScanNoneTip" />
+
+            <TextView
+                android:id="@+id/tvBluetoothScanNoneTip_1"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_46"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:text="@string/bluetooth_scan_state_waiting"
+                android:gravity="center"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivBluetoothScanNone" />
+
+            <com.afar.osaio.widget.FButton
+                android:id="@+id/btnBluetoothScanNoneRetry"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:layout_marginStart="@dimen/dp_68"
+                android:layout_marginTop="@dimen/dp_170"
+                android:layout_marginEnd="@dimen/dp_68"
+                android:paddingLeft="@dimen/dp_21"
+                android:paddingRight="@dimen/dp_21"
+                android:text="@string/bluetooth_scan_perm_reject_declare_reconnect"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvBluetoothScanNoneTip_1" />
+
+            <TextView
+                android:id="@+id/tvBluetoothScanNoneDeleteDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_85"
+                android:text="@string/camera_settings_remove_camera"
+                android:textColor="@color/theme_subtext_color"
+                android:textSize="@dimen/sp_16"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnBluetoothScanNoneRetry" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

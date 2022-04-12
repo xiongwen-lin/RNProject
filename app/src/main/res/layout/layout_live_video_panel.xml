@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/playerGuideContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivPlayerGuideControlPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/vPlayGuideContainerBottom"
+        android:alpha="0.8"
+        android:background="#464754"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/vPlayGuideContainerBottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_12"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.9"
+        android:background="#1B1B1E"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/playerGuideIconCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:src="@drawable/nooie360_hand" />
+
+    <ImageView
+        android:id="@+id/playerGuideIconLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_34"
+        android:layout_toLeftOf="@+id/playerGuideIconCenter"
+        android:src="@drawable/nooie360_left_gray" />
+
+    <ImageView
+        android:id="@+id/playerGuideIconRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dp_34"
+        android:layout_toRightOf="@+id/playerGuideIconCenter"
+        android:src="@drawable/nooie360_right_gray" />
+
+    <ImageView
+        android:id="@+id/playerGuideIconTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/playerGuideIconCenter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_18"
+        android:src="@drawable/nooie360_on_gray" />
+
+    <ImageView
+        android:id="@+id/playerGuideIconBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerGuideIconCenter"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_18"
+        android:src="@drawable/nooie360_down_gray" />
+
+    <TextView
+        android:id="@+id/tvPlayerGuideTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/playerGuideIconBottom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp_16"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/add_camera_swipe_to_see_more"
+        android:textColor="#E8E7E9"
+        android:textSize="@dimen/sp_15" />
+</RelativeLayout>

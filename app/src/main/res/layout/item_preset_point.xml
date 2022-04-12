@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vPresetPointItemContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.nooie.common.widget.RoundedImageView.RoundedImageView
+        android:id="@+id/ivPresetPointIcon"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:src="@drawable/default_preview_thumbnail"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/dp_5" />
+
+    <ImageView
+        android:id="@+id/btnPresetPointDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_3"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_20"
+        android:src="@drawable/preset_point_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPresetPointName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:singleLine="true"
+        android:text=""
+        android:gravity="center"
+        android:textSize="@dimen/sp_14"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toStartOf="@id/btnPresetPointEdit"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@id/ivPresetPointIcon"
+        app:layout_constraintTop_toBottomOf="@id/ivPresetPointIcon" />
+
+    <ImageView
+        android:id="@+id/btnPresetPointEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_0"
+        android:layout_marginTop="@dimen/dp_0"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:src="@drawable/preset_point_edit"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@id/tvPresetPointName"
+        app:layout_constraintEnd_toEndOf="@id/ivPresetPointIcon"
+        app:layout_constraintStart_toEndOf="@id/tvPresetPointName"
+        app:layout_constraintTop_toTopOf="@id/tvPresetPointName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,296 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/theme_green</item>
+    </style>
+
+    <style name="NooieTheme" parent="AppTheme">
+        <item name="android:buttonStyle">@style/NooieButtonWhiteTextStyle</item>
+        <item name="android:editTextStyle">@style/NooieEditTextStyle</item>
+        <item name="android:textViewStyle">@style/NooieTextView</item>
+        <item name="android:checkboxStyle">@style/NooieCheckBox</item>
+        <item name="android:radioButtonStyle">@style/NooieRadioButton</item>
+        <item name="android:seekBarStyle">@style/NooieSeekBarStyle</item>
+        <item name="android:alertDialogTheme">@style/NooieAlertDialog</item>
+        <item name="android:typeface">monospace</item>
+        <item name="status_font_color">@color/status_font_color</item>
+        <item name="status_bg_color">@color/status_bg_color</item>
+        <item name="navbar_font_color">@color/navbar_font_color</item>
+        <item name="navbar_bg_color">@color/navbar_bg_color</item>
+        <item name="app_bg_color">@color/app_bg_color</item>
+        <item name="fragment_bg_color">@color/app_bg_color</item>
+        <item name="list_primary_color">@color/list_primary_color</item>
+        <item name="list_sub_color">@color/list_sub_color</item>
+        <item name="list_secondary_color">@color/list_secondary_color</item>
+        <item name="list_line_color">@color/list_line_color</item>
+        <item name="list_bg_color">@color/list_bg_color</item>
+        <item name="primary_button_font_color">@color/primary_button_font_color</item>
+        <item name="primary_button_bg_color">@color/primary_button_bg_color</item>
+        <item name="secondary_button_font_color">@color/secondary_button_font_color</item>
+        <item name="secondary_button_bg_color">@color/secondary_button_bg_color</item>
+        <item name="notice_font_color">@color/notice_font_color</item>
+        <item name="notice_bg_color">@color/notice_bg_color</item>
+        <item name="bg_normal_text_bt">@drawable/bg_text_bts</item>
+        <item name="app_name">@string/app_name</item>
+        <item name="is_splash_used">false</item>
+        <item name="ap_connect_description">@string/ty_ap_connect_description</item>
+        <item name="is_need_blemesh_support">@bool/is_need_blemesh_support</item>
+        <item name="status_bg_color_75">@color/status_bg_color_75</item>
+        <item name="status_bg_color_90">@color/status_bg_color_90</item>
+    </style>
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/theme_text_gray</item>
+        <item name="colorControlActivated">@color/theme_text_color</item>
+    </style>
+    
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/bg</item>
+        <item name="colorPrimary">@color/theme_splash_primary</item>
+        <item name="colorPrimaryDark">@color/theme_splash_primary_dark</item>
+    </style>
+
+    <style name="VictureTheme" parent="NooieTheme">
+        <item name="colorPrimaryDark">@color/background_login_and_register</item>
+        <item name="android:checkboxStyle">@style/NooieCheckBox</item>
+    </style>
+
+    <!-- Button -->
+    <style name="NooieButtonWhiteTextStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_gray_state_list_radius_22</item>
+        <item name="android:textColor">@color/theme_green_subtext_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- SeekBar -->
+    <style name="NooieSeekBarStyle" parent="Widget.AppCompat.SeekBar" />
+
+    <!-- EditText -->
+    <!--
+    <style name="NooieEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/edit_text_no_content_bg</item>
+        <item name="android:textColorHint">@color/input_text_color</item>
+        <item name="android:textColor">@color/input_text_color</item>
+        <item name="android:paddingLeft">17dp</item>
+        <item name="android:paddingRight">17dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textCursorDrawable">@drawable/edit_cursor</item>
+    </style>
+    -->
+
+    <style name="NooieEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:paddingLeft">@dimen/dp_0</item>
+        <item name="android:paddingRight">@dimen/dp_0</item>
+        <item name="android:paddingTop">@dimen/dp_4</item>
+        <item name="android:paddingBottom">@dimen/dp_4</item>
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textCursorDrawable">@drawable/edit_cursor</item>
+    </style>
+
+    <style name="NooieAutocompleteTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/edit_text_no_content_bg</item>
+        <item name="android:textColorHint">@color/theme_subtext_color</item>
+        <item name="android:textColor">@color/theme_subtext_color</item>
+        <item name="android:paddingLeft">@dimen/dp_17</item>
+        <item name="android:paddingRight">@dimen/dp_17</item>
+        <item name="android:paddingTop">@dimen/dp_16</item>
+        <item name="android:paddingBottom">@dimen/dp_16</item>
+        <item name="android:textSize">@dimen/sp_12</item>
+        <item name="android:textCursorDrawable">@drawable/edit_cursor</item>
+    </style>
+
+    <style name="Autocomplete">
+        <item name="colorControlNormal">@color/theme_white</item>
+        <item name="colorControlActivated">@color/theme_white</item>
+    </style>
+
+    <style name="VictureAutocomplete">
+        <item name="colorControlNormal">@color/gray_dfdfdf</item>
+        <item name="colorControlActivated">@color/theme_text_color</item>
+    </style>
+
+    <style name="VictureInputFrameTextCenter">
+        <item name="colorControlNormal">@color/gray_dfdfdf</item>
+        <item name="colorControlActivated">@color/theme_text_color</item>
+        <item name="android:paddingRight">@dimen/dp_0</item>
+        <item name="android:paddingLeft">@dimen/dp_60</item>
+    </style>
+
+    <style name="NooieTextView" parent="Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:textColor">@color/theme_text_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- CheckBox -->
+    <style name="NooieCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textColor">@color/theme_gray</item>
+        <item name="android:button">@drawable/checkbox_normal</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- CheckBox -->
+    <style name="NormalCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textColor">@color/font_white_normal</item>
+        <item name="android:button">@drawable/checkbox</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- RadioButton -->
+    <style name="NooieRadioButton" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/radio_button</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+    <!-- AlertDialog -->
+    <style name="NooieAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/theme_green</item>
+    </style>
+
+    <style name="transparent_background_dialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="EasyPermissionsDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <!--<item name="android:windowFrame">@null</item>-->
+        <!--是否浮在窗口之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--半透明-->
+        <item name="android:windowIsTranslucent">true</item>
+        <!--是否显示title-->
+        <item name="android:windowNoTitle">true</item>
+        <!--dialog之外没有焦点的区域是否罩上黑色半透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/Base.Animation.AppCompat.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:textColor">@color/theme_text_color</item>
+        <item name="android:textColorPrimary">@color/theme_text_color</item>
+        <item name="android:background">@color/theme_white</item>
+        <item name="colorAccent">@color/theme_green</item>
+    </style>
+
+
+    <style name="divider_bule">
+        <item name="android:layout_height">@dimen/dp_1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/theme_green</item>
+    </style>
+
+    <style name="divider_black">
+        <item name="android:layout_height">1px</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/black_010C11</item>
+    </style>
+
+    <!--TextAppearance -->
+
+    <style name="divider_thin_vertical">
+        <item name="android:layout_width">@dimen/dp_1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/divider_line_of_white_bg</item>
+    </style>
+
+    <!-- Divider line -->
+    <style name="divider_thin">
+        <item name="android:layout_height">@dimen/dp_1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/divider_line_of_white_bg</item>
+    </style>
+
+    <style name="divider_white">
+        <item name="android:layout_height">@dimen/dp_1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/theme_white</item>
+    </style>
+
+    <!-- open wifi Holder -->
+    <style name="stretch_wifi_space">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/black_33010C11</item>
+    </style>
+
+    <!-- Place Holder -->
+    <style name="stretch_space">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">@dimen/dp_0</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+
+    <style name="stretch_space_vertical">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_0</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="from_bottom_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_enter_from_bottom_anim</item>
+        <item name="android:windowExitAnimation">@anim/pop_exit_to_bottom_anim</item>
+    </style>
+
+    <style name="TRM_ANIM_STYLE">
+        <item name="android:windowEnterAnimation">@anim/trm_popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/trm_popup_exit</item>
+    </style>
+
+    <style name="toast_text">
+        <item name="android:textColor">@color/theme_white</item>
+    </style>
+
+    <style name="ExternalAttr">
+        <item name="textColorError">@color/colorPrimary</item>
+    </style>
+
+    <style name="CheckBox" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/gray</item>
+        <item name="colorControlActivated">@color/theme_green</item>
+    </style>
+
+
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="transparent_background_transparent_dialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!-- 自定义loading dialog -->
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_alpha_80"
+    android:orientation="vertical">
+
+    <View style="@style/stretch_space" />
+
+    <LinearLayout
+        android:id="@+id/containerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:orientation="vertical">
+
+        <View
+            style="@style/divider_thin"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvPowerTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:gravity="center"
+            android:text="@string/cam_setting_night_vision_title"
+            android:textColor="@color/theme_text"
+            android:textSize="@dimen/sp_15" />
+
+        <View style="@style/divider_thin" />
+
+        <TextView
+            android:id="@+id/btnPowerOff"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/cam_setting_night_vision_type_auto"
+            android:textColor="@color/theme_text"
+            android:textSize="@dimen/sp_18"
+            android:visibility="gone" />
+
+        <View
+            style="@style/divider_thin"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btnPowerOn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/cam_setting_night_vision_type_off"
+            android:textColor="@color/theme_text"
+            android:textSize="@dimen/sp_18"
+            android:visibility="gone" />
+
+        <View
+            style="@style/divider_thin"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/btnPowerRemember"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/cam_setting_night_vision_type_on"
+            android:textColor="@color/theme_text"
+            android:textSize="@dimen/sp_18"
+            android:visibility="gone" />
+
+        <View
+            style="@style/divider_thin"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/btnResetStateCancel"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_34"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_marginTop="@dimen/dp_13"
+                android:layout_marginEnd="@dimen/dp_36"
+                android:layout_marginBottom="@dimen/dp_13"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/cancel"
+                android:textColor="@color/theme_white"
+                android:textSize="@dimen/sp_12" />
+
+            <TextView
+                android:id="@+id/btnResetStateConfirm"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_34"
+                android:layout_marginStart="@dimen/dp_36"
+                android:layout_marginTop="@dimen/dp_13"
+                android:layout_marginEnd="@dimen/dp_36"
+                android:layout_marginBottom="@dimen/dp_13"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/confirm_upper"
+                android:textColor="@color/theme_white"
+                android:textSize="@dimen/sp_12" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

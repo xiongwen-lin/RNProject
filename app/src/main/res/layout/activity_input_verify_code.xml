@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_blue">
+
+    <include
+        android:id="@+id/inputVerifyMenuBar"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputVerifyMenuBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvMsg"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_75"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_75"
+                android:text="@string/input_verify_code_send"
+                android:gravity="center"
+                android:textColor="@color/theme_text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDestination"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_75"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginEnd="@dimen/dp_75"
+                android:text=""
+                android:gravity="center"
+                android:textColor="@color/theme_text_color"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvMsg" />
+
+            <com.afar.osaio.widget.InputFrameView
+                android:id="@+id/ipvVerifyCode"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_58"
+                android:layout_marginEnd="@dimen/dp_50"
+                app:input_theme="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDestination" />
+
+            <TextView
+                android:id="@+id/tvCountdown"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_25"
+                android:layout_marginEnd="@dimen/dp_28"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@drawable/button_black_state_list_radius_13"
+                android:gravity="center"
+                android:paddingStart="@dimen/dp_17"
+                android:paddingTop="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_17"
+                android:paddingBottom="@dimen/dp_0"
+                android:singleLine="true"
+                android:text="180s"
+                android:textColor="@color/theme_green_subtext_color"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone"
+                app:layout_constraintTop_toTopOf="@+id/ipvVerifyCode"
+                app:layout_constraintBottom_toBottomOf="@+id/ipvVerifyCode"
+                app:layout_constraintEnd_toEndOf="@+id/ipvVerifyCode" />
+
+            <TextView
+                android:id="@+id/tvResendCode"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_35"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:gravity="center"
+                android:text="@string/input_verify_resend_verification_code"
+                android:textColor="@color/theme_subtext_color"
+                android:textSize="@dimen/sp_14"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvVerifyCode" />
+
+            <com.afar.osaio.widget.FButton
+                android:id="@+id/btnDone"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_42"
+                android:layout_marginStart="@dimen/dp_75"
+                android:layout_marginTop="@dimen/dp_85"
+                android:layout_marginEnd="@dimen/dp_75"
+                android:text="@string/next"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvVerifyCode" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

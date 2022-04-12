@@ -1,0 +1,147 @@
+apply plugin: 'maven-publish'
+
+def keystorePropertiesFile = rootProject.file("buildSrc/maven.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+//默认
+def NEXUS_MAVEN_REPO_RELEASE_URL = keystoreProperties['OSIAO_MAVEN_REPO_RELEASE_URL']
+def NEXUS_USERNAME = keystoreProperties['NEXUS_USERNAME']
+def NEXUS_PASSWORD = keystoreProperties['NEXUS_PASSWORD']
+def NEXUS_GROUP_ID = keystoreProperties['SMARTUI_GROUP_ID']
+
+ext {
+    //Method
+    configMavenPublish = this.&configMavenPublish
+    //Properties
+    MAVEN_REPO_RELEASE_URL = NEXUS_MAVEN_REPO_RELEASE_URL
+    GROUP_ID = NEXUS_GROUP_ID
+    VERSION = ""
+    USERNAME = NEXUS_USERNAME
+    PASSWORD = NEXUS_PASSWORD
+}
+
+
+void configMavenPublish(project, android, maven_repo_url) {
+    def projectName = project.name
+    def versionName = android.defaultConfig.versionName
+    ext.CONFIG_MAVEN_REPO_RELEASE_URL = maven_repo_url
+    ext.VERSION = versionName
+
+    println("config projectName = " + projectName)
+    println("config publish maven repo url = " + ext.MAVEN_REPO_RELEASE_URL)
+    println("config versionName = " + ext.VERSION)
+}
+
+void configMavenPublish(project, android, maven_repo_url, groupId) {
+    def projectName = project.name
+    def versionName = android.defaultConfig.versionName
+    ext.MAVEN_REPO_RELEASE_URL = maven_repo_url
+    ext.GROUP_ID = groupId
+    ext.VERSION = versionName
+
+    println("config projectName = " + projectName)
+    println("config publish maven repo url = " + ext.MAVEN_REPO_RELEASE_URL)
+    println("config versionName = " + ext.VERSION)
+    println("config group id  = " + ext.GROUP_ID)
+}
+
+void configMavenPublish(project, android, maven_repo_url, groupId, username, password) {
+    def projectName = project.name
+    def versionName = android.defaultConfig.versionName
+    ext.MAVEN_REPO_RELEASE_URL = maven_repo_url
+    ext.GROUP_ID = groupId
+    ext.VERSION = versionName
+    ext.USERNAME = username
+    ext.PASSWORD = password
+
+    println("config projectName = " + projectName)
+    println("config publish maven repo url = " + ext.MAVEN_REPO_RELEASE_URL)
+    println("config versionName = " + ext.VERSION)
+    println("config USERNAME = " + ext.USERNAME)
+    println("config PASSWORD = " + ext.PASSWORD)
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                def projectName = project.getName()
+                println("publishing projectName = " + projectName)
+                //项目组
+                groupId = GROUP_ID
+
+                //artifactId设定为Project的名称
+                //artifactId = 'EditBox'
+                //version = '1.0.1'
+                //项目名称
+                artifactId = projectName
+                //版本号
+                version = VERSION
+
+                println("publishing version  = " + version)
+
+                //artifact "build/outputs/aar/EditBox-1.aar"
+                //artifact "$buildDir/outputs/aar/${project.getName()}-release-v${version}.aar"
+                //afterEvaluate { artifact(tasks.getByName("bundleReleaseAar")) }
+                artifact(tasks.getByName("bundleReleaseAar"))
+
+                pom {
+                    withXml {
+                        def dependenciesNode = asNode().appendNode("dependencies")
+                        println("${projectName} allDependencies:")
+                        configurations.implementation.allDependencies.forEach() { Dependency dependency ->
+                            println("${projectName}-Dependency: $dependency.group.$dependency.name.$dependency.version")
+                            if (dependency.version != "unspecified" && dependency.name != "unspecified") {
+                                def dependencyNode = dependenciesNode.appendNode('dependency')
+                                dependencyNode.appendNode('groupId', dependency.group)
+                                dependencyNode.appendNode('artifactId', dependency.name)
+                                dependencyNode.appendNode('version', dependency.version)
+                            }
+                        }
+                    }
+
+                    /*VCS info*/
+                    /*
+                    scm {
+                        connection = 'scm:https://gitlab.apeman.com.cn/sz/app/android/pro/FastUIComponent'
+                        developerConnection = 'scm:https://gitlab.apeman.com.cn/sz/app/android/pro/FastUIComponent.git'
+                        url = 'https://gitlab.apeman.com.cn/sz/app/android/pro/FastUIComponent'
+                    }
+                     */
+
+                    developers {
+                        developer {
+                            id = 'apemans'
+                            name = 'apemans'
+                            email = 'zhengruidong@apemans.com'
+                        }
+                    }
+
+                    licenses {
+                        license {
+                            name = 'The Apache License, Version 2.0'
+                            url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                        }
+                    }
+                }
+
+            }
+        }
+        repositories {
+            maven {
+                //url = "http://172.16.26.46:8081/repository/osaio/"
+                //url = MAVEN_REPO_RELEASE_URL
+                url = MAVEN_REPO_RELEASE_URL
+                println("publishing repositories maven url = " + MAVEN_REPO_RELEASE_URL)
+                allowInsecureProtocol = true
+                credentials {
+                    username NEXUS_USERNAME
+                    password NEXUS_PASSWORD
+                    //username 'admin'
+                    //password 'apeman123'
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/smart_ssid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_15"
+        android:paddingEnd="@dimen/dp_15"
+        android:weightSum="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/router_smart_intergrated_ssid"
+                android:textSize="@dimen/sp_18"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/router_smart_intergrated_ssid_tip"
+                android:textColor="@color/black_80010c11"
+                android:textSize="@dimen/sp_15"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end">
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switchSSID"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_25"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingEnd="@dimen/dp_13"
+                android:visibility="visible"
+                app:sb_background="@color/theme_switch_btn_bg"
+                app:sb_border_width="@dimen/dp_0"
+                app:sb_button_color="@color/input_text_color"
+                app:sb_checked="false"
+                app:sb_checked_color="@color/theme_green"
+                app:sb_checkline_color="@color/input_text_color"
+                app:sb_show_indicator="false"
+                app:sb_uncheck_color="@color/input_text_color" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingEnd="@dimen/dp_15"
+        app:layout_constraintTop_toBottomOf="@+id/smart_ssid">
+
+        <View style="@style/divider_thin" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

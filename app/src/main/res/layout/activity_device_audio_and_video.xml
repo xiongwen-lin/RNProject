@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/mbDeviceAudioAndVideo"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mbDeviceAudioAndVideo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerAudioRecord"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_55"
+                android:layout_marginStart="@dimen/dp_21"
+                android:layout_marginEnd="@dimen/dp_21"
+                android:background="@drawable/setting_item_state_list"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:lines="1"
+                    android:text="@string/audio_and_video_audio_record"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/switchAudioRecord"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switchAudioRecord"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_25"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sb_background="@color/theme_switch_btn_bg"
+                    app:sb_border_width="@dimen/dp_0"
+                    app:sb_button_color="@color/theme_white"
+                    app:sb_checked_color="@color/theme_green"
+                    app:sb_checkline_color="@color/theme_white"
+                    app:sb_show_indicator="false"
+                    app:sb_uncheck_color="@color/theme_white" />
+
+                <View
+                    android:id="@+id/lineAudioRecord"
+                    style="@style/divider_thin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerRotateImg"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_55"
+                android:layout_marginStart="@dimen/dp_21"
+                android:layout_marginEnd="@dimen/dp_21"
+                android:background="@drawable/setting_item_state_list"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/containerAudioRecord">
+
+                <TextView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:lines="1"
+                    android:text="@string/audio_and_video_rotate_image"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/switchRotateImg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switchRotateImg"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_25"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sb_background="@color/theme_switch_btn_bg"
+                    app:sb_border_width="@dimen/dp_0"
+                    app:sb_button_color="@color/theme_white"
+                    app:sb_checked_color="@color/theme_green"
+                    app:sb_checkline_color="@color/theme_white"
+                    app:sb_show_indicator="false"
+                    app:sb_uncheck_color="@color/theme_white" />
+
+                <View
+                    android:id="@+id/lineRotateImg"
+                    style="@style/divider_thin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.afar.osaio.widget.LabelSwItemView
+                android:id="@+id/livMotionTracking"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_21"
+                android:layout_marginTop="@dimen/dp_0"
+                android:layout_marginEnd="@dimen/dp_21"
+                android:visibility="gone"
+                app:color="@color/theme_text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/containerRotateImg"
+                app:title="@string/camera_settings_motion_tracking" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerDesktopWidget"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_55"
+                android:layout_marginStart="@dimen/dp_21"
+                android:layout_marginEnd="@dimen/dp_21"
+                android:background="@drawable/setting_item_state_list"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/livMotionTracking">
+
+                <TextView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:lines="1"
+                    android:text="@string/audio_and_video_deskto_widget"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/switchDesktopWidget"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switchDesktopWidget"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_25"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:sb_background="@color/theme_switch_btn_bg"
+                    app:sb_border_width="@dimen/dp_0"
+                    app:sb_button_color="@color/theme_white"
+                    app:sb_checked_color="@color/theme_green"
+                    app:sb_checkline_color="@color/theme_white"
+                    app:sb_show_indicator="false"
+                    app:sb_uncheck_color="@color/theme_white" />
+
+                <View
+                    android:id="@+id/lineDesktopWidget"
+                    style="@style/divider_thin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/containerNightVision"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_21"
+                android:layout_marginEnd="@dimen/dp_21"
+                android:background="@drawable/setting_item_state_list"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/containerDesktopWidget">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/vLightModeContainer"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/tvNightVisionLabelTitle"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:layout_marginBottom="@dimen/dp_15"
+                        android:singleLine="true"
+                        android:text="@string/audio_and_video_night_vision"
+                        android:textSize="@dimen/sp_14"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tvNightVisionOff"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvNightVisionOff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_0"
+                        android:gravity="center"
+                        android:text="@string/cam_setting_night_vision_type_off"
+                        android:textColor="@color/input_text_color"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tvNightVisionInfrared"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvNightVisionInfrared"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_0"
+                        android:gravity="center"
+                        android:text="@string/cam_setting_night_vision_type_infrared"
+                        android:textColor="@color/input_text_color"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tvNightVisionLight"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvNightVisionLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_0"
+                        android:gravity="center"
+                        android:text="@string/cam_setting_night_vision_type_light"
+                        android:textColor="@color/input_text_color"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/tvNightVisionAuto"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvNightVisionAuto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_0"
+                        android:gravity="center"
+                        android:text="@string/cam_setting_night_vision_type_auto"
+                        android:textColor="@color/theme_green"
+                        android:textSize="@dimen/sp_10"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvNightVisionLabelTag"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_10"
+                    android:maxLines="3"
+                    android:text="@string/audio_and_video_night_vision_tag"
+                    android:textColor="@color/black_7a010C11"
+                    android:textSize="@dimen/sp_12"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/vLightModeContainer" />
+
+                <View
+                    android:id="@+id/lineNightVision"
+                    style="@style/divider_thin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.afar.osaio.widget.LabelSwItemView
+                android:id="@+id/livNightVision"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_21"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_21"
+                android:visibility="gone"
+                app:color="@color/theme_text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/containerDesktopWidget"
+                app:title="@string/audio_and_video_night_vision" />
+
+            <com.afar.osaio.widget.LabelSwTagItemView
+                android:id="@+id/livEnergyMode"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_21"
+                android:layout_marginTop="@dimen/dp_0"
+                android:layout_marginEnd="@dimen/dp_21"
+                android:visibility="gone"
+                app:color="@color/theme_text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/containerNightVision"
+                app:title="@string/audio_and_energy_mode" />
+
+            <com.afar.osaio.widget.LabelSwItemView
+                android:id="@+id/livWaterMark"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_21"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_21"
+                android:visibility="gone"
+                app:color="@color/theme_text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/livEnergyMode"
+                app:title="@string/audio_and_video_water_mark" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

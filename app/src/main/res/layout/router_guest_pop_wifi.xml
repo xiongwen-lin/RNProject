@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View style="@style/stretch_wifi_space" />
+
+    <LinearLayout
+        android:id="@+id/containerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:background="@drawable/bg_select_photo"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:background="@drawable/gray_dialog_radius_10"
+            android:text="Security Method"
+            android:gravity="center">
+        </TextView>
+
+        <View
+            style="@style/divider_thin" />
+
+        <TextView
+            android:id="@+id/open_System"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="Open System"
+            android:gravity="center">
+        </TextView>
+
+        <View
+            style="@style/divider_thin" />
+
+        <TextView
+            android:id="@+id/WPA2_Personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="WPA2-Personal"
+            android:gravity="center">
+        </TextView>
+
+        <View
+            style="@style/divider_thin" />
+
+        <TextView
+            android:id="@+id/WPA3_Personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="WPA3-Personal"
+            android:gravity="center">
+        </TextView>
+
+        <View
+            style="@style/divider_thin" />
+
+        <TextView
+            android:id="@+id/WPA21_Personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="WPA/WPA2-Personal"
+            android:gravity="center">
+        </TextView>
+
+        <View
+            style="@style/divider_thin" />
+
+        <TextView
+            android:id="@+id/WPA31_Personal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="WPA/WPA3-Personal"
+            android:gravity="center">
+        </TextView>
+
+        <View
+            style="@style/divider_thin" />
+
+        <TextView
+            android:id="@+id/WPA2_Enterprise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="WPA2-Enterprise"
+            android:gravity="center">
+        </TextView>
+
+        <View
+            style="@style/divider_thin" />
+
+        <TextView
+            android:id="@+id/WPA21_Enterprise"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="WPA/WPA2-Enterprise"
+            android:gravity="center">
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.afar.osaio.widget.FButton
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:background="@drawable/white_dialog_radius_10"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:textColor="@color/theme_green"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

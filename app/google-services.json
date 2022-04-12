@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "67967890840",
+    "project_id": "osaio-edd90",
+    "storage_bucket": "osaio-edd90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67967890840:android:2ca76136c9a890eb2da7ed",
+        "android_client_info": {
+          "package_name": "com.afar.osaio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67967890840-lv0ut42h5dt72lmhljlsofavndpqkm03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxXKIvF1hHey0a_9sn4dri7mRlb4a36Aw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67967890840-lv0ut42h5dt72lmhljlsofavndpqkm03.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

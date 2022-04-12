@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/managerAccountRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/accountSettingMenuBar"
+        layout="@layout/menu_bar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/theme_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/accountSettingMenuBar">
+
+        <LinearLayout
+            android:background="@drawable/bg_btn_on_normal_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="vertical"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginEnd="@dimen/dp_15"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/containerChangeProfile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_55"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingRight="@dimen/dp_24">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/change_profile"
+                    android:textColor="@color/theme_text_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <View style="@style/stretch_space" />
+
+                <com.nooie.common.widget.RoundedImageView.RoundedImageView
+                    android:id="@+id/ivPortrait"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user"
+                    app:riv_corner_radius="@dimen/dp_45" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/divider_thin"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_24" />
+
+            <LinearLayout
+                android:id="@+id/containerAccount"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingRight="@dimen/dp_24">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="@string/camera_share_account"
+                    android:textColor="@color/theme_text_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <View style="@style/stretch_space" />
+
+                <TextView
+                    android:id="@+id/tvAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:paddingRight="@dimen/dp_10"
+                    android:textColor="@color/theme_subtext_color"
+                    android:textSize="@dimen/sp_12" />
+            </LinearLayout>
+
+            <View
+                style="@style/divider_thin"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_24" />
+
+            <LinearLayout
+                android:id="@+id/containerNickname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_55"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingRight="@dimen/dp_24">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/name"
+                    android:textColor="@color/theme_text_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <TextView
+                    android:id="@+id/tvNickName"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="1"
+                    android:textColor="@color/theme_subtext_color"
+                    android:textSize="@dimen/sp_12" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:src="@drawable/right_arrow_black" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/divider_thin"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_24" />
+
+            <LinearLayout
+                android:id="@+id/containerChangePsd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_55"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingRight="@dimen/dp_24">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/change_psd"
+                    android:textColor="@color/theme_text_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <View style="@style/stretch_space" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:src="@drawable/right_arrow_black"
+                    android:textSize="@dimen/sp_15" />
+            </LinearLayout>
+
+            <View
+                style="@style/divider_thin"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_24" />
+
+            <LinearLayout
+                android:id="@+id/containerMediaLogin"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_55"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp_24"
+                android:paddingRight="@dimen/dp_24"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/media_login"
+                    android:textColor="@color/theme_text_color"
+                    android:textSize="@dimen/sp_14" />
+
+                <View style="@style/stretch_space" />
+
+                <ImageView
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:src="@drawable/right_arrow_black"
+                    android:textSize="@dimen/sp_15" />
+            </LinearLayout>
+
+            <View
+                style="@style/divider_thin"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_24"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <com.afar.osaio.widget.FButton
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginLeft="@dimen/dp_15"
+            android:layout_marginRight="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_42"
+            android:text="@string/logout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

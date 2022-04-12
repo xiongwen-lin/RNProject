@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerScanFailed"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/titlebar"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scanFailedContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlebar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvScanFailedGuideInfo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_23"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_23"
+                android:gravity="center_horizontal"
+                android:text="@string/scan_failed_guide_info_1"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tvScanFailedGuideInfo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_23"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_23"
+                android:gravity="center_horizontal"
+                android:text="@string/scan_failed_guide_info_2"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_14" />
+
+            <TextView
+                android:id="@+id/tvScanFailedGuideInfo3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_23"
+                android:layout_marginTop="@dimen/dp_35"
+                android:layout_marginEnd="@dimen/dp_23"
+                android:gravity="center_horizontal"
+                android:text="@string/scan_failed_guide_info_3"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_14" />
+
+            <com.afar.osaio.widget.FButton
+                android:id="@+id/btnContactUs"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_47"
+                android:layout_marginStart="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_35"
+                android:layout_marginEnd="@dimen/dp_60"
+                android:text="@string/contact_us" />
+
+            <TextView
+                android:id="@+id/tvScanReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_35"
+                android:text="@string/add_camera_try_again"
+                android:textColor="@color/theme_green"
+                android:textSize="@dimen/sp_16" />
+
+            <View style="@style/stretch_space_vertical" />
+
+            <TextView
+                android:id="@+id/tvScanFailedGuideInfo4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_23"
+                android:layout_marginTop="@dimen/dp_35"
+                android:layout_marginEnd="@dimen/dp_23"
+                android:gravity="center_horizontal"
+                android:text="@string/scan_failed_guide_info_4"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_14" />
+
+            <com.afar.osaio.widget.FButton
+                android:id="@+id/btnScanConnectAp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_47"
+                android:layout_marginStart="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_35"
+                android:layout_marginEnd="@dimen/dp_60"
+                android:text="@string/connect_in_AP_mode" />
+
+            <TextView
+                android:id="@+id/tvScanFailedGuideInfo5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_23"
+                android:layout_marginTop="@dimen/dp_35"
+                android:layout_marginEnd="@dimen/dp_23"
+                android:gravity="center_horizontal"
+                android:text="@string/scan_failed_guide_info_5"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_14" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

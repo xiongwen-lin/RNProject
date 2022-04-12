@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View style="@style/stretch_space" />
+
+    <LinearLayout
+        android:id="@+id/containerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@drawable/bg_select_photo"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:text="@string/select_image"
+            android:textColor="@color/gray_a1a1a1"
+            android:textSize="@dimen/sp_12" />
+
+        <View style="@style/divider_thin" />
+
+        <com.afar.osaio.widget.FButton
+            android:id="@+id/btnTakePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="@color/transparent"
+            android:text="@string/take_photo"
+            android:textColor="@color/theme_green" />
+
+        <View style="@style/divider_thin" />
+
+        <com.afar.osaio.widget.FButton
+            android:id="@+id/btnAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:background="@color/transparent"
+            android:text="@string/album"
+            android:textColor="@color/theme_green" />
+
+    </LinearLayout>
+
+    <com.afar.osaio.widget.FButton
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:background="@drawable/bg_select_photo"
+        android:text="@string/cancel"
+        android:textColor="@color/theme_green" />
+</LinearLayout>

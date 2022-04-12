@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_170">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_156"
+        android:id="@+id/clAutomation"
+        android:background="@drawable/scene_auto_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_21"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_13"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="If Schedule:3:06 PM2/6, “XXXXXXXXX GROUP” Switch…If Schedule:3:06 PM2/6, “XXXXXXXXX GROUP"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toStartOf="@+id/ivModify"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_21"
+            android:layout_marginTop="@dimen/dp_5"
+            android:text="1 tasks"
+            android:textColor="@color/sixty_white"
+            android:textSize="@dimen/sp_13"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+        <ImageView
+            android:id="@+id/ivModify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:src="@drawable/scene_more"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivAuto1"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginStart="@dimen/dp_21"
+            android:layout_marginBottom="@dimen/dp_21"
+            android:background="@drawable/button_white_state_list_radius_6"
+            android:padding="@dimen/dp_3"
+            android:src="@drawable/weather_change"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivAuto2"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@drawable/button_white_state_list_radius_6"
+            android:padding="@dimen/dp_3"
+            android:visibility="gone"
+            android:src="@drawable/scene_schedule"
+            app:layout_constraintBottom_toBottomOf="@id/ivAuto1"
+            app:layout_constraintStart_toEndOf="@+id/ivAuto1"
+            app:layout_constraintTop_toTopOf="@id/ivAuto1" />
+
+        <ImageView
+            android:id="@+id/ivAuto3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:src="@drawable/automation_switch"
+            app:layout_constraintBottom_toBottomOf="@id/ivAuto1"
+            app:layout_constraintStart_toEndOf="@+id/ivAuto2"
+            app:layout_constraintTop_toTopOf="@id/ivAuto1" />
+
+        <ImageView
+            android:id="@+id/ivAuto4"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:layout_marginStart="@dimen/dp_10"
+            android:background="@drawable/button_white_state_list_radius_6"
+            android:padding="@dimen/dp_3"
+            android:src="@drawable/device_change"
+            app:layout_constraintBottom_toBottomOf="@id/ivAuto3"
+            app:layout_constraintStart_toEndOf="@+id/ivAuto3"
+            app:layout_constraintTop_toTopOf="@id/ivAuto3" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/btnSceneSwitch"
+            android:layout_width="@dimen/dp_46"
+            android:layout_height="@dimen/dp_27"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_27"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:sb_background="@color/theme_switch_btn_bg"
+            app:sb_border_width="1dp"
+            app:sb_button_color="@color/theme_white"
+            app:sb_checked_color="@color/theme_green"
+            app:sb_show_indicator="false"
+            app:sb_uncheck_color="@color/theme_gray" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

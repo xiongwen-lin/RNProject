@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/menuBar"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@+id/menuBar"
+        app:layout_constraintBottom_toTopOf="@+id/btnResetSuccess">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTip1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:text="@string/router_how_to_reset_the_router_tip_one"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/black_80010c11"
+                app:layout_constraintTop_toBottomOf="@id/menuBar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/ivIcon1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_20"
+                android:src="@drawable/ic_reset_router"
+                app:layout_constraintTop_toBottomOf="@+id/tvTip1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tvTip2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:text="@string/router_how_to_reset_the_router_tip_two"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/black_80010c11"
+                app:layout_constraintTop_toBottomOf="@+id/ivIcon1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvTip3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:text="@string/router_how_to_reset_the_router_tip_three"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/black_80010c11"
+                app:layout_constraintTop_toBottomOf="@+id/tvTip2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvTip4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:text="@string/router_how_to_reset_the_router_tip_final"
+                android:textSize="@dimen/sp_16"
+                android:textColor="@color/theme_text_color"
+                app:layout_constraintTop_toBottomOf="@+id/tvTip3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/ivIcon2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_20"
+                android:visibility="gone"
+                android:src="@drawable/reset_cam720"
+                app:layout_constraintTop_toBottomOf="@+id/tvTip2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+            </ImageView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.afar.osaio.widget.FButton
+        android:id="@+id/btnResetSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginEnd="@dimen/dp_50"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:paddingLeft="@dimen/dp_22"
+        android:paddingRight="@dimen/dp_22"
+        android:text="@string/add_camera_reset_success"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp_30"
+    android:background="@color/theme_toast_bg"
+    android:orientation="vertical"
+    >
+
+    <View style="@style/stretch_space" />
+
+    <LinearLayout
+        android:id="@+id/containerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/style_background"
+        android:layout_marginTop="@dimen/dp_22"
+        android:paddingBottom="@dimen/dp_50"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp">
+
+            <ImageView
+                android:id="@+id/ivLeft"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+
+                android:scaleType="centerInside"
+                android:src="@drawable/close_icon_state_list" />
+
+            <TextView
+                android:id="@+id/tv_popup_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_18"
+                android:text="@string/pop_tuya_ble_title"
+                android:textSize="@dimen/sp_17" />
+        </RelativeLayout>
+
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_height="1px"
+           android:background="@color/line_color"
+           />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/lay_blue_show_device"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+        <ImageView
+            android:id="@+id/device_icon"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
+            android:layout_marginTop="@dimen/dp_36"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_device_socket_single"
+            />
+        <TextView
+            android:id="@+id/tv_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_18"
+            android:text=""
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_device_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text=""
+            android:textColor="@color/theme_subtext_color"
+            android:textSize="@dimen/sp_12" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBluetoothScanList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/dp_18"
+            android:paddingTop="@dimen/dp_6"
+
+            android:visibility="gone"
+
+            android:scrollbars="none"
+            />
+        <TextView
+            android:id="@+id/tv_device_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_8"
+            android:visibility="gone"
+            android:text="@string/pop_tuya_ble_device_tips"
+            android:textColor="@color/theme_subtext_color"
+            android:layout_marginStart="@dimen/dp_36"
+            android:layout_marginEnd="@dimen/dp_36"
+            android:textSize="@dimen/sp_11" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_36"
+
+            >
+
+            <com.afar.osaio.widget.NEventFButton
+                android:id="@+id/btnDone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/dp_50"
+                android:layout_marginEnd="@dimen/dp_50"
+                android:paddingLeft="@dimen/dp_21"
+                android:paddingRight="@dimen/dp_21"
+                android:text="@string/pop_tuya_ble_sure_add" />
+        <ImageView
+            android:id="@+id/ivLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_button_loading"
+            android:translationZ="@dimen/dp_6"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tv_device_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp_12"
+            android:text="@string/pop_tuya_ble_device_more"
+            android:textSize="@dimen/sp_16" />
+
+            <Button
+                android:id="@+id/tv_device_manually_select"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:background="@drawable/them_bg_gray_line"
+                android:text="@string/pop_tuya_ble_manually_select"
+                android:layout_marginStart="@dimen/dp_50"
+                android:layout_marginEnd="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_36"
+                android:textColor="@color/theme_subtext_color"
+                android:visibility="gone"
+                />
+            <TextView
+                android:id="@+id/tv_ble_search_empty"
+                android:paddingTop="@dimen/dp_28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/dp_38"
+                android:text="@string/pop_tuya_ble_search_empty"
+                android:textColor="@color/theme_subtext_color"
+                android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

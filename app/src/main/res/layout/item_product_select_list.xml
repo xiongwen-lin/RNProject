@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vProductSelectListContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_21"
+        android:layout_marginEnd="@dimen/dp_14"
+        android:background="@color/theme_subtext_color"
+        app:layout_constraintBottom_toBottomOf="@id/tvModelLabel"
+        app:layout_constraintEnd_toStartOf="@id/tvModelLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvModelLabel" />
+
+    <TextView
+        android:id="@+id/tvModelLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_0"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginEnd="@dimen/dp_0"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="Model"
+        android:textColor="@color/theme_text_color"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginStart="@dimen/dp_14"
+        android:layout_marginEnd="@dimen/dp_21"
+        android:background="@color/theme_subtext_color"
+        app:layout_constraintBottom_toBottomOf="@id/tvModelLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvModelLabel"
+        app:layout_constraintTop_toTopOf="@id/tvModelLabel" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvModelSelect"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginRight="@dimen/dp_10"
+        android:textColor="@color/gray_616161"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvModelLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

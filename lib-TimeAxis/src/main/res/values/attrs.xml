@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+    <attr name="isHorizontal" format="boolean" />
+    <attr name="markColor" format="color" />
+    <attr name="scaleColor" format="color" />
+    <attr name="bg" format="reference" />
+    -->
+
+    <declare-styleable name="TimerShaft">
+        <attr name="markColor" format="color" />
+        <attr name="scaleColor" format="color" />
+        <attr name="isHorizontal" format="boolean" />
+        <attr name="bg" format="color" />
+        <attr name="horizontalH" format="dimension" />
+        <attr name="isAsc" format="boolean" />
+    </declare-styleable>
+
+</resources>

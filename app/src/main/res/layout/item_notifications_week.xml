@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@drawable/setting_item_state_list"
+    android:orientation="vertical"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
+    <TextView
+        android:id="@+id/tvWeek"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginRight="17dp"
+        android:layout_toLeftOf="@+id/switchStatus"
+        android:gravity="center_vertical"
+        android:textColor="@color/theme_green"
+        android:textSize="12sp" />
+
+    <com.suke.widget.SwitchButton
+        android:id="@+id/switchStatus"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_25"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        app:sb_background="@color/theme_switch_btn_bg"
+        app:sb_border_width="@dimen/dp_0"
+        app:sb_button_color="@color/theme_white"
+        app:sb_checked_color="@color/theme_green"
+        app:sb_checkline_color="@color/theme_white"
+        app:sb_show_indicator="false"
+        app:sb_uncheck_color="@color/theme_white" />
+
+    <View
+        style="@style/divider_thin"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

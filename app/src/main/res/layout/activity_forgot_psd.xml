@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_blue">
+
+    <include
+        android:id="@+id/forgetPsdMenuBar"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forgetPsdMenuBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/forgetPsdContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.afar.osaio.widget.InputFrameView
+                android:id="@+id/ipvAccount"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_32"
+                app:input_theme="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_100"
+                android:layout_marginBottom="@dimen/dp_100"
+                app:layout_constraintBottom_toTopOf="@id/btnDone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ipvAccount" />
+
+            <com.afar.osaio.widget.FButton
+                android:id="@+id/btnDone"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_42"
+                android:layout_marginStart="@dimen/dp_75"
+                android:layout_marginEnd="@dimen/dp_75"
+                android:layout_marginBottom="@dimen/dp_63"
+                android:text="@string/forgot_get_reset_code"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivDoneLoading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_button_loading"
+                android:translationZ="@dimen/dp_6"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/btnDone"
+                app:layout_constraintEnd_toEndOf="@+id/btnDone"
+                app:layout_constraintStart_toStartOf="@+id/btnDone"
+                app:layout_constraintTop_toTopOf="@+id/btnDone" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.afar.osaio.widget.WebViewDialogView
+        android:id="@+id/wdvForgetPsd"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

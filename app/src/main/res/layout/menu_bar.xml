@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/menuBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+    <ImageView
+        android:id="@+id/ivLeft"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/dp_8"
+        android:scaleType="centerInside"
+        android:src="@drawable/left_arrow_icon_state_list" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerTitle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/dp_60"
+        android:layout_marginEnd="@dimen/dp_60">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/sp_17"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivTitleRightIcon"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivTitleRightIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_4"
+            android:paddingTop="@dimen/dp_20"
+            android:paddingBottom="@dimen/dp_20"
+            android:src="@drawable/title_down_black"
+            android:visibility="gone"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvTitle"
+            app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/ivTitle"
+        android:layout_width="@dimen/dp_88"
+        android:layout_height="@dimen/dp_20"
+        android:layout_centerInParent="true"
+        android:src="@drawable/nooie_iv_title"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/vSettingComponentBg"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:alpha="0.58"
+        android:background="@color/black_alpha_150"
+        android:paddingRight="@dimen/dp_8"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ivRight"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingRight="@dimen/dp_8"
+        android:scaleType="centerInside"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/ivRight1"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/ivRight"
+        android:paddingRight="@dimen/dp_8"
+        android:scaleType="centerInside"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvRight"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingRight="@dimen/dp_13"
+        android:textColor="@color/theme_green"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/mbDividerLine"
+        style="@style/divider_thin"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+    </RelativeLayout>
+    <include
+        android:id="@+id/topBarView"
+        layout="@layout/layout_topbar_action_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/menuBar"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</RelativeLayout>

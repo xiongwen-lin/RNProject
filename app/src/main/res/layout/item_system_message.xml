@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/setting_item_state_list">
+
+    <TextView
+        android:id="@+id/tvMsgDay"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/dp_20"
+        android:lines="1"
+        android:text="22"
+        android:textSize="@dimen/sp_10"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/smlContainer"
+        app:layout_constraintStart_toEndOf="@+id/ivMsgTimePoint"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMsgTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_0"
+        android:lines="1"
+        android:text="09:08"
+        android:textSize="@dimen/sp_11"
+        android:visibility="gone"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@+id/ivMsgTimePoint"
+        app:layout_constraintEnd_toStartOf="@+id/ivMsgTimePoint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivMsgTimePoint" />
+
+    <ImageView
+        android:id="@+id/ivMsgTimePoint"
+        android:layout_width="@dimen/dp_8"
+        android:layout_height="@dimen/dp_8"
+        android:src="@drawable/button_round_blue_state"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/smlContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/smlContainer" />
+
+    <RelativeLayout
+        android:id="@+id/smlContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_21"
+        android:layout_marginTop="@dimen/dp_0"
+        android:layout_marginEnd="@dimen/dp_21"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivMsgTimePoint"
+        app:layout_constraintTop_toBottomOf="@+id/tvMsgDay">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_23"
+            android:layout_toLeftOf="@id/tvAccept"
+            android:lines="1"
+            android:text="Camera sharing"
+            android:textSize="@dimen/sp_15" />
+
+        <ImageView
+            android:id="@+id/ivUnread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tvTitle"
+            android:layout_alignBottom="@id/tvTitle"
+            android:layout_toLeftOf="@id/tvAccept"
+            android:layout_toRightOf="@id/tvTitle"
+            android:src="@drawable/solid_circle_blue"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTime"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginRight="@dimen/dp_23"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:layout_toLeftOf="@+id/tvReject"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="loutingyuan@gmail.com would like to share the camera”Office” to you..."
+            android:textSize="@dimen/sp_10" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvTitle"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textSize="@dimen/sp_10"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvTitle"
+            android:layout_alignBottom="@+id/tvTitle"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="@string/accept"
+            android:textColor="@color/theme_green"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:text="@string/accept"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvReject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tvMsg"
+            android:layout_alignBottom="@+id/tvMsg"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:text="@string/reject"
+            android:textColor="@color/gray_a1a1a1"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginTop="@dimen/dp_0"
+        android:background="@color/divider_line"
+        app:layout_constraintEnd_toEndOf="@id/smlContainer"
+        app:layout_constraintStart_toStartOf="@id/smlContainer"
+        app:layout_constraintTop_toBottomOf="@id/smlContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

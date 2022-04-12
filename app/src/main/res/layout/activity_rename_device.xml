@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/menuBar"
+        layout="@layout/menu_bar" />
+
+    <ImageView
+        android:id="@+id/ivDeviceIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_50"
+        android:src="@drawable/home_plug_icon"
+        android:visibility="visible" />
+
+    <com.afar.osaio.smart.electrician.widget.InputFrameView
+        android:id="@+id/ipvDeviceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_54" />
+
+    <View style="@style/stretch_space_vertical" />
+
+    <com.afar.osaio.widget.FButton
+        android:id="@+id/btnRename"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_46"
+        android:layout_marginStart="@dimen/dp_60"
+        android:layout_marginEnd="@dimen/dp_60"
+        android:text="@string/save" />
+
+</LinearLayout>

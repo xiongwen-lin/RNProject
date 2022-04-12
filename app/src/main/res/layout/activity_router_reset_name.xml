@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/menuBar"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivRouter"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_100"
+        android:layout_marginTop="@dimen/dp_30"
+        android:src="@drawable/device_add_icon_lp_device_with_router"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuBar"/>
+
+    <com.afar.osaio.widget.InputFrameView
+        android:id="@+id/ipvPsd"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        app:input_theme="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivRouter" />
+
+    <com.afar.osaio.widget.NEventFButton
+        android:id="@+id/btnDone"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/dp_42"
+        android:layout_marginStart="@dimen/dp_72"
+        android:layout_marginTop="@dimen/dp_80"
+        android:layout_marginEnd="@dimen/dp_72"
+        android:text="@string/next"
+        app:eventId="@string/n_event_id_click_next_after_get_ssid_and_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ipvPsd" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="@drawable/setting_item_state_list"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:layout_toLeftOf="@+id/tvUnreadCount"
+        android:lines="1" />
+
+    <ImageView
+        android:id="@+id/ivUnread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvContent"
+        android:layout_alignBottom="@id/tvContent"
+        android:layout_toRightOf="@+id/tvContent"
+        android:src="@drawable/solid_circle_blue" />
+
+    <ImageView
+        android:id="@+id/ivNext"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/right_arrow_gray" />
+
+    <TextView
+        android:id="@+id/tvUnreadCount"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/ivNext"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="@color/theme_green"
+        android:textSize="12sp" />
+
+    <View
+        style="@style/divider_thin"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>

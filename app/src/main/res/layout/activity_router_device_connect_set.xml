@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/menuBar"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/connectInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/menuBar">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_connect_device">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_marginStart="@dimen/dp_10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:text="@string/router_connect_setting_download">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0kbps"
+                    android:visibility="gone"
+                    android:textColor="@color/black_80010c11">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/router_connect_setting">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/wifiType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/black_80010c11"
+                    android:text="2.4GHz">
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/router_connect_setting_upload_rate">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.6kbps"
+                    android:textColor="@color/black_80010c11">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/router_connect_setting_connected">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:textColor="@color/black_80010c11"
+                    android:text="6h ago">
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/connectInfo">
+
+        <LinearLayout
+            android:id="@+id/layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:layout_weight="9"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textSize="@dimen/sp_15"
+                android:text="@string/router_connect_setting_device_name">
+            </TextView>
+
+            <TextView
+                android:id="@+id/deviceName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="end"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_15"
+                android:text="--">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="end">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/right_arrow_gray_1">
+                </ImageView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            style="@style/divider_thin" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_gravity="center_vertical"
+                android:text="@string/router_connect_setting_intert_access_enable"
+                android:textSize="@dimen/sp_15">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingBottom="@dimen/dp_5"
+                android:gravity="end"
+                android:layout_weight="2">
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switchButton"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/theme_switch_btn_bg"
+                    app:sb_border_width="@dimen/dp_0"
+                    app:sb_checked="true"
+                    app:sb_button_color="@color/gray"
+                    app:sb_checked_color="@color/theme_green"
+                    app:sb_checkline_color="@color/gray"
+                    app:sb_show_indicator="false"
+                    app:sb_uncheck_color="@color/gray" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            style="@style/divider_thin" />
+
+        <LinearLayout
+            android:id="@+id/layout_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_15"
+                android:text="Maximum Upload Speed">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_weight="1">
+
+                <com.afar.osaio.widget.InputFrameView
+                    android:id="@+id/maxUploadSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:input_theme="2"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingEnd="@dimen/dp_10"
+                android:textColor="@color/black_80010c11"
+                android:text="kbps">
+            </TextView>
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/upload_line"
+            style="@style/divider_thin"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/layout_download"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_15"
+                android:text="Maximum Download Speed">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.afar.osaio.widget.InputFrameView
+                    android:id="@+id/maxDownSpeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:input_theme="2"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingEnd="@dimen/dp_10"
+                android:textColor="@color/black_80010c11"
+                android:text="kbps">
+            </TextView>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/download_line"
+            style="@style/divider_thin"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/device_details_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textSize="@dimen/sp_15"
+                android:text="@string/router_connect_setting_devices_detail">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="end">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/right_arrow_gray_1">
+                </ImageView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            style="@style/divider_thin" />
+
+        <LinearLayout
+            android:id="@+id/parental_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:layout_weight="9"
+            android:visibility="invisible"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:textSize="@dimen/sp_15"
+                android:text="@string/router_connect_setting_parental_control">
+            </TextView>
+
+            <TextView
+                android:id="@+id/tvParentalControl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:gravity="end"
+                android:singleLine="true"
+                android:textSize="@dimen/sp_15"
+                android:textColor="@color/black_80010c11"
+                android:text="08:00 - 23:00">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="end">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/right_arrow_gray_1">
+                </ImageView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            style="@style/divider_thin"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <com.afar.osaio.widget.FButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginEnd="@dimen/dp_50"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:paddingLeft="@dimen/dp_22"
+        android:paddingRight="@dimen/dp_22"
+        android:text="@string/router_save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

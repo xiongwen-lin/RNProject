@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape>
+            <gradient android:endColor="@color/sigin_button_4d8d8d8d" android:startColor="@color/sigin_button_4d8d8d8d" />
+            <corners android:radius="@dimen/dp_22" />
+        </shape>
+    </item>
+    <item android:state_pressed="false">
+        <shape>
+            <gradient android:endColor="@color/button_cancel_bg" android:startColor="@color/button_cancel_bg" />
+            <corners android:radius="@dimen/dp_22" />
+        </shape>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <gradient android:endColor="@color/button_cancel_bg" android:startColor="@color/button_cancel_bg" />
+            <corners android:radius="@dimen/dp_22" />
+        </shape>
+    </item>
+</selector>

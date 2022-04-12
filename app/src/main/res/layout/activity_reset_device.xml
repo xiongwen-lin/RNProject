@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/addDeviceMenuBar"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/svAddDeviceContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvResetStep1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/scan_rest_device_guide_info_1"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_14"
+                android:textAlignment="center" />
+
+            <View style="@style/stretch_space_vertical" />
+
+            <ImageView
+                android:id="@+id/ivStateStep1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/device_reset_step1" />
+
+            <View style="@style/stretch_space_vertical" />
+
+
+            <TextView
+                android:id="@+id/tvResetStep2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/scan_rest_device_guide_info_2"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_14"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/ivStateStep2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/power_strip_reset_step2" />
+
+            <TextView
+                android:id="@+id/tvResetStep3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/scan_rest_device_guide_info_3"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_14"
+                android:textAlignment="center" />
+
+            <ImageView
+                android:id="@+id/ivStateStep3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:src="@drawable/device_reset_step3" />
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gifIvAirPurifier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal" />
+
+            <com.afar.osaio.widget.FButton
+                android:id="@+id/btnReset"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_47"
+                android:layout_marginStart="@dimen/dp_60"
+                android:layout_marginBottom="@dimen/dp_19"
+                android:layout_marginTop="@dimen/dp_52"
+                android:layout_marginEnd="@dimen/dp_60"
+                android:textSize="@dimen/sp_18"
+                android:text="@string/reset_successful" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

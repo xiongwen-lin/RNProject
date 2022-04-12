@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/btnSelectMon"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:background="@drawable/circle_round_white_state_15"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/mon_upper"
+        android:textColor="@color/gray_8d93a2"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+    <View style="@style/stretch_space" />
+
+    <TextView
+        android:id="@+id/btnSelectTues"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:background="@drawable/circle_round_white_state_15"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/tues_upper"
+        android:textColor="@color/gray_8d93a2"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+    <View style="@style/stretch_space" />
+
+    <TextView
+        android:id="@+id/btnSelectWed"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:background="@drawable/circle_round_white_state_15"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/wed_upper"
+        android:textColor="@color/gray_8d93a2"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+    <View style="@style/stretch_space" />
+
+    <TextView
+        android:id="@+id/btnSelectThur"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:background="@drawable/circle_round_white_state_15"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/thur_upper"
+        android:textColor="@color/gray_8d93a2"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+    <View style="@style/stretch_space" />
+
+    <TextView
+        android:id="@+id/btnSelectFri"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:background="@drawable/circle_round_white_state_15"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/fri_upper"
+        android:textColor="@color/gray_8d93a2"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+    <View style="@style/stretch_space" />
+
+    <TextView
+        android:id="@+id/btnSelectSat"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:background="@drawable/circle_round_white_state_15"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/sat_upper"
+        android:textColor="@color/gray_8d93a2"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+    <View style="@style/stretch_space" />
+
+    <TextView
+        android:id="@+id/btnSelectSun"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:background="@drawable/circle_round_white_state_15"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/sun_upper"
+        android:textColor="@color/gray_8d93a2"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+</LinearLayout>

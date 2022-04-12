@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lay_add_device_search"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+
+        >
+
+        <ImageView
+            android:id="@+id/ivLeft"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="8dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/left_arrow_icon_black_state_list" />
+
+        <TextView
+            android:id="@+id/tv_popup_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_18"
+            android:text="@string/add_device"
+            android:textSize="@dimen/sp_17" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/line_color"
+        />
+    <LinearLayout
+        android:id="@+id/lay_blue_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_120"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv_ble_search_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_18"
+            android:text="@string/pop_tuya_ble_search_title"
+            android:textSize="@dimen/sp_14" />
+
+        <com.afar.osaio.smart.home.tuyable.BlueScanView
+            android:id="@+id/ble_view"
+            android:layout_width="match_parent"
+
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_18"
+            android:layout_height="@dimen/dp_400"/>
+        <TextView
+            android:id="@+id/tv_ble_search_empty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dp_38"
+            android:text="@string/pop_tuya_ble_search_empty"
+            android:textColor="@color/theme_subtext_color"
+            android:textSize="@dimen/sp_14" />
+    </LinearLayout>
+
+</LinearLayout>

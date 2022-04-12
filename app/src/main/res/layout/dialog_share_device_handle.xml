@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@drawable/white_dialog_radius_10"
+        android:minHeight="160dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="18dp"
+            android:textSize="17sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="43dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvSubMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="43dp"
+            android:text="@string/share_device_sub_message"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvMessage" />
+
+        <com.afar.osaio.widget.FButton
+            android:id="@+id/btnIgnore"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_36"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_42"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:background="@drawable/button_black_state_list_radius_17"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17"
+            android:text="@string/ignore"
+            android:textColor="@color/theme_white"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSubMessage" />
+
+
+        <com.afar.osaio.widget.FButton
+            android:id="@+id/btnReject"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_34"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:background="@drawable/button_black_state_list_radius_17"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17"
+            android:text="@string/reject"
+            android:textColor="@color/theme_white"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnIgnore" />
+
+        <com.afar.osaio.widget.FButton
+            android:id="@+id/btnAgree"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_34"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17"
+            android:text="@string/accept"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnReject" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

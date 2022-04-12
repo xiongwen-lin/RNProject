@@ -1,0 +1,1841 @@
+<resources>
+    <!-- Common -->
+    <string name="rule_edit" translatable="false">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`¬!"£$%^*()~=#{}[];':,./?/*-_+&#060;&#062;&#064;&#038;</string>
+    <string name="application_name" translatable="false">Osaio</string>
+    <string name="refresh">刷新</string>
+    <string name="cancel">取消</string>
+    <string name="cancel_normal">取消</string>
+    <string name="inbox">收件箱</string>
+    <string name="settings">设置</string>
+    <string name="next">下一步</string>
+    <string name="next_upper">下一步</string>
+    <string name="update">更新</string>
+    <string name="continue_upper">下一步</string>
+    <string name="ssid">SSID</string>
+    <string name="password">密码</string>
+    <string name="show">显示</string>
+    <string name="hide">隐藏</string>
+    <string name="save">保存</string>
+    <string name="high">高</string>
+    <string name="normal">普通</string>
+    <string name="copy">复制</string>
+    <string name="logout">登出</string>
+    <string name="sign_out">注销登录</string>
+    <string name="close">关闭</string>
+    <string name="low">低</string>
+    <string name="medium">中</string>
+    <string name="accept">接受</string>
+    <string name="reject">拒绝</string>
+    <string name="ignore">忽略</string>
+    <string name="live">直播</string>
+    <string name="subscribe_upper">订阅</string>
+    <string name="submit">提交</string>
+    <string name="terms_of_service">服务条款</string>
+    <string name="privacy_policy">隐私政策</string>
+    <string name="cache_cleared">清除缓存</string>
+    <string name="mon_upper">M</string>
+    <string name="tues_upper">T</string>
+    <string name="wed_upper">W</string>
+    <string name="thur_upper">T</string>
+    <string name="fri_upper">F</string>
+    <string name="sat_upper">S</string>
+    <string name="sun_upper">S</string>
+    <string name="change_upper">修改</string>
+    <string name="edit">编辑</string>
+
+    <string name="confirm">确认</string>
+    <string name="confirm_upper">确认</string>
+    <string name="complete">完成</string>
+
+    <string name="settings_delete">删除</string>
+    <string name="ok">确认</string>
+    <string name="select_image">选择图片</string>
+    <string name="take_photo">拍照</string>
+    <string name="album">相册</string>
+    <string name="camera">摄像机</string>
+    <string name="offline">离线</string>
+    <string name="online">在线</string>
+    <string name="copy_finish_tip">拷贝成功</string>
+    <string name="view">查看</string>
+    <string name="empty">空</string>
+    <string name="success">成功</string>
+    <string name="no_record">确保循环录制已打开并且第一个文件已完成可以回放。（第一个文件会在摄像机启动5分钟后或格式化micro SD卡完成5分钟后准备就绪）。</string>
+    <string name="seek_no_record">%1$s 没有录影.</string>
+    <string name="AM">AM</string>
+    <string name="PM">PM</string>
+    <string name="unknown">未知</string>
+    <string name="upgrade_success">升级成功</string>
+    <string name="phone_number_email">邮箱</string>
+    <string name="kick_out">被迫下线</string>
+    <string name="kick_out_info">你的账号在其他设备登录</string>
+    <string name="login_expire">登录过期</string>
+    <string name="login_expire_info">您的账户登录已过期，请重新登录</string>
+    <string name="account_move">账号更新</string>
+    <string name="account_move_info">账号信息已过期，请重新登录</string>
+    <string name="network_error0">网络错误，请再重试</string>
+    <string name="unable_to_parse_response">响应解析错误</string>
+    <string name="acc_illegal">无效账户,请重试</string>
+    <string name="wi_fi_illegal">Wi-Fi无效,请重试</string>
+    <string name="wi_fi_connect_error0">Wi-Fi连接错误,请重试.</string>
+    <string name="wi_fi_psd_illegal">Wi-Fi密码无效,请重试.</string>
+    <string name="msg_system_type">系统消息</string>
+    <string name="exit_app_tip">再次点击退出应用</string>
+    <string name="repeat_click_btn_soon">操作过频繁，请稍后再试</string>
+
+    <string name="share_dialog_title">分享设备</string>
+    <string name="share_dialog_content">%1$s 分享 %2$s 给我</string>
+    <string name="share_dialog_content_cancel">%1$s 取消分享 %2$s 给我</string>
+    <string name="share_dialog_content_remove">%1$s 删除我的分享 %2$s</string>
+    <string name="share_dialog_content_reject">%1$s 拒绝我的分享 %2$s</string>
+    <string name="share_dialog_content_agree">%1$s 同意我的分享 %2$s</string>
+    <string name="share_device_sub_message">%1$s会出现在你的设备列表里面, 你可以查看摄像机的预览.</string>
+
+    <string name="get_fail">失败</string>
+
+    <string name="request">请求</string>
+    <string name="request_rationale_ask">缺少请求的权限应用将不能正常工作.</string>
+    <string name="request_rationale_ask_again">
+        缺少请求的权限应用将不能正常工作.
+        打开应用设置去修改应用权限.
+
+    </string>
+    <string name="request_title">权限需求</string>
+
+    <string name="not_support">不支持</string>
+    <string name="subscribe">订阅</string>
+    <string name="unsubscribe">取消订阅</string>
+    <string name="unsubscribe_up_case">取消订阅</string>
+    <string name="carry_on">Carry on</string>
+    <string name="rename_empty">自定义名称不能为空</string>
+
+    <!-- SplashActivity -->
+    <string name="splash_app_name">Smart home</string>
+    <string name="splash_get_started">Family Care and Home Guard</string>
+    <string name="splash_auto_login_fail">自动登录失败</string>
+    <string name="splash_copy_right">Copyright © 2021 OSAIO all rights reserved.</string>
+
+    <!-- SignInAndUpActivity -->
+    <string name="create_account">添加账号</string>
+
+    <!-- SignInActivity -->
+    <string name="sign_in">登录</string>
+    <string name="sign_up">注册</string>
+    <string name="sign_in_forget_pwd">忘记密码</string>
+    <string name="sign_in_account_hint">邮箱</string>
+    <string name="sign_in_create_account">创建账号</string>
+    <string name="sign_in_account_or_password_empty">密码或账号不能为空.</string>
+    <string name="sign_in_camera_permission_request_warning">Osaio 没被授权使用你的相机.请进入\"设置\"打开Osaio Cam的相机权限。</string>
+    <string name="sign_in_account_empty">账号不能为空.</string>
+    <string name="sign_in_password_empty">密码不能为空.</string>
+    <string name="sign_in_account_not_exist">用户帐号不存在.</string>
+    <string name="sign_in_password_incorrect">邮箱账号和密码不正确</string>
+    <string name="sign_in_verify_code_incorrect">验证码错误</string>
+    <string name="sign_in_submit">提交</string>
+    <string name="sign_in_send">发送</string>
+    <string name="sign_in_resend">再次发送</string>
+    <string name="sign_in_third_login_tip">Sign in with your social media account</string>
+    <string name="sign_in_country_title">国家</string>
+    <string name="sign_account_migration_tip_title">只有您阅读并同意了我们的隐私政策后，您的账号才可在Osaio使用</string>
+    <string name="sign_account_migration_tip_content">
+        感谢您信任并使用Osaio，这是你第一次使用%1$s账号登录，作为一个开放的智能家居平台，保护用户的个人信息及隐私是Osaio的一项基本原则\n\n
+        若您不同意在Osaio上使用您的第三方账号，您可以不使用Osaio或重新注册新的账号同时若你改变主意的话，可以随时同意隐私政策并登录。
+    </string>
+
+    <!-- SignUpActivity -->
+    <string name="sign_up_create_account_tip">我确认我至少13岁，并且我同意Osaio的%1$s和%2$s.</string>
+    <string name="sign_up_already_have_account">已有账号? %1$s</string>
+    <string name="sign_up_tip_check_user_privacy">请查看用户隐私协议</string>
+    <string name="sign_up_tip_email">只能使用邮箱作为用户名</string>
+    <string name="sign_up_get_verification_code">获取验证码</string>
+    <string name="sign_up_account_exist">该用户已存在</string>
+    <string name="sign_up_dialog_tip_account_exist_content">用户已存在。请直接登录。\nVicture Home提供技术支持。</string>
+
+    <!-- InputVerifyCodeActivity -->
+    <string name="input_verify_code_title">账号验证</string>
+    <string name="input_verify_code_enter_code">验证码</string>
+    <string name="input_verify_code_send">验证码已经发送到:</string>
+    <string name="input_verify_reset_code_send">验证码已经被发送到:</string>
+    <string name="input_verify_resend_verification_code">如果你在3分钟内没有收到验证码, 请点击 %1$s.</string>
+    <string name="input_verify_resend_reset_code">如果你在3分钟内没有收到重置验证码, 请点击 %1$s.</string>
+    <string name="input_verify_resend">重发</string>
+    <string name="input_verify_please_enter_code">请输入验证码</string>
+    <string name="input_verify_code_sended">验证码已发送.</string>
+    <string name="input_reset_code_sended">验证码发送成功</string>
+
+    <!-- SetPasswordActivity -->
+    <string name="set_psd_title">设置新密码</string>
+    <string name="set_psd_reset_title">重置密码</string>
+    <string name="set_psd_enter_pwd">密码</string>
+    <string name="set_psd_enter_new_pwd">新设密码</string>
+    <string name="set_psd_confirm_pwd">确认密码</string>
+    <string name="set_psd_save_and_sign_in">保存并登录</string>
+
+    <!-- TwoAuthLoginActivity -->
+    <string name="two_auth_login_title">两步认证</string>
+    <string name="two_auth_login_tip">验证码已发送至：\n%1$s</string>
+
+    <!-- TwoAuthDetailActivity -->
+    <string name="two_auth_detail_tip">打开此功能可以更好地保护相机的安全。 输入发送到您帐户电子邮件中的验证码，验证并信任您的手机。</string>
+    <string name="two_auth_detail_name_label">当前设备</string>
+    <string name="two_auth_detail_device_trust_list_label">受信任的设备</string>
+
+    <!-- TwoAuthDeviceActivity -->
+    <string name="two_auth_device_title">设备信息</string>
+    <string name="two_auth_device_last_activity_time_label">最后登录时间</string>
+    <string name="two_auth_device_remove_from_account">删除系统信息</string>
+
+    <!-- Week -->
+    <string name="w_monday">星期一</string>
+    <string name="w_tuesday">星期二</string>
+    <string name="w_wednesday">星期三</string>
+    <string name="w_thursday">星期四</string>
+    <string name="w_friday">星期五</string>
+    <string name="w_saturday">星期六</string>
+    <string name="w_sunday">星期日</string>
+
+    <string name="weekdays">工作日</string>
+    <string name="weekends">周末</string>
+    <string name="every_day">每天</string>
+
+    <!-- VideoActivity -->
+    <string name="living_video_no_device">没有设备</string>
+
+    <string name="living_no_open">别打开</string>
+    <string name="living_open">打开</string>
+    <string name="living_open_capture_file">打开拍摄文件?</string>
+    <string name="living_file_save_to_album">视频已经保存到相册.</string>
+    <string name="living_photo_file_save_to_album">屏幕截图已保存。</string>
+    <string name="device_guide_next">NEXT</string>
+    <string name="device_guide_done">Done</string>
+    <string name="device_guide_history_des">video history playback bar</string>
+    <string name="device_guide_setting">device settings and more</string>
+    <string name="device_guide_setting_motion">motion tracking and device settings</string>
+    <string name="device_guide_talk_des">注意：在3米之内使用2声道音频时，可能会产生噪音。</string>
+    <string name="nooie_play_photo_title">相册</string>
+    <string name="nooie_play_talk_title">说话</string>
+    <string name="nooie_play_record_title">录制</string>
+    <string name="nooie_play_snap_shot_title">拍照</string>
+    <string name="nooie_play_audio_title">声音</string>
+    <string name="nooie_play_alarm_title">警报</string>
+    <string name="nooie_play_camera_photo_title">相机图片</string>
+    <string name="nooie_play_limit_time_title">低功耗</string>
+    <string name="nooie_play_limit_time_content">继续观看预览会消耗相机的电池。你想继续看吗?</string>
+    <string name="nooie_play_limit_time_content_short_link">长时间连接相机会增加电量消耗，是否继续保持连接？</string>
+    <string name="nooie_play_low_battery_title">电池电量低</string>
+    <string name="nooie_play_low_battery_content">相机 %1$s 电池电量不足，请尽快充电。</string>
+    <string name="nooie_play_lp_device_restart_tip">相机处于节能模式，单击可实时观看</string>
+    <string name="play_close_when_loading_tip">视频正在载入中，请稍后再试</string>
+    <string name="nooie_play_video_play_finish">最后一个视频已经播放完成</string>
+    <string name="nooie_play_video_play_bad">视频文件已损坏</string>
+    <string name="nooie_play_cloud_subscribe_wait_for_preview">订阅成功，paypal目前正在审核中，请等待paypal审核</string>
+    <string name="nooie_play_video_empty_tip">No video uploaded</string>
+    <string name="nooie_play_detection_setting_tip">Motion detection is not turned on, and alarm recording cannot be uploaded</string>
+    <string name="nooie_play_detection_setting_enable">Enable</string>
+
+    <!-- PlaybackActivity -->
+    <string name="playback_cloud_not_normal">云储存的状态不正常</string>
+    <string name="near_expire">云储存还有 %1$d 天到期, 请尽快续费</string>
+    <string name="playback_cloud_play_failure">云储存支付失败</string>
+
+    <!-- Cloud -->
+    <string name="dev_cloud_has_expired">云储存服务已过期</string>
+    <string name="dev_not_yet_open_cloud">设备没有开通云储存服务</string>
+    <string name="free_trial_30_days">30天免费体验</string>
+    <string name="renew">刷新</string>
+    <string name="purchase">购买</string>
+
+    <!-- RenameActivity -->
+    <string name="rename_failed">更改名字失败,请再尝试</string>
+
+    <!-- ForgotPsdActivity -->
+    <string name="forgot_get_reset_code">获取重置验证码</string>
+    <string name="forgot_psd_msg">输入你的邮箱来接收重置密码的验证码.</string>
+
+    <!-- CamSettingsActivity -->
+    <string name="settings_no_delete">取消</string>
+    <string name="settings_restarting">摄像机正在重启，请稍等</string>
+    <string name="settings_delete_fail">删除失败</string>
+    <string name="settings_qr_code_function">这是你的二维码，其他用户能够扫描你的二维码进行添加或者分享设备.</string>
+
+    <string name="notifications_alarm_level_low">低</string>
+    <string name="notifications_alarm_level_close">关</string>
+    <string name="notifications_alarm_level_medium">中</string>
+    <string name="notifications_alarm_level_high">高</string>
+    <string name="notifications_turn_on">打开:</string>
+    <string name="notifications_turn_off">关闭:</string>
+    <string name="notifications_invalid_tip">结束时间应该晚于开始时间</string>
+    <string name="cam_setting_night_vision_title">夜视能力</string>
+    <string name="cam_setting_night_vision_type_auto">自动</string>
+    <string name="cam_setting_night_vision_type_off">关闭</string>
+    <string name="cam_setting_night_vision_type_on">开启</string>
+    <string name="cam_setting_night_vision_type_infrared">红外</string>
+    <string name="cam_setting_night_vision_type_light">COLOR</string>
+    <string name="cam_setting_sync_time_title">同步时间</string>
+    <string name="cam_setting_sync_time">同步</string>
+    <string name="cam_setting_sync_time_content">您想将相机的时间与手机同步吗？</string>
+    <string name="cam_setting_face_detection">人脸检测</string>
+    <string name="cam_setting_human_detection">人形检测</string>
+    <string name="cam_setting_pir_detection">人体检测</string>
+    <string name="cam_setting_detection_notification">侦测通知</string>
+    <string name="cam_setting_open_preset_point">经常看一个位置</string>
+    <string name="cam_setting_flash_light">白光灯</string>
+    <string name="cam_setting_siren">声音示警</string>
+    <string name="cam_setting_siren_tag">检测到移动事件时，鸣笛示警</string>
+
+    <!-- ChooseWiFiActivity -->
+    <string name="choose_wifi_invalid_selection">无效选择</string>
+
+    <!-- HomeActivity -->
+    <string name="devices_offline_title">%1$s 不在线</string>
+    <string name="devices_offline_tip">你的摄像机不在线，请确保设备已开机并且连接到Wi-Fi.</string>
+    <string name="addTop">Top</string>
+    <string name="home_tab_label_devices">家</string>
+    <string name="home_tab_label_camera">摄像机</string>
+    <string name="home_tab_label_message">消息</string>
+    <string name="home_tab_label_store">Store</string>
+    <string name="home_tab_label_person">我的</string>
+    <string name="home_house_name">%1$s的房子</string>
+    <string name="home_network_weak_tip">未能连接到互联网，请检查你的网络设置</string>
+    <string name="home_person_edit_profile">Edit profile</string>
+
+    <!-- ScanCameraResultActivity -->
+    <string name="scan_owner">所有者:</string>
+    <string name="scan_device_model">型号</string>
+
+    <!-- NameDeviceActivity -->
+    <string name="name_device_enter_custom_name">请输入自定义名字</string>
+
+    <string name="add_device_not_exist">设备不存在</string>
+    <string name="add_device_error">添加失败: %1$s</string>
+    <string name="add_device_add_by_other">这台设备已经被其他用户添加</string>
+    <string name="add_device_add_by_yourself">这台设备已经给你添加</string>
+    <string name="add_device_dev_is_offline">设备不在线</string>
+
+    <!-- DeviceMessageActivity -->
+    <string name="message_no_any">没有任何消息</string>
+    <string name="message_no_more">没有更多的消息</string>
+    <string name="message_today">今天</string>
+    <string name="message_clear_success">清除成功</string>
+    <string name="message_delete_all_message">删除消息?</string>
+    <string name="message_delete_all_message_sub_msg">这将会删除所有的消息.</string>
+    <string name="message_delete_message">删除消息</string>
+    <string name="message_delete_message_sub_msg">您确定要删除所选消息吗?</string>
+    <string name="message_reject_confirm">确认拒绝</string>
+    <string name="message_reject_confirm_info">拒绝了你的分享.</string>
+    <string name="message_accept_confirm">确认接受</string>
+    <string name="message_accept_confirm_info">你正在确认分享.</string>
+    <string name="message_go_to_video">跳转到视频</string>
+    <string name="message_motion_detect_info">来自%1$s摄像机%2$s的移动侦测</string>
+    <string name="message_sound_detect_info">来自摄像机 %1$s 在 %2$s的声音告警</string>
+    <string name="message_pir_detect_info">人体侦测范围从 %1$s 摄像机到 %2$s 处.</string>
+    <string name="message_sd_leak_info">您的SD卡内存不足。 请下载文件并格式化卡或打开设置中的“循环录制”以自动释放空间。</string>
+    <string name="message_no_storage">没有储存</string>
+    <string name="message_please_subscribe_cloud">请订阅云储存或者插入储存卡.</string>
+    <string name="message_device_update_start">设备开始升级</string>
+    <string name="message_device_update_success">设备升级成功</string>
+    <string name="message_device_update_fail">设备升级失败</string>
+    <string name="message_device_msg_too_much_tip">信息太多了？ 调整相机的%1$s.</string>
+    <string name="message_device_msg_subscribe">想立刻看到这些侦测事件吗？ 订阅</string>
+    <string name="message_device_select_all">全选</string>
+    <string name="message_device_select_msg_first">请先选择消息</string>
+    <string name="message_cloud_video_expire">云视频已经过期</string>
+
+    <!-- CameraShareActivity -->
+    <string name="shared_send_user_not_exist">%1$s尚未注册</string>
+    <string name="shared_send_user_not_exist1">账号不存在，请先创建账号.</string>
+    <string name="shared_send_not_share_for_yourself">你不能把设备分享给你自己</string>
+    <string name="shared_send_already_share">邀请已经发送.</string>
+    <string name="share_send_invitation_wait">该设备已与该用户共享。</string>
+    <string name="share_send_get_share_to_user_failed">获取用户失败, 请重试</string>
+    <string name="share_delete_share_failed">删除分享失败, 请重试</string>
+    <string name="share_to_other_area">抱歉, 我们当前不支持不同国家之间的设备分享。</string>
+    <string name="share_device_count_over">相机最多只能分享给%1$s人</string>
+
+    <!-- ShareDeviceActivity -->
+    <string name="share_device_cancel_share_failed">删除分享失败, 请重试</string>
+
+    <!-- PlaybackActivity -->
+    <string name="play_back_no_sdcard">设备没有储存卡 \n如果已经插入储存卡, 请重启设备</string>
+    <string name="play_back_no_cloud">想看回放? \n订阅30天的云储存</string>
+
+    <!-- FeedBAckActivity -->
+    <string name="feedback_contact_info">联系邮箱</string>
+    <string name="feedback_email">邮箱</string>
+    <string name="feedback_detail">详细</string>
+    <string name="feedback_confirm_feedback">确认反馈?</string>
+    <string name="feedback_description_min_number">最少10个字</string>
+    <string name="feedback_input_contact_info">请输入联系资料</string>
+    <string name="feedback_tip_email">联系邮箱只能是邮箱地址</string>
+    <string name="feedback_add_photo">媒体</string>
+    <string name="feedback_add_photo_title">添加媒体</string>
+    <string name="feedback_add_photo_content">请上传图片或者屏幕截图，以协助我们诊断问题原因。</string>
+    <string name="feedback_page_title">给我们发送消息</string>
+    <string name="feedback_picture_type_error">目前支持上传的图片类型只有jpeg、jpg、png类型</string>
+    <string name="feedback_type_and_product_error">请选择问题类型.</string>
+    <string name="feedback_describe_problem">请您详细描述问题。</string>
+    <string name="feedback_send_to_much_msg">您发送的信息已经达到上限，请给我们多一些时间处理您前面的信息。</string>
+    <string name="feedback_send_success">感谢您的反馈，我们会尽快给您答复。</string>
+    <string name="feedback_upload_image_fail">无法加载媒体，请重试。</string>
+    <string-array name="issueArray">
+        <item>应用问题</item>
+        <item>连接问题</item>
+        <item>硬件问题</item>
+        <item>视频质量</item>
+        <item>云储存</item>
+        <item>其他问题</item>
+    </string-array>
+    <string name="issue_title">问题类型</string>
+
+    <string-array name="modelArray">
+        <item>Osaio室内摄像机</item>
+        <item>Osaio室内高清摄像机</item>
+        <item>Osaio 360度摄像机</item>
+    </string-array>
+    <string name="model_title">设备型号</string>
+
+    <!-- LiveActivity -->
+    <string name="live_see_history">订阅安全的云存储以便查看侦测事件回放或24/7回放</string>
+    <string name="playback_save_photo">保存图片</string>
+    <string name="playback_save_story">保存视频</string>
+
+    <!-- upgrade -->
+    <string name="upgrade_dialog_tip">这个版本不再提醒</string>
+
+    <!-- StorageActivity -->
+    <string name="storage_abnormal_parameter">参数异常</string>
+    <string name="storage_cloud">云储存</string>
+    <string name="storage_expire_date">到期日期: %1$s</string>
+    <string name="storage_subscribe_here">订阅</string>
+    <string name="storage_contact_us">如果你想清除你的云储存内容, 请联系我们的客服 %1$s</string>
+    <string name="storage_contact_us_time">9:00am - 12:00am</string>
+    <string name="storage_sdcard">储存卡</string>
+    <string name="storage_no_sd_card">找不到SD卡。</string>
+    <string name="storage_sd_card_damaged">MicroSD卡有问题，请使用FAT32/exFAT格式的计算机重新插入或格式化。</string>
+    <string name="storage_use_of_space">可用/总容量</string>
+    <string name="storage_loop_recording">循环录影</string>
+    <string name="storage_format_card">格式化储存卡</string>
+    <string name="storage_no_sdcard_tip">找不到SD卡。</string>
+    <string name="storage_format">格式化</string>
+    <string name="storage_format_card_into">是否格式化你的存储卡? 卡里的所有数据将会被清除.</string>
+    <string name="storage_format_card_into_confirm">正在格式化SDcard，完成后需要等待6分钟才能查看最新录影.</string>
+    <string name="storage_formatting">正在格式化</string>
+    <string name="storage_sd_card_is_formatting">储存卡正在格式化</string>
+    <string name="storage_ok_understand">好的, 我已经明白</string>
+    <string name="storage_cloud_intro_1">你将会使用大拿的云储存服务, 那是Osaio Cam可信赖的合作伙伴.</string>
+    <string name="storage_cloud_intro_2">大拿的云储存服务是经过测试和验证，提供安全和可靠的数据存储服务. </string>
+    <string name="storage_cloud_intro_3">大拿的云储存经过多重加密处理，可以很好的保护你的私人数据. </string>
+    <string name="storage_plan_chosen">已选订阅:</string>
+    <string name="storage_status">状态: %1$s</string>
+    <string name="storage_status_active">激活</string>
+    <string name="storage_cloud_tip">Osaio拥有7天、15天、30天的运动跟踪全时录像存储方案； 以上方案由经过安全测试的Amazon Web Service（AWS）支持，以保护您的隐私。</string>
+    <string name="storage_cloud_tip_sub_device">由安全的亚马逊云（AWS）提供支持，可保护您的隐私</string>
+    <string name="storage_unsubscribe_info">您确定取消该设备的云订阅?</string>
+    <string name="storage_unsubscribe_info_for_relation">取消订阅时，其他几个相机设备%1$s也将取消订阅。确定要取消订阅吗？</string>
+    <string name="storage_buy_cloud_title">Osaio云</string>
+    <string name="storage_hub_storage_tip">相机的录像将直接上传到基站上。</string>
+
+    <!-- MotionDetectActivity -->
+    <string name="motion_detect_sensitivity">敏感度</string>
+    <string name="detection_tip_of_motion">打开移动侦测以便接收警报信息，但是订阅云存储才能存储警报信息</string>
+    <string name="detection_tip_of_sound">打开声音侦测以便接收警报信息，但是订阅云存储才能存储警报信息</string>
+    <string name="detection_zone_label">侦测区域</string>
+    <string name="detection_schedule_label">日程表</string>
+
+    <!-- NooieDetectionScheduleActivity -->
+    <string name="detection_schedule_motion_tips">最多能够创建3个日程表用于接收移动侦测报警消息</string>
+    <string name="detection_schedule_sound_tips">最多能够创建3个日程表用于接收声音侦测报警消息</string>
+    <string name="detection_schedule_pir_tips">当您想在指定时间段接收警报时，请创建时间表(最多三个)。</string>
+    <string name="detection_schedule_adjust_title">日程表调整</string>
+    <string name="detection_schedule_adjust_content">由于我们的日程表结构做了调整优化，麻烦你重新设置下日程表，给你带来不便，深感抱歉.</string>
+
+    <!-- NooieCreateDetectionScheduleActivity -->
+    <string name="create_detection_schedule_title">设置时间</string>
+    <string name="create_detection_schedule_from">从</string>
+    <string name="create_detection_schedule_to">到</string>
+    <string name="create_detection_schedule_tip">注意：由于摄像机每天记录，因此您设置的时间跨度不能跨越两个不同的日期。 如果您想这样做，请创建两个时间表。 例如，从晚上10点到早上8点，您需要在晚上10点到晚上11点59分之间创建一个时间表，并在凌晨0点到上午8点之间创建另一个时间表。</string>
+
+    <!-- NooieDetectionZoneActivity -->
+    <string name="detection_zone_tip">点击编辑后拖动方框，可调整侦测范围</string>
+
+    <!-- CameraShareActivity -->
+    <string name="camera_share_title">分享摄像机</string>
+    <string name="camera_share_info">邀请他人来分享你摄像机的视频:%1$s,%2$s</string>
+    <string name="camera_share_users">用户</string>
+    <string name="camera_share_send_invitation">发送邀请</string>
+    <string name="camera_share_account">账号</string>
+    <string name="camera_share_owner">所有者</string>
+    <string name="camera_share_remove">移除</string>
+    <string name="camera_share_no_user">你没有和朋友或者家人分享设备, 现在开始分享</string>
+    <string name="camera_share_remove_confirm">移除访问</string>
+    <string name="camera_share_remove_info">你正在从你的摄像机移除 %1$s.</string>
+    <string name="camera_share_send_enter_user_account">输入用户账号</string>
+    <string name="camera_share_to">分享 %1$s 给 %2$s</string>
+    <string name="camera_share_no_share">取消</string>
+    <string name="camera_share_share">分享</string>
+    <string name="camera_share_info_learn_more">学到更多</string>
+    <string name="camera_share_account_invalid">请输入有效的邮箱账号</string>
+
+    <!-- HomeAwayActivity -->
+    <string name="home_away_title">Home/Away</string>
+    <string name="home_away_tip">根据家里的时间自动关闭相机</string>
+
+    <!-- HomeActivity -->
+    <string name="home_home">家</string>
+    <string name="home_inbox">收件箱</string>
+    <string name="home_help">支持</string>
+    <string name="home_gateway">网关</string>
+    <string name="home_camera">添加摄像机</string>
+    <string name="home_refresh">刷新</string>
+    <string name="home_app_settings">设置</string>
+    <string name="home_person_feedback">反馈</string>
+    <string name="home_item_off_tip">你的摄像机已经关闭。</string>
+    <string name="home_item_offline_tip">您的摄像机已经离线，请确保设备连接了电源并且连接到Wi-Fi</string>
+    <string name="home_video_history">历史视频</string>
+    <string name="home_notification_request_title">通知权限</string>
+    <string name="home_notification_request_content">应用程序需要请求通知权限才能接收消息。 请转到手机设置中的“通知管理”或应用详情以启用通知。</string>
+    <string name="home_request_devices_fail">获取相机列表超时，请检查网络后下拉刷新</string>
+    <string name="home_ad_go_to_brower">获取</string>
+    <string name="home_ad_dialog_title">特殊交易</string>
+    <string name="home_nav_menu_add">添加</string>
+    <string name="home_nav_menu_sort">排序</string>
+    <string name="home_device_item_more">更多</string>
+    <string name="home_device_type_ipc">智能相机</string>
+    <string name="home_device_type_ble_ap_ipc">DV Camera</string>
+    <string name="home_device_type_lock">Smart Lock</string>
+    <string name="home_item_ble_ap_tip">未连接相机</string>
+    <string name="home_item_ble_ap_access">访问相机</string>
+    <string name="home_ap_direct_mode_tip">已连上相机的热点，其它设备暂时被隐藏。</string>
+
+
+    <!-- AddCameraActivity -->
+    <string name="add_camera_title">设备列表</string>
+    <string name="add_camera_add_to">添加到</string>
+    <string name="add_camera_product_camera">Osaio PC420</string>
+    <string name="add_camera_product_camera_mc_120">Osaio MC120</string>
+    <string name="add_camera_product_camera_pc_530">Osaio PC530</string>
+    <string name="add_camera_product_camera_pc_730">VP07</string>
+    <string name="add_camera_product_lock">Osaio door lock</string>
+    <string name="add_camera_product_gateway">Osaio EC810</string>
+    <string name="add_camera_product_category_router">路由器</string>
+    <string name="add_camera_product_category_card">室内摄像机</string>
+    <string name="add_camera_product_category_head">摇头机</string>
+    <string name="add_camera_product_category_mini">MINI相机</string>
+    <string name="add_camera_product_category_gun">户外相机</string>
+    <string name="add_camera_product_category_lp">低功耗相机</string>
+    <string name="add_camera_guide_info">1.打开你的摄像机并留在路由器附近.</string>
+    <string name="add_camera_guide_info_lan">1.打开你的摄像机并留在路由器附近.</string>
+    <string name="add_camera_guide_info_ipc_200">1.在外面安装之前，请将相机连接到Wi-Fi路由器附近。 确保相机已开启。</string>
+    <string name="add_camera_guide_info_hc320">1.请确保相机开关已打开，并已安装电池。</string>
+    <string name="add_camera_guide_info_wait_15_sec">2.请等待指示灯变成红色闪烁，如果15秒后没有变为红色闪烁请重置摄像机</string>
+    <string name="add_camera_no_voice_message">指示灯亮红色</string>
+    <string name="add_camera_light_error">指示灯不变红？</string>
+    <string name="add_camera_light_error_810_pro">Didn\'t see the red light？</string>
+    <string name="add_camera_no_red_light">不是红灯</string>
+    <string name="add_no_connect_wifi">如果你的手机没有连接到Wi-Fi, 请连接到一个2.4G的路由.</string>
+    <string name="add_camera_no_red_light_step_1">1.如果指示灯不是红色或闪烁，而是绿色或绿灯闪烁，请点击下一步.</string>
+    <string name="add_camera_360_no_red_light_step_1">1.如果指示灯不是红色或闪烁，而是绿色或绿灯闪烁，请点击下一步.</string>
+    <string name="add_camera_no_red_light_step_2">如果指示灯还不正确，请重置摄像机</string>
+    <string name="add_camera_reset_success">重置成功</string>
+    <string name="add_camera_connect_to_wifi">连接到Wi-Fi</string>
+    <string name="add_camera_not_connect_to_wifi">无法连接到Wi-Fi</string>
+    <string name="add_camera_go_to_connect">去连接</string>
+    <string name="add_camera_already_connect">已连接</string>
+    <string name="add_camera_input_wifi_pas_tip">如果您的Wi-Fi为5GHz，请将其设置为2.4GHz。%1$s</string>
+    <string name="add_camera_input_wifi_pas_tip_more">常用路由器设置方法</string>
+    <string name="add_camera_psd_error">输入的密码有误</string>
+    <string name="add_camera_scan_qr_tip">1.将QR码放置在相机前面20CM至26CM的位置。 点击放大图片</string>
+    <string name="add_camera_scan_qr_tip_1080">1.将QR码放置在相机前面20CM至26CM的位置。 点击放大图片</string>
+    <string name="add_camera_scan_qr_sub_tip">2.当LED指示灯变为绿色常亮时，请转到下一步。</string>
+    <string name="add_camera_scan_qr_sub_tip_1080">2.当LED指示灯变为绿色常亮时，请转到下一步。</string>
+    <string name="wifi_qr_code_tip_ec_810_pro">2. After hearing the voice “Scan QR code successfully”, please click Next.</string>
+    <string name="wifi_qr_code_scan_no_response_ec_810_pro">Can not hear the voice prompt?</string>
+    <string name="add_camera_nothing_happen">扫码不成功？</string>
+    <string name="add_camera_nothing_happened_title">扫码不成功？</string>
+    <string name="add_camera_scan_wifi_code">连接摄像机</string>
+    <string name="add_camera_nothing_happened_help">1.请确保已经撕掉镜头保护膜或镜头表面清洁\n\n2.将手机屏幕亮度调到最高，并将手机二维码放在镜头前大约20cm到26cm处</string>
+    <string name="add_camera_nothing_happened_help_1080">1.请确保已经撕掉镜头保护膜或镜头表面清洁\n\n2.将手机屏幕亮度调到最高，并将手机二维码放在镜头前大约20cm到26cm处</string>
+    <string name="nothing_happened_help_ec_810_pro">
+        1. Please make sure the device is turned on.\n\n
+        2. Please make sure the QR code is in the front of device in about 6 inches(15cm).\n\n
+        3. Please make sure the device is in network setting mode and then scan the QR code. To enter the network setting mode, please press the button until hearing the voice prompt.\n\n
+    </string>
+    <string name="add_camera_try_again">再试一次</string>
+    <string name="add_camera_smart_link">智能配网</string>
+    <string name="add_camera_smart_link_tip">如果依然不能扫码成功，请尝试下智能配网</string>
+    <string name="add_camera_paring">连接中</string>
+    <string name="add_camera_connected">连接成功!</string>
+    <string name="add_camera_connected_failed">连接失败</string>
+    <string name="add_camera_not_found_how_to_solve">怎么解决</string>
+    <string name="add_camera_psd_incorrect">如果指示灯在蓝红之间闪烁, 则表示您输入的Wi-Fi密码有误. 请重置摄像机.</string>
+    <string name="add_camera_360_psd_incorrect">如果指示灯在白红之间闪烁, 则表示您输入的Wi-Fi密码有误. 请重置摄像机.</string>
+    <string name="add_camera_wait_red_light">重置后，请等待约15秒直到红灯闪烁.</string>
+    <string name="add_camera_light_is_red">指示灯亮红灯</string>
+    <string name="add_camera_already_added">请联系摄像机绑定者在他的账户移除摄像机，你才能添加此摄像机.</string>
+    <string name="add_camera_already_connected">您的摄像机已被其他人添加，请联系拥有者将它移除</string>
+    <string name="add_camera_click_to_learn_more">点击这里了解更多</string>
+    <string name="add_camera_back_home">先进入首页.</string>
+    <string name="add_camera_removed_try_again">已移除，重新连接</string>
+    <string name="add_camera_scan_result_failed">连接失败</string>
+    <string name="add_camera_name_your_camera">摄像机命名</string>
+    <string name="add_camera_rename_your_camera">重命名摄像机</string>
+    <string name="add_camera_front_door">正门</string>
+    <string name="add_camera_office">办公室</string>
+    <string name="add_camera_living_room">起居室</string>
+    <string name="add_camera_garage">车库</string>
+    <string name="add_camera_baby_room">婴儿房</string>
+    <string name="add_camera_kitchen">厨房</string>
+    <string name="add_camera_backyard">后院</string>
+    <string name="add_camera_customize">自定义名字</string>
+    <string name="add_camera_create_custom">创建名字</string>
+    <string name="add_camera_customize_hint_text">在这里输入</string>
+    <string name="add_camera_recommend_room">推荐房间</string>
+    <string name="add_camera_input_wifi_psd_ssid_tip">你的手机连接到:</string>
+    <string name="add_camera_input_wifi_psd_wifi_support_tip">Osaio相机不支持5G网络.</string>
+    <string name="add_camera_input_wifi_psd_wifi_support_type">仅限2.4G Wi-Fi</string>
+    <string name="add_camera_input_wifi_psd_wifi_no_perm_for_ssid">打开位置权限，APP将自动获取您的Wi-Fi。否则，请手动输入您的Wi-Fi名称并继续。</string>
+    <string name="add_camera_input_wifi_psd_wifi_no_ssid">获取Wifi名称失败， 请手动输入您的Wi-Fi名称并继续</string>
+    <string name="add_camera_input_wifi_psd_wifi_enter_name">输入wifi名称</string>
+    <string name="add_camera_input_wifi_psd_location_enable">打开“位置服务”以允许“ Osaio”使用位置服务，以便它们可以获得Wi-Fi名称。</string>
+    <string name="add_camera_swipe_to_see_more">按住滑动以查看更多</string>
+    <string name="add_camera_guide_got_it">I got it.</string>
+    <string name="add_camera_input_psd_illegal_title">错误</string>
+    <string name="add_camera_input_psd_illegal_message">WiFi密码中包含特殊的字符,目前这些字符不被相机支持.请重新输入密码.该密码最大个数不超过31并支持以下的字符:%1$s</string>
+    <string name="add_camera_input_current_network">当前网络</string>
+    <string name="add_camera_input_empty_psd_title">没密码</string>
+    <string name="add_camera_input_empty_psd_content">你确定在没有密码下连接吗？</string>
+    <string name="add_camera_wifi_qr_param_error">参数错误，无法生成二维码</string>
+    <string name="add_camera_input_wifi_format_tip">Currently connected 5Ghz Wi-Fi is not supported by the device. Please switch to 2.4Ghz Wi-Fi. Switch or not?</string>
+    <string name="add_camera_input_wifi_invalid_tip">SecurityCam_是设备的热点，请连接路由器的Wi-Fi</string>
+    <string name="add_camera_input_wifi_go_to_change">Switch Wi-Fi</string>
+    <string name="add_camera_input_check_wifi_tip">请检查WIFI</string>
+    <string name="add_camera_input_wifi_tip_title">Wi-Fi internet is not available.</string>
+    <string name="add_camera_input_wifi_title">为相机选择Wi-Fi</string>
+    <!-- DeviceSetup -->
+    <string name="device_setup_title">设置</string>
+    <string name="DONE">完成</string>
+    <string name="device_settup_outdoor_tip_1">把相机拿出来(如果需要的话，拔掉插头再插上)放在你想要安装的地方。</string>
+    <string name="device_settup_outdoor_tip_2">
+        1.请用直播窗口来检测您的网络信号。如果您刚才为了挪动相机，拔下了电源，请插上电源后等待一会儿。\n\n
+    2.我们建议您的设备和路由器之间不超过一墙之隔，且距离为6米以内。
+    </string>
+    <string name="device_settup_outdoor_step_tip_1">在壁挂板上标出两个孔的位置，钻孔，将板钉在墙上。</string>
+    <string name="device_settup_outdoor_step_tip_2">将这一边装在墙上。</string>
+    <string name="device_settup_outdoor_step_tip_3">这一边和设备相连接。</string>
+    <string name="device_settup_outdoor_step_tip_4">1. 请检查相机底座上的标记点，并确保与墙板底部的弹簧锁对齐。</string>
+    <string name="device_settup_outdoor_step_tip_5">2. 顺时针旋转相机底座，直到听到咔哒声。</string>
+    <string name="device_settup_outdoor_step_tip_6">顺时针旋转相机底座，直到听到咔哒声。</string>
+    <string name="device_installation">相机安装</string>
+    <string name="device_installed">已安装</string>
+    <string name="add_camera_privary_policy">
+        您的设备可能会捕获包含您自己或他人（包括孩子）的图像或声音信息。\n
+        请确保已通知相关人（包括儿童的父母或法定监护人），并获得事先同意。\n
+        若发现设备未经同意就捕获了他人的信息，请与我们联系以删除数据。请查看我们的隐私政策和服务条款以获取更多信息。
+    </string>
+    <string name="add_camera_privary_policy_ignore">不再提醒</string>
+    <string name="add_camera_privary_policy_confirm">明白了</string>
+
+    <!-- CameraSettings -->
+    <string name="camera_settings_title">摄像机设置</string>
+    <string name="camera_settings_audio_record">录制声音</string>
+    <string name="camera_settings_status_light">LED指示灯</string>
+    <string name="camera_settings_rotate_image">翻转图像</string>
+    <string name="camera_settings_motion_tracking">移动跟踪</string>
+    <string name="camera_settings_video_quality">视频质量</string>
+    <string name="camera_settings_cam_info">摄像机信息</string>
+    <string name="camera_settings_video_and_audio">音频/视频</string>
+    <string name="camera_settings_home_away">相机开关</string>
+    <string name="camera_settings_storage">储存</string>
+    <string name="camera_settings_share_camera">分享摄像机</string>
+    <string name="camera_settings_remove_camera">移除摄像机</string>
+    <string name="camera_settings_remove_camera_confirm">确认移除</string>
+    <string name="camera_settings_motion_detection">移动侦测</string>
+    <string name="camera_settings_sound_detection">声音侦测</string>
+    <string name="camera_settings_reset">恢复出厂设置</string>
+    <string name="camera_settings_reset_info">确定恢复出厂设置?\n大约需要花费两分钟.</string>
+    <string name="camera_settings_reset_to">恢复到 %1$s</string>
+    <string name="camera_settings_factory_settings">出厂设置.</string>
+    <string name="camera_settings_remove_info">确认删除相机 %1$s.</string>
+    <string name="camera_settings_remove_info_confirm">确认移除摄像机 %1$s</string>
+    <string name="camera_settings_no_remove">取消</string>
+    <string name="camera_settings_remove">移除</string>
+    <string name="camera_settings_motion">移动</string>
+    <string name="camera_settings_sound">声音</string>
+    <string name="camera_settings_pir">PIR</string>
+    <string name="camera_settings_unsubcribe_cloud_content">如果您不再需要使用相机，则需要先取消云存储订阅。</string>
+    <string name="camera_setting_third_party_control_title">支持的第三方控制</string>
+    <string name="camera_setting_third_party_control_alexa">Amazon Alexa</string>
+    <string name="camera_setting_third_party_control_assistant">Google Assistant</string>
+
+    <string name="camera_settings_cam_info_model">型号</string>
+    <string name="camera_settings_cam_info_camera_name">名字</string>
+    <string name="camera_settings_cam_info_battery">电池</string>
+    <string name="camera_settings_cam_info_owner">所有者</string>
+    <string name="camera_settings_cam_info_device_id">设备 ID</string>
+    <string name="camera_settings_cam_info_firmware">软件</string>
+    <string name="camera_settings_cam_info_ip">IP地址</string>
+    <string name="camera_settings_cam_info_mac">MAC</string>
+    <string name="camera_settings_cam_info_bluetooth_name">蓝牙名称</string>
+    <string name="camera_settings_cam_info_ssid">相机热点SSID</string>
+    <string name="camera_settings_cam_info_hotspot">热点密码</string>
+    <string name="camera_settings_update">升级</string>
+    <string name="camera_settings_updating">正在升级</string>
+    <string name="camera_settings_downloading">正在下载固件包</string>
+    <string name="camera_settings_downloaded">正在下载固件包</string>
+    <string name="camera_settings_installing">升级中</string>
+    <string name="camera_settings_update_success">升级中</string>
+    <string name="camera_settings_update_fail">设备升级失败</string>
+    <string name="camera_settings_update_finish">升级完成</string>
+    <string name="camera_settings_update_retry">Retry</string>
+    <string name="camera_settings_cam_firmware_update">固件更新说明</string>
+    <string name="camera_settings_cam_firmware_update_info">新版本: %1$s \n%2$s</string>
+    <string name="camera_settings_cam_update_confirm_info">在升级完成之前请不要断电.</string>
+    <string name="camera_settings_cam_update_confirm_reset_info">在升级过程中请勿断电以及删除设备，否则会损坏机器，固件升级持续大约5分钟左右，请耐心等待设备自动连接，谢谢。</string>
+    <string name="camera_settings_updating_tips">设备正在升级，暂时无法使用。</string>
+    <string name="camera_settings_warn_msg_get_sd_fail">无法获取SD卡信息。</string>
+    <string name="camera_setting_warn_msg_set_sleep_success">设置休眠成功.</string>
+    <string name="camera_setting_warn_msg_set_sleep_fail">设置休眠失败.</string>
+    <string name="camera_info_external_power_tip">检测到外部电源</string>
+
+    <!-- DeviceAudioAndVideoActivity -->
+    <string name="audio_and_video_audio_record">录音</string>
+    <string name="audio_and_video_rotate_image">旋转图像</string>
+    <string name="audio_and_video_deskto_widget">Desktop widget</string>
+    <string name="audio_and_video_night_vision">夜视能力</string>
+    <string name="audio_and_video_night_vision_tag">环境光线较暗时，红外灯会亮起以获得更好的夜视效果</string>
+    <string name="audio_and_energy_mode">节能模式</string>
+    <string name="audio_and_energy_mode_tip">开启后，夜视模式下亮起的红外灯，将以一半的亮度工作</string>
+    <string name="audio_and_video_water_mark">水印</string>
+
+    <!-- DetectionSettingActivity -->
+    <string name="detection_setting_title">侦测设置</string>
+
+    <!-- PresetPointActivity -->
+    <string name="preset_point_add_tip">将指定位置设置为经常使用的位置，以便快速定位和查看</string>
+    <string name="preset_point_title">常用位置命名</string>
+    <string name="preset_point_enter_name_hint">输入名字</string>
+    <string name="preset_point_sorting_title">常用位置排序</string>
+    <string name="preset_point_sorting_tip">您最多可以添加3个位置并拖动以进行排序</string>
+    <string name="preset_point_shot_icon_fail">当前画面截图失败，请重试。</string>
+    <string name="preset_point_name_empty">名字不能为空.</string>
+    <string name="preset_point_delete_tip">是否确认删除？</string>
+
+    <!-- AppSettingsActivity -->
+    <string name="app_settings_title">应用设置</string>
+    <string name="app_settings_clear_cache">清除缓存</string>
+    <string name="app_settings_about">关于</string>
+    <string name="app_settings_clear_cache_tip">是否清除缓存?</string>
+    <string name="app_settings_clear">清除</string>
+    <string name="app_settings_manage_account">账号设置</string>
+
+    <!-- AboutActivity -->
+    <string name="about_nooie_home_cam">Osaio</string>
+    <string name="about_version">版本: %1$s</string>
+    <string name="about_select_email_application">Select email application</string>
+    <string name="about_privacy">Osaio\’s %1$s 和 %2$s.</string>
+    <string name="support_email_address">app-support@osaio.net</string>
+    <string name="support_email_address_uuid_repeat">app.ud.support@govicture.com</string>
+
+    <!-- HelpActivity -->
+    <string name="help">帮助</string>
+    <string name="help_user_manual">用户手册</string>
+    <string name="help_faq">FAQ</string>
+    <string name="help_need_other_help">联系我们</string>
+
+    <!-- ManageAccountActivity -->
+    <string name="account_profile_photo">改变头像</string>
+    <string name="account_account">账号</string>
+    <string name="account_change_password">更改密码</string>
+    <string name="account_nick_name">名字</string>
+    <string name="account_qr_code">二维码</string>
+    <string name="account_logout_confirm">你将退出登录</string>
+    <string name="account_old_password">旧密码</string>
+    <string name="account_new_password">新密码</string>
+    <string name="account_confirm_password">确认密码</string>
+    <string name="account_password_info">完成更改密码后，你需要重新登录.</string>
+    <string name="account_change_psd_success">更改密码成功</string>
+    <string name="account_set_portrait">更改头像成功</string>
+    <string name="account_change_nick_name_success">更改昵称成功</string>
+    <string name="account_old_password_incorrect">旧密码错误</string>
+    <string name="account_change_psd_old_new_same">旧密码和新密码一样</string>
+    <string name="account_change_psd_new_confirm_not_same">密码不一致</string>
+    <string name="account_psd_not_less_six">密码不能少于6位.</string>
+    <string name="account_psd_overflow">密码不能多于20位.</string>
+    <string name="account_select_photo">选择图片</string>
+    <string name="account_logout">登出</string>
+    <string name="account_password_limit_num">密码必须为6-20位</string>
+    <string name="account_rename_title">账户设置</string>
+    <string name="account_save_and_sign_in">保存并登录</string>
+
+    <!-- CountryListActivity -->
+    <string name="country_list_title">选择国家</string>
+    <string name="country_list_search">搜索</string>
+
+    <!-- MediaActivity -->
+    <string name="media_tag_label_video">视频</string>
+    <string name="media_tag_label_image">图片</string>
+    <string name="media_select">选择</string>
+    <string name="media_select_all">全选</string>
+    <string name="media_select_title">选择项目</string>
+    <string name="media_select_title_num">已选择 %1$d</string>
+    <string name="media_delete_title">删除图片/视频</string>
+    <string name="media_delete_content">您确定要删除所选的图片/视频吗？</string>
+    <string name="media_delete_photo_title">删除照片</string>
+    <string name="media_delete_photo_content">确认是否删除照片？</string>
+    <string name="media_delete_video_title">删除视频</string>
+    <string name="media_delete_video_content">确认是否删除视频？</string>
+    <string name="media_label_photo">图片</string>
+    <string name="media_label_video">视频</string>
+
+    <!-- system message -->
+    <string name="system_message">系统消息</string>
+    <string name="system_message_device_sharing">分享设备</string>
+    <string name="system_message_share">分享</string>
+
+    <string name="system_message_expired">已过期</string>
+    <string name="system_message_accepted">已接受</string>
+    <string name="system_message_rejected">已拒绝</string>
+    <string name="system_message_canceled">已取消</string>
+    <string name="system_message_invalid">无效的</string>
+
+    <string name="system_message_delete_share">删除我的分享</string>
+    <string name="system_message_pay_subscribe_complete_title">订阅成功</string>
+    <string name="system_message_pay_subscribe_cancel_title">成功取消订阅</string>
+    <string name="system_message_pay_subscribe_arrears_title">过期订阅</string>
+    <string name="system_message_pay_subscribe_charge_title">订阅收费成功</string>
+    <string name="system_message_pay_subscribe_successfully_with_trial">你的设备 %1$s 订阅 %2$s 成功. 谢谢你的订阅.试用期 %3$d%4$s, 下个月的 %5$snd会自动充值.</string>
+    <string name="system_message_pay_subscribe_successfully_without_trial">你的设备 %1$s 订阅 %2$s 成功. 谢谢你的订阅, 下个月的 %3$snd会自动充值.</string>
+    <string name="system_message_pay_subscribe_cancel_successfully">设备 %1$s 的订阅计划 %2$s 取消成功.</string>
+    <string name="system_message_pay_subscribe_arrears">设备 %1$s 的订阅计划 %2$s 已经过期. 请检查你的支付方式是否正确. 我们会在24小时后扣费.</string>
+    <string name="system_message_pay_nooie_subscribe_successfully_with_trial">您已成功为您的设备%1$s订阅了云套餐%3$s。您的订单号是%2$s。</string>
+    <string name="system_message_pay_nooie_subscribe_subscribe_with_trial">您的设备%1$s订阅已续费.</string>
+    <string name="system_message_pay_nooie_subscribe_cancel_with_trial">您的设备%1$s订阅已取消.</string>
+    <string name="system_message_pay_nooie_subscribe_expired_with_trial">您的设备%1$s订阅已到期.</string>
+
+    <string name="system_message_device_bound_by_other">相机 %1$s 已被网关 %2$s 绑定</string>
+    <string name="system_message_free_trial_storage">恭喜，您已激活免费云计划，该免费云计划将在%1$s中结束。</string>
+
+    <string name="system_message_to_me">给我</string>
+    <string name="system_message_shared">已分享</string>
+    <string name="system_message_i_agree">同意</string>
+    <string name="system_message_i_reject">反对</string>
+
+    <string name="system_message_cancel_share">取消分享</string>
+    <string name="system_message_agree_share">同意分享</string>
+    <string name="system_message_reject_share">拒绝分享</string>
+    <string name="system_message_pay_subscribe_charge_successfully">尊敬的用户, 您好！您订阅云服务 %1$s (设备%2$s)成功, 每月%3$s日为扣款日, 您可在任意时间内取消.</string>
+
+    <string name="system_message_feedback_wait">已收到，会尽快回复。</string>
+    <string name="system_message_feedback_finish">我们感谢您的时间和意见。 如有任何问题或意见，请随时与我们联系。</string>
+    <string name="system_message_other_place_login">有手机刚刚登录到该帐户。 如果这不是您的操作，我们建议您立即修改登录密码以保护您的帐户。</string>
+
+    <!--Warn Message-->
+    <string name="warn_message_motion">移动侦测</string>
+    <string name="warn_message_motion_sub">设备 %1$s 移动侦测</string>
+    <string name="warn_message_sound">声音告警</string>
+    <string name="warn_message_sound_sub">设备 %1$s 声音侦测</string>
+    <string name="warn_message_pir">人体侦测</string>
+    <string name="warn_message_pir_sub">设备 %1$s 人体侦测</string>
+    <string name="warn_message_sd_leak">SD卡内存不足</string>
+    <string name="warn_message_sd_leak_sub">设备%1$s的SD卡内存不足</string>
+    <string name="warn_message_other">其它</string>
+    <string name="warn_message_online">设备在线</string>
+    <string name="warn_message_offline">设备离线</string>
+
+    <!-- nooie push msg -->
+    <string name="nooie_push_msg_detect_of_motion">Device %1$s Motion Detected</string>
+    <string name="nooie_push_msg_detect_of_sound">Device %1$s Voice Detected</string>
+    <string name="nooie_push_msg_detect_of_pir">Device %1$s PIR Detected</string>
+    <string name="nooie_push_msg_normal_content">Osaio Message</string>
+    <string name="push_msg_device_bound_by_other">相机 %1$s 已经被绑定.</string>
+
+    <!-- CloudMoreActivity -->
+    <string name="cloud_more_content">
+        您可以使用Osaio App轻松向朋友和家人共享设备的查看权限。 这将使他们能够通过您的相机查看； 但是，他们将无法控制您的设备。 请按照以下说明共享设备:
+        \n-如果被邀请者没有Osaio帐户，请下载Osaio App并先注册一个帐户。
+        \n-选择要共享的摄像机并进入"摄像机设置"
+        \n-在"摄像机设置"下，选择"摄像机共享"
+        \n-在 您要与之共享访问权限的人的帐户电子邮件地址，然后点击"发送邀请".
+        \n-Osaio将通过应用将此邀请发送给对方。
+    </string>
+
+    <!-- AddBluetoothDeviceActivity -->
+    <string name="add_bluetooth_device_title">Add Bluetooth device</string>
+    <string name="add_bluetooth_device_scan_empty">No device found</string>
+    <string name="add_bluetooth_device_searching_tip">Scan in nearby devices...</string>
+    <string name="scan_device_item_rssi_label">RSSI:%1$d</string>
+    <string name="add_bluetooth_device_exist">Device added</string>
+    <string name="add_bluetooth_device_add_fail">Adding device failed</string>
+    <string name="add_bluetooth_device_check_bluetooth_title">Turn on Bluetooth</string>
+    <string name="add_bluetooth_device_check_bluetooth_content">Smart door lock needs to open Bluetooth connection.</string>
+    <string name="add_bluetooth_device_check_location_enable">Turn on "Location Services" to allow "Osaio" to use location services so that they can obtain bluetooth.</string>
+    <string name="add_bluetooth_device_bluetooth_invalid_tip">Please confirm whether the mobile phone has been given the Bluetooth function, positioning function and location permission function required by the application to connect to the Bluetooth device.</string>
+
+    <!-- AddAuthorizationActivity -->
+    <string name="add_authorization_title">Enter authorization code</string>
+    <string name="add_authorization_goto_admin">I am the administrator</string>
+
+    <!-- AddAdminActivity -->
+    <string name="add_admin_title">Add Administrator</string>
+
+    <!-- LookDeviceActivity -->
+    <string name="look_device_title">Smart Lock</string>
+    <string name="look_device_password_label">Password</string>
+    <string name="look_device_recording_label">Recording</string>
+    <string name="look_device_authorization_label">Authorization</string>
+    <string name="look_device_rename_label">Rename</string>
+    <string name="look_device_user_label">User</string>
+    <string name="look_device_bluetooth_label">Bluetooth</string>
+    <string name="look_device_rename_to_long">Custom name is too long</string>
+
+    <!-- LockRecordActivity -->
+    <string name="lock_record_title">Unlock record</string>
+    <string name="lock_record_name_user_open">Internal unlock</string>
+    <string name="lock_record_name_finger_open">Fingerprint unlock</string>
+    <string name="lock_record_name_psw_open">Password open</string>
+    <string name="lock_record_name_app_open">App open</string>
+    <string name="lock_record_name_remote_open">Remote open</string>
+
+    <!-- LockAuthorizationActivity -->
+    <string name="lock_authorization_title">Authorization</string>
+    <string name="lock_authorization_no_name">No name</string>
+    <string name="lock_authorization_delete_tip">Are you sure you want to delete the authorization code?</string>
+
+    <!-- LockAccountActivity -->
+    <string name="lock_account_title">Account management</string>
+    <string name="lock_account_item_device_name">Lock name :</string>
+    <string name="lock_account_item_device_phone">Phone account :</string>
+    <string name="lock_account_item_device_password">Password :</string>
+    <string name="lock_account_delete_tip">Are you sure you want to delete the account code?</string>
+
+    <!-- AddLpSuitActivity -->
+    <string name="add_lp_suit_gateway_title">添加新的基站</string>
+    <string name="add_lp_suit_gateway_desc">一个基站最多可以配套4个相机</string>
+    <string name="add_lp_suit_lp_camera_title">添加相机</string>
+    <string name="add_lp_suit_lp_camera_desc">将相机添加到已存在的基站下。</string>
+    <string name="add_lp_suit_pro_lp_camera_title">相机单独使用</string>
+    <string name="add_lp_suit_pro_lp_camera_desc">将相机直接连接路由器，无需基站。</string>
+    <string name="add_lp_suit_pro_lp_hub_camera_title">相机+基站套</string>
+    <string name="add_lp_suit_pro_lp_hub_camera_desc">将相机添加到基站上进行使用。</string>
+
+    <!-- AddLowPowerIpcActivity -->
+    <string name="add_low_power_ipc_title">添加设备</string>
+    <string name="add_low_power_ipic_right_btn">添加\n相机</string>
+    <string name="add_low_power_ipc_guide_tip">1.给网关接通电源，网关蓝灯亮起 \n2.用网线连接网关和路由器</string>
+    <string name="add_low_power_ipc_link_page_title">提示:如果已经添加了网关，直接添加相机</string>
+
+    <!-- AddGatewayActivity -->
+    <string name="add_gateway_title">添加网关</string>
+    <string name="add_gateway_scan_and_add_btn">扫码添加</string>
+
+    <!-- DeviceScanCodeActivity -->
+    <string name="device_scan_code_guide_tip">请扫描网关底部的二维码添加网关</string>
+    <string name="device_scan_code_switch_phone_light_tip">不能看清？</string>
+    <string name="device_scan_code_switch_phone_light_on">请打开手电筒</string>
+    <string name="device_scan_code_switch_phone_light_off">请关闭手电筒</string>
+    <string name="device_scan_code_add_gateway_failed_title">添加网关失败</string>
+    <string name="device_scan_code_add_gateway_failed">你已经添加了网关，不需要再添加了</string>
+    <string name="device_scan_code_add_gateway_again">您已经无法添加网关，需要重新添加</string>
+    <string name="device_scan_code_add_gateway_other_title">网关已被绑定</string>
+    <string name="device_scan_code_add_gateway_other">网关已绑定，请重置后再绑定</string>
+
+    <!-- AddGatewayCompleteActivity -->
+    <string name="add_gateway_complete_success">网关添加成功，请添加摄像头</string>
+
+    <!-- AddLpCameraActivity -->
+    <string name="add_lp_camera_title">添加摄像机</string>
+    <string name="add_lp_camera_guide_tip">按住电源键，引导蓝灯闪烁，松开</string>
+    <string name="add_lp_camera_guide_tip_ec810_pro">长按相机的电源按钮，直到红色闪烁后松手</string>
+    <string name="add_lp_camera_incorrect_light">指示灯不正确？</string>
+    <string name="add_lp_camera_guide_tip_no_hub">您的相机需要与基站一起使用，请首先添加基站。</string>
+
+    <!-- LpCameraIncorrectLight -->
+    <string name="lp_camera_incorrect_light_title">指示灯不正确</string>
+    <string name="lp_camera_incorrect_light_guide_tip_1">1.如果相机指示灯不亮，请给相机充电直到指示灯亮起</string>
+    <string name="lp_camera_incorrect_light_guide_tip_2">2.如果相机指示灯不是蓝灯闪烁，请长按相机的电源键约10秒，以重置相机</string>
+    <string name="lp_camera_incorrect_light_guide_tip_2_ec810_pro">2.如果相机指示灯不是红灯闪烁，请长按相机的电源键约10秒，以重置相机</string>
+    <string name="lp_camera_incorrect_light_reset_successfully">重置成功</string>
+    <string name="pro_lp_camera_incorrect_light_guide_tip">如果指示灯不是红灯闪烁的状态，请重置设备。</string>
+
+    <!-- MatchLpCameraActivity -->
+    <string name="match_lp_camera_guide_tip">1. 按下网关按钮2秒，基站指示灯会变成蓝色闪烁\n\n2.网关和相机指示灯同时变绿，匹配成功</string>
+    <string name="match_lp_camera_match_failed_link">2.网关和相机指示灯同时变绿，匹配成功</string>
+    <string name="match_lp_camera_start_using">开始使用</string>
+    <string name="match_lp_camera_unsuccessful_macth">匹配不成功？</string>
+    <string name="match_lp_camera_pared_title">相机已被绑定</string>
+    <string name="match_lp_camera_pared_content">相机已被绑定，请重置后再配对</string>
+    <string name="match_lp_camera_pared_failed">配对失败，请重试</string>
+
+    <!-- MatchLpCameraFailActivity -->
+    <string name="match_lp_camera_fail_title">配对失败</string>
+    <string name="match_lp_camera_fail_guide_tip">
+        1.检查你的网关网络，确保能连接到网络。\n\n
+        2.确保设备的通信环境良好。相机应尽可能靠近网关，中间不得有金属或强电磁干扰。
+    </string>
+    <string name="match_camera_help_ap_guide_title">问：什么是连接模式？</string>
+    <string name="match_camera_help_ap_guide_tip">
+        答：该相机共有两种连接模式。\n\n
+        1.远程访问模式。将相机连接到路由器，以便手机可以远程访问相机。\n\n
+        2.热点访问模式。手机连接相机热点以访问相机，适合无网环境下使用。
+    </string>
+
+    <!-- GatewaySettingsActivity -->
+    <string name="gateway_settings_title">网关设置</string>
+
+    <!-- GatewayInfoActivity -->
+    <string name="gateway_info_device_id">网关ID</string>
+    <string name="gateway_info_device_status">网络状态</string>
+    <string name="gateway_info_device_mac">MAC地址</string>
+    <string name="gateway_info_clear_up_space">清理空间</string>
+    <string name="gateway_info_upgrade">固件更新</string>
+    <string name="gateway_info_use_space">已使用%1$s</string>
+    <string name="gateway_info_is_newest_version">当前网关是最新版本</string>
+    <string name="gateway_info_restart">重启</string>
+    <string name="gateway_info_unbind">解绑</string>
+    <string name="gateway_info_confirm_clear_up_space">确认清除所有视频?</string>
+    <string name="gateway_info_restart_title">重启网关</string>
+    <string name="gateway_info_restart_content_1">确认重启网关？</string>
+    <string name="gateway_info_restart_content_2">网关已经确认重启。这个过程需要2-3分钟。重启完成后，请重新打开APP。</string>
+    <string name="gateway_info_unbind_content">解绑后，您将无法查看绑定到网关的相机视频。确认解绑吗?</string>
+    <string name="gateway_info_offline_tip">网关已离线</string>
+    <string name="gateway_info_lastest_version_tip">当前网关是最新版本</string>
+
+    <!-- GatewayFirmwareActivity -->
+    <string name="gateway_firmware_title">升级中</string>
+    <string name="gateway_firmware_current_version_label">当前版本:</string>
+    <string name="gateway_firmware_new_version_label">最新版本:</string>
+    <string name="gateway_firmware_download_upgrade">下载升级</string>
+    <string name="gateway_firmware_confirm_upgrade_title">更新内容</string>
+    <string name="gateway_firmware_confirm_upgrade_content">确认重新启动网关?</string>
+
+    <!-- GatewayUpgradeActivity -->
+    <string name="gateway_upgrade_upgrading_tip">升级中...</string>
+    <string name="gateway_upgrade_failed_tip">请检查网关连接是否正确。</string>
+
+    <!-- DeivePIRActivity -->
+    <string name="device_pir_tip">打开PIR检测接收报警，越灵敏，越容易触发报警。</string>
+
+    <!-- ConnectionModeActivity -->
+    <string name="connection_mode_title">连接方式</string>
+    <string name="connection_mode_tip_1">我们提供以下%1$d种连接设备的方式。可选择适合您的连接方式。</string>
+    <string name="connection_mode_tip_lan">它从路由器到您要安装相机的位置有多远？ 选择一种方案以使用推荐的方法设置设备。</string>
+    <string name="connection_mode_hot_spot_title">热点</string>
+    <string name="connection_mode_hot_spot_content">使用手机连接到设备的热点以进行快速连接。</string>
+    <string name="connection_mode_qc_title">二维码（推荐）</string>
+    <string name="connection_mode_qc_content">使用设备扫描手机上的二维码，网络很简单。</string>
+    <string name="connection_mode_dc_title">DV</string>
+    <string name="connection_mode_dc_content">使用手机直连能够快速查看直播预览</string>
+    <string name="connection_mode_lan_title">有线连接</string>
+    <string name="connection_mode_lan_content">如果您的相机将安装在路由器附近</string>
+    <string name="connection_mode_wireless_title">无线连接</string>
+    <string name="connection_mode_wireless_content">如果您的相机将安装在距离路由器较远的位置</string>
+    <string name="connection_mode_qc_title_hc_320">远程访问模式</string>
+    <string name="connection_mode_qc_content_hc_320">将相机连接到路由器，以便手机可以远程访问相机。</string>
+    <string name="connection_mode_dc_title_hc_320">热点访问模式</string>
+    <string name="connection_mode_dc_content_hc_320">手机连接相机发射的热点以访问相机，适合无网环境下使用。</string>
+
+    <!-- ConnectionToWiFiActivity -->
+    <string name="connection_to_wifi_tip">1.在手机的设置中连接到设备的热点。\n2. 返回app并继续配对。</string>
+    <string name="connection_to_wifi_no_perm_for_ssid">打开位置权限，APP将自动获取您的Wi-Fi。</string>
+    <string name="connection_to_wifi_find_no_ap">请再次尝试连接设备热点</string>
+
+    <!-- ScanActivity -->
+    <string name="scan_device_init_network">1.正在初始化网络信息</string>
+    <string name="scan_device_init_network_success">1.成功初始化网络信息</string>
+    <string name="scan_device_init_network_fail">1.初始化网络信息失败</string>
+    <string name="scan_device_network_connect">2.正在连接网络</string>
+    <string name="scan_device_network_connect_sucess">2.成功连接网络</string>
+    <string name="scan_device_network_connect_fail">2.连接网络失败</string>
+    <string name="scan_device_service_connect">3.正在连接云服务器</string>
+    <string name="scan_device_service_connect_sucess">3.成功连接云服务器</string>
+    <string name="scan_device_service_connect_fail">3.连接云服务器失败</string>
+    <string name="scan_device_fail_help_ap_title_1">1. 网络初始化失败，如何解决</string>
+    <string name="scan_device_fail_help_ap_content_1">1. 确保您的手机成功连接了相机的热点SecurityCam_XXXX。 请转到手机的wifi设置进行检查。.</string>
+    <string name="scan_device_fail_help_ap_title_2">2. 无法连接互联网，如何解决</string>
+    <string name="scan_device_fail_help_ap_content_2">
+        1.检查您输入的路由器密码是否正确。检查Wi-Fi帐户或密码前后的空格或区分大小写的问题。\n
+        2.请保持您的设备和路由器尽可能靠近。\n
+        3.确保已为Wi-Fi启用广播并且未隐藏广播。确保已在2.4 GHz的Wi-Fi频段上添加设备。 （检查2.4 GHz频段和5 GHz频段是否共享相同的Wi-Fi帐户。如果是，我们建议您配置两个帐户并在网络连接期间切换到2.4 GHz频段。）\n
+        4.确保路由器的无线设置的加密方法和身份验证类型分别设置为WPA2-PSK和AES，或者两者都设置为“自动”。确保无线模式不仅设置为11n。\n
+        5.如果为路由器启用了无线MAC地址过滤功能，请从路由器的MAC地址过滤列表中删除您的设备，以确保允许其连接到网络。您也可以禁用MAC地址过滤。\n
+        6.确保为路由器启用了DHCP服务。否则，该IP地址将被占用。\n
+        7.您的路由器可能已达到允许的最大同时连接数：请尝试断开网络上的其他设备，然后再尝试连接Osaio设备\n
+        8.不支持wifi需要注册。如机场Wif，需要验证的公共wifi是不支持的
+    </string>
+    <string name="scan_device_fail_help_ap_title_3">3. 无法连接到云，如何解决 </string>
+    <string name="scan_device_fail_help_ap_content_3">1. 确保您的路由器网络正常。 您是否可以使用手机连接到同一路由器，并尝试访问www.google.com？</string>
+
+    <!-- ScanCodeActivity -->
+    <string name="scan_code_title">扫码</string>
+    <string name="scan_code_guide_tip">扫描位于相机背面的QR码或手动输入ID码。</string>
+    <string name="scan_code_goto_enter_device_id">我想手动输入代码</string>
+    <string name="scan_code_add_gateway_failed_title">添加设备失败</string>
+    <string name="scan_code_add_gateway_again">您已经无法添加设备，需要重新添加</string>
+    <string name="scan_code_add_gateway_other_title">设备已被绑定</string>
+    <string name="scan_code_add_gateway_other">设备已绑定，请重置后再绑定</string>
+    <string name="device_id_invalid_tip">设备ID不存在</string>
+
+    <!-- RouterSettingActivity -->
+    <string name="router_setting_title">Router setting method</string>
+    <string name="router_setting_tip">
+        If your router supports both the 2.4 GHz and 5 GHz bands, but only one Wi-Fi name is displayed on the Wi-Fi search page of your mobile phone, perform these steps:\n\n
+        Go to the Wireless page of the router. (The entry address is usually provided on the label attached to the back of the router).\n
+        Go to the 2.4 GHz setting page, and set the Wi-Fi name (SSID) to xxx-2.4G, where xxx indicates the Wi-Fi name. Save setting.\n
+        Go to the 5 GHz setting page, and set the Wi-Fi name (SSID) to xxx-5G, where xxx indicates the Wi-Fi name. Save setting.\n
+        When the preceding settings are complete, the new Wi-Fi names will appear on the Wi-Fi settings page of your mobile phone.\n
+        Note: After the Wi-Fi names are changed, you need to reconnect the devices that use this wireless router. The password remains the same if it has not been changed.\n\n
+        The following files describe how to configure the routers of some popular brands.
+    </string>
+    <string name="router_setting_netgear">Configure a Netgear router</string>
+    <string name="router_setting_asus">Configure an ASUS router</string>
+    <string name="router_setting_d_link">Configure a D-Link router</string>
+    <string name="router_setting_tp_link">Configure a TP-Link router</string>
+
+    <!-- RouterConfigureActivity -->
+    <string name="router_configure_step_net_gear_1">1. On the BASIC tab page, click Wireless .</string>
+    <string name="router_configure_step_net_gear_2">2. In the Wireless Network (2.4GHz b/g/n) area, set Name (SSID) to  xxx-2.4G , where xxx indicates the Wi-Fi name. Saving setting.</string>
+    <string name="router_configure_step_net_gear_3">3. In the Wireless Network (5GHz a/n/ac) area, set Name (SSID) to xxx-5G , where xxx indicates the Wi-Fi name. Saving setting.</string>
+
+    <string name="router_configure_step_asus_1">1. In the Advanced Settings area, click Wireless .</string>
+    <string name="router_configure_step_asus_2">2. On the General tab page, check whether Enable Smart Connect is On . If Smart Connect is enabled, disable it to separate the SSIDs for the 2.4 GHz and 5 GHz bands.</string>
+    <string name="router_configure_step_asus_3">3. In the Band drop-down list, select 2.4GHz and then set Network Name (SSID) to xxx-2.4G , where xxx indicates the Wi-Fi name. Save the setting.</string>
+    <string name="router_configure_step_asus_4">4. In the Band drop-down list, select 5GHz and then set Network Name (SSID) to xxx-5G . Save the setting.</string>
+
+    <string name="router_configure_step_d_link_1">1、On the D-Link home page, click the Settings tab and select Wireless.</string>
+    <string name="router_configure_step_d_link_2">2、In the 2.4GHz area, set Wi-Fi Name (SSID) to xxx-2.4G; and in the 5GHz area, set Wi-Fi Name (SSID) to xxx-5G, where xxx indicates the Wi-Fi name.</string>
+    <string name="router_configure_step_d_link_3">3、The last step is to Save the settings。</string>
+
+    <string name="router_configure_top_tip_tp_link_1">By default, the TP-Link router Wi-Fi names (SSID) for the 2.4 GHz and 5 GHz bands are the same. To distinguish the SSIDs for the two bands, follow these steps:</string>
+    <string name="router_configure_step_tp_link_1">1. In the lower-right corner of the page, click Setting .</string>
+    <string name="router_configure_step_tp_link_2">2. Click Wireless .</string>
+    <string name="router_configure_step_tp_link_3">3. In the 2.4G Wireless area, set SSID to （XXX）-2.4G , where xxx indicates the Wi-Fi name. Saving setting.</string>
+    <string name="router_configure_step_tp_link_4">4. In the 5G Wireless area, set SSID to （XXX）-5G , where xxx indicates the Wi-Fi name. Saving setting.</string>
+    <string name="router_configure_bottom_tip_tp_link_1">When the preceding settings are complete, the new Wi-Fi names will appear on the Wi-Fi settings page of your mobile phone.</string>
+    <string name="router_configure_bottom_tip_tp_link_2">Note: After the Wi-Fi names are changed, you need to reconnect the devices that use this wireless router. The password remains the same if it has not been changed.</string>
+
+    <!-- InputDeviceIdActivity -->
+    <string name="input_device_id_title">手动输入</string>
+    <string name="input_device_id_max_len_tip">设备ID不能超过32位</string>
+
+    <!-- SwitchConnectionModeActivity -->
+    <string name="switch_connection_mode_title">切换连接模式</string>
+    <string name="switch_connection_mode_tip_1">切换连接模式，您需要长按相机的重置按键，然后再次添加相机以连接。</string>
+    <string name="switch_connection_mode_tip_1_hc_320">
+        当前的连接模式是%1$s.\n\n
+        如果您想切换成工作模式， 可以通过重置相机，约等待20s，直到指示灯红色闪烁，再点击下一步。
+    </string>
+    <string name="switch_connection_mode_tip_2">如图所示，长按重置孔5秒后，相机将重置.</string>
+    <string name="switch_connection_mode_found_ap_direct_connection">已成功连接相机的WIFI，是否立即访问相机？</string>
+    <string name="switch_connection_mode_ap_direct_connection_error">手机热点连接异常，请检查并尝试重新连接热点。</string>
+    <string name="switch_connection_mode_confirm_btn">相机已重置且红灯闪烁</string>
+
+    <!-- DeviceScanFailActivity -->
+    <string name="device_scan_fail_title">连接异常</string>
+    <string name="device_scan_fail_tip">
+        1.请等待10分钟后，重新添加相机进行网络配置。\n
+        %1$s\n\n
+        2.如果上述操作尝试无效，请附上此页面截图，联系技术支持 %2$s，可以协助您解决问题。
+    </string>
+    <string name="device_scan_fail_confirm_btn">返回首页</string>
+
+    <!-- ConnectBluetoothActivity -->
+    <string name="connect_bluetooth_title">连接相机蓝牙</string>
+    <string name="connect_bluetooth_tip_1">1. Please make sure the camera is powered on</string>
+    <string name="connect_bluetooth_tip_2">2. Search and connect the camera\'s Bluetooth</string>
+    <string name="connect_bluetooth_confirm_connect">Connect</string>
+
+    <!-- BluetoothScanActivity -->
+    <string name="bluetooth_scan_title">连接相机蓝牙</string>
+    <string name="bluetooth_scan_state_waiting">等待连接相机蓝牙...</string>
+    <string name="bluetooth_scan_state_scanning">正在扫描相机蓝牙...</string>
+    <string name="bluetooth_scan_state_result">可连接的相机</string>
+    <string name="bluetooth_scan_perm_reject_declare_title">蓝牙连接失败</string>
+    <string name="bluetooth_scan_perm_reject_declare_content">
+        Osaio通过蓝牙连接相机\n\n
+        · 搜索相机蓝牙需要您允许地理位置权限和打开蓝牙开关。仅用于相机连接。\n\n
+        · 请再次连接并同意权限申请。
+    </string>
+    <string name="bluetooth_scan_perm_reject_declare_reconnect">再次连接</string>
+    <string name="bluetooth_scan_item_connect_btn">连接</string>
+    <string name="bluetooth_scan_location_request_title">请开启定位服务</string>
+    <string name="bluetooth_scan_location_request_content">Osaio仅用于搜索附近相机</string>
+    <string name="bluetooth_scan_location_request_allow">去开启</string>
+    <string name="bluetooth_scan_request_location_perm_title">权限申请</string>
+    <string name="bluetooth_scan_request_location_perm_content">Osaio将申请地理位置权限，以及打开蓝牙，仅用于搜索附近相机</string>
+    <string name="bluetooth_scan_no_found_title">未发现相机蓝牙</string>
+    <string name="bluetooth_scan_no_found_content">
+        1.请确保相机已开机，可通过重启相机并观察指示灯是否亮起。\n\n\
+        2.如果相机已开机而APP无法搜索到蓝牙，请重置相机，等待约20s直到指示灯红灯闪烁，重试搜索。
+    </string>
+    <string name="bluetooth_scan_no_found_research">再次搜索</string>
+    <string name="bluetooth_scan_operation_tip_fail">蓝牙连接失败，请重试</string>
+    <string name="bluetooth_scan_operation_tip_success">蓝牙连接成功</string>
+    <string name="bluetooth_scan_operation_tip_setting_fail">操作失败，请重试</string>
+    <string name="bluetooth_scan_operation_tip_unbind">相机可能处于其它连接模式或者已被绑定，请重置相机</string>
+    <string name="bluetooth_scan_operation_tip_unbind_confirm">I got it</string>
+    <string name="bluetooth_scan_operation_tip_disconnect_title">蓝牙已断开</string>
+    <string name="bluetooth_scan_operation_tip_disconnect_content">您与设备的蓝牙已断开，请重新搜索并连接设备蓝牙</string>
+    <string name="bluetooth_scan_operation_tip_disconnect_confirm">重新连接</string>
+    <string name="bluetooth_scan_operation_tip_bound">相机已被绑定，请重置相机</string>
+    <string name="bluetooth_scan_operation_tip_bound_by_self">The camera is already bound.</string>
+
+    <!-- ModifyCameraPasswordActivity -->
+    <string name="modify_camera_password_title">修改热点密码</string>
+    <string name="modify_camera_password_tip">连接上相机热点即可访问相机。\n如果修改，请保存好新密码，以防丢失。</string>
+    <string name="modify_camera_password_ssid">SSID: %1$s</string>
+    <string name="modify_camera_password_defaut_pw">默认密码: %1$s</string>
+    <string name="modify_camera_password_confirm_change">Confirm the changes</string>
+    <string name="modify_camera_password_invalid">热点的密码长度为 8-16 个英文字符、符号或数字</string>
+    <string name="modify_camera_password_different">新密码与确认密码不一致，请校对</string>
+    <string name="modify_camera_skip">跳过</string>
+
+    <!-- ConnectApDeviceActivity -->
+    <string name="connect_ap_device_forgot_pw">忘记密码？</string>
+    <string name="connect_ap_device_forgot_pw_title">忘记密码</string>
+    <string name="connect_ap_device_forgot_pw_message">如果您已忘记了相机热点的密码，可以通过重置相机后返回首页，重新连接。</string>
+    <!-- FlashLightActivity -->
+    <string name="flash_light_tip">触发报警时，白光灯的工作方式</string>
+    <string name="flash_light_full_color_night_vision_title">全彩模式</string>
+    <string name="flash_light_full_color_night_vision_tag">夜视状态下白光灯亮起，用于补光</string>
+    <string name="flash_light_flash_warning_title">报警模式</string>
+    <string name="flash_light_flash_warning_tag">夜视状态下触发报警时，白光灯亮起</string>
+    <string name="flash_light_close_title">黑白夜视模式</string>
+    <string name="flash_light_close_tag">夜视状态下不开启白光灯，使用红外灯拍摄</string>
+
+    <!-- FileSettingActivity -->
+    <string name="file_setting_title">文件设置</string>
+    <string name="file_setting_mode">模式</string>
+    <string name="file_setting_snap_number">图片抓拍张数</string>
+    <string name="file_setting_record_time">录制时长</string>
+
+    <!-- FileSettingConfigureActivity -->
+    <string name="file_setting_configure_mode_tip_1">The current networking mode is WAN mode, and it does not currently support viewing pictures on the APP, you can view it by removing the SD card from the camera</string>
+    <string name="file_setting_configure_mode_tip">设置相机记录事件的文件形式</string>
+    <string name="file_setting_configure_snap_number_tip">相机每次抓拍时连续抓拍的图片张数</string>
+    <string name="file_setting_configure_record_time_tip">设置每次录制视频的时长</string>
+
+    <!-- PhotoMediaActivity -->
+    <string name="photo_media_empty">未发现相机抓拍图片</string>
+    <string name="photo_media_loading">加载中...</string>
+    <string name="photo_media_no_sd">未接入相机SD卡</string>
+    <string name="photo_media_retry">加载失败，点击重试</string>
+    <string name="photo_media_save_photo_success">保存到手机本地成功</string>
+
+    <!-- OtaUpdateTipActivity -->
+    <string name="ota_update_tip_title">升级指引</string>
+    <string name="ota_update_tip_guide_title">1.切换连接模式</string>
+    <string name="ota_update_tip_guide_tip">请连接相机，进入“设置页>切换连接模式”，将其切换成“远程访问模式”。相机需要访问网络，才能下载固件进行升级。\n如果您没有路由器，也可以使用手机发起热点，供相机连接。</string>
+    <string name="ota_update_tip_guide_title_1">2.再次连接相机，在提示下开始升级</string>
+    <string name="ota_update_tip_guide_tip_1">切换连接模式后，可能需要您重启APP，进入相机的直播页，则可以在提示下开始固件升级。</string>
+
+    <!-- ChangeDevicePasswordActivity -->
+    <string name="change_device_password_old_password_error">旧密码错误，请重新输入</string>
+    <string name="change_device_password_reconnect_device_title">修改成功</string>
+    <string name="change_device_password_reconnect_device_content">连接已断开，需要重新连接相机</string>
+    <string name="change_device_password_reconnect_device_confirm_btn">重新连接相机</string>
+
+    <!-- FirstStartInstructionActivity -->
+    <string name="first_start_instruction_title">服务条款与隐私政策说明</string>
+    <string name="first_start_instruction_tip">
+        我们非常重视您的个人信息和隐私保护，为了更好地保障您的个人权益，请在使用我们产品前认真阅读%1$s和%2$s内容，并确保您已超过13周岁。\n\n
+        若选择不同意，将无法使用我们的产品和服务。
+    </string>
+    <string name="first_start_instruction_agree">同意</string>
+    <string name="first_start_instruction_reject">退出</string>
+
+    <!-- StartUpGuideActivity -->
+    <string name="start_up_guide_slogan">多品牌和设备入驻,逐渐升级你的生活</string>
+    <string name="start_up_guide_copy_right">Powered by Osaio</string>
+    <string name="start_up_guide_next">开始体验</string>
+
+    <!-- permission -->
+    <string name="location_request_tip">Location is turned off. Some Android phones require it enabled in order to scan for Bluetooth LE devices.</string>
+    <string name="bluetooth_location_permission_request_tip">Osaio 需要位置权限才能扫描蓝牙设备</string>
+    <string name="bluetooth_request_tip">Osaio wants to turn on Bluetooth</string>
+    <string name="perm_deny_tip_title">Permission denied</string>
+
+    <!-- Dialog -->
+    <string name="dialog_tip_title">提示</string>
+    <string name="dialog_ble_authorization_title">Authorization code :</string>
+    <string name="dialog_ble_authorization_code_hint">Please enter your name</string>
+    <string name="dialog_ble_rename_device_title">Enter the Bluetooth name</string>
+
+    <!-- HybridWebViewActivity -->
+    <string name="hybrid_wx_uninstall_content">未检测到微信客户端，请安装后重试。</string>
+    <string name="hybrid_wx_uninstall_install">立即安装</string>
+
+    <!-- ApiCode -->
+    <string name="api_code_1109">设备已被用户解绑.</string>
+
+
+    <!--Router-->
+    <string name="router_remove_schedule_tip">是否确认删除？</string>
+    <string name="router_time_settings">时间设置</string>
+    <string name="router_save">保存</string>
+    <string name="router_firmware_version">The firmware version of the router is too low. Please upgrade the firmware first.</string>
+    <string name="router_wifi_setting">Wi-Fi设置</string>
+    <string name="router_wifi_connect_fail">连接失败</string>
+    <string name="router_wifi_connect_fail_msg">APP未连接路由器的Wi-Fi，无法访问路由器，请连接路由器Wi-Fi</string>
+    <string name="router_use_password_of_2">使用2.4G频段Wi-Fi密码</string>
+    <string name="router_2g_wifi">2.4G WiFi</string>
+    <string name="router_5g_wifi">5G WiFi</string>
+    <string name="router_hidden_ssid">隐藏SSID</string>
+    <string name="router_input_error">Input error</string>
+    <string name="router_wifi_password">Wi-Fi密码</string>
+    <string name="router_support_wpa3_encryption">支持WPA3加密</string>
+    <string name="router_smart_intergrated_ssid">智能合成Wi-Fi名称</string>
+    <string name="router_smart_intergrated_ssid_tip">2.4G频段Wi-Fi和5G频段Wi-Fi都使用了同样的Wi-Fi名称</string>
+    <string name="router_admin_password_tip">路由器管理员密码使用2.4G Wi-Fi密码</string>
+    <string name="router_wifi_name_ssid">Wi-Fi网络名称</string>
+    <string name="router_wifi_name">Wi-Fi网络名称</string>
+    <string name="router_s_admin_password">路由器管理员密码</string>
+    <string name="router_share_wifi_with_qr_code">二维码分享Wi-Fi</string>
+    <string name="router_network_exception">网络连接异常</string>
+    <string name="router_user_name">用户名</string>
+    <string name="router_password">密码</string>
+    <string name="router_device_name">路由器名称</string>
+    <string name="router_i_got_it">我知道了</string>
+    <string name="router_not_connect">APP未连接路由器的Wi-Fi，无法访问路由器，请连接路由器Wi-Fi</string>
+    <string name="router_forget_password">忘记密码</string>
+    <string name="router_how_to_reset">如何重置</string>
+    <string name="router_connected_fail">连接失败</string>
+
+    <string name="router_exit">退出</string>
+    <string name="router_retry">重试</string>
+    <string name="router_update">升级提示</string>
+    <string name="router_remove_device_dialog_info">路由器将从设备列表中删除。删除后您将无法通过APP控制设备。是否继续删除？</string>
+    <string name="router_remove_router">删除设备</string>
+    <string name="router_reboot_dialog_msg">重启路由器大约花费2分钟的时间。重启后您可能需要重新连接路由器。是否确认重启？</string>
+    <string name="router_reboot_dialog_info">重启路由器</string>
+    <string name="router_turn_off_remote_off_dialog_msg">The device has turned off remote access, please connect to the rouThe device has turned off remote access, please connect to</string>
+    <string name="router_connect_router_to_access_dialog_msg">APP未连接路由器的Wi-Fi，无法访问路由器，请连接路由器Wi-Fi</string>
+    <string name="router_firmware_upgrade_dialog_title">升级提示</string>
+    <string name="router_firmware_upgrade_dialog_msg">升级需要几分钟。\n过程中请避免使用路由器。</string>
+    <string name="router_setting_backup_prompt">提示</string>
+    <string name="router_config_success_tip">配置成功。新的SSID和密码大约在1分钟后生效。后续请将手机重新连接路由器Wi-Fi。</string>
+    <string name="router_protected">保护中</string>
+    <string name="router_refuse">拒绝</string>
+    <string name="router_agree">同意访问</string>
+    <string name="router_ago">之前</string>
+
+    <!--ConfigurationRouterActivity-->
+    <string name="router_config_title">设置指引</string>
+    <string name="router_config_static_ip">Static IP</string>
+    <string name="router_config_dhcp">DHCP</string>
+    <string name="router_config_pppoe">PPPoE</string>
+    <string name="router_config_backup_tip">检测到备份的配置信息，是否使用备份配置？</string>
+    <string name="router_config_wan_connect_type">网络连接模式</string>
+    <string name="router_config_2g_wifi_name">2.4G Wi-Fi 名称</string>
+    <string name="router_config_5g_wifi_name">5G Wi-Fi 名称</string>
+    <string name="router_config_backup">使用备份配置</string>
+    <string name="router_config_use_new_config">重新配置</string>
+
+
+    <!--ConnectionDeviceDetailsActivity-->
+    <string name="router_device_detail_name">Device Name</string>
+    <string name="router_device_detail_title">设备详情</string>
+    <string name="router_device_detail_brand">品牌</string>
+    <string name="router_device_detail_ip_address">IP地址</string>
+    <string name="router_device_detail_mac_address">MAC地址</string>
+
+
+    <!--ConnectionRouterActivity-->
+    <string name="router_connect_result_device_title">连接设备</string>
+    <string name="router_connect_result_get_info_fail">获取信息失败，请重试</string>
+    <string name="router_connect_result_no_network">网络未连接，请检查网络</string>
+    <string name="router_connect_result_title">连接成功！</string>
+    <string name="router_connect_result_tip">欢迎使用Osaio路由器</string>
+    <string name="router_connect_result_privacy_and_licnese">我已阅读并同意%1$s和%2$s。</string>
+
+
+    <!--RecoverRouterBackupActivity-->
+    <string name="router_admin_password">路由器管理员密码</string>
+    <string name="router_admin_password_title">路由器管理员密码</string>
+    <string name="router_admin_password_error">%1$s错误</string>
+    <string name="router_admin_forget_password">忘记密码？</string>
+    <string name="router_admin_tips_password">The default password is printed on the router cover.</string>
+    <string name="router_add_parent_control_select_device">选择设备</string>
+    <string name="router_config_dialog_forget_msg">如果您已忘记了密码，可以通过重置设备后返回首页重新添加。默认密码可在设备机身上找到。</string>
+
+    <!--RouterBackupInfoForPhoneActivity-->
+    <string name="router_setting_backup">设置备份</string>
+    <string name="router_setting_backup_local_backup">本地备份</string>
+    <string name="router_setting_backup_msg">将路由器设置备份到手机本地，当再次配置路由器时可以快速复用。</string>
+
+
+    <!--RouterBindToDeviceActivity-->
+    <string name="router_bind_device_title">绑定</string>
+    <string name="router_bind_device_msg">正在绑定设备到账号下</string>
+    <string name="router_firmware_upgrade">固件升级</string>
+    <string name="router_firmware_upgrade_upgrading">固件升级中</string>
+    <string name="router_firmware_upgrade_tip">升级需要几分钟。\n过程中请避免使用路由器。</string>
+    <string name="router_firmware_upgrade_info2">升级过程中请勿断电/重置，否则将损坏设备。</string>
+    <string name="router_firmware_upgrade_dialog_info">固件升级过程中将花费几分钟的时间，中途手机会与路由器断开连接,升级完成后你需要重新连接。\n升级中请勿将路由器断电，避免损坏路由器的固件。</string>
+
+    <!--RouterConnectionWifiActivity-->
+    <string name="router_router_connect">连接路由器Wi-Fi</string>
+    <string name="router_router_connect_wifi_msg">已连接路由器的Wi-Fi，且该路由器已存在于设备列表</string>
+    <string name="router_router_attention">注意：请确保路由器已上电并已经恢复出厂参数。</string>
+    <string name="router_router_go_to_connect">去连接</string>
+    <string name="router_router_can_not_search_wifi">未发现路由器Wi-Fi？</string>
+    <string name="router_router_unconnect_tip_one">1.通过WLAN或Wi-Fi设置，将您的手机连接到路由器的Wi-Fi网络。Osaio路由器的默认SSID采用GNCC-XXXX或GNCC-5G-XXXX的格式。\n2.返回APP继续配置</string>
+    <string name="router_router_connect_to_get_router_info">请重试获取路由器信息。</string>
+    <string name="router_router_get_info_fail">获取失败</string>
+
+
+    <!--RouterDetalisActivity-->
+    <string name="router_detail_router">路由器</string>
+    <string name="router_detail_unit_kbps">kbps</string>
+    <string name="router_detail_unit_mbps">Mbps</string>
+    <string name="router_detail_download_rate">下载速度</string>
+    <string name="router_detail_upload_rate">上传速度</string>
+    <string name="router_detail_connect_device">已连接设备</string>
+    <string name="router_detail_parental_control">父母控制</string>
+    <string name="router_detail_wifi_manager">Wi-Fi管理</string>
+    <string name="router_detail_guest_wifi">访客Wi-Fi</string>
+    <string name="router_detail_net_setting">网络设置</string>
+    <string name="router_detail_time_setting">时间设置</string>
+
+
+    <!--RouterDetalisSetActivity-->
+    <string name="router_detail_setting_title">路由器设置</string>
+    <string name="router_detail_setting_router_name">路由器名称</string>
+    <string name="router_detail_setting_device_information">设备信息</string>
+    <string name="router_detail_setting_led_indicator">路由器指示灯</string>
+    <string name="router_detail_setting_on">ON</string>
+    <string name="router_setting_detail_firmware_version">固件版本</string>
+    <string name="router_detail_setting_reboot_router">重启路由器</string>
+    <string name="router_detail_setting_remove_device">删除设备</string>
+
+
+    <!--RouterDeviceAccessControlActivity-->
+    <string name="router_access_control_setting">路由器设置</string>
+    <string name="router_access_control_safe_level">Safe level:Intermediate</string>
+    <string name="router_access_control_password_mode">密码模式</string>
+    <string name="router_access_control_authorization_mode">授权模式</string>
+    <string name="router_access_control_no_list">列表下无设备</string>
+
+
+    <!--RouterDeviceConnectActivity-->
+    <string name="router_devices_connected">连接设备</string>
+
+
+    <!--RouterDeviceConnectSetActivity-->
+    <string name="router_connect_setting">访问模式：</string>
+    <string name="router_connect_setting_download">下载速度:</string>
+    <string name="router_connect_setting_upload_rate">上传速度:</string>
+    <string name="router_connect_setting_connected">连接:</string>
+    <string name="router_connect_setting_device_name">设备名称</string>
+    <string name="router_connect_setting_intert_access_enable">允许访问网络</string>
+    <string name="router_connect_setting_devices_detail">设备详情</string>
+    <string name="router_connect_setting_parental_control">父母控制</string>
+
+
+    <!--RouterGuestWifiActivity-->
+    <string name="router_guest_wifi_tip_two">访客Wi-Fi可供访客访问互联网，但不能访问您的本地网络设备。</string>
+    <string name="router_guest_wifi_guest_wifi">访客Wi-Fi</string>
+
+
+    <!--RouterInfoActivity-->
+    <string name="router_info_name">路由器名称</string>
+    <string name="router_info_model">设备类型</string>
+    <string name="router_info_mac_address">MAC地址</string>
+    <string name="router_info_device_id">序列号</string>
+    <string name="router_info_public_ip_address">局域网IP地址</string>
+    <string name="router_info_ip_address_alternate">广域网IP地址</string>
+    <string name="router_info_dns_preferred">DNS服务器</string>
+    <string name="router_info_online_duration">在线时长</string>
+    <string name="router_info_remove_device">删除设备</string>
+
+
+    <!--RouterInternetModeSettingActivity-->
+    <string name="router_internet_setting_title">网络设置</string>
+    <string name="router_internet_setting_normal">路由器已能正常上网。如无需切换上网模式可以%1$s</string>
+    <string name="router_internet_setting_jump">跳过</string>
+    <string name="router_internet_setting_error">请注意%1$s的规则是：%2$s</string>
+    <string name="router_internet_setting_ip_error">IP地址</string>
+    <string name="router_internet_setting_subnet_mask_error">子网掩码</string>
+    <string name="router_internet_setting_gateway_error">网关</string>
+    <string name="router_internet_setting_primary_dns_error">首选DNS服务器</string>
+    <string name="router_internet_setting_secondary_dns_error">备用DNS服务器</string>
+    <string name="router_internet_setting_pptip_ip_error">pptp_ip</string>
+    <string name="router_internet_setting_pptp_mask_error">pptp掩码</string>
+    <string name="router_internet_setting_pptp_gateway_error">pptp网关</string>
+    <string name="router_internet_setting_address_mode">地址模式</string>
+    <string name="router_internet_setting_ip_address">IP地址</string>
+    <string name="router_internet_setting_subnet_mask">子网掩码</string>
+    <string name="router_internet_setting_gateway">网关</string>
+    <string name="router_internet_setting_primary_dns">首选DNS服务器</string>
+    <string name="router_internet_setting_secondary_dns">备用DNS服务器</string>
+    <string name="router_internet_setting_server_address">路由器地址</string>
+    <string name="router_internet_setting_auto_detect">自动选择</string>
+    <string name="router_internet_setting_mppe">MPPE</string>
+    <string name="router_internet_setting_mppc">MPPC</string>
+    <string name="router_internet_setting_dhcp">自动IP(DHCP)</string>
+    <string name="router_internet_setting_static_ip">静态IP</string>
+    <string name="router_internet_setting_pppoe">PPPoE</string>
+
+    <!--RouterNotOnlineActivity-->
+    <string name="router_not_network_line_recheck">重新检测</string>
+
+    <!--RouterOfflineHelpActivity-->
+    <string name="router_offline_help">路由器离线帮助</string>
+    <string name="router_offline_msg">如果您的路由器已离线，可尝试以下方法：</string>
+    <string name="router_offline_tip_one">1.确保设备已启动，可通过观察指示灯是否亮起</string>
+    <string name="router_offline_tip_two">2.尝试是否可以连接路由器Wi-Fi，并用PC或手机浏览器登录。</string>
+    <string name="router_offline_tip_three">3.检查连接路由器与光猫/上级路由之间的网线是否连接良好。</string>
+    <string name="router_offline_tip_four">4.将路由器关机重启。</string>
+    <string name="router_offline_tip_five">5.如果问题依然无法解决，请联系您的运营商，也可以联系我们。</string>
+
+
+    <!--RouterParentalControlActivity-->
+    <string name="router_parental_control">父母控制</string>
+    <string name="router_parental_control_delete_device">Once removed，this device will access Internet without protection.Are you sure?</string>
+    <string name="router_parental_control_allow_internet">控制设备的上网时间段</string>
+
+
+    <!--RouterSetWifiManagerActivity-->
+    <string name="router_wifi_management">Wi-Fi管理</string>
+    <string name="router_wifi_management_tip">通过使用手机上的二维码扫描器扫描此二维码，即可加入访客 Wi-Fi网络。</string>
+    <string name="router_wifi_management_help_android_tip_one">如果您使用的是Android手机，请使用手机浏览器或手机的QR码阅读器扫描QR码。但有些手机或浏览器的QR阅读器只显示二维码的内容，而不是自动连接到Wi-Fi。</string>
+    <string name="router_wifi_management_help_android_tip_two">二维码扫描器位于输入栏的右侧</string>
+    <string name="router_wifi_management_help_ios_tip_one">如果您使用的是iPhone，请在控制中心中找到二维码扫描器。 需要您先添加二维码扫描器到控制中心中。</string>
+    <string name="router_wifi_management_help_ios_tip_two">从手机屏幕底部往上滑打开控制台，找到QR阅读器</string>
+    <string name="router_timezone_current_time">路由器当前时间</string>
+    <string name="router_timezone_copy_mobilephone_time">复制手机时间</string>
+    <string name="router_timezone_sync_to_network">自动同步网络时间</string>
+
+
+    <!--ResetRouterHelpActivity-->
+    <string name="router_how_to_reset_the_router">如何重置路由器</string>
+    <string name="router_how_to_reset_the_router_tip_one">1.请确保路由器已开启。在路由器上找到重置按钮或重置孔。</string>
+    <string name="router_how_to_reset_the_router_tip_two">2.长按重置按键5-8秒，直到路由器的指示灯慢闪。</string>
+    <string name="router_how_to_reset_the_router_tip_three">3.路由器将重启并恢复成出厂设置。该过程将大约花费两分钟。完成后您需要重新设置路由器。</string>
+    <string name="router_how_to_reset_the_router_tip_final">为避免固件或设备损坏，重置过程中请确保路由器处于开机状态。</string>
+
+    <!--Teckin-->
+    <string name="device">设备</string>
+    <string name="group">群组</string>
+    <string name="add_device">添加设备</string>
+    <string name="create_group">创建组</string>
+    <string name="manage_home">管理家庭</string>
+    <string name="auto_control">智能场景</string>
+    <string name="create_group_middle_tip">您尚未添加足够的设备来创建组。</string>
+    <string name="click_obtain">Click Obtain</string>
+    <string name="enable_location">启用位置服务</string>
+    <string name="enable_location_tips">需要定位服务。您是否允许Osaio访问设备位置？</string>
+    <string name="electrical">电工</string>
+    <string name="lighting">照明</string>
+    <string name="indoor_plug">室内插头</string>
+    <string name="outdoor_plug">室外插头</string>
+    <string name="bulb">灯泡</string>
+    <string name="strip_light">灯带</string>
+    <string name="floor_lamp">落地灯</string>
+    <string name="wall_switch">开关</string>
+    <string name="ez_mode">Wi-Fi快连</string>
+    <string name="ap_mode">热点配网</string>
+    <string name="indicator_tips">请确保您的设备已接通电源并且在Wi-Fi覆盖范围内，并等待指示灯闪烁。</string>
+    <string name="blub_tips">请确保您的设备已接通电源并且在Wi-Fi覆盖范围内，并等待灯泡闪烁。</string>
+    <string name="ez_flash">快速闪烁</string>
+    <string name="ez_not_flash">没有快速闪烁？</string>
+    <string name="ap_flash">缓慢闪烁</string>
+    <string name="ap_not_flash">没有缓慢闪烁？</string>
+    <string name="location_permision">开启位置权限以便自动获取您的Wi-Fi名称。 否则，请手动输入您的Wi-Fi名称。</string>
+    <string name="enter_name">输入名字</string>
+    <string name="get_ssid_failed">获取Wi-Fi名称失败。 请手动输入您的Wi-Fi名称。</string>
+    <string name="location_permision_ap">开启位置权限以便自动获取您的Wi-Fi名称。</string>
+    <string name="scan_rest_switch_guide_info_2">2.按住电源按钮至少7秒钟。</string>
+    <string name="scan_rest_switch_guide_info_4">4.再次按住电源按钮至少7秒钟，直到指示灯缓慢闪烁。</string>
+    <string name="light_scan_reset_device_guide_info_1">1.关闭电源，等待大约10秒钟，然后打开设备电源.</string>
+    <string name="light_scan_reset_device_guide_info_2">2.关闭，打开，关闭，打开，关闭和打开设备.</string>
+    <string name="light_scan_reset_device_guide_info_3">3.确认灯快速闪烁。</string>
+    <string name="light_scan_reset_device_guide_info_4">4.关闭，打开，关闭，打开，关闭和打开设备,灯泡缓慢闪烁。</string>
+    <string name="light_strip_reset_device_guide_info_1">1.关闭电源，等待大约10秒钟，然后打开设备电源.</string>
+    <string name="light_strip_scan_reset_device_guide_info_4">4.关闭，打开，关闭，打开，关闭和打开设备,灯带缓慢闪烁。</string>
+    <string name="connect_in_AP_mode">以AP模式连接</string>
+    <string name="scan_rest_device_guide_info_1">1.拔下并等待大约10秒钟，然后打开设备电源。</string>
+    <string name="scan_rest_device_guide_info_2">2.按住电源按钮至少5秒钟。</string>
+    <string name="scan_rest_device_guide_info_3">3.确认灯快速闪烁。</string>
+    <string name="scan_rest_feeder_guide_info_3">3.确认指示灯正在慢闪。</string>
+    <string name="scan_rest_device_guide_info_4">4.再次按住电源按钮至少5秒钟，直到指示灯缓慢闪烁。</string>
+    <string name="reset_successful">重置成功</string>
+    <string name="reset_device">重置设备</string>
+    <string name="add_camera_input_wifi_24g_tip">2.4GHz Wi-Fi</string>
+    <string name="add_camera_input_wifi_pas_24g_tip">2.4G</string>
+    <string name="no_password">没密码</string>
+    <string name="no_password_detail_tip">你确定在没有密码下连接吗？</string>
+    <string name="only_support_24G">请确保连接的网络为%1$s，Osaio不支持5G或需要身份验证的公共网络。%2$s</string>
+    <string name="not_connect">未连接</string>
+    <string name="not_connect_middle_tip">您的手机未连接到任何网络，请连接到2.4G Wi-Fi。</string>
+    <string name="connect_btn_title">连接</string>
+    <string name="connecting">正在连接...</string>
+    <string name="scan_failed_guide_info_1">1.请检查您的路由器，确保它正常运行。</string>
+    <string name="scan_failed_guide_info_2">2.请确保连接的网络是2.4G并输入正确的Wi-Fi密码。</string>
+    <string name="scan_failed_guide_info_3">3.更多提示，请见%s.</string>
+    <string name="scan_failed_guide_info_4">4.您还可以尝试使用设备的接入点进行连接的替代选项。</string>
+    <string name="scan_failed_guide_info_5">5.如果这些都不起作用，请通过app-support@osaio.net与我们联系</string>
+    <string name="scan_device_how_to_reset">再试一次</string>
+    <string name="pairing_please_wait">配对中，请等待。</string>
+    <string name="paired_failed">配对失败</string>
+    <string name="not_exist_device">糟糕...错误的设备</string>
+    <string name="not_exist_device_tip1">暂不支持您添加的产品，后续我们将支持更多产品系列。当前，Osaio应用程序仅支持SP10、SP11、SP20、SP21、SP22、SP23、SP27、SB50、SB53、SB60、SS30N、SS31、SS33、SS36、SR40、SR41、SR42、SR43、SR46、SL02、FL41产品。 如有任何疑问，请联系app-support@osaio.net</string>
+    <string name="not_exist_device_tip2">请重置设备，然后将其忘记。</string>
+    <string name="paired_ok">配对成功</string>
+    <string name="connecting_succeeded">连接成功</string>
+    <string name="scan_rest_device_guide_info_5">1.将手机连接到手机设置中的设备热点。</string>
+    <string name="scan_rest_device_guide_info_6">2.返回应用程序并继续配对。</string>
+    <string name="name_your_light">命名你的灯泡</string>
+    <string name="name_your_power_strip">排插命名</string>
+    <string name="name_your_switch">命名开关</string>
+    <string name="name_your_light_strip">命名灯带</string>
+    <string name="name_your_modulator">命名调光器</string>
+    <string name="name_your_plug">插头命名</string>
+    <string name="rename_plug">命名</string>
+    <string name="device_name_can_not_blank">设备名称不能为空。</string>
+    <string name="name_too_long">请创建一个较短的名称。</string>
+    <string name="current_network">当前网络</string>
+    <string name="change">更改</string>
+    <string name="forget_this_device">忘记这个设备</string>
+    <string name="permissions_required">需要权限</string>
+    <string name="creat_group_detail_info">同一类别下的设备可以同时分组和控制。</string>
+    <string name="selected_device_empty">没有设备。</string>
+    <string name="plug">插头</string>
+    <string name="light">灯泡</string>
+    <string name="select_least_one_device">选择至少一个设备</string>
+    <string name="name_your_group">为您的小组命名</string>
+    <string name="name">姓名</string>
+    <string name="dev_sharing">设备共享</string>
+    <string name="home_manager">家庭管理</string>
+    <string name="add_home">添加家庭</string>
+    <string name="add_home_tip">请输入家庭名字</string>
+    <string name="owners">拥有者</string>
+    <string name="add_schedule">添加</string>
+    <string name="guests">访客</string>
+    <string name="devices">设备</string>
+    <string name="home">家庭</string>
+    <string name="name_your_home">家庭命名</string>
+    <string name="add_owner_tip">此人可以访问添加到\"%1$s\"的所有设备。</string>
+    <string name="location">位置</string>
+    <string name="send_invitation">发送邀请</string>
+    <string name="add_member">添加成员</string>
+    <string name="add_guest">添加访客</string>
+    <string name="confirm_email">确认邮箱</string>
+    <string name="share_dev_detail_info">与你\"%1$s\"外边的人共享设备权限</string>
+    <string name="email_address_is_not_valid">请输入有效的邮件地址。</string>
+    <string name="email_not_match">电子邮件地址不匹配。</string>
+    <string name="have_added_guest">您已添加此用户</string>
+    <string name="different_region_can_not_sharing">抱歉，我们目前不支持不同国家/地区之间的访问共享。</string>
+    <string name="add_access">添加访问权限</string>
+    <string name="select_share_device_tip">选择您要与访客共享的设备。</string>
+    <string name="add_owner">添加所有者</string>
+    <string name="my_profile">个人信息</string>
+    <string name="member">成员</string>
+    <string name="owner">所有者</string>
+    <string name="remove_access">删除访问</string>
+    <string name="remove_access_tip">您确定要将%1$s作为%2$s删除吗？</string>
+    <string name="remove">移除</string>
+    <string name="home_settings">家庭设置</string>
+    <string name="remove_home">移除家庭</string>
+    <string name="home_remove_tip">你确定要删除该家庭吗？将删除所有设备、所有者、访客和数据。请注意，您需要至少一个家庭才能使用该应用程序的功能。</string>
+    <string name="profile">信息</string>
+    <string name="guest">访客</string>
+    <string name="device_singular">%1$d设备</string>
+    <string name="device_plural">%1$d设备</string>
+    <string name="delete_uppercase">删除</string>
+    <string name="shared_access">共享访问</string>
+    <string name="member_device_remove_tip">您确定要删除%1$s对设备%2$s的访问权限吗？</string>
+    <string name="account_setting">账号设置</string>
+    <string name="change_profile">更改头像</string>
+    <string name="media_login">媒体登录</string>
+    <string name="change_psd">更改密码</string>
+    <string name="access">访问</string>
+    <string name="shared">已分享</string>
+    <string name="group_name">组名称</string>
+    <string name="manage_devices">管理设备</string>
+    <string name="group_schedule">小组时间表</string>
+    <string name="dismiss_group">解除组</string>
+    <string name="group_remove_tip">您确定要解除群组%1$s吗？组时间表和数据将被删除。</string>
+    <string name="choose">选择</string>
+    <string name="select_all">全选</string>
+    <string name="edit_upper">编辑</string>
+    <string name="on_uppercase">ON</string>
+    <string name="off_uppercase">OFF</string>
+    <string name="travel">随机</string>
+    <string name="sun">周日</string>
+    <string name="mon">周一</string>
+    <string name="tues">周二</string>
+    <string name="wed">周三</string>
+    <string name="thurs">周四</string>
+    <string name="fri">周五</string>
+    <string name="sat">周六</string>
+    <string name="once">一次</string>
+    <string name="schedule_action_top_tip">在特定时间打开或关闭设备。</string>
+    <string name="schedule_action_at">在</string>
+    <string name="normal_timer">定点开关</string>
+    <string name="timer_mutually_exclusive_tip">错误</string>
+    <string name="device_off_line_tip">设备离线，请检查您的网络</string>
+    <string name="information">信息</string>
+    <string name="firmware">固件</string>
+    <string name="thrid_party_control">支持第三方控制</string>
+    <string name="alexa">亚马逊Alexa</string>
+    <string name="ifttt">IFTTT</string>
+    <string name="google_assistant">Google智能助理</string>
+    <string name="connect_to_alexa">连接到Alexa</string>
+    <string name="connect_to_ifttt">连接到IFTTT</string>
+    <string name="connect_to_assistant">连接到助理</string>
+    <string name="device_remove_tip">您确定要从家庭中删除%1$s吗？您将无法撤消此操作。</string>
+    <string name="remove_device">移除</string>
+    <string name="updating">UPDATING</string>
+    <string name="firmware_update_title">固件升级</string>
+    <string name="firmware_update_tip">固件更新%1$s可用。您想立即升级吗？</string>
+    <string name="upgrade_upper">升级</string>
+    <string name="reset_factory_settings">重置为%1$s</string>
+    <string name="factory_settings">出厂设置</string>
+    <string name="device_settings_reset">出厂重置</string>
+    <string name="device_settings_reset_info">您确定要重置为出厂设置吗？\n重置完成大约需要2分钟。</string>
+    <string name="name_your_plugs">排插单插命名</string>
+    <string name="add_dev_sharing">添加设备共享</string>
+    <string name="model">模型</string>
+    <string name="device_id">设备编号</string>
+    <string name="ip">IP</string>
+    <string name="mac_address">MAC</string>
+    <string name="hide_upper_case">隐藏</string>
+    <string name="copy_upper_case">复制</string>
+    <string name="copy_success">已成功复制到粘贴板</string>
+
+    <!--createsmart-->
+    <string name="tap_to_run">一键执行</string>
+    <string name="automation">自动化</string>
+    <string name="launch_tap">运行“一键执行”</string>
+    <string name="weather_changes">气象变化时</string>
+    <string name="smart_scheudle">定时</string>
+    <string name="status_changes">设备状态变化时</string>
+    <string name="run_device">操作设备</string>
+    <string name="select_smart">选择智能</string>
+    <string name="delay">延时</string>
+    <string name="smart">智能</string>
+    <string name="management">管理</string>
+    <string name="set_condition">设置条件</string>
+    <string name="set_task">设置任务</string>
+    <string name="create_smart">创建智能</string>
+    <string name="enable_automation">开关自动化</string>
+    <string name="select_function">选择功能</string>
+    <string name="create_new_smart">创建智能</string>
+    <string name="launch_not_add">“一键执行”场景不支持添加“运行一键执行”的任务</string>
+    <string name="condition">条件</string>
+    <string name="task">任务</string>
+    <string name="style">风格</string>
+    <string name="edit_name">编辑名称</string>
+    <string name="select_launch">选择要执行的“一键执行”</string>
+    <string name="select_automation">选择要开关的“自动化”场景</string>
+    <string name="disable">停用</string>
+    <string name="enable">启用</string>
+    <string name="current_city">当前城市</string>
+    <string name="repeat">重复</string>
+    <string name="repeat_tips">如果不选择该动作，则只会执行一次。</string>
+    <string name="exe_time">设置执行时间</string>
+    <string name="select_condition">选择场景</string>
+    <string name="select_task">选择任务</string>
+    <string name="effective_time">生效时间段</string>
+    <string name="all_day">全天</string>
+    <string name="daytime">白天</string>
+    <string name="at_night">夜间</string>
+    <string name="customize">自定义</string>
+    <string name="full_time">24小时</string>
+    <string name="sunrise_set">从日出到日落</string>
+    <string name="sunset_rise">从日落到日出</string>
+    <string name="custom_time">手动设定时间段</string>
+    <string name="discard_change">是否取消场景编辑</string>
+    <string name="no">否</string>
+    <string name="discard">舍弃</string>
+    <string name="all_met">当满足所有条件时</string>
+    <string name="any_met">当满足任一条件时</string>
+    <string name="add_condition">添加条件</string>
+    <string name="add_task">添加任务</string>
+    <string name="please_choose">请选择功能</string>
+    <string name="set_time_delay">请选择延时时长</string>
+    <string name="tap_start">一键执行:执行</string>
+    <string name="auto_disable">自动化:停用</string>
+    <string name="auto_enable">自动化:启用</string>
+    <string name="scene_edit">编辑</string>
+    <string name="remove_scene">你确定移除？ </string>
+    <string name="sys_notification">System Notification</string>
+    <string name="same_day">当日</string>
+    <string name="next_day">次日</string>
+    <string name="condition_cannot_be_added">“一键执行”场景时不能再添加条件</string>
+    <string name="delay_last_tip">延时不能作为最后一个执行的任务</string>
+    <string name="humidity">干燥 (0%-40%) \n舒适 (40%-70%) \n潮湿 (70%-100%)</string>
+    <string name="condition_conflict_tip">不能同时设置此条件类型</string>
+    <string name="condition_not_support">此条件类型不支持该操作</string>
+    <string name="schedule">Schedule</string>
+    <string name="delete">删除</string>
+    <string name="save_upper_case">保存</string>
+    <string name="all_device">全部设备</string>
+    <string name="countdown_one_min">Countdown at least 1min</string>
+    <string name="from">从</string>
+    <string name="to">至</string>
+    <string name="day">+1天</string>
+    <string name="location_tips">请打开定位权限，以便配置设备网络，并帮助APP获取天气信息</string>
+
+    <string name="plug_lower">插座</string>
+    <string name="power_strip">排插</string>
+    <string name="switch_teckin">开关</string>
+    <string name="dimmer_switch">调光开关</string>
+    <string name="pet_feeder">宠物喂食器</string>
+    <string name="ble_wifi">(蓝牙+Wi-Fi)</string>
+    <string name="small_appliances">小家电</string>
+    <string name="reset_feed_pet">2.同时按住解锁按钮和手动喂食按钮，直至Wi-Fi指示灯闪烁</string>
+    <string name="add_camera_scan_qr_sub_tip_1">2.设备指示灯变为绿色常亮或摄像机发出声响时，表示连接成功</string>
+    <string name="name_your_device">设备命名</string>
+
+    <string name="contact_us">联系我们</string>
+    <string name="new_message">新消息</string>
+    <string name="all">所有</string>
+    <string name="refresh_device">下拉刷新设备</string>
+    <string name="refreshing_device">刷新设备信息中</string>
+    <string name="refresh_success">刷新成功</string>
+    <string name="refresh_fail">刷新失败,请检查网络</string>
+    <string name="nice_to_meet_you">很高兴认识你</string>
+    <string name="welcome_back">欢迎回来</string>
+    <string name="smart_home">智能家居</string>
+    <string name="air_purifier">空气净化器</string>
+    <string name="reset_air_purifier_tips2">2.长按氛围灯按钮，直至Wi-Fi图标闪烁</string>
+    <string name="reset_air_purifier_tips3">3.确认wifi图标快速闪烁</string>
+    <string name="close_record_detected">关闭后将仅记录侦测事件</string>
+    <string name="on_recording_all">开启后将全时记录</string>
+    <string name="website">网站</string>
+    <string name="location_service_unopened">定位服务未开启</string>
+    <string name="location_service_open">开启定位允许此应用获取天气信息</string>
+    <string name="disagree_close_app">您也可以不同意并关闭APP，这将导致您无法使用我们的产品或服务</string>
+    <string name="test_environment">测试环境</string>
+    <string name="enter_test_environment">进入测试环境</string>
+    <string name="exit_test_environment">退出测试环境</string>
+
+    <string name="pop_tuya_ble_title">发现设备</string>
+    <string name="pop_tuya_ble_sure_add">就是它！</string>
+    <string name="pop_tuya_ble_device_more">更多设备</string>
+    <string name="pop_tuya_ble_device_tips">若上面没有您的设备，请重置设备后再试或尝试手动选择设备</string>
+    <string name="blue_mode">蓝牙配网</string>
+    <string name="pop_tuya_ble_search_title">正在搜索附近蓝牙设备...</string>
+    <string name="pop_tuya_ble_search_empty">没有找到您的设备？</string>
+    <string name="pop_tuya_ble_manually_select">手动选择设备</string>
+    <string name="add_air_purifier_tips">请接通电源后，长按氛围灯键3s直至听到声响</string>
+    <string name="hear_sound">听到声响</string>
+    <string name="no_sound">没有听到响声？</string>
+    <string name="smart_thing">Smart Things</string>
+    <string name="connect_to_smartthings">连接到SmartThings</string>
+    <string name="smartthings_tips1">使用 SmartThings增强您的智能家居体验并使用您的声音控制设备。</string>
+    <string name="smartthings_tips2">如何与 SmartThings连接？</string>
+    <string name="smartthings_tips3">osaio 技能必须在 SmartThings 应用程序中启用。 打开 SmartThings 应用程序并点击右上角的“+”选择“设备”，“按品牌”选择“osaio”任意一个品类后继续。
+点击“下一步”，在授权页登录osaio账号完成技能授权。</string>
+    <string name="smartthings_tips4">如何通过SmartThings控制osaio设备？</string>
+    <string name="smartthings_tips5">可以通过SmartThings APP进行设备控制，或者使用Bixby（三星手机语音助手）语音控制连接的设备。
+ &#160;例如：&#160;“Hi Bixby，打开灯。”&#160;“Hi Bixby，关闭灯。</string>
+
+    <string name="bluetooth_scan_operation_tip_disconnect_ok">好的</string>
+    <string name="bluetooth_scan_operation_tip_disconnect">开启蓝牙可自动发现设备</string>
+    <string name="bluetooth_scan_operation_tip_open">开启</string>
+    <string name="bluetooth_scan_operation_tip_disconnect_location">开启定位可自动发现设备</string>
+    <string name="setting_temp_unit">温度单位</string>
+    <string name="third_skill_title">通过语音控制智能设备</string>
+    <string name="third_skill_tip"> 您也可以在设备的“设置”界面关联第三方技能</string>
+</resources>

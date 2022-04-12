@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/dp_10"
+    android:paddingEnd="@dimen/dp_10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/layout_pptp_ip_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="@string/router_internet_setting_ip_address"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/theme_text_color">
+            </TextView>
+
+            <com.afar.osaio.widget.InputFrameView
+                android:id="@+id/pptp_ip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                app:input_theme="2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pptp_subnet_mask"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="@string/router_internet_setting_subnet_mask"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/theme_text_color">
+            </TextView>
+
+            <com.afar.osaio.widget.InputFrameView
+                android:id="@+id/pptp_mask"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                app:input_theme="2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pptp_gateway"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="@string/router_internet_setting_gateway"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/theme_text_color">
+            </TextView>
+
+            <com.afar.osaio.widget.InputFrameView
+                android:id="@+id/pptp_gateway"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                app:input_theme="2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/router_internet_setting_server_address"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/theme_text_color">
+            </TextView>
+
+            <com.afar.osaio.widget.InputFrameView
+                android:id="@+id/pptp_server_address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                app:input_theme="2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="@string/router_user_name"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/theme_text_color">
+            </TextView>
+
+            <com.afar.osaio.widget.InputFrameView
+                android:id="@+id/pptp_user_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                app:input_theme="2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="@string/router_password"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/theme_text_color">
+            </TextView>
+
+            <com.afar.osaio.widget.InputFrameView
+                android:id="@+id/pptp_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                app:input_theme="2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pptp_primary_dns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:text="@string/router_internet_setting_primary_dns"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/theme_text_color">
+            </TextView>
+
+            <com.afar.osaio.widget.InputFrameView
+                android:id="@+id/pptp_primary_dns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                app:input_theme="2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_pptp_secondary_dns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/router_internet_setting_secondary_dns"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/theme_text_color">
+            </TextView>
+
+            <com.afar.osaio.widget.InputFrameView
+                android:id="@+id/pptp_secondary_dns"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                app:input_theme="2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_30"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/MPPE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_30"
+                android:textColor="@color/theme_text_color"
+                android:text="@string/router_internet_setting_mppe"/>
+
+            <CheckBox
+                android:id="@+id/MPPC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_30"
+                android:textColor="@color/theme_text_color"
+                android:text="@string/router_internet_setting_mppc"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

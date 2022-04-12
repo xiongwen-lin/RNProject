@@ -1,0 +1,1204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <View
+        android:id="@+id/vPlayerBg"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:background="@color/black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.nooie.sdk.media.NooieMediaPlayer
+        android:id="@+id/player"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginTop="@dimen/dp_0"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@id/containerDateTimePortrait"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playerMenuBar" />
+
+    <TextView
+        android:id="@+id/tvRecordTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:drawableLeft="@drawable/solid_circle_red"
+        android:drawablePadding="@dimen/dp_4"
+        android:gravity="center"
+        android:shadowColor="@color/input_text_color"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="1.0"
+        android:text="00:00:00"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/player"
+        app:layout_constraintStart_toStartOf="@id/player"
+        app:layout_constraintTop_toTopOf="@id/player" />
+
+    <TextView
+        android:id="@+id/tvLive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:gravity="center"
+        android:shadowColor="@color/input_text_color"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="1.0"
+        android:text="@string/live"
+        android:textColor="@color/theme_white"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/player"
+        app:layout_constraintTop_toTopOf="@id/player" />
+
+    <TextView
+        android:id="@+id/tvFps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_2"
+        android:gravity="right"
+        android:lines="1"
+        android:textColor="@color/theme_green_subtext_color"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/tvBitrate"
+        app:layout_constraintTop_toBottomOf="@+id/tvLive" />
+
+    <TextView
+        android:id="@+id/tvBitrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp_0"
+        android:ellipsize="end"
+        android:gravity="right"
+        android:lines="1"
+        android:textColor="@color/theme_green_subtext_color"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/tvLive"
+        app:layout_constraintTop_toTopOf="@+id/tvFps" />
+
+    <ImageView
+        android:id="@+id/ivAudioPlaybackPortrait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_14"
+        android:layout_marginBottom="@dimen/dp_18"
+        android:scaleType="center"
+        android:src="@drawable/audio_off_white_land"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btnPlayFullScreenPortrait"
+        app:layout_constraintEnd_toEndOf="@id/player" />
+
+    <ImageView
+        android:id="@+id/btnPlayFullScreenPortrait"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_14"
+        android:layout_marginBottom="@dimen/dp_14"
+        android:scaleType="center"
+        android:src="@drawable/half_screen_icon"
+        app:layout_constraintBottom_toBottomOf="@id/player"
+        app:layout_constraintEnd_toEndOf="@id/player" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerDateTimePortrait"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_0"
+        android:layout_marginTop="@dimen/dp_0"
+        android:layout_marginEnd="@dimen/dp_0"
+        android:background="@drawable/bg_select_date"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/player">
+
+        <ImageView
+            android:id="@+id/playbackSwitchContainerTarget"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_21"
+            android:scaleType="center"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.afar.osaio.widget.UtcDateSelectView
+            android:id="@+id/dateSelectViewPortrait"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_21"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivPlaybackIcon"
+            app:layout_constraintStart_toEndOf="@id/playbackSwitchContainerTarget"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivPlaybackIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_0"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingEnd="@dimen/dp_21"
+            android:paddingBottom="@dimen/dp_8"
+            android:src="@drawable/play_display_normal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/playbackSwitchContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_65"
+        android:layout_marginStart="@dimen/dp_16"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/containerDateTimePortrait"
+        app:layout_constraintTop_toTopOf="@id/containerDateTimePortrait">
+
+        <ImageView
+            android:id="@+id/ivPlaybackSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_0"
+            android:paddingBottom="@dimen/dp_10"
+            android:scaleType="center"
+            android:src="@drawable/sdcard_button_state_list"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@id/playbackSwitchSubContainer"
+            app:layout_constraintStart_toStartOf="@id/playbackSwitchSubContainer"
+            app:layout_constraintTop_toTopOf="@id/playbackSwitchSubContainer" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/playbackSwitchSubContainer"
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_marginStart="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_15"
+            android:background="@color/gray_eceff4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivPlaybackFirst"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/dp_3"
+                android:scaleType="center"
+                android:src="@drawable/cloud_button_state_list"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/ivPlaybackSwitchArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_5"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingEnd="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_10"
+            android:scaleType="center"
+            android:src="@drawable/right_arrow_gray_1"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/playbackSwitchSubContainer"
+            app:layout_constraintStart_toEndOf="@id/playbackSwitchSubContainer"
+            app:layout_constraintTop_toTopOf="@id/playbackSwitchSubContainer" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerOperationPortrait"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginStart="@dimen/dp_21"
+        android:layout_marginTop="@dimen/dp_0"
+        android:layout_marginEnd="@dimen/dp_21"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerDateTimePortrait">
+
+        <ScrollView
+            android:id="@+id/containerCtrlPortrait"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_45"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toTopOf="@id/containerCloudTipPortrait"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:alignContent="flex_start"
+                app:alignItems="flex_start"
+                app:flexDirection="row"
+                app:flexWrap="wrap"
+                app:justifyContent="flex_start">
+
+                <com.afar.osaio.widget.NormalTextIconView
+                    android:id="@+id/tivPhoto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_38"
+                    android:visibility="gone"
+                    app:layout_flexBasisPercent="33%"
+                    app:layout_order="1" />
+
+                <com.afar.osaio.widget.NormalTextIconView
+                    android:id="@+id/tivTalk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_38"
+                    app:eventId="@string/n_event_id_click_talk"
+                    app:layout_flexBasisPercent="33%"
+                    app:layout_order="3" />
+
+                <com.afar.osaio.widget.NormalTextIconView
+                    android:id="@+id/tivRecord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_38"
+                    app:layout_flexBasisPercent="33%"
+                    app:layout_order="2" />
+
+                <com.afar.osaio.widget.NEventNormalTextIconView
+                    android:id="@+id/tivSnapShot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_38"
+                    app:eventId="@string/n_event_id_click_screen_shot"
+                    app:layout_flexBasisPercent="33%"
+                    app:layout_order="4" />
+
+                <com.afar.osaio.widget.NEventNormalTextIconView
+                    android:id="@+id/tivAudio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_38"
+                    app:eventId="@string/n_event_id_click_audio"
+                    app:layout_flexBasisPercent="33%"
+                    app:layout_order="5" />
+
+                <com.afar.osaio.widget.NormalTextIconView
+                    android:id="@+id/tivAlarm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_38"
+                    android:visibility="gone"
+                    app:layout_flexBasisPercent="33%"
+                    app:layout_order="6" />
+
+                <com.afar.osaio.widget.NormalTextIconView
+                    android:id="@+id/tivFlashLight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_38"
+                    android:visibility="gone"
+                    app:layout_flexBasisPercent="33%"
+                    app:layout_order="7" />
+
+            </com.google.android.flexbox.FlexboxLayout>
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerPlaybackPortrait"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/containerCloudTipPortrait"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
+                android:id="@+id/sl_device_list"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_0"
+                android:layout_marginTop="@dimen/dp_22"
+                android:layout_marginEnd="@dimen/dp_37"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/timerShaftPortrait"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:swipe_style="classic">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@id/swipe_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:scrollbars="none" />
+
+                <include
+                    android:id="@id/swipe_load_more_footer"
+                    layout="@layout/refresh_footer" />
+            </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvPlaybackDetection"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_0"
+                android:layout_marginTop="@dimen/dp_22"
+                android:layout_marginEnd="@dimen/dp_37"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/timerShaftPortrait"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.scenery7f.timeaxis.view.UtcTimerShaft
+                android:id="@+id/timerShaftPortrait"
+                android:layout_width="@dimen/dp_130"
+                android:layout_height="@dimen/dp_0"
+                android:layout_marginEnd="@dimen/dp_30"
+                app:bg="@color/background"
+                app:isAsc="false"
+                app:isHorizontal="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:scaleColor="@color/playback_mark_text_color" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/vPlaybackVideoEmpty"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_0"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivPlaybackVideoEmptyIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_0"
+                    android:src="@drawable/empty_picture_icon"
+                    app:layout_constraintBottom_toTopOf="@id/tvPlaybackVideoEmptyTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/tvPlaybackVideoEmptyTitle"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_0"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_0"
+                    android:text="@string/nooie_play_video_empty_tip"
+                    android:gravity="center"
+                    android:textSize="@dimen/sp_16"
+                    app:layout_constraintBottom_toTopOf="@id/vPlaybackDetectionSettingBg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivPlaybackVideoEmptyIcon" />
+
+                <View
+                    android:id="@+id/vPlaybackDetectionSettingBg"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:background="@drawable/bg_round_gray_state_50"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvPlaybackDetectionSettingTip"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_marginStart="@dimen/dp_50"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:gravity="center"
+                    android:text="@string/nooie_play_detection_setting_tip"
+                    android:textColor="@color/theme_white"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/vPlaybackDetectionSettingBg"
+                    app:layout_constraintEnd_toStartOf="@id/tvPlaybackDetectionSettingEnable"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintHorizontal_weight="7"
+                    app:layout_constraintStart_toStartOf="@id/vPlaybackDetectionSettingBg"
+                    app:layout_constraintTop_toTopOf="@id/vPlaybackDetectionSettingBg" />
+
+                <TextView
+                    android:id="@+id/tvPlaybackDetectionSettingEnable"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_marginStart="@dimen/dp_0"
+                    android:layout_marginEnd="@dimen/dp_50"
+                    android:gravity="center"
+                    android:text="@string/nooie_play_detection_setting_enable"
+                    android:textColor="@color/theme_green"
+                    android:textSize="@dimen/sp_14"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/vPlaybackDetectionSettingBg"
+                    app:layout_constraintEnd_toEndOf="@id/vPlaybackDetectionSettingBg"
+                    app:layout_constraintHorizontal_weight="3"
+                    app:layout_constraintStart_toEndOf="@id/tvPlaybackDetectionSettingTip"
+                    app:layout_constraintTop_toTopOf="@id/vPlaybackDetectionSettingBg" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/bubbleContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_32"
+            android:paddingEnd="@dimen/dp_32"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/containerCtrlPortrait"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1">
+
+            <TextView
+                android:id="@+id/tvTalkBubble"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginLeft="@dimen/dp_0"
+                android:layout_marginTop="@dimen/dp_0"
+                android:layout_marginRight="@dimen/dp_0"
+                android:layout_marginBottom="@dimen/dp_0"
+                android:background="@drawable/button_gray_state_list_round_16"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:text="@string/device_guide_talk_des"
+                android:textColor="@color/gray_616161"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bubble_down_arrow"
+                app:layout_constraintEnd_toEndOf="@id/tvTalkBubble"
+                app:layout_constraintStart_toStartOf="@id/tvTalkBubble"
+                app:layout_constraintTop_toBottomOf="@id/tvTalkBubble" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerCloudTipPortrait"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <View
+                style="@style/divider_thin"
+                android:layout_width="@dimen/dp_0"
+                android:layout_marginStart="@dimen/dp_21"
+                android:layout_marginEnd="@dimen/dp_21"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSeeHistory"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@string/live_see_history"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/ivSeeHistoryBuyCloud"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivSeeHistoryBuyCloud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_40"
+                android:scaleType="center"
+                android:src="@drawable/buy_cloud_state_list"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Land Screen -->
+    <TextView
+        android:id="@+id/tvRecordTimeLand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:drawableLeft="@drawable/solid_circle_red"
+        android:drawablePadding="4dp"
+        android:gravity="center"
+        android:shadowColor="@color/input_text_color"
+        android:shadowDx="1.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="1.0"
+        android:text="00:00:00"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/player"
+        app:layout_constraintStart_toStartOf="@id/player"
+        app:layout_constraintTop_toTopOf="@id/player" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/deviceNameTitleLandContainer"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_250"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_250"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/player">
+
+        <TextView
+            android:id="@+id/tvCameraNameLand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:shadowColor="@color/input_text_color"
+            android:shadowDx="1.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toStartOf="@id/ivCameraNameLandIcon"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivCameraNameLandIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_6"
+            android:src="@drawable/title_down_white"
+            android:visibility="gone"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="@id/tvCameraNameLand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvCameraNameLand"
+            app:layout_constraintTop_toTopOf="@id/tvCameraNameLand" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerOperationLand"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginBottom="@dimen/dp_46"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBitrate">
+
+        <LinearLayout
+            android:id="@+id/containerCtrlLand"
+            android:layout_width="@dimen/dp_65"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivTalkLand"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_0"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_weight="1"
+                android:src="@drawable/talk_off_land_icon_state_list" />
+
+            <ImageView
+                android:id="@+id/ivSnapShotLand"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_0"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:src="@drawable/snapshot_land_icon_state_list" />
+
+            <ImageView
+                android:id="@+id/ivRecordLand"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_0"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:src="@drawable/record_land_icon_state_list" />
+
+            <ImageView
+                android:id="@+id/ivAlarmLand"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_0"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_weight="1"
+                android:src="@drawable/alarm_off_land_icon_state_list"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivCloudSaveLand"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_0"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:src="@drawable/download_land_icon_state_list"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/ivAudioLand"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_0"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:src="@drawable/audio_off_land_icon_state_list" />
+
+            <ImageView
+                android:id="@+id/ivFlashLightLand"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp_0"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_weight="1"
+                android:scaleType="center"
+                android:src="@drawable/flash_light_off_land_icon_state_list" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/containerPlaybackSave"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_0"
+            android:background="@color/black_cc010c11"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivPlaybackSaveClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_15"
+                android:scaleType="center"
+                android:src="@drawable/close_icon_state_list" />
+
+            <TextView
+                android:id="@+id/btnPlaybackSavePhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:lines="1"
+                android:padding="@dimen/dp_15"
+                android:text="@string/playback_save_photo"
+                android:textColor="@color/theme_white"
+                android:textSize="@dimen/sp_16" />
+
+            <TextView
+                android:id="@+id/btnPlaybackSaveStory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_15"
+                android:lines="1"
+                android:padding="@dimen/dp_15"
+                android:text="@string/playback_save_story"
+                android:textColor="@color/theme_white"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnPlayFullScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_100"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:scaleType="center"
+            android:src="@drawable/full_screen_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerDateAndPlaybackLand"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerDateTimeLand"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_50"
+            android:background="@color/black_0b2734"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ivSeeHistoryBuyCloudLand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_27"
+                android:paddingTop="@dimen/dp_12"
+                android:paddingBottom="@dimen/dp_12"
+                android:scaleType="center"
+                android:src="@drawable/buy_cloud_state_list"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvSeeHistoryLand"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_38"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/live_see_history"
+                android:textColor="@color/theme_white"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivSeeHistoryBuyCloudLand"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivOtherPlaybackLand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_27"
+                android:paddingTop="@dimen/dp_6"
+                android:paddingBottom="@dimen/dp_6"
+                android:scaleType="center"
+                android:src="@drawable/sd_gray_land"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivSwitchCloudSdLand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_22"
+                android:paddingTop="@dimen/dp_6"
+                android:paddingBottom="@dimen/dp_6"
+                android:scaleType="center"
+                android:src="@drawable/cloud_white_land"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivOtherPlaybackLand"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.afar.osaio.widget.UtcDateSelectView
+                android:id="@+id/dateSelectViewLand"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_0"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ivSwitchCloudSdLand"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerPlaybackLand"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_70"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.scenery7f.timeaxis.view.UtcTimerShaft
+                android:id="@+id/timerShaftLand"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/dp_0"
+                android:visibility="visible"
+                app:bg="@color/transparent"
+                app:isAsc="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:scaleColor="@color/playback_mark_text_color" />
+
+            <ImageView
+                android:id="@+id/ivLeftLand"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="@dimen/dp_0"
+                android:layout_marginStart="@dimen/dp_0"
+                android:layout_marginTop="@dimen/dp_24"
+                android:background="@color/black_03141c"
+                android:scaleType="center"
+                android:src="@drawable/left_arrow_little_white"
+                app:layout_constraintBottom_toBottomOf="@id/timerShaftLand"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/timerShaftLand" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/containerPlaybackController"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/player"
+        app:layout_constraintEnd_toEndOf="@id/player"
+        app:layout_constraintStart_toStartOf="@id/player"
+        app:layout_constraintTop_toTopOf="@id/player">
+
+        <ImageView
+            android:id="@+id/btnPlaybackPre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/playback_pre_icon" />
+
+        <ImageView
+            android:id="@+id/btnPlaybackRestartOrStop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_45"
+            android:layout_marginEnd="@dimen/dp_45"
+            android:scaleType="center"
+            android:src="@drawable/playback_stop_icon"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/btnPlaybackNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="center"
+            android:src="@drawable/playback_next_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/containerLpDeviceController"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_44"
+        android:layout_marginEnd="@dimen/dp_44"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/player"
+        app:layout_constraintEnd_toEndOf="@id/player"
+        app:layout_constraintStart_toStartOf="@id/player"
+        app:layout_constraintTop_toTopOf="@id/player">
+
+        <ImageView
+            android:id="@+id/btnLpDeviceRestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/dp_90"
+            android:paddingEnd="@dimen/dp_90"
+            android:paddingBottom="@dimen/dp_13"
+            android:scaleType="center"
+            android:src="@drawable/player_start_light_icon" />
+
+        <TextView
+            android:id="@+id/tvLpDeviceRestartTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_0"
+            android:layout_marginEnd="@dimen/dp_0"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text="@string/nooie_play_lp_device_restart_tip"
+            android:gravity="center"
+            android:textColor="@color/theme_white"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivDirectionControlBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/direction_control_bg"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/player"
+        app:layout_constraintEnd_toEndOf="@id/player"
+        app:layout_constraintStart_toStartOf="@id/player"
+        app:layout_constraintTop_toTopOf="@id/player" />
+
+    <ImageView
+        android:id="@+id/ivGestureLeftArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:src="@drawable/gesture_left_arrow"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivDirectionControlBg"
+        app:layout_constraintStart_toStartOf="@id/ivDirectionControlBg"
+        app:layout_constraintTop_toTopOf="@id/ivDirectionControlBg" />
+
+    <ImageView
+        android:id="@+id/ivGestureTopArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:rotation="90"
+        android:src="@drawable/gesture_left_arrow"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/ivDirectionControlBg"
+        app:layout_constraintStart_toStartOf="@id/ivDirectionControlBg"
+        app:layout_constraintTop_toTopOf="@id/ivDirectionControlBg" />
+
+    <ImageView
+        android:id="@+id/ivGestureRightArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:rotation="180"
+        android:src="@drawable/gesture_left_arrow"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivDirectionControlBg"
+        app:layout_constraintEnd_toEndOf="@id/ivDirectionControlBg"
+        app:layout_constraintTop_toTopOf="@id/ivDirectionControlBg" />
+
+    <ImageView
+        android:id="@+id/ivGestureBottomArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:rotation="270"
+        android:src="@drawable/gesture_left_arrow"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivDirectionControlBg"
+        app:layout_constraintEnd_toEndOf="@id/ivDirectionControlBg"
+        app:layout_constraintStart_toStartOf="@id/ivDirectionControlBg" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_72"
+        android:background="@color/delete_button_color"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/containerOtherPlaybackLand"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/date_select_width"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivNextPlaybackLand"
+                android:layout_width="@dimen/dp_20"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/next_button_state_list"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivThumbnail"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/player"
+        app:layout_constraintEnd_toEndOf="@id/player"
+        app:layout_constraintStart_toStartOf="@id/player"
+        app:layout_constraintTop_toTopOf="@id/player" />
+
+    <ImageView
+        android:id="@+id/ivPanelComponent"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:background="@color/white"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/player"
+        app:layout_constraintEnd_toEndOf="@id/player"
+        app:layout_constraintStart_toStartOf="@id/player"
+        app:layout_constraintTop_toTopOf="@id/player" />
+
+    <TextView
+        android:id="@+id/tvPanelTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/add_camera_swipe_to_see_more"
+        android:textColor="#E8E7E9"
+        android:textSize="@dimen/sp_15"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivPanelComponent"
+        app:layout_constraintEnd_toEndOf="@id/ivPanelComponent"
+        app:layout_constraintStart_toStartOf="@id/ivPanelComponent" />
+
+    <RelativeLayout
+        android:id="@+id/deviceListContainer"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:background="@color/black_cc010c11"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:background="@color/background" />
+
+        <TextView
+            android:id="@+id/tvCurrentDeviceName"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginLeft="@dimen/dp_60"
+            android:layout_toLeftOf="@id/ivCloseIcon"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/theme_green"
+            android:textSize="@dimen/sp_17"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivCloseIcon"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/dp_10"
+            android:scaleType="centerInside"
+            android:src="@drawable/close_gray" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDeviceListLand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivCloseIcon"
+            android:background="@color/background" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDeviceList"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:background="@color/show_device_list_bg_color"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/playerMenuBar" />
+
+    <include
+        android:id="@+id/playerMenuBar"
+        layout="@layout/menu_bar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvInputTitle"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_0"
+        android:paddingRight="@dimen/dp_0"
+        android:singleLine="true"
+        android:visibility="gone"
+        android:textColor="@color/theme_white"
+        android:textSize="@dimen/sp_15"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <AutoCompleteTextView
+        android:id="@+id/etInput"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:imeOptions="actionGo"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_10"
+        android:gravity="end"
+        android:singleLine="true"
+        android:textColor="@color/theme_white"
+        android:textSize="@dimen/sp_16"
+        android:theme="@style/VictureAutocomplete"
+        app:layout_constraintEnd_toStartOf="@+id/btnInput"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInputTitle" />
+
+    <ImageView
+        android:id="@+id/btnInput"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_0"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_8"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/etInput"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etInput" />
+
+    <TextView
+        android:id="@+id/btnTxtInput"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_0"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxWidth="@dimen/dp_125"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/theme_green"
+        android:textSize="@dimen/sp_15"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/etInput"
+        app:layout_constraintEnd_toEndOf="@+id/etInput"
+        app:layout_constraintTop_toTopOf="@+id/etInput" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

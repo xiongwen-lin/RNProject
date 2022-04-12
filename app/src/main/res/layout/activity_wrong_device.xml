@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/menu_bar"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wrong_device"
+        app:layout_constraintTop_toTopOf="@+id/glineImageview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginStart="@dimen/dp_35"
+        android:layout_marginEnd="@dimen/dp_35"
+        android:text="@string/not_exist_device_tip1"
+        android:textSize="@dimen/dp_14"
+        android:lineSpacingMultiplier="1.2"
+        android:lineSpacingExtra="@dimen/dp_2"
+        android:textColor="@color/theme_text_color"
+        app:layout_constraintTop_toTopOf="@+id/glineTv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:text="@string/not_exist_device_tip2"
+        android:layout_marginStart="@dimen/dp_35"
+        android:layout_marginEnd="@dimen/dp_35"
+        android:layout_marginTop="@dimen/dp_20"
+        android:textSize="@dimen/dp_14"
+        android:gravity="center_horizontal"
+        android:textColor="@color/theme_text_color"
+        android:lineSpacingMultiplier="1.2"
+        android:lineSpacingExtra="@dimen/dp_2"
+        app:layout_constraintTop_toBottomOf="@+id/tvTip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.afar.osaio.widget.FButton
+        android:id="@+id/btnRemove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_60"
+        android:layout_marginEnd="@dimen/dp_60"
+        android:text="@string/forget_this_device"
+        app:layout_constraintTop_toTopOf="@+id/glineForget"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glineImageview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.181"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glineTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.419"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glineForget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.784"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvTagLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_4"
+        android:text="Video"
+        android:gravity="center"
+        android:textSize="@dimen/sp_18"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vTagLabelBottom"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_2"
+        android:background="@color/theme_green"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/tvTagLabel"
+        app:layout_constraintStart_toStartOf="@id/tvTagLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvTagLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

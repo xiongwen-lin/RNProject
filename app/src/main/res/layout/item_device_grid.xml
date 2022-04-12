@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_120"
+    android:background="@drawable/item_device_bg_radius"
+    android:elevation="@dimen/dp_15">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/deviceContainer"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_120"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvDeviceName"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="start"
+            android:maxEms="10"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@id/guidelineNameHorizontal"
+            app:layout_constraintEnd_toEndOf="@+id/guidelinetvVertical2"
+            app:layout_constraintStart_toStartOf="@id/guidelinetvVertical1"
+            app:layout_constraintTop_toTopOf="@id/guidelineNameHorizontal" />
+
+        <ImageView
+            android:id="@+id/ivDeviceIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_list_placeholder"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelinetvHoriziontal"
+            app:layout_constraintStart_toStartOf="@id/guidelinetvVertical1"
+            app:layout_constraintTop_toTopOf="@+id/guidelinetvHoriziontal" />
+
+        <ImageView
+            android:id="@+id/ivDeviceSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_marginEnd="@dimen/dp_3"
+            android:padding="@dimen/dp_15"
+            android:src="@drawable/ic_public_switch_off"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivDeviceIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_15"
+            android:layout_marginBottom="@dimen/dp_15"
+            android:src="@drawable/online_circle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvOffline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/offline"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/sp_10"
+            app:layout_constraintBottom_toBottomOf="@+id/guidelineOfflineHorizontal"
+            app:layout_constraintStart_toStartOf="@+id/guidelinetvVertical1"
+            app:layout_constraintTop_toTopOf="@+id/guidelineOfflineHorizontal" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineSwitchVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.809" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinetvHoriziontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.322" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineNameHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.667" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineOfflineHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.858" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinetvVertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.349" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinetvVertical1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.095" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelinetvVertical2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.603" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/background_offline"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_120"
+        android:background="@drawable/item_device_offline_bg_radius"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

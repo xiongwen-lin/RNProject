@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<level-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@drawable/alarm_level_0"
+        android:maxLevel="100"
+        android:minLevel="1"></item>
+
+    <item
+        android:drawable="@drawable/alarm_level_1"
+        android:maxLevel="200"
+        android:minLevel="101"></item>
+
+    <item
+        android:drawable="@drawable/alarm_level_2"
+        android:maxLevel="300"
+        android:minLevel="201"></item>
+
+    <item
+        android:drawable="@drawable/alarm_level_3"
+        android:maxLevel="400"
+        android:minLevel="301"></item>
+
+    <item
+        android:drawable="@drawable/alarm_level_4"
+        android:maxLevel="500"
+        android:minLevel="401"></item>
+
+    <item
+        android:drawable="@drawable/alarm_level_5"
+        android:maxLevel="600"
+        android:minLevel="501"></item>
+
+    <item
+        android:drawable="@drawable/alarm_level_6"
+        android:maxLevel="700"
+        android:minLevel="601"></item>
+
+    <item
+        android:drawable="@drawable/alarm_level_7"
+        android:maxLevel="800"
+        android:minLevel="701"></item>
+
+    <item
+        android:drawable="@drawable/alarm_level_8"
+        android:maxLevel="900"
+        android:minLevel="801"></item>
+
+    <item
+        android:drawable="@drawable/alarm_level_9"
+        android:maxLevel="1000"
+        android:minLevel="901"></item>
+
+    <item
+        android:drawable="@drawable/alarm_level_disable"
+        android:maxLevel="1200"
+        android:minLevel="1100"></item>
+
+</level-list>

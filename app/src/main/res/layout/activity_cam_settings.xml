@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/containerDeviceSetting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/menuBar"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/headerLine"
+        style="@style/divider_thin"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuBar" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="43dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRemoveCamera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLine">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/containerAudioRecord"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_item_state_list"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/camera_settings_audio_record" />
+
+                <View style="@style/stretch_space" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switchAudioRecord"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/theme_switch_btn_bg"
+                    app:sb_border_width="@dimen/dp_0"
+                    app:sb_button_color="@color/theme_white"
+                    app:sb_checked_color="@color/theme_green"
+                    app:sb_checkline_color="@color/theme_white"
+                    app:sb_show_indicator="false"
+                    app:sb_uncheck_color="@color/theme_white" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineAudioRecord"
+                style="@style/divider_thin"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp" />
+
+            <LinearLayout
+                android:id="@+id/containerStatusLight"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_item_state_list"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/camera_settings_status_light" />
+
+                <View style="@style/stretch_space" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switchStatusLight"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/theme_switch_btn_bg"
+                    app:sb_border_width="@dimen/dp_0"
+                    app:sb_button_color="@color/theme_white"
+                    app:sb_checked_color="@color/theme_green"
+                    app:sb_checkline_color="@color/theme_white"
+                    app:sb_show_indicator="false"
+                    app:sb_uncheck_color="@color/theme_white" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineStatusLight"
+                style="@style/divider_thin"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp" />
+
+            <LinearLayout
+                android:id="@+id/containerRotateImg"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_item_state_list"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/camera_settings_rotate_image" />
+
+                <View style="@style/stretch_space" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switchRotateImg"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/theme_switch_btn_bg"
+                    app:sb_border_width="@dimen/dp_0"
+                    app:sb_button_color="@color/theme_white"
+                    app:sb_checked_color="@color/theme_green"
+                    app:sb_checkline_color="@color/theme_white"
+                    app:sb_show_indicator="false"
+                    app:sb_uncheck_color="@color/theme_white" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineRotateImage"
+                style="@style/divider_thin"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp" />
+
+            <LinearLayout
+                android:id="@+id/containerMotionTracking"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_item_state_list"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/camera_settings_motion_tracking" />
+
+                <View style="@style/stretch_space" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/switchMotionTracking"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_gravity="center_vertical"
+                    app:sb_background="@color/theme_switch_btn_bg"
+                    app:sb_border_width="@dimen/dp_0"
+                    app:sb_button_color="@color/theme_white"
+                    app:sb_checked_color="@color/theme_green"
+                    app:sb_checkline_color="@color/theme_white"
+                    app:sb_show_indicator="false"
+                    app:sb_uncheck_color="@color/theme_white" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineMotionTracking"
+                style="@style/divider_thin"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp" />
+
+            <LinearLayout
+                android:id="@+id/containerVideoQuality"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_item_state_list"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/camera_settings_video_quality" />
+
+                <View style="@style/stretch_space" />
+
+                <TextView
+                    android:id="@+id/tvVideoQualityNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/normal"
+                    android:textColor="@color/input_text_color"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvVideoQualityHigh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/high"
+                    android:textColor="@color/input_text_color"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineVideoQuality"
+                style="@style/divider_thin"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/containerNightVision"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_item_state_list"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:paddingRight="@dimen/dp_8"
+                    android:text="@string/cam_setting_night_vision_title" />
+
+                <TextView
+                    android:id="@+id/tvNightVisionOff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/cam_setting_night_vision_type_off"
+                    android:textColor="@color/input_text_color"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvNightVisionAuto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/cam_setting_night_vision_type_auto"
+                    android:textColor="@color/theme_green"
+                    android:textSize="@dimen/sp_10"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/right_arrow_gray"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineNightVision"
+                style="@style/divider_thin"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/containerMotionDetection"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_item_state_list"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/camera_settings_motion_detection" />
+
+                <View style="@style/stretch_space" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/right_arrow_gray" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineMotionDetection"
+                style="@style/divider_thin"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp" />
+
+            <LinearLayout
+                android:id="@+id/containerSoundDetection"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_item_state_list"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/camera_settings_sound_detection" />
+
+                <View style="@style/stretch_space" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/right_arrow_gray" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineSoundDetection"
+                style="@style/divider_thin"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp" />
+
+            <LinearLayout
+                android:id="@+id/containerStorage"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_item_state_list"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/camera_settings_storage" />
+
+                <View style="@style/stretch_space" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/right_arrow_gray" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineStorage"
+                style="@style/divider_thin"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp" />
+
+            <LinearLayout
+                android:id="@+id/containerShare"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_item_state_list"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/camera_settings_share_camera" />
+
+                <View style="@style/stretch_space" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/right_arrow_gray" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineShare"
+                style="@style/divider_thin"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp" />
+
+            <LinearLayout
+                android:id="@+id/containerInfo"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@drawable/setting_item_state_list"
+                android:orientation="horizontal"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/camera_settings_cam_info" />
+
+                <View style="@style/stretch_space" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:src="@drawable/right_arrow_gray" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/lineCamInfo"
+                style="@style/divider_thin"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.afar.osaio.widget.FButton
+        android:id="@+id/btnRemoveCamera"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:layout_marginStart="@dimen/dp_63"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_63"
+        android:layout_marginBottom="54dp"
+        android:paddingLeft="@dimen/dp_22"
+        android:paddingRight="@dimen/dp_22"
+        android:text="@string/camera_settings_remove"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCamReset"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_23"
+        android:layout_marginEnd="@dimen/dp_23"
+        android:gravity="center"
+        android:lines="1"
+        android:text="@string/camera_settings_reset_to"
+        android:textSize="@dimen/sp_12"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRemoveCamera" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

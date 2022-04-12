@@ -1,0 +1,212 @@
+[
+  {
+    "name" : "Router",
+    "type" : 0,
+    "enable" : false,
+    "children" : [
+      {
+        "name" : "R2",
+        "type" : "R2",
+        "productType" : 0,
+        "enable" : false
+      }
+    ]
+  },
+  {
+    "name" : "Card",
+    "type" : 1,
+    "enable" : true,
+    "children" : [
+      {
+        "name" : "C1",
+        "type" : "C1",
+        "productType" : 1,
+        "enable" : true
+      },
+      {
+        "name" : "C1 Pro",
+        "type" : "C1PRO",
+        "productType" : 1,
+        "enable" : true
+      },
+      {
+        "name" : "C2",
+        "type" : "C2",
+        "productType" : 1,
+        "enable" : true
+      },
+      {
+        "name" : "XC100",
+        "type" : "XC100",
+        "productType" : 1,
+        "enable" : true
+      },
+      {
+        "name" : "TC100",
+        "type" : "TC100",
+        "productType" : 1,
+        "enable" : false
+      }
+    ]
+  },
+  {
+    "name" : "Head",
+    "type" : 3,
+    "enable" : true,
+    "children" : [
+      {
+        "name" : "P1",
+        "type" : "P1",
+        "productType" : 3,
+        "enable" : true
+      },
+      {
+        "name" : "P1 Pro",
+        "type" : "P1PRO",
+        "productType" : 1,
+        "enable" : true
+      },
+      {
+        "name" : "P2",
+        "type" : "P2",
+        "productType" : 3,
+        "enable" : true
+      },
+      {
+        "name" : "P3",
+        "type" : "P3",
+        "productType" : 3,
+        "enable" : true
+      },
+      {
+        "name" : "P3 Pro",
+        "type" : "P3Pro",
+        "productType" : 3,
+        "enable" : false
+      },
+      {
+        "name" : "P4",
+        "type" : "P4",
+        "productType" : 3,
+        "enable" : false
+      },
+      {
+        "name" : "PC540",
+        "type" : "PC540",
+        "productType" : 3,
+        "enable" : false
+      },
+      {
+        "name" : "TR100",
+        "type" : "TR100",
+        "productType" : 3,
+        "enable" : false
+      },
+      {
+        "name" : "K2",
+        "type" : "K2",
+        "productType" : 3,
+        "enable" : false
+      },
+      {
+        "name" : "TS200",
+        "type" : "TS200",
+        "productType" : 3,
+        "enable" : false
+      }
+    ]
+  },
+  {
+    "name" : "Indoor Camera MINI",
+    "type" : 5,
+    "enable" : true,
+    "children" : [
+      {
+        "name" : "M1",
+        "type" : "M1",
+        "productType" : 5,
+        "enable" : true
+      }
+    ]
+  },
+  {
+    "name" : "Low power",
+    "type" : 4,
+    "enable" : true,
+    "children" : [
+      {
+        "name" : "W0-CAM",
+        "type" : "W0-CAM",
+        "productType" : 4,
+        "enable" : false
+      },
+      {
+        "name" : "W1/W1T",
+        "type" : "W1-CAM",
+        "productType" : 4,
+        "enable" : true
+      },
+      {
+        "name" : "W2",
+        "type" : "W2",
+        "productType" : 1,
+        "enable" : false
+      },
+      {
+        "name" : "HC320",
+        "type" : "HC320",
+        "productType" : 4,
+        "enable" : false
+      }
+    ]
+  },
+  {
+    "name" : "Gun",
+    "type" : 2,
+    "enable" : true,
+    "children" : [
+      {
+        "name" : "K1",
+        "type" : "K1",
+        "productType" : 3,
+        "enable" : true
+      },
+      {
+        "name" : "K1 Pro",
+        "type" : "K1PRO",
+        "productType" : 3,
+        "enable" : true
+      },
+      {
+        "name" : "PC730",
+        "type" : "PC730730",
+        "productType" : 2,
+        "enable" : true
+      },
+      {
+        "name" : "T1",
+        "type" : "T1",
+        "productType" : 2,
+        "enable" : true
+      },
+      {
+        "name" : "T1 Pro",
+        "type" : "T1PRO",
+        "productType" : 2,
+        "enable" : true
+      },
+      {
+        "name" : "T2",
+        "type" : "T2",
+        "productType" : 2,
+        "enable" : true
+      },
+      {
+        "name" : "TS100",
+        "type" : "TS100",
+        "productType" : 2,
+        "enable" : false
+      }
+    ]
+  }
+]

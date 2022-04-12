@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tvFirstStartAppLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:drawableTop="@drawable/logo_welcome"
+        android:drawablePadding="@dimen/dp_18"
+        android:visibility="gone"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/theme_white"
+        android:textSize="@dimen/sp_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.12"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvPrivacyTitle"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:text="@string/first_start_instruction_title"
+        android:textColor="@color/theme_text_color"
+        android:textSize="@dimen/sp_30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFirstStartAppLogo" />
+
+    <TextView
+        android:id="@+id/tvPrivacy"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginStart="@dimen/dp_18"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginEnd="@dimen/dp_18"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:text="@string/first_start_instruction_tip"
+        android:textColor="@color/theme_text_color"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toTopOf="@id/btnPrivacyAgree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPrivacyTitle" />
+
+    <com.afar.osaio.widget.FButton
+        android:id="@+id/btnPrivacyAgree"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_42"
+        android:layout_marginStart="@dimen/dp_75"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginEnd="@dimen/dp_75"
+        android:layout_marginBottom="@dimen/dp_100"
+        android:background="@drawable/button_gray_state_list_radius_22"
+        android:text="@string/first_start_instruction_agree"
+        android:textColor="@color/theme_green_subtext_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/btnPrivacyReject"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_75"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_75"
+        android:gravity="center"
+        android:minHeight="@dimen/dp_42"
+        android:text="@string/first_start_instruction_reject"
+        android:textColor="@color/theme_subtext_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPrivacyAgree" />
+
+    <TextView
+        android:id="@+id/tvDisagreeTips"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_61"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_61"
+        android:gravity="center"
+        android:textSize="@dimen/sp_12"
+        android:text="@string/disagree_close_app"
+        android:textColor="@color/theme_subtext_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnPrivacyAgree" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

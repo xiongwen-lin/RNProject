@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingRight="0dp"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/player_pause"
+        android:layout_width="44dp"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:src="@drawable/ic_video_pause"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/player_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#4C010C11"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/player_seek_bar"
+        style="@style/Widget.SeekBar.Media"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="#7F010C11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/player_progress" />
+
+    <TextView
+        android:id="@+id/player_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/video_full_screen"
+        android:layout_width="30dp"
+        android:layout_height="44dp"
+        android:paddingLeft="14dp"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:src="@drawable/ic_video_fullscreen"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/mbPresetPoint"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mbPresetPoint">
+
+        <com.nooie.sdk.media.NooieMediaPlayer
+            android:id="@+id/player"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginTop="@dimen/dp_0"
+            app:layout_constraintDimensionRatio="H,16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivDirectionControlBg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/direction_control_bg"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/player"
+            app:layout_constraintEnd_toEndOf="@id/player"
+            app:layout_constraintStart_toStartOf="@id/player"
+            app:layout_constraintTop_toTopOf="@id/player" />
+
+        <View
+            android:id="@+id/vGestureCenter"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="@dimen/dp_1"
+            app:layout_constraintBottom_toBottomOf="@id/player"
+            app:layout_constraintEnd_toEndOf="@id/player"
+            app:layout_constraintStart_toStartOf="@id/player"
+            app:layout_constraintTop_toTopOf="@id/player" />
+
+        <ImageView
+            android:id="@+id/ivGestureLeftArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:src="@drawable/gesture_left_arrow"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ivDirectionControlBg"
+            app:layout_constraintStart_toStartOf="@id/ivDirectionControlBg"
+            app:layout_constraintTop_toTopOf="@id/ivDirectionControlBg" />
+
+        <ImageView
+            android:id="@+id/ivGestureTopArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:rotation="90"
+            android:src="@drawable/gesture_left_arrow"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/ivDirectionControlBg"
+            app:layout_constraintStart_toStartOf="@id/ivDirectionControlBg"
+            app:layout_constraintTop_toTopOf="@id/ivDirectionControlBg" />
+
+        <ImageView
+            android:id="@+id/ivGestureRightArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:rotation="180"
+            android:src="@drawable/gesture_left_arrow"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ivDirectionControlBg"
+            app:layout_constraintEnd_toEndOf="@id/ivDirectionControlBg"
+            app:layout_constraintTop_toTopOf="@id/ivDirectionControlBg" />
+
+        <ImageView
+            android:id="@+id/ivGestureBottomArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:rotation="270"
+            android:src="@drawable/gesture_left_arrow"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/ivDirectionControlBg"
+            app:layout_constraintEnd_toEndOf="@id/ivDirectionControlBg"
+            app:layout_constraintStart_toStartOf="@id/ivDirectionControlBg" />
+
+        <ImageView
+            android:id="@+id/ivPresetPointPreviewBg"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_0"
+            android:layout_marginLeft="@dimen/dp_21"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_21"
+            android:src="@drawable/preset_point_preview_bg"
+            app:layout_constraintDimensionRatio="H,2:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/player" />
+
+        <ImageView
+            android:id="@+id/ivPresetPointAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/preset_point_add"
+            app:layout_constraintBottom_toBottomOf="@id/ivPresetPointPreviewBg"
+            app:layout_constraintEnd_toEndOf="@id/ivPresetPointPreviewBg"
+            app:layout_constraintStart_toStartOf="@id/ivPresetPointPreviewBg"
+            app:layout_constraintTop_toTopOf="@id/ivPresetPointPreviewBg" />
+
+        <TextView
+            android:id="@+id/tvPresetPointAddTip"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_21"
+            android:layout_marginTop="@dimen/dp_85"
+            android:layout_marginEnd="@dimen/dp_21"
+            android:layout_marginBottom="@dimen/dp_32"
+            android:gravity="center"
+            android:text="@string/preset_point_add_tip"
+            android:textColor="@color/gray_cc616161"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivPresetPointPreviewBg" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/vPresetPointContainer"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_21"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginEnd="@dimen/dp_21"
+            android:background="@drawable/button_white_state_list_radius_16"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/player">
+
+            <TextView
+                android:id="@+id/tvPresetPointListTitle"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_14"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_14"
+                android:text="@string/preset_point_sorting_title"
+                android:gravity="center"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPresetPointList"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_14"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvPresetPointListTitle" />
+
+            <TextView
+                android:id="@+id/tvPresetPointListTip"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_14"
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_marginEnd="@dimen/dp_14"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:gravity="center"
+                android:text="@string/preset_point_sorting_tip"
+                android:textColor="@color/gray_cc616161"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvPresetPointList" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

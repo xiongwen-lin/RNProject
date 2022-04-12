@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/countryListMenuBar"
+        layout="@layout/menu_bar" />
+
+    <RelativeLayout
+        android:id="@+id/countrySearchBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/countryListMenuBar"
+        android:layout_marginLeft="@dimen/dp_23"
+        android:layout_marginRight="@dimen/dp_23"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <ImageView
+            android:id="@+id/countrySearchInputIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp_11"
+            android:layout_marginBottom="@dimen/dp_11"
+            android:src="@drawable/search_country" />
+
+        <EditText
+            android:id="@+id/countrySearchInputQuery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/countrySearchInputIcon"
+            android:background="@null"
+            android:hint="@string/country_list_search"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:paddingLeft="@dimen/dp_8"
+            android:paddingRight="@dimen/dp_8"
+            android:singleLine="true"
+            android:textColor="@color/theme_text_color"
+            android:textColorHint="@color/theme_subtext_color"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/sp_15" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_long"
+        style="@style/divider_thin"
+        android:layout_below="@id/countrySearchBarContainer" />
+
+    <com.nooie.common.widget.contact.CountryListView
+        android:id="@+id/lvCountrySearchCountry"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line_long"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dp_19"
+        android:divider="@color/transparent"
+        android:scrollbars="none" />
+
+
+</RelativeLayout>

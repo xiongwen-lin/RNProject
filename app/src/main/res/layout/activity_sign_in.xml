@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_blue">
+
+    <ScrollView
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/signInAndUpContainer"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_34"
+                app:layout_constraintBottom_toTopOf="@id/btnFbLogin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <!--<TextView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_69"
+                    android:drawableTop="@drawable/logo_welcome"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/theme_subtext_color"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />-->
+
+                <TextView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_42"
+                    android:layout_marginTop="@dimen/dp_50"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_0"
+                    android:text="@string/sign_in_title"
+                    android:textColor="@color/theme_text_color"
+                    android:textSize="@dimen/sp_36"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/ivSlogan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_42"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/dp_0"
+                    android:text="@string/sign_in_slogan"
+                    android:textColor="@color/unable_clickable_color"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivLogo" />
+
+                <com.nooie.widget.NEventTextView
+                    android:id="@+id/btnSignInTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_75"
+                    android:layout_marginTop="@dimen/dp_60"
+                    android:layout_marginEnd="@dimen/dp_4"
+                    android:lines="1"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_14"
+                    android:paddingRight="@dimen/dp_20"
+                    android:paddingBottom="@dimen/dp_14"
+                    android:text="@string/sign_in"
+                    android:textColor="@color/theme_text_color"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold"
+                    app:eventId="@string/n_event_id_select_login"
+                    app:layout_constraintEnd_toStartOf="@id/btnSignUpTag"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivLogo" />
+
+                <View
+                    android:id="@+id/vSignInSelectedTag"
+                    android:layout_width="@dimen/dp_43"
+                    android:layout_height="@dimen/dp_2"
+                    android:background="@color/theme_green"
+                    app:layout_constraintEnd_toEndOf="@id/btnSignInTag"
+                    app:layout_constraintStart_toStartOf="@id/btnSignInTag"
+                    app:layout_constraintTop_toBottomOf="@id/btnSignInTag" />
+
+                <com.nooie.widget.NEventTextView
+                    android:id="@+id/btnSignUpTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:layout_marginEnd="@dimen/dp_75"
+                    android:gravity="end"
+                    android:lines="1"
+                    android:paddingLeft="@dimen/dp_20"
+                    android:paddingTop="@dimen/dp_14"
+                    android:paddingRight="@dimen/dp_20"
+                    android:paddingBottom="@dimen/dp_14"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/theme_text_color"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold"
+                    app:eventId="@string/n_event_id_click_add_account"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btnSignInTag"
+                    app:layout_constraintTop_toTopOf="@id/btnSignInTag" />
+
+                <View
+                    android:id="@+id/vSignUpSelectedTag"
+                    android:layout_width="@dimen/dp_43"
+                    android:layout_height="@dimen/dp_2"
+                    android:background="@color/theme_green"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/btnSignUpTag"
+                    app:layout_constraintStart_toStartOf="@id/btnSignUpTag"
+                    app:layout_constraintTop_toBottomOf="@id/btnSignUpTag" />
+
+                <com.afar.osaio.widget.InputFrameView
+                    android:id="@+id/ipvAccount"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_27"
+                    android:layout_marginTop="@dimen/dp_44"
+                    android:layout_marginEnd="@dimen/dp_27"
+                    app:input_theme="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnSignInTag" />
+
+                <com.afar.osaio.widget.InputFrameView
+                    android:id="@+id/ipvPsd"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_27"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_27"
+                    app:input_theme="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ipvAccount" />
+
+                <com.afar.osaio.widget.NEventFButton
+                    android:id="@+id/btnSignIn"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_44"
+                    android:layout_marginStart="@dimen/dp_42"
+                    android:layout_marginTop="@dimen/dp_155"
+                    android:layout_marginEnd="@dimen/dp_42"
+                    android:text="@string/submit"
+                    app:eventId="@string/n_event_id_click_login"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ipvPsd" />
+
+                <TextView
+                    android:id="@+id/tvForgetPsd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginEnd="@dimen/dp_0"
+                    android:gravity="center"
+                    android:text="@string/sign_in_forget_pwd"
+                    android:textColor="@color/theme_green_subtext_color"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/btnSignIn"
+                    app:layout_constraintStart_toStartOf="@+id/btnSignIn"
+                    app:layout_constraintTop_toBottomOf="@id/btnSignIn" />
+
+                <ImageView
+                    android:id="@+id/ivSignInLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_button_loading"
+                    android:translationZ="@dimen/dp_6"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/btnSignIn"
+                    app:layout_constraintEnd_toEndOf="@+id/btnSignIn"
+                    app:layout_constraintStart_toStartOf="@+id/btnSignIn"
+                    app:layout_constraintTop_toTopOf="@+id/btnSignIn" />
+
+                <com.afar.osaio.widget.InputFrameView
+                    android:id="@+id/ipvSelectCountry"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_27"
+                    android:layout_marginTop="@dimen/dp_44"
+                    android:layout_marginEnd="@dimen/dp_27"
+                    android:visibility="gone"
+                    app:input_theme="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnSignInTag" />
+
+                <com.afar.osaio.widget.InputFrameView
+                    android:id="@+id/ipvRegisterAccount"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_27"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_27"
+                    android:visibility="gone"
+                    app:input_theme="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ipvSelectCountry" />
+
+                <com.afar.osaio.widget.InputFrameView
+                    android:id="@+id/ipvVerifyCode"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_27"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_27"
+                    android:visibility="gone"
+                    app:input_theme="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ipvRegisterAccount" />
+
+                <TextView
+                    android:id="@+id/tvCountdown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_marginEnd="@dimen/dp_28"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/dp_17"
+                    android:paddingTop="@dimen/dp_0"
+                    android:paddingEnd="@dimen/dp_17"
+                    android:paddingBottom="@dimen/dp_0"
+                    android:singleLine="true"
+                    android:text="180s"
+                    android:textColor="@color/theme_white"
+                    android:textSize="@dimen/sp_12"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/ipvVerifyCode"
+                    app:layout_constraintEnd_toEndOf="@id/ipvVerifyCode"
+                    app:layout_constraintTop_toTopOf="@id/ipvVerifyCode" />
+
+                <CheckBox
+                    android:id="@+id/cbPrivacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_30"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:gravity="top|left"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ipvVerifyCode" />
+
+                <TextView
+                    android:id="@+id/tvPrivacy"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_0"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:text="@string/sign_up_create_account_tip"
+                    android:textColor="@color/theme_text_color"
+                    android:textSize="@dimen/sp_12"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@id/ipvVerifyCode"
+                    app:layout_constraintStart_toEndOf="@id/cbPrivacy"
+                    app:layout_constraintTop_toTopOf="@id/cbPrivacy" />
+
+                <com.afar.osaio.widget.NEventFButton
+                    android:id="@+id/btnSignUp"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_42"
+                    android:layout_marginStart="@dimen/dp_42"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:layout_marginEnd="@dimen/dp_42"
+                    android:text="@string/submit"
+                    android:visibility="gone"
+                    app:eventId="@string/n_event_id_click_register"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvPrivacy" />
+
+                <ImageView
+                    android:id="@+id/ivSignUpLoading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_button_loading"
+                    android:translationZ="@dimen/dp_6"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/btnSignUp"
+                    app:layout_constraintEnd_toEndOf="@+id/btnSignUp"
+                    app:layout_constraintStart_toStartOf="@+id/btnSignUp"
+                    app:layout_constraintTop_toTopOf="@+id/btnSignUp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/btnFbLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_75"
+                android:layout_marginBottom="@dimen/dp_34"
+                android:src="@drawable/logo_welcome"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/vThirdLoginDivider"
+                app:layout_constraintEnd_toStartOf="@id/btnGoogleLogin"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/btnGoogleLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginEnd="@dimen/dp_5"
+                android:src="@drawable/logo_welcome"
+                android:visibility="gone"
+                app:layout_constraintEnd_toStartOf="@id/btnTwitterLogin"
+                app:layout_constraintStart_toEndOf="@id/btnFbLogin"
+                app:layout_constraintTop_toTopOf="@id/btnFbLogin" />
+
+            <ImageView
+                android:id="@+id/btnTwitterLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_75"
+                android:src="@drawable/logo_welcome"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/btnGoogleLogin"
+                app:layout_constraintTop_toTopOf="@id/btnFbLogin" />
+
+            <View
+                android:id="@+id/vThirdLoginDivider"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginStart="@dimen/dp_75"
+                android:layout_marginEnd="@dimen/dp_75"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:alpha="0.5"
+                android:background="@color/theme_text_color"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/tvThirdLoginTip"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvThirdLoginTip"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_75"
+                android:layout_marginEnd="@dimen/dp_75"
+                android:layout_marginBottom="@dimen/dp_28"
+                android:gravity="center"
+                android:text="@string/sign_in_third_login_tip"
+                android:textColor="@color/font_white_normal"
+                android:textSize="@dimen/sp_12"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivExistIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_0"
+                android:layout_marginEnd="@dimen/dp_0"
+                android:padding="@dimen/dp_24"
+                android:src="@drawable/close_gray"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.afar.osaio.widget.WebViewDialogView
+        android:id="@+id/wdvSignIn"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

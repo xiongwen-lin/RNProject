@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_marginBottom="@dimen/dp_10"
+    android:background="@drawable/message_backgroud"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_news_device" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/tvUnreadCount"
+        android:layout_toRightOf="@+id/ivIcon"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:lines="1"
+        android:textColor="@color/theme_text_color"
+        android:textSize="@dimen/sp_15"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivUnread"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tvContent"
+        android:layout_alignBottom="@id/tvContent"
+        android:layout_toRightOf="@+id/tvContent"
+        android:src="@drawable/message_alarm" />
+
+    <ImageView
+        android:id="@+id/ivNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/right_arrow_black" />
+
+    <TextView
+        android:id="@+id/tvUnreadCount"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@+id/ivNext"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:lines="1"
+        android:text=""
+        android:textColor="@color/message_theme_text_color"
+        android:textSize="10sp" />
+</RelativeLayout>

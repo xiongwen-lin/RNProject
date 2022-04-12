@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@drawable/white_dialog_radius_10"
+        android:minHeight="@dimen/dp_160">
+
+        <TextView
+            android:id="@+id/tvDialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_64"
+            android:layout_marginTop="@dimen/dp_27"
+            android:layout_marginEnd="@dimen/dp_64"
+            android:textSize="@dimen/sp_17"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDialogMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="43dp"
+            android:autoLink="all"
+            android:maxLines="8"
+            android:scrollbars="vertical"
+            android:gravity="start"
+            app:layout_constraintBottom_toTopOf="@id/btnDialogOk"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDialogTitle" />
+
+        <CheckBox
+            android:id="@+id/cbDialogTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_23"
+            android:layout_marginTop="@dimen/dp_18"
+            android:layout_marginEnd="@dimen/dp_23"
+            android:paddingHorizontal="@dimen/dp_8"
+            android:text="@string/upgrade_dialog_tip"
+            android:textColor="@color/gray_9a9a9a"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvDialogMessage" />
+
+        <com.afar.osaio.widget.FButton
+            android:id="@+id/btnDialogOk"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_34"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17"
+            android:text="@string/confirm_upper"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cbDialogTip" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

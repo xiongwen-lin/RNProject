@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/dp_12"
+    android:paddingRight="@dimen/dp_12">
+
+    <com.nooie.common.widget.RoundedImageView.RoundedImageView
+        android:id="@+id/ivshareUserImg"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user"
+        app:riv_corner_radius="@dimen/dp_45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvShareUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_6"
+        android:lines="1"
+        android:ellipsize="end"
+        android:text="@string/unknown"
+        android:textColor="@color/theme_text_color"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivshareUserImg"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

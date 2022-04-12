@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.afar.osaio">
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="true" /> <!-- Wi-Fi -->
+    <!-- Dangerous Permissions -->
+    <!-- getScanResults need below two permission -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" /> <!-- Dangerous Permissions -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Dangerous Permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" /> <!-- Dangerous Permissions -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="true" /> <!-- Push service -->
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" /> <!-- 富媒体需要声明的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_DOWNLOAD_MANAGER" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAREXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" /> <!-- Required -->
+    <permission
+        android:name="${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" /> <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="${JPUSH_PKGNAME}.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!--android:name="com.afar.osaio.base.NooieApplication"-->
+    <application
+        android:name=".testrn.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/application_name"
+        android:maxAspectRatio="2.4"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/NooieTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:label, android:theme,android:allowBackup,android:supportsRtl">
+        <activity android:name="com.afar.osaio.smart.router.RouterBaseActivity"></activity>
+        <!-- 适配全面屏 -->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" /> <!-- 适配华为(hua wei)刘海屏 -->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true" /> <!-- 适配小米(xiao mi)刘海屏 -->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" /> <!-- Package multiple channel -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+        <meta-data
+            android:name="com.nooie.sdk.appid"
+            android:value="3dab98eee85b7ae8" />
+        <meta-data
+            android:name="com.nooie.sdk.secret"
+            android:value="7569f96ceac7c333e981a9604865e413" />
+
+        <!--tuya appid and secret -->
+        <meta-data
+            android:name="TUYA_SMART_APPKEY"
+            android:value="${TUYA_SMART_APPKEY}" />
+        <meta-data
+            android:name="TUYA_SMART_SECRET"
+            android:value="${TUYA_SMART_SECRET}" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"
+                tools:replace="android:resource" />
+        </provider>
+
+        <!--<activity
+            android:name="com.afar.osaio.account.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="osaio.message.home" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>-->
+        <activity
+            android:name=".testrn.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="osaio.message.home" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+<!--        <activity android:name="com.apemans.yrpannelkit.yrpannelkit.activity.YRReactActivity"-->
+<!--            android:launchMode="singleTask"/>-->
+
+        <activity
+            android:name="com.afar.osaio.account.activity.SplashLoadingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".application.activity.ThirdSkillActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.afar.osaio.test.AActivity"
+            android:launchMode="singleTask">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity
+            android:name="com.afar.osaio.test.BActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.afar.osaio.test.CActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.afar.osaio.test.DActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.afar.osaio.account.activity.SignInAndUpActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.account.activity.SignInActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/VictureTheme" />
+        <activity
+            android:name="com.afar.osaio.account.activity.ForgotPsdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/VictureTheme" />
+        <activity
+            android:name="com.afar.osaio.account.activity.InputVerifyCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/VictureTheme" />
+        <activity
+            android:name="com.afar.osaio.account.activity.SetPasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/VictureTheme" />
+        <activity
+            android:name="com.afar.osaio.account.activity.TwoAuthLoginActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/VictureTheme" />
+        <activity
+            android:name="com.afar.osaio.account.activity.TwoAuthDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.account.activity.TwoAuthDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.account.activity.ChangePasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.application.activity.AboutActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.afar.osaio.application.activity.WebViewActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.AppSettingsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.DetectionSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.application.activity.FeedbackActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.application.activity.HelpActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.AddACameraActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.AddCameraSelectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.RouterDetectionScheduleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.RouterDeviceCreateDetectionScheduleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterSetWifiManagerHelpActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterSetWifiManagerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterGuestWifiActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterTimeZoneActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterDeviceAccessControlActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterBindToDeviceFailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.ConnectionDeviceDetailsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterOfflineHelpActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterSetWifiActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterDeviceConnectSetActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterBackupInfoForPhoneActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterAddParentalControlActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterParentalControlActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterDeviceConnectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterDetalisSetActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterDetalisActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterResetNameActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterNotOnlineActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterBindToDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterConnectionWifiActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RouterInternetModeSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.RecoverRouterBackupActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.ConfigurationRouterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.router.ConnectionRouterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.ResetRouterHelpActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.NoRedLightActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.NoConnectWiFi"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.NothingHappenActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.InputWiFiPsdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.ScanCameraResultActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.WiFiQRCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.RenameDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.QRCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.message.activity.DeviceMessageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="osaio.message.device" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.afar.osaio.message.activity.SystemMessageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="osaio.message.sys" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.NooieScanActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.DeviceSetupActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.NooieDeviceSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.DeviceAudioAndVideoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.CustomNameActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.NooieDetectionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.NooieDetectionScheduleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.NooieCreateDetectionScheduleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.DeviceCreateDetectionScheduleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.NooieDetectionZoneActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.NooieStorageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.CloudMoreActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.device.activity.NooieShareDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.NooieDeviceInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.DevicePIRActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.HomeAwayActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.DeviceTestToolActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.NooieNameDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.player.activity.NooiePlayActivity"
+            android:configChanges="keyboardHidden|screenSize|orientation"
+            android:launchMode="singleTop"
+            android:screenOrientation="sensor" />
+        <activity
+            android:name="com.afar.osaio.smart.hybrid.webview.HybridWebViewActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.CountryListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/VictureTheme" />
+        <activity
+            android:name="com.afar.osaio.application.activity.UserManualActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.application.activity.FAQActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.media.activity.MediaActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.media.activity.ImageMediaActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.media.activity.VideoMediaActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.home.activity.HomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.smartlook.activity.AddBluetoothDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.smartlook.activity.AddAdminActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.smartlook.activity.AddAuthorizationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.smartlook.activity.LookDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.smartlook.activity.LockRecordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.smartlook.activity.LockAuthorizationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.smartlook.activity.LockAccountActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.AddLpSuitWithRouterActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.AddLpSuitActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.AddLowPowerIpcActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.AddGatewayActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.DeviceScanCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.AddGatewayCompleteActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.AddLpCameraActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.AddProLpCameraActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.LpCameraIncorrectLightActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.MatchLpCameraActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.MatchLpCameraFailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.GatewaySettingsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.GatewayInfoActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.GatewayFirmwareActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.lpipc.activity.GatewayUpgradeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.ConnectionModeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.ConnectToWiFiActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.FailHelpActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.ScanCodeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.InputDeviceIdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.RouterSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.RouterConfigureActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.PresetPointActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.SwitchConnectionModeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.scan.activity.DeviceScanFailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.mixipc.activity.ConnectBluetoothActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.mixipc.activity.ModifyCameraPasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.mixipc.activity.BluetoothScanActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.mixipc.activity.ConnectApDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.mixipc.activity.NameDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.FileSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.FileSettingConfigureActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.mixipc.activity.ChangeDevicePasswordActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.OtaUpdateTipActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.media.activity.PhotoMediaActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.media.activity.CameraPhotoDetailActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.setting.activity.FlashLightActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.afar.osaio.account.activity.FirstStartInstructionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" />
+
+        <activity
+            android:name="com.afar.osaio.message.activity.MessageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name="com.afar.osaio.account.activity.StartUpGuideActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.AddDeviceSelectLinkageActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.AddDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.SearchBlueActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.ConnectInApModeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.GroupActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.HotSpotConnectActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.HotSpotTipsActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.InputWiFiPsdActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.NameDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.ResetDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.ScanDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.ScanFailedActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.WrongDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.CreateGroupActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.afar.osaio.smart.electrician.activity.NameGroupActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.HomeListActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.AddGuestActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.AddHomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.AddOwnerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.FamilyMemberActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.HomeSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.HomeManagerActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.MemberAccessActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.MemberActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.MyProfileActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.NameHomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.SelectShareDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.SetNameActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.ManageLampDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.ManageDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.GroupScheduleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.GroupSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.ScheduleActionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.ScheduleActionUpdateActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.LampSettingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.SingleDeviceShareActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.RenameDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.PowerStripRenameActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.DeviceShareUsersActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.AutomationActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.CreateNewSmartActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.DeviceChangeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.DelayActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.CreateSceneActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.DeviceDpActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.EffectiveActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.LaunchActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.RepeatActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.RunDeviceActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.SceneSortActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.ScheduleActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.SelectFunctionActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.SelectSmartActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.SelectWeatherActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.TeckinSmartSceneActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.afar.osaio.smart.electrician.smartScene.activity.WeatherActivity" />
+        <activity android:name="com.afar.osaio.smart.electrician.activity.DeviceInfoActivity" />
+        <activity android:name=".application.activity.SmartThingActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <!-- FCM -> Firebase Cloud Message -->
+        <service android:name="com.afar.osaio.smart.push.firebase.FirebaseMessageService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+        See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon1"
+            android:resource="@drawable/ic_notification" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color1"
+            android:resource="@color/colorAccent" />
+    </application>
+
+</manifest>

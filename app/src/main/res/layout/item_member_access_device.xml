@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.afar.osaio.smart.electrician.widget.SquareLinearLayout
+        android:id="@+id/sllDevice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:layout_marginEnd="@dimen/dp_11"
+        android:background="@drawable/item_white_state_list_radius_5"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View style="@style/stretch_space_vertical" />
+
+        <ImageView
+            android:id="@+id/ivHomeManagerDeviceIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/modify" />
+
+        <TextView
+            android:id="@+id/tvHomeManagerDeviceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_16"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/unknown"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/sp_13" />
+
+        <View style="@style/stretch_space_vertical" />
+
+    </com.afar.osaio.smart.electrician.widget.SquareLinearLayout>
+
+    <ImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/feedback_close"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

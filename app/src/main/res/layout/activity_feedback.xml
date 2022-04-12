@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/menu_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/emailContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:background="@drawable/button_gray_state_list_radius_5">
+
+                <TextView
+                    android:id="@+id/tvEmailTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:paddingStart="@dimen/dp_0"
+                    android:text="@string/phone_number_email"
+                    android:textSize="@dimen/sp_15" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_toLeftOf="@id/ivEmailSwitch"
+                    android:layout_toRightOf="@id/tvEmailTitle"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical|right"
+                    android:lines="1"
+                    android:text=""
+                    android:textColor="@color/gray_8d93a2"
+                    android:textSize="@dimen/sp_15" />
+
+                <ImageView
+                    android:id="@+id/ivEmailSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/right_arrow_gray" />
+
+                <View
+                    android:id="@+id/dtEmail"
+                    style="@style/divider_thin"
+                    android:layout_alignParentBottom="true"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/issueContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvIssueTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_toLeftOf="@+id/ivIssueSwitch"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text="Issue Type"
+                    android:textSize="@dimen/sp_15" />
+
+                <ImageView
+                    android:id="@+id/ivIssueSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tvIssueTitle"
+                    android:layout_alignBottom="@id/tvIssueTitle"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/right_arrow_gray" />
+
+                <View
+                    android:id="@+id/dtIssue"
+                    style="@style/divider_thin"
+                    android:layout_below="@+id/tvIssueTitle" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvIssue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dtIssue"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:scrollbars="vertical"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/modelContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tvModelTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_toLeftOf="@+id/ivModelSwitch"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:lines="1"
+                    android:text="Product Model"
+                    android:textSize="@dimen/sp_15" />
+
+                <ImageView
+                    android:id="@+id/ivModelSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tvModelTitle"
+                    android:layout_alignBottom="@id/tvModelTitle"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/right_arrow_gray" />
+
+                <View
+                    android:id="@+id/dtModel"
+                    style="@style/divider_thin"
+                    android:layout_below="@+id/tvModelTitle" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvModel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dtModel"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/photoAndVideoTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/button_gray_state_list_radius_5">
+
+                <TextView
+                    android:id="@+id/tvNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    android:layout_toLeftOf="@+id/ivPhotoAndVideoTopAdd"
+                    android:paddingStart="@dimen/dp_0"
+                    android:text="@string/feedback_add_photo" />
+
+                <ImageView
+                    android:id="@+id/ivPhotoAndVideoTopAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/dp_12"
+                    android:layout_alignTop="@id/tvNum"
+                    android:layout_alignBottom="@id/tvNum"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:scaleType="center"
+                    android:src="@drawable/add_photo" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvPhotoAndView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvNum"
+                    android:layout_marginLeft="@dimen/dp_11"
+                    android:layout_marginRight="@dimen/dp_11"
+                    android:layout_marginBottom="@dimen/dp_0" />
+            </RelativeLayout>
+
+            <View
+                style="@style/divider_thin"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_24"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tvDetailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_14"
+                android:layout_marginEnd="@dimen/dp_24"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:paddingStart="@dimen/dp_0"
+                android:text="@string/feedback_detail"
+                android:textSize="@dimen/sp_15" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_14"
+                android:layout_marginEnd="@dimen/dp_24">
+
+                <AutoCompleteTextView
+                    android:id="@+id/etContent"
+                    style="@style/NooieAutocompleteTextStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:gravity="top"
+                    android:hint="@string/feedback_describe_problem"
+                    android:imeOptions="actionDone"
+                    android:minHeight="@dimen/dp_200"
+                    android:paddingBottom="@dimen/dp_50"
+                    android:singleLine="false"
+                    android:textColor="@color/theme_subtext_color" />
+
+                <ImageView
+                    android:id="@+id/ivClearContent"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_55"
+                    android:layout_gravity="right|bottom"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/close_icon_state_list" />
+            </FrameLayout>
+
+            <com.afar.osaio.widget.FButton
+                android:id="@+id/btnSend"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_42"
+                android:layout_marginLeft="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_84"
+                android:layout_marginRight="@dimen/dp_50"
+                android:layout_marginBottom="@dimen/dp_50"
+                android:paddingLeft="@dimen/dp_22"
+                android:paddingRight="@dimen/dp_22"
+                android:text="@string/submit" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

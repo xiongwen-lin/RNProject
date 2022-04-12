@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/menu_bar"
+        android:id="@+id/titlebar"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTopTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_46"
+            android:layout_marginTop="@dimen/dp_32"
+            android:layout_marginEnd="@dimen/dp_46"
+            android:gravity="center"
+            android:text="@string/schedule_action_top_tip"
+            android:textColor="@color/theme_subtext_color"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/vLineTop"
+            style="@style/divider_thin"
+            android:layout_marginStart="@dimen/dp_23"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_23"
+            app:layout_constraintTop_toBottomOf="@+id/tvTopTip" />
+
+        <TextView
+            android:id="@+id/btnCreateScheduleOn"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_32"
+            android:background="@drawable/button_schedule_action_on_radius_20"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/on_uppercase"
+            android:textColor="@color/theme_white"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintEnd_toStartOf="@+id/guideline10"
+            app:layout_constraintStart_toEndOf="@+id/tvTopTip"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vLineTop" />
+
+        <TextView
+            android:id="@+id/btnCreateScheduleOff"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="@dimen/dp_40"
+            android:background="@drawable/button_schedule_action_off_radius_20"
+            android:gravity="center"
+            android:lines="1"
+            android:text="@string/off_uppercase"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline10"
+            app:layout_constraintTop_toTopOf="@+id/btnCreateScheduleOn" />
+
+        <LinearLayout
+            android:id="@+id/containerScheduleAt"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_24"
+            android:paddingRight="@dimen/dp_24"
+            app:layout_constraintBottom_toTopOf="@+id/guideline1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btnCreateScheduleOff">
+
+            <TextView
+                android:id="@+id/tvAtLabel"
+                android:layout_width="55dp"
+                android:layout_height="@dimen/dp_31"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/left_linear_gradient"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.6"
+                android:text="@string/schedule_action_at"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_12" />
+
+            <com.contrarywind.view.WheelView
+                android:id="@+id/wheelStartHour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:wheelview_dividerColor="@color/wheel_blue"
+                app:wheelview_textColorCenter="@color/theme_text_color"
+                app:wheelview_textColorOut="@color/theme_text_colorout"
+                app:wheelview_textSize="@dimen/sp_23" />
+
+            <com.contrarywind.view.WheelView
+                android:id="@+id/wheelStartMinutes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:wheelview_dividerColor="@color/wheel_blue"
+                app:wheelview_textColorCenter="@color/theme_text_color"
+                app:wheelview_textColorOut="@color/theme_text_colorout"
+                app:wheelview_textSize="@dimen/sp_23" />
+
+            <TextView
+                android:id="@+id/tvDay"
+                android:layout_width="60dp"
+                android:layout_height="@dimen/dp_31"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/right_liner_gradient"
+                android:gravity="center"
+                android:text="" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/vLineButtom"
+            style="@style/divider_thin"
+            android:layout_marginStart="@dimen/dp_23"
+            android:layout_marginEnd="@dimen/dp_23"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline1" />
+
+        <com.afar.osaio.widget.SelectWeekView
+            android:id="@+id/swvCreateSchedule"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_23"
+            android:layout_marginTop="@dimen/dp_47"
+            android:layout_marginEnd="@dimen/dp_23"
+            app:layout_constraintBottom_toBottomOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

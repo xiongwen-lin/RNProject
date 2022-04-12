@@ -1,0 +1,53 @@
+
+{
+	"buildFiles" : 
+	[
+		"/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/src/main/jni/CMakeLists.txt"
+	],
+	"cFileExtensions" : [ "c" ],
+	"cleanCommands" : 
+	[
+		"/Users/fqiao/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/.externalNativeBuild/cmake/debug/armeabi-v7a --target clean"
+	],
+	"libraries" : 
+	{
+		"nooie-encrypt-Debug-armeabi-v7a" : 
+		{
+			"abi" : "armeabi-v7a",
+			"artifactName" : "nooie-encrypt",
+			"buildCommand" : "/Users/fqiao/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/.externalNativeBuild/cmake/debug/armeabi-v7a --target nooie-encrypt",
+			"buildType" : "debug",
+			"files" : 
+			[
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/Users/fqiao/Library/Android/sdk/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/fqiao/Library/Android/sdk/android-ndk-r16b/sysroot -Dnooie_encrypt_EXPORTS -I. -I/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/src/main/jni/base -I/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/src/main/jni/base/encrypt -I/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/src/main/jni/encryption  -isystem /Users/fqiao/Library/Android/sdk/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=19 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c99 -Wno-error=format-security                                     -Wno-unused -Wno-format                                     -Wno-implicit-function-declaration                                     -Wno-pointer-sign                                     -Wno-incompatible-pointer-types-discards-qualifiers                                     -Wno-incompatible-pointer-types                                     -Wno-tautological-constant-out-of-range-compare                                     -Wno-logical-op-parentheses                                     -Wno-parentheses-equality                                     -Wno-parentheses-equality                                     -Wno-macro-redefined -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/src/main/jni/nooie-jni.c",
+					"workingDirectory" : "/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/Users/fqiao/Library/Android/sdk/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/fqiao/Library/Android/sdk/android-ndk-r16b/sysroot -Dnooie_encrypt_EXPORTS -I. -I/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/src/main/jni/base -I/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/src/main/jni/base/encrypt -I/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/src/main/jni/encryption  -isystem /Users/fqiao/Library/Android/sdk/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=19 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c99 -Wno-error=format-security                                     -Wno-unused -Wno-format                                     -Wno-implicit-function-declaration                                     -Wno-pointer-sign                                     -Wno-incompatible-pointer-types-discards-qualifiers                                     -Wno-incompatible-pointer-types                                     -Wno-tautological-constant-out-of-range-compare                                     -Wno-logical-op-parentheses                                     -Wno-parentheses-equality                                     -Wno-parentheses-equality                                     -Wno-macro-redefined -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/src/main/jni/base/encrypt/md5.c",
+					"workingDirectory" : "/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				},
+				
+				{
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=/Users/fqiao/Library/Android/sdk/android-ndk-r16b/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/fqiao/Library/Android/sdk/android-ndk-r16b/sysroot -Dnooie_encrypt_EXPORTS -I. -I/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/src/main/jni/base -I/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/src/main/jni/base/encrypt -I/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/src/main/jni/encryption  -isystem /Users/fqiao/Library/Android/sdk/android-ndk-r16b/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=19 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security  -std=c99 -Wno-error=format-security                                     -Wno-unused -Wno-format                                     -Wno-implicit-function-declaration                                     -Wno-pointer-sign                                     -Wno-incompatible-pointer-types-discards-qualifiers                                     -Wno-incompatible-pointer-types                                     -Wno-tautological-constant-out-of-range-compare                                     -Wno-logical-op-parentheses                                     -Wno-parentheses-equality                                     -Wno-parentheses-equality                                     -Wno-macro-redefined -O0 -fno-limit-debug-info  -fPIC      -c ",
+					"src" : "/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/src/main/jni/encryption/encryption.c",
+					"workingDirectory" : "/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/.externalNativeBuild/cmake/debug/armeabi-v7a"
+				}
+			],
+			"output" : "/Users/fqiao/Documents/apeman/pro/nooie-smart-android/distribution/nooie/lib/armeabi-v7a/libnooie-encrypt.so",
+			"toolchain" : "18345924097562779288"
+		}
+	},
+	"toolchains" : 
+	{
+		"18345924097562779288" : 
+		{
+			"cCompilerExecutable" : "/Users/fqiao/Library/Android/sdk/android-ndk-r16b/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+			"cppCompilerExecutable" : "/Users/fqiao/Library/Android/sdk/android-ndk-r16b/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+		}
+	}
+}

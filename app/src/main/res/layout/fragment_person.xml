@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/ivPersonMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_20"
+        android:visibility="invisible"
+        android:src="@drawable/person_msg_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivPersonMsgPoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:src="@drawable/solid_circle_red"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/ivPersonMsg"
+        app:layout_constraintTop_toTopOf="@id/ivPersonMsg" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerPersonInfo"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPersonMsg">
+
+        <com.nooie.common.widget.RoundedImageView.RoundedImageView
+            android:id="@+id/ivPersonPortrait"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
+            android:src="@drawable/ic_account_avatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="@dimen/dp_15" />
+
+        <ImageView
+            android:id="@+id/ivPersonPortraitEditIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/person_portrait_edit_icon"
+            app:layout_constraintBottom_toBottomOf="@id/ivPersonPortrait"
+            app:layout_constraintEnd_toEndOf="@id/ivPersonPortrait" />
+
+        <TextView
+            android:id="@+id/tvPersonName"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_24"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:text=""
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/sp_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivPersonPortrait"
+            app:layout_constraintTop_toTopOf="@id/ivPersonPortrait" />
+
+        <TextView
+            android:id="@+id/tvPersonEditProfile"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:maxLines="2"
+            android:text="@string/home_person_edit_profile"
+            android:textColor="@color/theme_subtext_color"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintEnd_toStartOf="@id/ivPersonEditProfileArrow"
+            app:layout_constraintStart_toStartOf="@id/tvPersonName"
+            app:layout_constraintTop_toBottomOf="@id/tvPersonName" />
+
+        <ImageView
+            android:id="@+id/ivPersonEditProfileArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_0"
+            android:paddingEnd="@dimen/dp_20"
+            android:src="@drawable/right_arrow_gray"
+            app:layout_constraintBottom_toBottomOf="@id/tvPersonEditProfile"
+            app:layout_constraintEnd_toEndOf="@id/tvPersonName"
+            app:layout_constraintTop_toTopOf="@id/tvPersonEditProfile" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerFAQ"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_38"
+        android:background="@drawable/btn_press_bg_gray_state_list"
+        android:paddingEnd="@dimen/dp_10"
+        app:layout_constraintStart_toStartOf="@id/containerPersonInfo"
+        app:layout_constraintTop_toBottomOf="@id/containerPersonInfo">
+
+        <ImageView
+            android:id="@+id/ivPersonSupport"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginStart="@dimen/dp_10"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_account_faq_off"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPersonFAQTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:maxLines="2"
+            android:text="@string/faq"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivPersonSupport"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/containerPersonFeedback"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginStart="@dimen/dp_20"
+        android:background="@drawable/btn_press_bg_gray_state_list"
+        app:layout_constraintBottom_toBottomOf="@id/containerFAQ"
+        app:layout_constraintEnd_toEndOf="@id/containerPersonInfo"
+        app:layout_constraintStart_toEndOf="@id/containerFAQ"
+        app:layout_constraintTop_toTopOf="@id/containerFAQ">
+
+        <ImageView
+            android:id="@+id/ivPersonFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:src="@drawable/ic_account_feedback_off"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPersonFeedbackTitle"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:maxLines="2"
+            android:text="@string/home_person_feedback"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivPersonFeedbackArrow"
+            app:layout_constraintStart_toEndOf="@id/ivPersonFeedback"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivPersonFeedbackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_0"
+            android:paddingEnd="@dimen/dp_20"
+            android:visibility="gone"
+            android:src="@drawable/right_arrow_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPersonSetting"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginTop="@dimen/dp_30"
+        android:background="@color/theme_bg"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_15"
+        android:paddingBottom="@dimen/dp_20"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/containerFAQ"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

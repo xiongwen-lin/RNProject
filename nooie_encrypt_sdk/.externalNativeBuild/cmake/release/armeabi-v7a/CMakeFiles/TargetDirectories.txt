@@ -1,0 +1,3 @@
+/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/fqiao/Documents/apeman/pro/nooie-smart-android/nooie_encrypt_sdk/.externalNativeBuild/cmake/release/armeabi-v7a/CMakeFiles/nooie-encrypt.dir

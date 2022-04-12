@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/renameDeviceMenuBar"
+        layout="@layout/menu_bar" />
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_27"
+        android:src="@drawable/power_strip_name" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_11"
+        android:text="Plug s"
+        android:textColor="@color/theme_subtext_color"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:textSize="@dimen/sp_12"
+        android:textStyle="bold" />
+
+    <com.afar.osaio.smart.electrician.widget.InputFrameView
+        android:id="@+id/ipvDeviceName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_46" />
+
+    <View style="@style/stretch_space_vertical" />
+
+    <com.afar.osaio.widget.FButton
+        android:id="@+id/btnRename"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_60"
+        android:layout_marginEnd="@dimen/dp_60"
+        android:text="@string/save" />
+
+</LinearLayout>

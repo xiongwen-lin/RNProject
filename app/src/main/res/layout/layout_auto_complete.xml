@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_item"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_55"
+    android:background="@color/theme_white"
+    android:paddingLeft="@dimen/dp_0">
+
+    <TextView
+        android:id="@+id/tv_simple_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:layout_toLeftOf="@id/iv_simple_item"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="2"
+        android:textAllCaps="false"
+        android:textColor="@color/input_text_color" />
+
+    <ImageView
+        android:id="@+id/iv_simple_item"
+        android:layout_width="@dimen/dp_55"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/close_icon_state_list" />
+
+    <View style="@style/divider_thin" />
+</RelativeLayout>

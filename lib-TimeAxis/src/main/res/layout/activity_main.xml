@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context="com.scenery7f.timeaxis.MainActivity">
+
+    <com.scenery7f.timeaxis.view.TimerShaft
+        android:id="@+id/timer_shaft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:markColor="@color/olivedrab"
+        app:scaleColor="@color/blue">
+
+    </com.scenery7f.timeaxis.view.TimerShaft>
+</LinearLayout>

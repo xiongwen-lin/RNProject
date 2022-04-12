@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.afar.osaio.testrn.widget.YRRoundProgress
+        android:id="@+id/roundProgress"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:roundColor="#EBEBEB"
+        app:roundProgressColor="#FF4D8CEC"
+        app:roundWidth="12dp"
+        app:roundtextColor="#010C11"
+        app:roundtextSize="16sp"
+        app:textIsDisplayable="true" />
+
+</LinearLayout>

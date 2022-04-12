@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_guest"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!--android:text="@string/router_guest_wifi_tip_one"-->
+    <TextView
+        android:id="@+id/tvSmartTips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/theme_green"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingEnd="@dimen/dp_15"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivSmartIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:src="@drawable/guest_icon"
+        app:layout_constraintTop_toBottomOf="@+id/tvSmartTips" />
+
+    <TextView
+        android:id="@+id/smart_guest_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingEnd="@dimen/dp_15"
+        android:text="@string/router_guest_wifi_tip_two"
+        android:textColor="@color/black_80010c11"
+        app:layout_constraintTop_toBottomOf="@+id/ivSmartIcon" />
+
+    <LinearLayout
+        android:id="@+id/smart_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_30"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_10"
+        android:paddingEnd="@dimen/dp_15"
+        android:paddingBottom="@dimen/dp_10"
+        android:weightSum="5"
+        app:layout_constraintTop_toBottomOf="@+id/smart_guest_text">
+
+        <TextView
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="@string/router_guest_wifi_guest_wifi" />
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="end">
+
+            <com.suke.widget.SwitchButton
+                android:id="@+id/switchSmartButton"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_25"
+                android:paddingTop="@dimen/dp_5"
+                android:paddingEnd="@dimen/dp_13"
+                android:tag="0"
+                android:visibility="visible"
+                app:sb_background="@color/theme_switch_btn_bg"
+                app:sb_border_width="@dimen/dp_0"
+                app:sb_button_color="@color/input_text_color"
+                app:sb_checked="false"
+                app:sb_checked_color="@color/theme_green"
+                app:sb_checkline_color="@color/input_text_color"
+                app:sb_show_indicator="false"
+                app:sb_uncheck_color="@color/input_text_color" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

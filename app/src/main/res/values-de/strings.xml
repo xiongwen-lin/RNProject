@@ -1,0 +1,1835 @@
+<resources>
+    <!-- Common -->
+    <string name="rule_edit" translatable="false">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`¬!"£$%^*()~=#{}[];':,./?/*-_+&#060;&#062;&#064;&#038;</string>
+    <string name="application_name" translatable="false">Osaio</string>
+    <string name="refresh">AKTUALISIEREN</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="cancel_normal">Abbrechen</string>
+    <string name="inbox">POSTEINGANG</string>
+    <string name="settings">STELLUNGEN</string>
+    <string name="next">Nächst</string>
+    <string name="next_upper">Nächst</string>
+    <string name="update">AKTUALISIEREN</string>
+    <string name="continue_upper">Fortsetzen</string>
+    <string name="ssid">SSID</string>
+    <string name="password">Passwort</string>
+    <string name="show">Zeigen</string>
+    <string name="hide">VERBERGEN</string>
+    <string name="save">SPAREN</string>
+    <string name="high">HOCH</string>
+    <string name="normal">NORMAL</string>
+    <string name="copy">KOPIEREN</string>
+    <string name="logout">AUSLOGGEN</string>
+    <string name="sign_out">Ausloggen</string>
+    <string name="close">SCHLIESSEN</string>
+    <string name="low">NIEDRIG</string>
+    <string name="medium">MITTEL</string>
+    <string name="accept">AKZEPTIEREN</string>
+    <string name="reject">ABLEHNEN</string>
+    <string name="ignore">IGNORIEREN</string>
+    <string name="live">Live</string>
+    <string name="subscribe_upper">ABONNIEREN</string>
+    <string name="submit">Senden</string>
+    <string name="terms_of_service">Nutzungsbedingungen</string>
+    <string name="privacy_policy">Datenschutzrichtlinie</string>
+    <string name="cache_cleared">Cache gelöscht.</string>
+    <string name="mon_upper">M</string>
+    <string name="tues_upper">T</string>
+    <string name="wed_upper">W</string>
+    <string name="thur_upper">T</string>
+    <string name="fri_upper">F</string>
+    <string name="sat_upper">S</string>
+    <string name="sun_upper">S</string>
+    <string name="change_upper">VERÄNDERUNG</string>
+    <string name="edit">BEARBEITEN</string>
+
+    <string name="confirm">Bestätigen</string>
+    <string name="confirm_upper">Bestätigen</string>
+    <string name="complete">fertig  sein</string>
+
+    <string name="settings_delete">LÖSCHEN</string>
+    <string name="ok">OK</string>
+    <string name="select_image">Bild auswählen</string>
+    <string name="take_photo">MACH EIN FOTO</string>
+    <string name="album">Foto</string>
+    <string name="camera">Kamera</string>
+    <string name="offline">Offline</string>
+    <string name="online">Online</string>
+    <string name="copy_finish_tip">Kopiert.</string>
+    <string name="view">SEHEN</string>
+    <string name="empty">Leeren</string>
+    <string name="success">Erfolgreich</string>
+    <string name="no_record">Stellen Sie sicher, dass die Loop-Aufnahme aktiv ist und die erste Datei für die Wiedergabe bereit ist.(Die erste Datei ist  5 Minuten später nach dem Start der Kamera oder nach dem Formatieren der Micro-SD-Karte in 5 Minuten verfügbar).</string>
+    <string name="seek_no_record">%1$s Keine Aufnahme gefunden.</string>
+    <string name="AM">AM</string>
+    <string name="PM">PM</string>
+    <string name="unknown">unbekannt</string>
+    <string name="upgrade_success">Upgrade erfolgreich.</string>
+    <string name="phone_number_email">Email</string>
+    <string name="kick_out">Abmelden erzwingen</string>
+    <string name="kick_out_info">Ihr Konto wurde auf einem anderen Gerät angemeldet</string>
+    <string name="login_expire">Login abgelaufen</string>
+    <string name="login_expire_info">Ihr Konto ist seit mehr als. Bitte melden Sie sich erneut an.</string>
+    <string name="account_move">Aktualisiere den Account</string>
+    <string name="account_move_info">Die Kontoinformationen sind abgelaufen. Bitte melden Sie sich erneut an.</string>
+    <string name="network_error0">Netzwerkfehler. Bitte versuchen Sie es später erneut.</string>
+    <string name="unable_to_parse_response">Serverfehler. Bitte versuchen Sie es später erneut.</string>
+    <string name="acc_illegal">Dieser Account existiert nicht. Bitte melden Sie sich an oder verwenden Sie ein anderes Konto.</string>
+    <string name="wi_fi_illegal">WLAN-Fehler, bitte versuchen Sie es später erneut.</string>
+    <string name="wi_fi_connect_error0">Wi-Fi-Verbindungsfehler, bitte versuchen Sie es später erneut.</string>
+    <string name="wi_fi_psd_illegal">Das WLAN-Passwort ist falsch. Bitte versuchen Sie es später erneut.</string>
+    <string name="msg_system_type">Systemmeldungen</string>
+    <string name="exit_app_tip">Zum Verlassen erneut drücken.</string>
+    <string name="repeat_click_btn_soon">Die Operation ist zu häufig. Bitte versuchen Sie es später erneut</string>
+
+    <string name="share_dialog_title">Gerätefreigabe</string>
+    <string name="share_dialog_content">%1$s Möchte den Zugriff auf %2$s mit Ihnen teilen.</string>
+    <string name="share_dialog_content_cancel">%1$s Ihr Zugriff auf %2$s wurde mit Ihnen entfernt.</string>
+    <string name="share_dialog_content_remove">%1$s entfernte den Zugriff auf %2$s</string>
+    <string name="share_dialog_content_reject">%1$s hat Ihren freigegebenen Zugriff auf %2$s abgelehnt</string>
+    <string name="share_dialog_content_agree">%1$s hat Ihren freigegebenen Zugriff  zu %2$s akzeptiert</string>
+    <string name="share_device_sub_message">%1$s wurde Ihrem Konto erfolgreich hinzugefügt.</string>
+
+    <string name="get_fail">Gescheitert.</string>
+
+    <string name="request">ANFORDERN</string>
+    <string name="request_rationale_ask">Diese App funktioniert möglicherweise nicht ordnungsgemäß ohne die erforderlichen Berechtigungen.</string>
+    <string name="request_rationale_ask_again">
+        Diese App funktioniert möglicherweise nicht ordnungsgemäß ohne die erforderlichen Berechtigungen.
+    Bitte geben Sie Ihre Berechtigungen in den App-Einstellungen an, um Fehler zu vermeiden.
+    Erlaubnis zum Fortfahren erforderlich. Bitte gehen Sie zu den App-Einstellungen und geben Sie Ihre Erlaubnis ein.
+    </string>
+    <string name="request_title">Berechtigungen erfordern</string>
+
+    <string name="not_support">unterstützt nicht</string>
+    <string name="subscribe">Abonnieren</string>
+    <string name="unsubscribe">Abmeldung</string>
+    <string name="unsubscribe_up_case">Abmeldung</string>
+    <string name="carry_on">Carry on</string>
+    <string name="rename_empty">Der frei Name darf nicht leer sein.</string>
+
+    <!-- SplashActivity -->
+    <string name="splash_app_name">Smart home</string>
+    <string name="splash_get_started">Family Care and Home Guard</string>
+    <string name="splash_auto_login_fail">Login fehlgeschlagen.</string>
+    <string name="splash_copy_right">Copyright © 2021 OSAIO all rights reserved.</string>
+
+    <!-- SignInAndUpActivity -->
+    <string name="create_account">Ein Konto erstellen</string>
+
+    <!-- SignInActivity -->
+    <string name="sign_in">Anmelden</string>
+    <string name="sign_up">Registrieren</string>
+    <string name="sign_in_forget_pwd">Passwort vergessen</string>
+    <string name="sign_in_account_hint">Email</string>
+    <string name="sign_in_create_account">Erstellen Sie Ihr Konto</string>
+    <string name="sign_in_account_or_password_empty">Passwort / Konto darf nicht leer sein.</string>
+    <string name="sign_in_camera_permission_request_warning">Osaio ist nicht berechtigt, Ihre Kamera zu verwenden.Bitte erlauben Sie den Zugriff auf Osaio in den \"Einstellungen.\"</string>
+    <string name="sign_in_account_empty">Konto darf nicht leer sein.</string>
+    <string name="sign_in_password_empty">Passwort darf nicht leer sein.</string>
+    <string name="sign_in_account_not_exist">Der Benutzer existiert nicht.</string>
+    <string name="sign_in_password_incorrect">E-Mail-Konto oder Kennwort ist falsch</string>
+    <string name="sign_in_verify_code_incorrect">Überprüfungscode ist falsch</string>
+    <string name="sign_in_submit">Senden</string>
+    <string name="sign_in_send">Senden</string>
+    <string name="sign_in_resend">Erneut senden</string>
+    <string name="sign_in_third_login_tip">Sign in with your social media account</string>
+    <string name="sign_in_country_title">Bezirk</string>
+    <string name="sign_account_migration_tip_title">Sie können Ihr Konto in Osaio nur verwenden, nachdem Sie unsere Datenschutzerklärung gelesen und akzeptiert haben</string>
+    <string name="sign_account_migration_tip_content">
+        Bedankt voor het vertrouwen en het gebruik van Osaio. Dit is de eerste keer dat u inlogt met uw %1$s-account. Als een open smart home-platform is het beschermen van de persoonlijke informatie en privacy van gebruikers een basisprincipe van Osaio\n\n
+        Als u niet akkoord gaat met het gebruik van uw account van derden op Osaio, mag u Osaio niet gebruiken of een nieuw account registrerenAls u echter van gedachten verandert, kunt u op elk gewenst moment akkoord gaan met het privacybeleid en inloggen.
+    </string>
+
+    <!-- SignUpActivity -->
+    <string name="sign_up_create_account_tip">Ich bestätige, dass ich mindestens 13 Jahre alt bin und den Sie %1$s und %2$s von Osaio zustimme.</string>
+    <string name="sign_up_already_have_account">Haben Sie schon ein Konto? %1$s</string>
+    <string name="sign_up_tip_check_user_privacy">Bitte lesen Sie die Datenschutzbestimmungen von Osaio durch und stimmen Sie diesen zu.</string>
+    <string name="sign_up_tip_email">Bitte verwenden Sie eine E-Mail-Adresse, um sich zu registrieren.</string>
+    <string name="sign_up_get_verification_code">Bestätigungscode abrufen</string>
+    <string name="sign_up_account_exist">Der Benutzer ist bereits vorhanden.</string>
+    <string name="sign_up_dialog_tip_account_exist_content">Das Konto existiert bereits. Bitte melden Sie sich an.\nPowered by Victure Home.</string>
+
+    <!-- InputVerifyCodeActivity -->
+    <string name="input_verify_code_title">Bestätigung des Kontos</string>
+    <string name="input_verify_code_enter_code">Verifizierungscode</string>
+    <string name="input_verify_code_send">Ein Bestätigungscode wurde gesendet an:</string>
+    <string name="input_verify_reset_code_send">Der Bestätigungscode wurde an Ihre E-Mail gesendet:</string>
+    <string name="input_verify_resend_verification_code">Wenn Sie den Bestätigungscode nicht innerhalb von 3 Minuten erhalten haben, klicken Sie bitte auf %1$s.</string>
+    <string name="input_verify_resend_reset_code">Wenn Sie den Rücksetzcode nicht innerhalb von 3 Minuten erhalten haben, klicken Sie bitte auf %1$s.</string>
+    <string name="input_verify_resend">Erneut senden</string>
+    <string name="input_verify_please_enter_code">Bitte geben Sie den Bestätigungscode ein</string>
+    <string name="input_verify_code_sended">Der Bestätigungscode wurde gesendet.</string>
+    <string name="input_reset_code_sended">Der Bestätigungscode wurde erfolgreich gesendet.</string>
+
+    <!-- SetPasswordActivity -->
+    <string name="set_psd_title">Festlegen eines neuen Passwort</string>
+    <string name="set_psd_reset_title">Passwort zurücksetzen</string>
+    <string name="set_psd_enter_pwd">Passwort</string>
+    <string name="set_psd_enter_new_pwd">Passwort erstellen</string>
+    <string name="set_psd_confirm_pwd">Passwort bestätigen</string>
+    <string name="set_psd_save_and_sign_in">Speichern und anmelden</string>
+
+    <!-- TwoAuthLoginActivity -->
+    <string name="two_auth_login_title">Zwei-Faktor-Authentifizierung</string>
+    <string name="two_auth_login_tip">Ein Authentifizierungscode wurde gesendet an:\n%1$s</string>
+
+    <!-- TwoAuthDetailActivity -->
+    <string name="two_auth_detail_tip">Aktivieren Sie diese Funktion, um die Sicherheit Ihrer Kamera besser zu schützen. Überprüfen und vertrauen Sie Ihrem Telefon, indem Sie einen sekundären Code eingeben, der an die E-Mail-Adresse Ihres Kontos gesendet wird.</string>
+    <string name="two_auth_detail_name_label">Aktuelles Gerät</string>
+    <string name="two_auth_detail_device_trust_list_label">Vertrauenswürdige Geräte</string>
+
+    <!-- TwoAuthDeviceActivity -->
+    <string name="two_auth_device_title">Geräteinformationen</string>
+    <string name="two_auth_device_last_activity_time_label">Letzte Aktivität</string>
+    <string name="two_auth_device_remove_from_account">Systemmeldungen löschen</string>
+
+    <!-- Week -->
+    <string name="w_monday">Montag</string>
+    <string name="w_tuesday">Dienstag</string>
+    <string name="w_wednesday">Mittwoch</string>
+    <string name="w_thursday">Donnerstag</string>
+    <string name="w_friday">Freitag</string>
+    <string name="w_saturday">Samstag</string>
+    <string name="w_sunday">Sonntag</string>
+
+    <string name="weekdays">Arbeitstag</string>
+    <string name="weekends">Wochenenden</string>
+    <string name="every_day">Jeden Tag</string>
+
+    <!-- VideoActivity -->
+    <string name="living_video_no_device">Kein Gerät / Kamera gefunden.</string>
+
+    <string name="living_no_open">Nicht öffnen</string>
+    <string name="living_open">Öffnen</string>
+    <string name="living_open_capture_file">Das Video wurde im Album gespeichert.</string>
+    <string name="living_file_save_to_album">Video auf Fotos gespeichert.</string>
+    <string name="living_photo_file_save_to_album">Screenshot gespeichert.</string>
+    <string name="device_guide_next">NEXT</string>
+    <string name="device_guide_done">Done</string>
+    <string name="device_guide_history_des">video history playback bar</string>
+    <string name="device_guide_setting">device settings and more</string>
+    <string name="device_guide_setting_motion">motion tracking and device settings</string>
+    <string name="device_guide_talk_des">Achtung: Bei Verwendung von 2-Wege-Audio innerhalb von 3 Metern können Geräusche auftreten.</string>
+    <string name="nooie_play_photo_title">Foto</string>
+    <string name="nooie_play_talk_title">Ton</string>
+    <string name="nooie_play_record_title">Aufnahme</string>
+    <string name="nooie_play_snap_shot_title">Fotografieren</string>
+    <string name="nooie_play_audio_title">Ton</string>
+    <string name="nooie_play_alarm_title">Alarm</string>
+    <string name="nooie_play_camera_photo_title">Kamerabild</string>
+    <string name="nooie_play_limit_time_title">Geringer Energieverbrauch</string>
+    <string name="nooie_play_limit_time_content">Die kontinuierliche Anzeige der Vorschau verbraucht den Akku der Kamera. Möchten Sie weiter schauen?</string>
+    <string name="nooie_play_limit_time_content_short_link">A long-time connection will quicken power consumption. Do you want to keep connecting?</string>
+    <string name="nooie_play_low_battery_title">Niedriger Batteriesstrom</string>
+    <string name="nooie_play_low_battery_content">Der Akku der Kamera %1$s ist sehr niedrig. Bitte laden Sie ihn so schnell wie möglich auf.</string>
+    <string name="nooie_play_lp_device_restart_tip">Die Kamera ist im Energiesparmodus. Klicke um sie live zu sehen.</string>
+    <string name="play_close_when_loading_tip">Video is loading, please try again later</string>
+    <string name="nooie_play_video_play_finish">Das letzt wurde Video bereits abgespielt.</string>
+    <string name="nooie_play_video_play_bad">Die Videodatei ist beschädigt</string>
+    <string name="nooie_play_cloud_subscribe_wait_for_preview">Das Abonnement ist erfolgreich. Paypal wird derzeit überprüft. Bitte warten Sie auf die Überprüfung durch Paypal</string>
+    <string name="nooie_play_video_empty_tip">No video uploaded</string>
+    <string name="nooie_play_detection_setting_tip">Motion detection is not turned on, and alarm recording cannot be uploaded</string>
+    <string name="nooie_play_detection_setting_enable">Enable</string>
+
+    <!-- PlaybackActivity -->
+    <string name="playback_cloud_not_normal">Der Zustand des Cloud-Dienstes ist nicht normal</string>
+    <string name="near_expire">Ihr Cloud-Abonnement wird in %1$d Tagen ablaufen. Erneuern Sie sich, um die Kündigung des Dienstes zu vermeiden.</string>
+    <string name="playback_cloud_play_failure">Zahlung fehlgeschlagen.</string>
+
+    <!-- Cloud -->
+    <string name="dev_cloud_has_expired">Ihr Cloud-Abonnement ist abgelaufen.</string>
+    <string name="dev_not_yet_open_cloud">Sie haben die Cloud-Dienste für dieses Gerät nicht abonniert.</string>
+    <string name="free_trial_30_days">Kostenlose 30-Tage-Testversion.</string>
+    <string name="renew">Erneuern</string>
+    <string name="purchase">Kauf</string>
+
+    <!-- RenameActivity -->
+    <string name="rename_failed">Fehler beim Ändern. Bitte versuchen Sie es später erneut.</string>
+
+    <!-- ForgotPsdActivity -->
+    <string name="forgot_get_reset_code">Rücksetzcode bekommen</string>
+    <string name="forgot_psd_msg">Geben Sie die E-Mail-Adresse Ihres Kontos ein, um einen Code zum Zurücksetzen des Passworts zu erhalten.</string>
+
+    <!-- CamSettingsActivity -->
+    <string name="settings_no_delete">Abbrechen</string>
+    <string name="settings_restarting">Die Kamera startet neu. Warten Sie mal.</string>
+    <string name="settings_delete_fail">Löschen fehlgeschlagen.</string>
+    <string name="settings_qr_code_function">Dies ist Ihr QR-Code. Andere Benutzer können diesen Code scannen, um Sie hinzuzufügen und Geräte freizugeben.</string>
+
+    <string name="notifications_alarm_level_low">Niedrig</string>
+    <string name="notifications_alarm_level_close">Schließen</string>
+    <string name="notifications_alarm_level_medium">Mittel</string>
+    <string name="notifications_alarm_level_high">Hoch</string>
+    <string name="notifications_turn_on">Einschalten bei:</string>
+    <string name="notifications_turn_off">Ausschalten bei:</string>
+    <string name="notifications_invalid_tip">Die Endzeit darf nicht vor der Startzeit liegen.</string>
+    <string name="cam_setting_night_vision_title">Nachtsicht</string>
+    <string name="cam_setting_night_vision_type_auto">AUTO</string>
+    <string name="cam_setting_night_vision_type_off">AUS</string>
+    <string name="cam_setting_night_vision_type_on">AUF</string>
+    <string name="cam_setting_night_vision_type_infrared">IR</string>
+    <string name="cam_setting_night_vision_type_light">COLOR</string>
+    <string name="cam_setting_sync_time_title">Zeit synchronisieren</string>
+    <string name="cam_setting_sync_time">Synchronisieren</string>
+    <string name="cam_setting_sync_time_content">Möchten Sie die Uhrzeit Ihrer Kamera mit Ihrem Mobiltelefon synchronisieren?</string>
+    <string name="cam_setting_face_detection">Gesichtserkennung</string>
+    <string name="cam_setting_human_detection">Human Detection</string>
+    <string name="cam_setting_pir_detection">PIR-Erkennung</string>
+    <string name="cam_setting_detection_notification">Erkennungsbenachrichtigung</string>
+    <string name="cam_setting_open_preset_point">Schauen Sie sich oft einen Ort an</string>
+    <string name="cam_setting_flash_light">Spotlight</string>
+    <string name="cam_setting_siren">Sirene</string>
+    <string name="cam_setting_siren_tag">Sobald eine Bewegung erkannt wird, gibt die Kamera eine Sirene ab.</string>
+
+    <!-- ChooseWiFiActivity -->
+    <string name="choose_wifi_invalid_selection">Ungültige Auswahl</string>
+
+    <!-- HomeActivity -->
+    <string name="devices_offline_title">%1$s offline</string>
+    <string name="devices_offline_tip">Ihre Kamera ist offline. Stellen Sie sicher, dass das Gerät eingeschaltet und mit dem WLAN verbunden ist.</string>
+    <string name="addTop">Top</string>
+    <string name="home_tab_label_devices">Startseite</string>
+    <string name="home_tab_label_camera">Camera</string>
+    <string name="home_tab_label_message">Nachricht</string>
+    <string name="home_tab_label_store">Store</string>
+    <string name="home_tab_label_person">Mein</string>
+    <string name="home_house_name">%1$s es Haus</string>
+    <string name="home_network_weak_tip">Es konnte keine Verbindung zum Internet hergestellt werden. Überprüfen Sie die Netzwerkeinstellungen</string>
+    <string name="home_person_edit_profile">Edit profile</string>
+
+    <!-- ScanCameraResultActivity -->
+    <string name="scan_owner">Besitzer:</string>
+    <string name="scan_device_model">Modell</string>
+
+    <!-- NameDeviceActivity -->
+    <string name="name_device_enter_custom_name">Bitte geben Sie einen Namen ein.</string>
+
+    <string name="add_device_not_exist">Diese Geräte-ID existiert nicht.</string>
+    <string name="add_device_error">%1$s Gerät konnte nicht hinzugefügt werden.</string>
+    <string name="add_device_add_by_other">Dieses Gerät wurde bereits von einem anderen Benutzer hinzugefügt</string>
+    <string name="add_device_add_by_yourself">Dieses Gerät wurde bereits von Ihnen hinzugefügt</string>
+    <string name="add_device_dev_is_offline">Gerät ist offline</string>
+
+    <!-- DeviceMessageActivity -->
+    <string name="message_no_any">Keine Nachrichten.</string>
+    <string name="message_no_more">Keine Nachrichten mehr</string>
+    <string name="message_today">Heute</string>
+    <string name="message_clear_success">Gelöscht.</string>
+    <string name="message_delete_all_message">Alle Nachrichten löschen.</string>
+    <string name="message_delete_all_message_sub_msg">Dadurch werden alle Ihre Nachrichten gelöscht.</string>
+    <string name="message_delete_message">Nachrichten löschen</string>
+    <string name="message_delete_message_sub_msg">Möchten Sie die ausgewählten Nachrichten wirklich löschen?</string>
+    <string name="message_reject_confirm">Einladung ablehnen</string>
+    <string name="message_reject_confirm_info">Sie lehnen diese Einladung ab.</string>
+    <string name="message_accept_confirm">Einladung bestätigen</string>
+    <string name="message_accept_confirm_info">Sie akzeptieren diese Einladung.</string>
+    <string name="message_go_to_video">GEHE ZUM VIDEO</string>
+    <string name="message_motion_detect_info">Bewegung von %1$s Kamera bei %2$s erkannt</string>
+    <string name="message_sound_detect_info">Ton von %1$s Kamera bei %2$s erkannt.</string>
+    <string name="message_pir_detect_info">Die menschliche Erkennungweite reicht von %1$s Kamera bis %2$s.</string>
+    <string name="message_sd_leak_info">Ihre Speicherkarte ist fast voll. Bitte laden Sie Ihre Dateien herunter und formatieren Sie die Karte oder schalten Sie die \"Loop-Aufnahme\" in den Einstellungen ein, um automatisch Speicherplatz freizugeben.</string>
+    <string name="message_no_storage">keine Storage</string>
+    <string name="message_please_subscribe_cloud">Abonnieren Sie den Cloud-Service oder setzen Sie eine Micro-SD-Karte ein.</string>
+    <string name="message_device_update_start">Firmware wird aktualisiert, bitte warten.</string>
+    <string name="message_device_update_success">Die Firmware-Aktualisierung erfolgreich.</string>
+    <string name="message_device_update_fail">Die Firmware-Aktualisierung fehlgeschlagen.Bitte versuchen Sie es später noch einmal.</string>
+    <string name="message_device_msg_too_much_tip">Zu viele Nachrichten? Passen Sie die %1$s Ihrer Kamera an.</string>
+    <string name="message_device_msg_subscribe">Möchten Sie die Ereignisse sofort sehen? Abonnieren</string>
+    <string name="message_device_select_all">WÄHLEN SIE ALLE AUS</string>
+    <string name="message_device_select_msg_first">Wählen Sie zuerst die Nachricht aus.</string>
+    <string name="message_cloud_video_expire">Cloud-Video ist abgelaufen</string>
+
+    <!-- CameraShareActivity -->
+    <string name="shared_send_user_not_exist">%1$s wurde nicht registriert</string>
+    <string name="shared_send_user_not_exist1">Der Account existiert nicht. Bitte erst einen Account erstellen.</string>
+    <string name="shared_send_not_share_for_yourself">Sie können ein Gerät nicht für sich selbst teilen</string>
+    <string name="shared_send_already_share">Die Einladung wurde gesendet.</string>
+    <string name="share_send_invitation_wait">Das Gerät wurde für diesen Benutzer freigegeben.</string>
+    <string name="share_send_get_share_to_user_failed">Fehler beim Abrufen der Benutzerinformationen. Bitte versuchen Sie es später erneut.</string>
+    <string name="share_delete_share_failed">Entfernen des Zugriffs fehlgeschlagen. Bitte versuche es erneut.</string>
+    <string name="share_to_other_area">Leider unterstützen wir derzeit keine Zugriffsfreigabe zwischen verschiedenen Ländern.</string>
+    <string name="share_device_count_over">Die Kamera kann nur mit höchstens %1$s Person geteilt werden</string>
+
+    <!-- ShareDeviceActivity -->
+    <string name="share_device_cancel_share_failed">Entfernen des Zugriffs fehlgeschlagen. Bitte versuche es erneut.</string>
+
+    <!-- PlaybackActivity -->
+    <string name="play_back_no_sdcard">Keine Micro-SD-Karte gefunden. Wenn Sie eine Micro-SD-Karte eingesetzt haben, starten Sie die Stromversorgung neu.</string>
+    <string name="play_back_no_cloud">Abonnieren Sie sicheren Cloud-Speicher, den ersten Monat kostenlos.</string>
+
+    <!-- FeedBAckActivity -->
+    <string name="feedback_contact_info">Kontakt E-Mail</string>
+    <string name="feedback_email">E-mail</string>
+    <string name="feedback_detail">Details</string>
+    <string name="feedback_confirm_feedback">Schick uns eine Nachricht</string>
+    <string name="feedback_description_min_number">Bitte geben Sie mindestens 10 Wörter ein.</string>
+    <string name="feedback_input_contact_info">Bitte geben Sie eine Kontakt-E-Mail an.</string>
+    <string name="feedback_tip_email">Bevorzugte E-Mail-Adresse kann nur eine E-Mail-Adresse sein</string>
+    <string name="feedback_add_photo">Medien</string>
+    <string name="feedback_add_photo_title">Medien hinzufügenn</string>
+    <string name="feedback_add_photo_content">Bitte laden Sie Fotos oder Screenshots hoch, um das Problem besser zu verstehen.</string>
+    <string name="feedback_page_title">Schick uns eine Nachricht</string>
+    <string name="feedback_picture_type_error">Derzeit werden nur die Bildformate JPEG, JPG und PNG unterstützt.</string>
+    <string name="feedback_type_and_product_error">Bitte wählen Sie einen Fragetyp.</string>
+    <string name="feedback_describe_problem">Bitte beschreiben Sie das Problem.</string>
+    <string name="feedback_send_to_much_msg">Sie haben ein Limit für das Senden von Nachrichten erreicht. Bitte geben Sie uns etwas Zeit, um Ihre vorherigen Nachrichten zu beantworten.</string>
+    <string name="feedback_send_success">Vielen Dank für Ihre Kommentare. Wir werden uns bei Ihnen melden.</string>
+    <string name="feedback_upload_image_fail">Fehler beim Hochladen von Medien, versuchen Sie es erneut.</string>
+    <string-array name="issueArray">
+        <item>App-Problem</item>
+        <item>Paarungsproblem</item>
+        <item>Hardware-Problem</item>
+        <item>Videoqualität</item>
+        <item>Cloud-Speicher</item>
+        <item>Andere Ausgabe</item>
+    </string-array>
+    <string name="issue_title">Art des Problems</string>
+
+    <string-array name="modelArray">
+        <item>Osaio Indoor</item>
+        <item>Osaio Indoor FHD</item>
+        <item>Osaio 360</item>
+    </string-array>
+    <string name="model_title">Produktmodell</string>
+
+    <!-- LiveActivity -->
+    <string name="live_see_history">Abonnieren Sie einen sicheren Cloud-Speicher, um Wiederholungen von Erkennungsereignissen oder 24/7-Wiedergaben anzuzeigen</string>
+    <string name="playback_save_photo">Speichern Foto</string>
+    <string name="playback_save_story">Save Story</string>
+
+    <!-- upgrade -->
+    <string name="upgrade_dialog_tip">Diese Version wird nicht mehr erwähnt</string>
+
+    <!-- StorageActivity -->
+    <string name="storage_abnormal_parameter">Systemfehler.</string>
+    <string name="storage_cloud">Cloud-Speicher</string>
+    <string name="storage_expire_date">Haltbarkeitsdatum: %1$s</string>
+    <string name="storage_subscribe_here">Abonnieren</string>
+    <string name="storage_contact_us">Wenn Sie Ihren Cloud-Speicher löschen möchten, wenden Sie sich bitte an den Kundenservice unter %1$s</string>
+    <string name="storage_contact_us_time">9:00 - 12:00 Uhr</string>
+    <string name="storage_sdcard">SD-Karte</string>
+    <string name="storage_no_sd_card">Keine SD-Karte gefunden.</string>
+    <string name="storage_sd_card_damaged">Die MicroSD-Karte hat ein Problem. Bitte erneut einlegen oder vom Computer mit dem FAT32/exFAT-Format formatieren.</string>
+    <string name="storage_use_of_space">Verfügbar/Gesamter Platz</string>
+    <string name="storage_loop_recording">Daueraufnahme</string>
+    <string name="storage_format_card">SD-Karte formatieren</string>
+    <string name="storage_no_sdcard_tip">Keine SD-Karte gefunden.</string>
+    <string name="storage_format">FORMAT</string>
+    <string name="storage_format_card_into">Möchten Sie Ihre SD-Karte formatieren? Alle darin gespeicherten Daten werden gelöscht.</string>
+    <string name="storage_format_card_into_confirm">Ihre SD-Karte wird formatiert. Warten Sie nach dem Abschluss mindestens 6 Minuten, bevor Sie auf neue Aufnahmen zugreifen.</string>
+    <string name="storage_formatting">FORMATIERUNG</string>
+    <string name="storage_sd_card_is_formatting">SD-Karte wird formatiert</string>
+    <string name="storage_ok_understand">OK, ich verstehe</string>
+    <string name="storage_cloud_intro_1">Sie werden zum Danale Cloud Service abreisen, einem vertrauenswürdigen Partner von Osaio.</string>
+    <string name="storage_cloud_intro_2">Wir unterstützen den sicheren und getesteten Amazon Web Service (AWS), um Ihre Privatsphäre zu schützen. </string>
+    <string name="storage_cloud_intro_3">AWS erfüllt die Standards der Strafjustiz-Informationssicherheit (CJIS) des FBI. AWS wird in den Vereinigten Staaten von staatlichen, lokalen und staatlichen Strafverfolgungsbehörden eingesetzt. </string>
+    <string name="storage_plan_chosen">Plan gewählt:</string>
+    <string name="storage_status">Status: %1$s</string>
+    <string name="storage_status_active">Aktiv</string>
+    <string name="storage_cloud_tip">Osaio verfügt über eine 7-Tage-, 15-Tage- und 30-Tage-Lösung für die permanente Speicherung von Videos mit Bewegungsverfolgung. Diese werden von sicherheitsgeprüften Amazon Web Services (AWS) zum Schutz Ihrer Privatsphäre unterstützt.</string>
+    <string name="storage_cloud_tip_sub_device">Unterstützt von sicheren und getesteten Amazon Web Services (AWS) schützen Sie Ihre Privatsphäre</string>
+    <string name="storage_unsubscribe_info">Möchten Sie das Cloud-Abonnement wirklich kündigen?</string>
+    <string name="storage_unsubscribe_info_for_relation">Wenn Sie sich abmelden, werden auch mehrere andere Kamerageräte devices %1$s abbestellen. Sind Sie sicher, sich abzumelden?</string>
+    <string name="storage_buy_cloud_title">Osaio Wolke</string>
+    <string name="storage_hub_storage_tip">The camera recordings will only be uploaded and saved to the connected Hub.</string>
+
+    <!-- MotionDetectActivity -->
+    <string name="motion_detect_sensitivity">Empfindlichkeit</string>
+    <string name="detection_tip_of_motion">Aktivieren der Bewegungserkennung, um Warnungsinformationen zu erhalten, aber Cloudspeicher abonnieren, um Warnungsinformationen zu speichern</string>
+    <string name="detection_tip_of_sound">Aktivieren sie die Sounderkennung, um Warnungsinformationen zu erhalten, aber abonnieren Sie den Cloudspeicher, um Warnungsinformationen zu speichern.</string>
+    <string name="detection_zone_label">Erkennungszone</string>
+    <string name="detection_schedule_label">Zeitplan</string>
+
+    <!-- NooieDetectionScheduleActivity -->
+    <string name="detection_schedule_motion_tips">Erstellen Sie Zeitpläne (bis zu drei), wenn Sie Bewegungsalarme erhalten möchten.</string>
+    <string name="detection_schedule_sound_tips">Erstellen Sie Zeitpläne (bis zu drei), wenn Sie Geräuschalarme erhalten möchten.</string>
+    <string name="detection_schedule_pir_tips">Wenn Sie Alarm  für einen bestimmten Zeitraum erhalten möchten, bitte erstellen Sie einen Zeitplan (maximal drei).</string>
+    <string name="detection_schedule_adjust_title">den Zeitplan anpassen</string>
+    <string name="detection_schedule_adjust_content">Wir entschuldigen uns für die Unannehmlichkeiten, die durch die Anpassung unserer Zeitplanstruktur und die Schwierigkeiten bei der Neueinstellung des Zeitplans verursacht wurden.</string>
+
+    <!-- NooieCreateDetectionScheduleActivity -->
+    <string name="create_detection_schedule_title">die Zeit einstellen</string>
+    <string name="create_detection_schedule_from">von</string>
+    <string name="create_detection_schedule_to">zu</string>
+    <string name="create_detection_schedule_tip">Hinweis: Da die Kamera täglich aufzeichnet, kann die von Ihnen festgelegte Zeitspanne nicht zwei verschiedene Tage überschreiten. Wenn Sie das tun möchten, erstellen Sie bitte zwei Zeitpläne. Beispielsweise müssen Sie zwischen 22:00 und 08:00 Uhr einen Zeitplan zwischen 22:00 und 23:59 Uhr und zwischen 0 und 08:00 Uhr erstellen.</string>
+
+    <!-- NooieDetectionZoneActivity -->
+    <string name="detection_zone_tip">Klicken Sie auf die Bearbeitungsoption, um den Erkennungsbereich zu ziehen und zu verschieben</string>
+
+    <!-- CameraShareActivity -->
+    <string name="camera_share_title">Freigabe der Kamera</string>
+    <string name="camera_share_info">Laden Sie die Benutzer dazu ein, die Ansicht von Ihrer Kamera aus zu teilen:%1$s,%2$s</string>
+    <string name="camera_share_users">Benutzer</string>
+    <string name="camera_share_send_invitation">Einladung senden</string>
+    <string name="camera_share_account">Konto</string>
+    <string name="camera_share_owner">Besitzer</string>
+    <string name="camera_share_remove">LÖSCHEN</string>
+    <string name="camera_share_no_user">Sie haben Ihr Gerät für niemanden freigegeben.</string>
+    <string name="camera_share_remove_confirm">Entfernen bestätigen</string>
+    <string name="camera_share_remove_info">Sie entfernen%1$s von Ihrer Kamera.</string>
+    <string name="camera_share_send_enter_user_account">Benutzerkonto eingeben</string>
+    <string name="camera_share_to">Teilen %1$s mit %2$s</string>
+    <string name="camera_share_no_share">Abbrechen</string>
+    <string name="camera_share_share">TEILEN</string>
+    <string name="camera_share_info_learn_more">Weitere Informationen</string>
+    <string name="camera_share_account_invalid">Bitte geben Sie eine gültige E-Mail-Adresse ein.</string>
+
+    <!-- HomeAwayActivity -->
+    <string name="home_away_title">Home/Away</string>
+    <string name="home_away_tip">Automatisches Ausschalten der Kamera entsprechend der Zeit zu Hause</string>
+
+    <!-- HomeActivity -->
+    <string name="home_home">Hauptseite</string>
+    <string name="home_inbox">Posteingang</string>
+    <string name="home_help">Unterstützung</string>
+    <string name="home_gateway">Gateway</string>
+    <string name="home_camera">Kamera hinzufügen</string>
+    <string name="home_refresh">AKTUALISIERUNG</string>
+    <string name="home_app_settings">Einstellungen</string>
+    <string name="home_person_feedback">Rückmeldung</string>
+    <string name="home_item_off_tip">Ihre Kamera wurde ausgeschaltet.</string>
+    <string name="home_item_offline_tip">Ihre Kamera ist offline, stellen Sie bitte sicher, dass das Gerät mit der Stromquelle verbunden und mit Wi-Fi verbunden ist</string>
+    <string name="home_video_history">Videoverlauf</string>
+    <string name="home_notification_request_title">Benachrichtigungsbehörde</string>
+    <string name="home_notification_request_content">Die App muss eine Benachrichtigungsberechtigung anfordern, um Nachrichten empfangen zu können. Gehen Sie in Ihren Telefoneinstellungen zu \"Benachrichtigungsverwaltung\" oder zu den App-Details, um Benachrichtigungen zu aktivieren.</string>
+    <string name="home_request_devices_fail">Zeitlimit für Kameraliste bekommen, überprüfen Sie bitte das Netzwerk und ziehen Sie nach unten, um sie zu aktualisieren.</string>
+    <string name="home_ad_go_to_brower">akzeptieren</string>
+    <string name="home_ad_dialog_title">spezialer Deal</string>
+    <string name="home_nav_menu_add">Hinzufügen</string>
+    <string name="home_nav_menu_sort">Sortieren</string>
+    <string name="home_device_item_more">mehr</string>
+    <string name="home_device_type_ipc">Intelligente Kamera</string>
+    <string name="home_device_type_ble_ap_ipc">DV Camera</string>
+    <string name="home_device_type_lock">Smart Lock</string>
+    <string name="home_item_ble_ap_tip">Kamera nicht angeschlossen</string>
+    <string name="home_item_ble_ap_access">Zugriff auf Kamera</string>
+    <string name="home_ap_direct_mode_tip">Der Hotspot der Kamera ist verbunden und andere Geräte werden vorübergehend ausgeblendet.</string>
+
+    <!-- AddCameraActivity -->
+    <string name="add_camera_title">Geräteliste</string>
+    <string name="add_camera_add_to">addieren</string>
+    <string name="add_camera_product_camera">Osaio PC420</string>
+    <string name="add_camera_product_camera_mc_120">Osaio MC120</string>
+    <string name="add_camera_product_camera_pc_530">Osaio PC530</string>
+    <string name="add_camera_product_camera_pc_730">VP07</string>
+    <string name="add_camera_product_lock">Osaio door lock</string>
+    <string name="add_camera_product_gateway">Osaio EC810</string>
+    <string name="add_camera_product_category_router">Router</string>
+    <string name="add_camera_product_category_card">Indoor Camera</string>
+    <string name="add_camera_product_category_head">Indoor Camera PAN</string>
+    <string name="add_camera_product_category_mini">Indoor Camera MINI</string>
+    <string name="add_camera_product_category_gun">Outdoor Camera</string>
+    <string name="add_camera_product_category_lp">Battery Camera</string>
+    <string name="add_camera_guide_info">1.Schalten Sie Ihre Kamera ein und bleiben Sie in der Nähe des Routers.</string>
+    <string name="add_camera_guide_info_lan">1.Schalten Sie Ihre Kamera ein und bleiben Sie in der Nähe des Routers.</string>
+    <string name="add_camera_guide_info_ipc_200">1.Schließen Sie die Kamera in der Nähe Ihres WLAN-Routers an, bevor Sie sie außerhalb installieren. Stellen Sie sicher, dass die Kamera eingeschaltet ist.</string>
+    <string name="add_camera_guide_info_hc320">1.Stellen Sie sicher, dass die Kamera eingeschaltet und der Akku eingelegt ist.</string>
+    <string name="add_camera_guide_info_wait_15_sec">2.Bitte warten Sie, bis die Anzeige rot leuchtet und blinkt. Wenn die LED nach 15 Sekunden nicht rot aufleuchtet und blinkt, setzen Sie die Kamera zurück.</string>
+    <string name="add_camera_no_voice_message">Rotes Licht an</string>
+    <string name="add_camera_light_error">Das Licht ändert sich nicht rot?</string>
+    <string name="add_camera_light_error_810_pro">Didn\'t see the red light？</string>
+    <string name="add_camera_no_red_light">Kein rot richtig</string>
+    <string name="add_no_connect_wifi">Stellen Sie in den Einstellungen Ihres Telefons eine Verbindung zu einem 2,4-G-Netzwerk her.</string>
+    <string name="add_camera_no_red_light_step_1">1. Wenn die Anzeige nicht rot ist oder blinkt, aber das Grün oder weiße Licht blinkt, klicken Sie auf Weiter.</string>
+    <string name="add_camera_360_no_red_light_step_1">1. Wenn die Anzeige nicht rot ist oder blinkt, aber das Grün oder weiße Licht blinkt, klicken Sie auf Weiter.</string>
+    <string name="add_camera_no_red_light_step_2">Wenn die Anzeige nicht korrekt ist, setzen Sie die Kamera zurück</string>
+    <string name="add_camera_reset_success">Erfolgreich zurückgesetzt</string>
+    <string name="add_camera_connect_to_wifi">Verbinden Sie sich mit Wi-Fi</string>
+    <string name="add_camera_not_connect_to_wifi">Keine Verbindung mit Wi-Fi</string>
+    <string name="add_camera_go_to_connect">Gehe zu verbinden</string>
+    <string name="add_camera_already_connect">Verbunden</string>
+    <string name="add_camera_input_wifi_pas_tip">Wenn Ihr WLAN 5 GHz beträgt, stellen Sie es bitte auf 2,4 GHz ein.%1$s</string>
+    <string name="add_camera_input_wifi_pas_tip_more">Allgemeine Router-Einstellungsmethode</string>
+    <string name="add_camera_psd_error">Falsches Passwort.</string>
+    <string name="add_camera_scan_qr_tip">1. Platzieren Sie diesen QR-Code bei 20 bis 26 cm vor Ihrer Kamera. Klicken Sie, um das Bild zu vergrößern</string>
+    <string name="add_camera_scan_qr_tip_1080">1. Platzieren Sie diesen QR-Code bei 20 bis 26 cm vor Ihrer Kamera. Klicken Sie, um das Bild zu vergrößern</string>
+    <string name="add_camera_scan_qr_sub_tip">2.Wenn die LED-Anzeige dauerhaft grün leuchtet, fahren Sie mit dem nächsten Schritt fort.</string>
+    <string name="add_camera_scan_qr_sub_tip_1080">2.Wenn die LED-Anzeige dauerhaft grün leuchtet, fahren Sie mit dem nächsten Schritt fort.</string>
+    <string name="wifi_qr_code_tip_ec_810_pro">2. After hearing the voice “Scan QR code successfully”, please click Next.</string>
+    <string name="wifi_qr_code_scan_no_response_ec_810_pro">Can not hear the voice prompt?</string>
+    <string name="add_camera_nothing_happen">Code scannen ist nicht erfolgreich?</string>
+    <string name="add_camera_nothing_happened_title">Code scannen ist nicht erfolgreich?</string>
+    <string name="add_camera_scan_wifi_code">Mit der Kamera verbinden</string>
+    <string name="add_camera_nothing_happened_help">1. Stellen Sie sicher, dass der Linsenschutz entfernt wurde oder die Linsenoberfläche sauber ist.\n\n2.Passen Sie die Helligkeit des Telefonbildschirms auf den höchsten bildschirm an, und stellen Sie den QR-Code des Telefons ca. 20cm bis 26cm vor die Linse.</string>
+    <string name="add_camera_nothing_happened_help_1080">1. Stellen Sie sicher, dass der Linsenschutz entfernt wurde oder die Linsenoberfläche sauber ist.\n\n2.Passen Sie die Helligkeit des Telefonbildschirms auf den höchsten bildschirm an, und stellen Sie den QR-Code des Telefons ca. 20cm bis 26cm vor die Linse.</string>
+    <string name="nothing_happened_help_ec_810_pro">
+        1. Please make sure the device is turned on.\n\n
+        2. Please make sure the QR code is in the front of device in about 6 inches(15cm).\n\n
+        3. Please make sure the device is in network setting mode and then scan the QR code. To enter the network setting mode, please press the button until hearing the voice prompt.\n\n
+    </string>
+    <string name="add_camera_try_again">Wiederholen</string>
+    <string name="add_camera_smart_link">Intelligentes Verteilungsnetz</string>
+    <string name="add_camera_smart_link_tip">Wenn Sie den Code immer noch nicht erfolgreich scannen können, versuchen Sie es bitte mit dem intelligenten Verteilungsnetzwerk.</string>
+    <string name="add_camera_paring">Verbindung</string>
+    <string name="add_camera_connected">In Verbindung gebracht!</string>
+    <string name="add_camera_connected_failed">Verbindung nicht gelungen</string>
+    <string name="add_camera_not_found_how_to_solve">Wie löst man</string>
+    <string name="add_camera_psd_incorrect">Wenn die Kontrollleuchte sowohl blau als auch rot blinkt, es deutet darauf hin, dass das von Ihnen eingegebene WLAN-Passwort falsch war. Bitte setzen Sie die Kamera zurück.</string>
+    <string name="add_camera_360_psd_incorrect">Wenn die Anzeigeleuchte sowohl weiß als auch rot blinkt, deutet dies darauf hin, dass das von Ihnen eingegebene WLAN-Kennwort falsch war. Bitte setzen Sie die Kamera zurück.</string>
+    <string name="add_camera_wait_red_light">Warten Sie nach dem Zurücksetzen ca. 15 Sekunden, bis die Kontrollleuchte rot blinkt.</string>
+    <string name="add_camera_light_is_red">Rotes Licht an</string>
+    <string name="add_camera_already_added">Bitte kontaktieren Sie den Besitzer, um die Kamera aus dem zugehörigen Konto zu entfernen, wenn Sie fortfahren möchten.</string>
+    <string name="add_camera_already_connected">Ihre Kamera wurde von jemand anderem hinzugefügt, bitte kontaktieren Sie den Besitzer, um es zu entfernen</string>
+    <string name="add_camera_click_to_learn_more">Klick hier um mehr zu erfahren</string>
+    <string name="add_camera_back_home">Gehe zuerst zur Startseite.</string>
+    <string name="add_camera_removed_try_again">Entfernt,Versuchen Sie es erneut</string>
+    <string name="add_camera_scan_result_failed">Verbindung nicht gelungen</string>
+    <string name="add_camera_name_your_camera">Benennen Sie Ihre Kamera</string>
+    <string name="add_camera_rename_your_camera">Benenne deine Kamera um</string>
+    <string name="add_camera_front_door">Haustür</string>
+    <string name="add_camera_office">Büro</string>
+    <string name="add_camera_living_room">Wohnzimmer</string>
+    <string name="add_camera_garage">Garage</string>
+    <string name="add_camera_baby_room">Babyzimmer</string>
+    <string name="add_camera_kitchen">Küche</string>
+    <string name="add_camera_backyard">Hinterhof</string>
+    <string name="add_camera_customize">Benutzerdefinierter Name</string>
+    <string name="add_camera_create_custom">Erstelle einen Namen</string>
+    <string name="add_camera_customize_hint_text">Geben Sie hier ein</string>
+    <string name="add_camera_recommend_room">Empfohlenes Zimmer</string>
+    <string name="add_camera_input_wifi_psd_ssid_tip">Ihr Telefon ist mit verbunden:</string>
+    <string name="add_camera_input_wifi_psd_wifi_support_tip">Osaio unterstützt kein 5G-Netzwerk.</string>
+    <string name="add_camera_input_wifi_psd_wifi_support_type">Nur 2.4G Wi-Fi</string>
+    <string name="add_camera_input_wifi_psd_wifi_no_perm_for_ssid">Einschalten  Sie die Standortberechtigung,wirdIhre Wlan automatisch verbinden. Andernfalls , Sie sollen Ihren WLAN-Namen manuell eingeben und fortfahren.</string>
+    <string name="add_camera_input_wifi_psd_wifi_no_ssid">WLAN-Name kann nicht erworben  werden. Bitte geben Sie Ihren WLAN-Namen manuell ein und  dann fortfahren.</string>
+    <string name="add_camera_input_wifi_psd_wifi_enter_name">Wlan Name eingeben</string>
+    <string name="add_camera_input_wifi_psd_location_enable">Turn on "Location Services" to allow "Osaio" to use location services so that they can obtain Wi-Fi names.</string>
+    <string name="add_camera_swipe_to_see_more">Streichen Sie, um mehr zu sehen</string>
+    <string name="add_camera_guide_got_it">Ich habe es verstanden.</string>
+    <string name="add_camera_input_psd_illegal_title">Fehler</string>
+    <string name="add_camera_input_psd_illegal_message">Das Wi-Fi-Passwort enthält ein Sonderzeichen, das von unserer Kamera nicht unterstützt wird.  Bitte ändern Sie Ihr WLAN-Passwort. Es kann bis zu 31 Nummern und Zeichen enthalten:%1$s</string>
+    <string name="add_camera_input_current_network">Aktuelles Netzwerk</string>
+    <string name="add_camera_input_empty_psd_title">Kein Passwort</string>
+    <string name="add_camera_input_empty_psd_content">Möchten Sie wirklich eine Verbindung ohne Passwort herstellen?</string>
+    <string name="add_camera_wifi_qr_param_error">Der Parameter ist falsch und der QR-Code kann nicht generiert werden.</string>
+    <string name="add_camera_input_wifi_format_tip">Currently connected 5Ghz Wi-Fi is not supported by the device. Please switch to 2.4Ghz Wi-Fi. Switch or not?</string>
+    <string name="add_camera_input_wifi_invalid_tip">SecurityCam_ ist der Hotspot des Geräts. Bitte verbinden Sie das WLAN des Routers</string>
+    <string name="add_camera_input_wifi_go_to_change">Switch Wi-Fi</string>
+    <string name="add_camera_input_check_wifi_tip">Bitte überprüfen Sie WLAN.</string>
+    <string name="add_camera_input_wifi_tip_title">Wi-Fi internet is not available.</string>
+    <string name="add_camera_input_wifi_title">Wählen Sie Wi-Fi für die Kamera</string>
+    <!-- DeviceSetup -->
+    <string name="device_setup_title">Einstellung</string>
+    <string name="DONE">ERLEDIGT</string>
+    <string name="device_settup_outdoor_tip_1">Bringen Sie die Kamera nach draußen (trennen und bei Bedarf wieder einstecken) an die Stelle, an der Sie sie installieren möchten.</string>
+    <string name="device_settup_outdoor_tip_2">
+        1. Verwenden Sie das Live-Video, um sicherzustellen, dass sich Ihre Kamera in der WLAN-Reichweite befindet. Dies kann eine Weile dauern, wenn Sie es vom Netz nehmen. \n\n
+        2. Wir empfehlen, dass sich die Kamera innerhalb eines Abstands von 20 Fuß zum Router befindet und nur eine Wand dazwischen, um eine optimale Abdeckung zu erzielen.
+    </string>
+    <string name="device_settup_outdoor_step_tip_1">Markieren Sie die Position der beiden Löcher in der Wandhalterung, bohren Sie die Löcher und verschrauben Sie die Platte mit der Wand.</string>
+    <string name="device_settup_outdoor_step_tip_2">Leg diese Seite gegen die Wand.</string>
+    <string name="device_settup_outdoor_step_tip_3">Diese Seite wird mit dem Produkt verbunden.</string>
+    <string name="device_settup_outdoor_step_tip_4">1.Bitte überprüfen Sie den Markierungspunkt des Kamerabodens und stellen Sie sicher, dass er mit dem Schnappverschluss an der Unterseite der Wandhalterung übereinstimmt.</string>
+    <string name="device_settup_outdoor_step_tip_5">2.Drehen Sie den Kameraboden im Uhrzeigersinn, bis Sie ein Klicken hören.</string>
+    <string name="device_settup_outdoor_step_tip_6">Passen Sie die Ansicht der Kamera an und verwenden Sie das Live-Streaming-Video, um ihre Position zu verfeinern.</string>
+    <string name="device_installation">Kamerainstallation</string>
+    <string name="device_installed">Bereits installiert</string>
+    <string name="add_camera_privary_policy">
+        Dieses Gerät kann Bilder oder Sprachinformationen von Ihnen oder anderen (einschließlich Kindern) erhalten.\n
+        Bitte stellen Sie sicher, dass die betreffende Person (einschließlich des Elternteils oder Erziehungsberechtigten des Kindes) benachrichtigt und die Zustimmung eingeholt wurde.\n
+        Wenn Sie feststellen, dass das Gerät die Informationen anderer Personen ohne Zustimmung erfasst hat, kontaktieren Sie uns bitte, um die Daten zu löschen. Weitere Informationen finden Sie in unseren Datenschutzrichtlinie und Nutzungsbedingungen.
+    </string>
+    <string name="add_camera_privary_policy_ignore">Hör auf mich zu erinnern</string>
+    <string name="add_camera_privary_policy_confirm">verstanden</string>
+
+    <!-- CameraSettings -->
+    <string name="camera_settings_title">Kameraeinstellungen</string>
+    <string name="camera_settings_audio_record">Audio Aufnahme</string>
+    <string name="camera_settings_status_light">LED-Anzeige</string>
+    <string name="camera_settings_rotate_image">Bild drehen</string>
+    <string name="camera_settings_motion_tracking">Bewegungsverfolgung</string>
+    <string name="camera_settings_video_quality">Videoqualität</string>
+    <string name="camera_settings_cam_info">Allgemeine</string>
+    <string name="camera_settings_video_and_audio">Audio/Video</string>
+    <string name="camera_settings_home_away">Kamera ein/aus</string>
+    <string name="camera_settings_storage">Speicher</string>
+    <string name="camera_settings_share_camera">Freigabe der Kamera</string>
+    <string name="camera_settings_remove_camera">Kamera entfernen</string>
+    <string name="camera_settings_remove_camera_confirm">Entfernen bestätigen</string>
+    <string name="camera_settings_motion_detection">Bewegungserkennung</string>
+    <string name="camera_settings_sound_detection">Klangerkennung</string>
+    <string name="camera_settings_reset">Zurücksetzen auf die Werkseinstellungen</string>
+    <string name="camera_settings_reset_info">Sind Sie sicher, dass Sie die Werkseinstellungen wiederherstellen möchten? \nDas Werksreset dauert etwa 2 Minutene.</string>
+    <string name="camera_settings_reset_to">Zurücksetzen auf %1$s</string>
+    <string name="camera_settings_factory_settings">Werkseinstellungen.</string>
+    <string name="camera_settings_remove_info">Bestätigen Sie, dass die Kamera %1$s entfernt wird.</string>
+    <string name="camera_settings_remove_info_confirm">Bestätigen Sie, um die Kamera %1$s zu entfernen </string>
+    <string name="camera_settings_no_remove">Abbrechen</string>
+    <string name="camera_settings_remove">Entfernen</string>
+    <string name="camera_settings_motion">Bewegung</string>
+    <string name="camera_settings_sound">Klang</string>
+    <string name="camera_settings_pir">PIR</string>
+    <string name="camera_settings_unsubcribe_cloud_content">Wenn Sie die Kamera nicht verwenden, müssen Sie zuerst das Cloud-Speicherabonnement kündigen.</string>
+    <string name="camera_setting_third_party_control_title">Unterstützte Drittanbieter-Steuerung</string>
+    <string name="camera_setting_third_party_control_alexa">Amazon Alexa</string>
+    <string name="camera_setting_third_party_control_assistant">Google Assistant</string>
+
+    <string name="camera_settings_cam_info_model">Modell</string>
+    <string name="camera_settings_cam_info_camera_name">Namen</string>
+    <string name="camera_settings_cam_info_battery">Batterie</string>
+    <string name="camera_settings_cam_info_owner">Besitzer</string>
+    <string name="camera_settings_cam_info_device_id">Geräte ID</string>
+    <string name="camera_settings_cam_info_firmware">Firmware</string>
+    <string name="camera_settings_cam_info_ip">IP</string>
+    <string name="camera_settings_cam_info_mac">MAC</string>
+    <string name="camera_settings_cam_info_bluetooth_name">Bluetooth-Name</string>
+    <string name="camera_settings_cam_info_ssid">Kamera-Hotspot-SSID</string>
+    <string name="camera_settings_cam_info_hotspot">Hotspot-Passwort</string>
+    <string name="camera_settings_update">AKTUALISIEREN</string>
+    <string name="camera_settings_updating">AKTUALISIERUNG</string>
+    <string name="camera_settings_downloading">Wird heruntergeladen..</string>
+    <string name="camera_settings_downloaded">Wird heruntergeladen..</string>
+    <string name="camera_settings_installing">während des Upgrades</string>
+    <string name="camera_settings_update_success">während des Upgrades</string>
+    <string name="camera_settings_update_fail">Die Firmware-Aktualisierung fehlgeschlagen. Bitte versuchen Sie es später noch einmal.</string>
+    <string name="camera_settings_update_finish">Aktualisierung abgeschlossen.</string>
+    <string name="camera_settings_update_retry">Retry</string>
+    <string name="camera_settings_cam_firmware_update">Firmware-Aktualisierungsanweisungen</string>
+    <string name="camera_settings_cam_firmware_update_info">Neue Version: %1$s \n%2$s</string>
+    <string name="camera_settings_cam_update_confirm_info">Stellen Sie sicher, dass Sie das Gerät nicht ausschalten oder trennen, bevor die Aktualisierung abgeschlossen ist.</string>
+    <string name="camera_settings_cam_update_confirm_reset_info">Bitte schalten Sie das Gerät während des Aktualisierungsvorgangs nicht aus, da sonst die Gefahr besteht, dass der Updatevorgang unterbrochen und das Gerät unbrauchbar wird. Das Firmware-Update dauert ca. 5 Minuten.</string>
+    <string name="camera_settings_updating_tips">Ihr Gerät wird jetzt aktualisiert, bitte warten Sie.</string>
+    <string name="camera_settings_warn_msg_get_sd_fail">Fehler beim Abrufen der SD-Karteninformationen.</string>
+    <string name="camera_setting_warn_msg_set_sleep_success">Stellen Sie den Schlafzustand erfolgreich ein</string>
+    <string name="camera_setting_warn_msg_set_sleep_fail">Wir konnten Ihre Kamera nicht ausschalten. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.</string>
+    <string name="camera_info_external_power_tip">External power supply detected</string>
+
+    <!-- DeviceAudioAndVideoActivity -->
+    <string name="audio_and_video_audio_record">Audioaufnahme</string>
+    <string name="audio_and_video_rotate_image">Drehen des Bildes</string>
+    <string name="audio_and_video_deskto_widget">Desktop widget</string>
+    <string name="audio_and_video_night_vision">Nachtsicht</string>
+    <string name="audio_and_video_night_vision_tag">Wenn die Umgebung dunkel ist, wird das Infrarotlicht für eine bessere Nachtsicht eingeschaltet</string>
+    <string name="audio_and_energy_mode">Energiesparmodus</string>
+    <string name="audio_and_energy_mode_tip">Wenn diese Option aktiviert ist, arbeitet das Infrarotlicht, das im Nachtsichtmodus aufleuchtet, mit der halben Helligkeit</string>
+    <string name="audio_and_video_water_mark">Wasserzeichen</string>
+
+    <!-- DetectionSettingActivity -->
+    <string name="detection_setting_title">Erkennungseinstellungen</string>
+
+    <!-- PresetPointActivity -->
+    <string name="preset_point_add_tip">Stellen Sie den festgelegten Standort als häufig verwendeten Standort ein, damit Sie ihn schnell finden und anzeigen können</string>
+    <string name="preset_point_title">Gemeinsame Standortbenennung</string>
+    <string name="preset_point_enter_name_hint">Geben Sie den Namen ein</string>
+    <string name="preset_point_sorting_title">Gemeinsame Positionssortierung</string>
+    <string name="preset_point_sorting_tip">Sie können bis zu 3 Positionen hinzufügen und zum Sortieren ziehen</string>
+    <string name="preset_point_shot_icon_fail">Der Screenshot des aktuellen Bildschirms ist fehlgeschlagen. Bitte versuchen Sie es erneut.</string>
+    <string name="preset_point_name_empty">Der Name darf nicht leer sein.</string>
+    <string name="preset_point_delete_tip">Sind Sie sicher, es zu löschen?</string>
+
+    <!-- AppSettingsActivity -->
+    <string name="app_settings_title">App Einstellungen</string>
+    <string name="app_settings_clear_cache">Cache löschen</string>
+    <string name="app_settings_about">Über</string>
+    <string name="app_settings_clear_cache_tip">Möchten Sie den Cache leeren?</string>
+    <string name="app_settings_clear">LÖSCHEN</string>
+    <string name="app_settings_manage_account">Kontoeinstellungen</string>
+
+    <!-- AboutActivity -->
+    <string name="about_nooie_home_cam">Osaio</string>
+    <string name="about_version">Version:%1$s</string>
+    <string name="about_select_email_application">Bitte triff eine Auswahl.</string>
+    <string name="about_privacy">Osaio\’s %1$s und %2$s.</string>
+    <string name="support_email_address">app-support@osaio.net</string>
+    <string name="support_email_address_uuid_repeat">app.ud.support@govicture.com</string>
+
+    <!-- HelpActivity -->
+    <string name="help">Hilfe</string>
+    <string name="help_user_manual">Benutzerhandbuch</string>
+    <string name="help_faq">FAQ</string>
+    <string name="help_need_other_help">Schick uns eine Nachricht</string>
+
+    <!-- ManageAccountActivity -->
+    <string name="account_profile_photo">Profilbild ändern</string>
+    <string name="account_account">Konto</string>
+    <string name="account_change_password">Ändere das Passwort</string>
+    <string name="account_nick_name">Name</string>
+    <string name="account_qr_code">QR-Code</string>
+    <string name="account_logout_confirm">Sie werden von der Osaio App abgemeldet</string>
+    <string name="account_old_password">Altes Passwort</string>
+    <string name="account_new_password">Neues Passwort</string>
+    <string name="account_confirm_password">Passwort bestätigen</string>
+    <string name="account_password_info">Bitte melden Sie sich nach dem Ändern des Passworts erneut an.</string>
+    <string name="account_change_psd_success">Erfolgreich.</string>
+    <string name="account_set_portrait">Erfolgreich.</string>
+    <string name="account_change_nick_name_success">Erfolgreich.</string>
+    <string name="account_old_password_incorrect">Falsches altes Passwort</string>
+    <string name="account_change_psd_old_new_same">Alte und neue Passwörter sind gleich</string>
+    <string name="account_change_psd_new_confirm_not_same">Inkonsistentes Passwort</string>
+    <string name="account_select_photo">Bitte Foto auswählen</string>
+    <string name="account_psd_not_less_six">Passwortlänge darf nicht kleiner als sechs sein.</string>
+    <string name="account_psd_overflow">Passwortlänge darf nicht größer als 20 sein.</string>
+    <string name="account_logout">Ausloggen</string>
+    <string name="account_password_limit_num">Passwort muss 6-20 Ziffern sein</string>
+    <string name="account_rename_title">Kontoeinstellungen</string>
+    <string name="account_save_and_sign_in">Speichern und Anmelden</string>
+
+    <!-- CountryListActivity -->
+    <string name="country_list_title">Wähle ein Land</string>
+    <string name="country_list_search">Suche</string>
+
+    <!-- MediaActivity -->
+    <string name="media_tag_label_video">Video</string>
+    <string name="media_tag_label_image">Bild</string>
+    <string name="media_select">Auswählen</string>
+    <string name="media_select_all">wählen Sie alle</string>
+    <string name="media_select_title">Element auswählen</string>
+    <string name="media_select_title_num">%1$d ausgewählt</string>
+    <string name="media_delete_title">Medien löschen</string>
+    <string name="media_delete_content">Möchten Sie das ausgewählte Medium wirklich löschen?</string>
+    <string name="media_delete_photo_title">Foto löschen</string>
+    <string name="media_delete_photo_content">Sind Sie sicher,diese Fotos gelöscht werden  ?</string>
+    <string name="media_delete_video_title">Video löschen</string>
+    <string name="media_delete_video_content">Stellen Sie sicher, dass Sie das Video löschen möchten?</string>
+    <string name="media_label_photo">Foto</string>
+    <string name="media_label_video">Video</string>
+
+    <!-- system message -->
+    <string name="system_message">Systemmeldungen</string>
+    <string name="system_message_device_sharing">Geräte-/Kamerafreigabe</string>
+    <string name="system_message_share">Anteile</string>
+
+    <string name="system_message_expired">abgelaufen.</string>
+    <string name="system_message_accepted">Akzeptiert</string>
+    <string name="system_message_rejected">Abgelehnt</string>
+    <string name="system_message_canceled">Abgebrochen</string>
+    <string name="system_message_invalid">Ungültig</string>
+
+    <string name="system_message_delete_share">gemeinsamen Zugriff auf entfernt</string>
+    <string name="system_message_pay_subscribe_complete_title">Abo erfolgreich.</string>
+    <string name="system_message_pay_subscribe_cancel_title">Successful.</string>
+    <string name="system_message_pay_subscribe_arrears_title">Abonnieren Sie überfällig</string>
+    <string name="system_message_pay_subscribe_charge_title">Zahlung erhalten.</string>
+    <string name="system_message_pay_subscribe_successfully_with_trial">Sie haben einen %2$s Plan für das Gerät %1$s erfolgreich abonniert. Vielen Dank, dass Sie sich für unsere Dienstleistungen entschieden haben. Der Testzeitraum beträgt %3$d%4$s. Nach dem Test werden Ihnen %5$s pro Monat automatisch berechnet.</string>
+    <string name="system_message_pay_subscribe_successfully_without_trial">Sie haben einen %2$s Plan für das Gerät %1$s erfolgreich abonniert. Vielen Dank, dass Sie sich für unsere Dienstleistungen entschieden haben. Sie werden jeden Monat automatisch mit dem %3$s belastet.</string>
+    <string name="system_message_pay_subscribe_cancel_successfully">Sie haben Ihr Abonnement für %2$s für das Gerät %1$s erfolgreich gekündigt.</string>
+    <string name="system_message_pay_subscribe_arrears">Ihr Abonnement für den %2$s-Plan für das Gerät %1$s ist überfällig.  Bitte machen Sie eine Zahlung oder aktualisieren Sie Ihre Zahlungsart.</string>
+    <string name="system_message_pay_nooie_subscribe_successfully_with_trial">Sie haben das Cloud-Paket %3$s  für Ihr Gerät %1$s erfolgreich abonniert. Ihre Bestellnummer lautet %2$s.</string>
+    <string name="system_message_pay_nooie_subscribe_subscribe_with_trial">Ihr Abonnement für %1$s wurde verlängert und bezahlt. Vielen Dank.</string>
+    <string name="system_message_pay_nooie_subscribe_cancel_with_trial">Ihr Abonnement für %1$s wurde gekündigt. Wir hoffen, Sie kommen bald wieder.</string>
+    <string name="system_message_pay_nooie_subscribe_expired_with_trial">Ihr Abonnement für %1$s ist abgelaufen. Bitte verlängern Sie Ihr Abonnement, um Betriebsunterbrechungen zu vermeiden.</string>
+
+    <string name="system_message_device_bound_by_other">Kamera %1$s wurde von Gateway %2$s verknüpft.</string>
+    <string name="system_message_free_trial_storage">Herzlichen Glückwunsch, Sie haben den kostenlosen Cloud-Plan aktiviert. Der kostenlose Cloud-Plan endet in %1$s.</string>
+
+    <string name="system_message_to_me">für dich</string>
+    <string name="system_message_shared">gemeinsamer Zugriff auf</string>
+    <string name="system_message_i_agree">Du hast angenommen</string>
+    <string name="system_message_i_reject">Du hast abgelehnt</string>
+
+    <string name="system_message_cancel_share">Teilen abgebrochen</string>
+    <string name="system_message_agree_share">akzeptierte dein</string>
+    <string name="system_message_reject_share">lehnte dein ab</string>
+    <string name="system_message_pay_subscribe_charge_successfully">Ihr Abonnement für den%1$s Cloud Service wurde erneuert. Ihre Karte wurde mit%3$s belastet und endet mit%2$s. Vielen Dank, dass Sie sich für Osaio entschieden haben.</string>
+
+    <string name="system_message_feedback_wait">Wir haben Ihre Nachricht erhalten und werden umgehend antworten.</string>
+    <string name="system_message_feedback_finish">Wir schätzen Ihre Zeit und Meinungen. Bitte zögern Sie nicht, uns mit Fragen oder Kommentaren zu kontaktieren.</string>
+    <string name="system_message_other_place_login">Ein Mobiltelefon hat sich gerade in diesem Konto angemeldet. Wenn dies nicht Ihre Aktivität ist, empfehlen wir Ihnen, das Anmeldekennwort sofort zu ändern, um Ihr Konto zu schützen.</string>
+
+    <!--Warn Message-->
+    <string name="warn_message_motion">Bewegung erkannt</string>
+    <string name="warn_message_motion_sub">Gerät %1$s Bewegung erkannt</string>
+    <string name="warn_message_sound">Tonerkennung Warnung</string>
+    <string name="warn_message_sound_sub">Gerät %1$s Ton erkannt</string>
+    <string name="warn_message_pir">Menschliche Erkennung</string>
+    <string name="warn_message_pir_sub">Gerät %1$s PIR  hat erkannt worden.</string>
+    <string name="warn_message_sd_leak">Speicher fast voll</string>
+    <string name="warn_message_sd_leak_sub">Gerät %1$s SD-Karte nicht genügend Speicher</string>
+    <string name="warn_message_other">Andere</string>
+    <string name="warn_message_online">Gerät online</string>
+    <string name="warn_message_offline">Gerät offline</string>
+
+    <!-- nooie push msg -->
+    <string name="nooie_push_msg_detect_of_motion">Device %1$s Motion Detected</string>
+    <string name="nooie_push_msg_detect_of_sound">Device %1$s Voice Detected</string>
+    <string name="nooie_push_msg_detect_of_pir">Device %1$s PIR Detected</string>
+    <string name="nooie_push_msg_normal_content">Osaio Message</string>
+    <string name="push_msg_device_bound_by_other">Kamera %1$s wurde verbunden.</string>
+
+    <!-- CloudMoreActivity -->
+    <string name="cloud_more_content">
+        Mit Osaio App können Sie den Anzeigezugriff Ihres Geräts ganz einfach an Freunde und Familie weitergeben. Dadurch können sie durch Ihre Kamera sehen; Sie können Ihr Gerät jedoch nicht steuern. Bitte folgen Sie den Anweisungen unten, um ein Gerät zu teilen:
+        \n-Wenn der Eingeladene kein Osaio-Konto hat, laden Sie bitte Osaio App herunter und registrieren Sie zuerst ein Konto.
+        \n-Wählen Sie die Kamera, die Sie teilen möchten, und gehen Sie zu den Kameraeinstellungen.
+        \n-Wählen Sie unter den Kameraeinstellungen Kamerafreigabe
+        \n-Geben Sie die Konto-E-Mail-Adresse von die Person, mit der Sie den Zugriff teilen möchten, und drücken Sie "Einladung senden."
+        \n-Osaio wird diese Einladung per App an die Person senden.
+    </string>
+
+    <!-- AddBluetoothDeviceActivity -->
+    <string name="add_bluetooth_device_title">Add Bluetooth device</string>
+    <string name="add_bluetooth_device_scan_empty">No device found</string>
+    <string name="add_bluetooth_device_searching_tip">Scan in nearby devices...</string>
+    <string name="scan_device_item_rssi_label">RSSI:%1$d</string>
+    <string name="add_bluetooth_device_exist">Device added</string>
+    <string name="add_bluetooth_device_add_fail">Adding device failed</string>
+    <string name="add_bluetooth_device_check_bluetooth_title">Turn on Bluetooth</string>
+    <string name="add_bluetooth_device_check_bluetooth_content">Smart door lock needs to open Bluetooth connection.</string>
+    <string name="add_bluetooth_device_check_location_enable">Turn on "Location Services" to allow "Osaio" to use location services so that they can obtain bluetooth.</string>
+    <string name="add_bluetooth_device_bluetooth_invalid_tip">Please confirm whether the mobile phone has been given the Bluetooth function, positioning function and location permission function required by the application to connect to the Bluetooth device.</string>
+
+    <!-- AddAuthorizationActivity -->
+    <string name="add_authorization_title">Enter authorization code</string>
+    <string name="add_authorization_goto_admin">I am the administrator</string>
+
+    <!-- AddAdminActivity -->
+    <string name="add_admin_title">Add Administrator</string>
+
+    <!-- LookDeviceActivity -->
+    <string name="look_device_title">Smart Lock</string>
+    <string name="look_device_password_label">Password</string>
+    <string name="look_device_recording_label">Recording</string>
+    <string name="look_device_authorization_label">Authorization</string>
+    <string name="look_device_rename_label">Rename</string>
+    <string name="look_device_user_label">User</string>
+    <string name="look_device_bluetooth_label">Bluetooth</string>
+    <string name="look_device_rename_to_long">Custom name is too long</string>
+
+    <!-- LockRecordActivity -->
+    <string name="lock_record_title">Unlock record</string>
+    <string name="lock_record_name_user_open">Internal unlock</string>
+    <string name="lock_record_name_finger_open">Fingerprint unlock</string>
+    <string name="lock_record_name_psw_open">Password open</string>
+    <string name="lock_record_name_app_open">App open</string>
+    <string name="lock_record_name_remote_open">Remote open</string>
+
+    <!-- LockAuthorizationActivity -->
+    <string name="lock_authorization_title">Authorization</string>
+    <string name="lock_authorization_no_name">No name</string>
+    <string name="lock_authorization_delete_tip">Are you sure you want to delete the authorization code?</string>
+
+    <!-- LockAccountActivity -->
+    <string name="lock_account_title">Account management</string>
+    <string name="lock_account_item_device_name">Lock name :</string>
+    <string name="lock_account_item_device_phone">Phone account :</string>
+    <string name="lock_account_item_device_password">Password :</string>
+    <string name="lock_account_delete_tip">Are you sure you want to delete the account code?</string>
+
+    <!-- AddLpSuitActivity -->
+    <string name="add_lp_suit_gateway_title">Neuen Hub hinzufügen</string>
+    <string name="add_lp_suit_gateway_desc">Ein Hub kann bis zu 4 Kameras synchronisieren</string>
+    <string name="add_lp_suit_lp_camera_title">Kamera hinzufügen</string>
+    <string name="add_lp_suit_lp_camera_desc">Fügen Sie dem vorhandenen Hub eine Kamera hinzu</string>
+    <string name="add_lp_suit_pro_lp_camera_title">Kamera individuell verwenden</string>
+    <string name="add_lp_suit_pro_lp_camera_desc">Schließen Sie die Kamera direkt an den WLAN-Router an. Kein Hub erforderlich</string>
+    <string name="add_lp_suit_pro_lp_hub_camera_title">CAM + HUB Anzug</string>
+    <string name="add_lp_suit_pro_lp_hub_camera_desc">Kamera zum Hub hinzufügen</string>
+
+    <!-- AddLowPowerIpcActivity -->
+    <string name="add_low_power_ipc_title">Geräte zunehmen</string>
+    <string name="add_low_power_ipic_right_btn">Kamera\nhinzufügen</string>
+    <string name="add_low_power_ipc_guide_tip">1.Schalten Sie das Gateway ein, blaues Licht am Gateway. \n2.Verbinden Sie das Gateway mit einem Netzwerkkabel mit einem Router.</string>
+    <string name="add_low_power_ipc_link_page_title">Hinweis: Wenn bereits ein Gateway hinzugefügt hat, fügen Sie die Kamera direkt hinzu.</string>
+
+    <!-- AddGatewayActivity -->
+    <string name="add_gateway_title">Gateway addieren</string>
+    <string name="add_gateway_scan_and_add_btn">QR-Code scannen und hinzufügen</string>
+
+    <!-- DeviceScanCodeActivity -->
+    <string name="device_scan_code_guide_tip">Bitte scannen Sie den QR-Code am unteren Rand des Gateways, um das Gateway hinzuzufügen.</string>
+    <string name="device_scan_code_switch_phone_light_tip">Können Sie  nicht klar sehen?</string>
+    <string name="device_scan_code_switch_phone_light_on">Bitte schalten Sie die Taschenlampe ein.</string>
+    <string name="device_scan_code_switch_phone_light_off">Bitte schalten Sie die Taschenlampe aus.</string>
+    <string name="device_scan_code_add_gateway_failed_title">Hinzufügen des Gateways hat schreitet .</string>
+    <string name="device_scan_code_add_gateway_failed">Sie haben das Gateway bereits hinzugefügt, ohne  Hinzufuegen zu brauchen.</string>
+    <string name="device_scan_code_add_gateway_again">Sie können  das Gateway bereits nicht hinzufügen und müssen Sie  es nicht zu tun.</string>
+    <string name="device_scan_code_add_gateway_other_title">Gateway wurde verbunden</string>
+    <string name="device_scan_code_add_gateway_other">Das Gateway ist verbunden. Bitte setzen Sie es vor dem Verbindung zurück.</string>
+
+    <!-- AddGatewayCompleteActivity -->
+    <string name="add_gateway_complete_success">Gateway wurde erfolgreich hinzugefügt, bitte fügen Sie eine Kamera hinzu.</string>
+
+    <!-- AddLpCameraActivity -->
+    <string name="add_lp_camera_title">Kamera hinzufügen</string>
+    <string name="add_lp_camera_guide_tip">Halten Sie den Netzschalter gedrückt, um das blinkende blaue Licht zu leiten und loszulassen.</string>
+    <string name="add_lp_camera_guide_tip_ec810_pro">Halten Sie den Netzschalter der Kamera gedrückt, bis das rote Licht blinkt, und lassen Sie ihn dann los</string>
+    <string name="add_lp_camera_incorrect_light">Falsche Hinweislicht ?</string>
+    <string name="add_lp_camera_guide_tip_no_hub">Ihre Kamera muss mit dem Hub verwendet werden. Fügen Sie zuerst den Hub hinzu.</string>
+
+    <!-- LpCameraIncorrectLight -->
+    <string name="lp_camera_incorrect_light_title">Falsches Lampe des Hinweis</string>
+    <string name="lp_camera_incorrect_light_guide_tip_1">1.Wenn die Kameraanzeige nicht aufleuchtet, laden Sie die Kamera auf, bis die Anzeige aufleuchtet</string>
+    <string name="lp_camera_incorrect_light_guide_tip_2">2.Wenn die Kameraanzeige nicht blau blinkt, drücken Sie die Ein- / Aus-Taste der Kamera ca. 10 Sekunden lang, um die Kamera zurückzusetzen</string>
+    <string name="lp_camera_incorrect_light_guide_tip_2_ec810_pro">2.Wenn die Kameraanzeige nicht rot blinkt, drücken Sie die Ein- / Aus-Taste der Kamera ca. 10 Sekunden lang, um die Kamera zurückzusetzen</string>
+    <string name="lp_camera_incorrect_light_reset_successfully">Erfolgreich zurücksetzen</string>
+    <string name="pro_lp_camera_incorrect_light_guide_tip">Wenn die Anzeigelampe nicht rot blinkt, starten Sie das Gerät neu.</string>
+
+    <!-- MatchLpCameraActivity -->
+    <string name="match_lp_camera_guide_tip">1. Bitte drücken Sie die Gateway-Taste 2 Sekunden lang, dann leuchtet die Hub-Anzeige blau und blinkt\n\n2.Gateway und Kamera werden gleichzeitig grün verändern , um eine erfolgreiche Übereinstimmung zu erzielen.</string>
+    <string name="match_lp_camera_match_failed_link">2.Gateway und Kamera werden gleichzeitig grün verändern , um eine erfolgreiche Übereinstimmung zu erzielen.</string>
+    <string name="match_lp_camera_start_using">Die Kamera hat gestartet.</string>
+    <string name="match_lp_camera_unsuccessful_macth">Flasche Anpassung?</string>
+    <string name="match_lp_camera_pared_title">Die Kamera ist verbunden.</string>
+    <string name="match_lp_camera_pared_content">Die Kamera ist gekoppelt. Bitte setzen Sie sie vor dem Koppeln zurück.</string>
+    <string name="match_lp_camera_pared_failed">Die Anpassung ist misslungen ,bitte versuchen Sie noch einmal. </string>
+
+    <!-- MatchLpCameraFailActivity -->
+    <string name="match_lp_camera_fail_title">Die Anpassung ist misslungen.</string>
+    <string name="match_lp_camera_fail_guide_tip">
+        1.Überprüfen Sie Ihren Gateway-Netzwerk, um sicherzustellen, dass Sie eine Verbindung zum Internet herstellen können.\n\n
+        2.Stellen Sie sicher, dass die Kommunikationsumgebung des Geräts gut ist. Die Kamera sollte so nah wie möglich an der Gangway sein und in der Mitte dürfen es  keine Metall- oder starken elektromagnetischen Störungen geben.
+    </string>
+    <string name="match_camera_help_ap_guide_title">F: Was ist der Verbindungsmodus?</string>
+    <string name="match_camera_help_ap_guide_tip">
+        A: Es gibt zwei Verbindungsmodi. \n\n
+        1. Fernzugriffsmodus. Schließen Sie die Kamera an den Router an, damit das Telefon remote auf die Kamera zugreifen kann.\n\n
+        2. Hotspot-Zugriffsmodus: Greifen Sie auf die Kamera zu, indem Sie das Telefon an den von der Kamera ausgegebenen Hotspot anschließen. Dies ist für Umgebungen geeignet, in denen kein Netzwerk vorhanden ist.
+    </string>
+
+    <!-- GatewaySettingsActivity -->
+    <string name="gateway_settings_title">Einstellungen des Gateways</string>
+
+    <!-- GatewayInfoActivity -->
+    <string name="gateway_info_device_id">ID  des Gateways</string>
+    <string name="gateway_info_device_status">Der Zustand des Netzwerks</string>
+    <string name="gateway_info_device_mac">Adresse des MACs</string>
+    <string name="gateway_info_clear_up_space">Speicherung  aufräumen</string>
+    <string name="gateway_info_upgrade">Firmware erneue</string>
+    <string name="gateway_info_use_space">%1$s verwendet</string>
+    <string name="gateway_info_is_newest_version">Das Gateway ist in  die neueste Version.</string>
+    <string name="gateway_info_restart">Neustart</string>
+    <string name="gateway_info_unbind">entbinden</string>
+    <string name="gateway_info_confirm_clear_up_space">Alle Videos  aufräumen ?</string>
+    <string name="gateway_info_restart_title">Das  Gateway neustarten</string>
+    <string name="gateway_info_restart_content_1">Bestätigen Sie den Neustart des Gateways?</string>
+    <string name="gateway_info_restart_content_2">Das Gateway bestätigt den Neustart. Dieser Vorgang dauert 2-3 Minuten. Sobald der Neustart abgeschlossen ist, öffnen Sie bitte die APP erneut.</string>
+    <string name="gateway_info_unbind_content">Nach dem Entbündeln können Sie das Video von der mit dem Gateway verbundenen Kamera nicht mehr sehen. Sind Sie sicher, dass Sie sich abmelden möchten?</string>
+    <string name="gateway_info_offline_tip">Das  Gateway ist Off-line.</string>
+    <string name="gateway_info_lastest_version_tip">Das Gateway ist in  die neueste Version.</string>
+
+    <!-- GatewayFirmwareActivity -->
+    <string name="gateway_firmware_title">Während des Erneuerungen</string>
+    <string name="gateway_firmware_current_version_label">Aktuelle Version:</string>
+    <string name="gateway_firmware_new_version_label">Neueste Version:</string>
+    <string name="gateway_firmware_download_upgrade">das Herunterlade erneuern</string>
+    <string name="gateway_firmware_confirm_upgrade_title">Inhalt erneue</string>
+    <string name="gateway_firmware_confirm_upgrade_content">sind Sie sicher, das Gateway neu zu starten?</string>
+
+    <!-- GatewayUpgradeActivity -->
+    <string name="gateway_upgrade_upgrading_tip">Während des Erneuerungen...</string>
+    <string name="gateway_upgrade_failed_tip">Bitte überprüfen Sie, ob das Gateway richtig angeschlossen ist.</string>
+
+    <!-- DeivePIRActivity -->
+    <string name="device_pir_tip">Einschalten Sie die PIR-Erkennung, um Warnungen zu erhalten. Je empfindlicher, desto einfacher ist es, zu Warnungen zuführen .</string>
+
+    <!-- ConnectionModeActivity -->
+    <string name="connection_mode_title">Verbindungsmodus</string>
+    <string name="connection_mode_tip_1">Wir bieten die folgenden %1$d Möglichkeiten zum Anschließen von Geräten. Sie können die Verbindungsmethode auswählen, die zu Ihnen passt.</string>
+    <string name="connection_mode_tip_lan">Wie weit ist es von Ihrem Router bis zu dem Ort, an dem Sie die Kamera installieren werden, entfernt? Wählen Sie das Szenario, um die Geräte mit der empfohlenen Methode einzurichten</string>
+    <string name="connection_mode_hot_spot_title">Hot Spot</string>
+    <string name="connection_mode_hot_spot_content">Verwenden Sie das Mobiltelefon, um eine Verbindung zum Hot Spot des Geräts herzustellen und eine schnelle Verbindung herzustellen.</string>
+    <string name="connection_mode_qc_title">QR-Code (empfohlen)</string>
+    <string name="connection_mode_qc_content">Verwenden Sie das Gerät, um den QR-Code auf dem Telefon zu scannen. Das Netzwerk ist einfach.</string>
+    <string name="connection_mode_dc_title">DV</string>
+    <string name="connection_mode_dc_content">Verwenden Sie Ihr Telefon und Gerät, um eine direkte Verbindung herzustellen und Live-Übertragungen schnell anzuzeigen</string>
+    <string name="connection_mode_lan_title">Verdrahtetes Netzwerk</string>
+    <string name="connection_mode_lan_content">Wenn Ihre Kamera in der Nähe des Routers installiert wird</string>
+    <string name="connection_mode_wireless_title">Drahtloses Netwok</string>
+    <string name="connection_mode_wireless_content">Wenn Ihre Kamera weit vom Router entfernt installiert wird</string>
+    <string name="connection_mode_qc_title_hc_320">Fernzugriff Modus</string>
+    <string name="connection_mode_qc_content_hc_320">Schließen Sie die Kamera an den Router an, damit das Telefon remote auf die Kamera zugreifen kann.</string>
+    <string name="connection_mode_dc_title_hc_320">Hotspot-Zugriffsmodus</string>
+    <string name="connection_mode_dc_content_hc_320">Das Mobiltelefon stellt eine Verbindung zu dem von der Kamera gestarteten Hotspot her, um auf die Kamera zuzugreifen, die für die Verwendung in einer Umgebung ohne Internet geeignet ist.</string>
+
+    <!-- ConnectionToWiFiActivity -->
+    <string name="connection_to_wifi_tip">1. Verbinden Sie Ihr Telefon in den Einstellungen Ihres Telefons mit dem Hotspot des Geräts.\n2. Kehren Sie zur App zurück und fahren Sie mit dem Pairing fort.</string>
+    <string name="connection_to_wifi_no_perm_for_ssid">Einschalten  Sie die Standortberechtigung,wirdIhre Wlan automatisch verbinden.</string>
+    <string name="connection_to_wifi_find_no_ap">Bitte verknüpfen Sie den Geräte-Hotspot und versuchen Sie es erneut</string>
+
+    <!-- ScanActivity -->
+    <string name="scan_device_init_network">1.Internet initiieren</string>
+    <string name="scan_device_init_network_success">1.Die Initiation war erfolgreich</string>
+    <string name="scan_device_init_network_fail">1.Internet Initiierung fehlgeschlagen</string>
+    <string name="scan_device_network_connect">2.Verbindung zum Internet herstellen</string>
+    <string name="scan_device_network_connect_sucess">2.Internet verbunden</string>
+    <string name="scan_device_network_connect_fail">2.Internetverbindung fehlgeschlagen</string>
+    <string name="scan_device_service_connect">3.Verbindung zur Cloud herstellen</string>
+    <string name="scan_device_service_connect_sucess">3.Cloud verbunden</string>
+    <string name="scan_device_service_connect_fail">3.Verbindung zur Cloud fehlgeschlagen</string>
+    <string name="scan_device_fail_help_ap_title_1">1. Internet initiation failed，how to solve</string>
+    <string name="scan_device_fail_help_ap_content_1">1. Make sure your phone connect Camera\'s hosport SecurityCam_XXXX succeed. Please go to phone\'s wifi settings to check it.</string>
+    <string name="scan_device_fail_help_ap_title_2">2. Failed to connect internet ，how to solve</string>
+    <string name="scan_device_fail_help_ap_content_2">
+        1. Check whether the router password you entered is correct. Check for spaces before and after the Wi-Fi account or password and case sensitivity issues.\n
+        2. Please keep your device, and router as close to each other as possible.\n
+        3.Ensure that broadcasting is enabled for Wi-Fi and is not hidden. Ensure that your device has been added over a Wi-Fi band of 2.4 GHz. (Check whether the 2.4 GHz band and 5GHz band share the same Wi-Fi account. If so, we recommend that you configure two accounts and switch to the 2.4 GHz band during network connection.)\n
+        4.Ensure that the encryption method and authentication type are set to WPA2-PSK and AES, respectively, for the router\'s wireless settings, or both are set to Auto. Ensure that the wireless mode is not set to 11n only.\n
+        5.If wireless MAC address filtering is enabled for the router, remove your device from the router\'s MAC address filtering list to ensure that it is allowed to connect to the network. You can also disable MAC address filtering.
+        6.Ensure that the DHCP service is enabled for the router. If not, the IP address will be occupied.\n
+        7. Your router may have reached the maximum number of simultaneous connections allowed; please turn off other devices on the network before trying to connect your Osaio device.\n
+        8. The wifi need to register is not support. Such as airport Wifi, need to agree on one page is not support
+    </string>
+    <string name="scan_device_fail_help_ap_title_3">3. Failed to connect to cloud，how to solve </string>
+    <string name="scan_device_fail_help_ap_content_3">1. Make sure your router\'s network is good. Would you use your phone to connect to the same router, and try to visit www.google.com whether succeed.</string>
+
+    <!-- ScanCodeActivity -->
+    <string name="scan_code_title">Scan Code</string>
+    <string name="scan_code_guide_tip">Scan the QR code located on the back of the camera or type in the ID code manually.</string>
+    <string name="scan_code_goto_enter_device_id">I would like to type in the code</string>
+    <string name="scan_code_add_gateway_failed_title">Gerät hinzufügen fehlgeschlagen</string>
+    <string name="scan_code_add_gateway_again">Sie haben das Gerät bereits nicht hinzugefügt und müssen es erneut hinzufügen</string>
+    <string name="scan_code_add_gateway_other_title">Device has been bound</string>
+    <string name="scan_code_add_gateway_other">The device has been bound，please reset it after binding</string>
+    <string name="device_id_invalid_tip">Ungültige Geräte-ID</string>
+
+    <!-- RouterSettingActivity -->
+    <string name="router_setting_title">Router setting method</string>
+    <string name="router_setting_tip">
+        If your router supports both the 2.4 GHz and 5 GHz bands, but only one Wi-Fi name is displayed on the Wi-Fi search page of your mobile phone, perform these steps:\n\n
+        Go to the Wireless page of the router. (The entry address is usually provided on the label attached to the back of the router).\n
+        Go to the 2.4 GHz setting page, and set the Wi-Fi name (SSID) to xxx-2.4G, where xxx indicates the Wi-Fi name. Save setting.\n
+        Go to the 5 GHz setting page, and set the Wi-Fi name (SSID) to xxx-5G, where xxx indicates the Wi-Fi name. Save setting.\n
+        When the preceding settings are complete, the new Wi-Fi names will appear on the Wi-Fi settings page of your mobile phone.\n
+        Note: After the Wi-Fi names are changed, you need to reconnect the devices that use this wireless router. The password remains the same if it has not been changed.\n\n
+        The following files describe how to configure the routers of some popular brands.
+    </string>
+    <string name="router_setting_netgear">Configure a Netgear router</string>
+    <string name="router_setting_asus">Configure an ASUS router</string>
+    <string name="router_setting_d_link">Configure a D-Link router</string>
+    <string name="router_setting_tp_link">Configure a TP-Link router</string>
+
+    <!-- RouterConfigureActivity -->
+    <string name="router_configure_step_net_gear_1">1. On the BASIC tab page, click Wireless .</string>
+    <string name="router_configure_step_net_gear_2">2. In the Wireless Network (2.4GHz b/g/n) area, set Name (SSID) to  xxx-2.4G , where xxx indicates the Wi-Fi name. Saving setting.</string>
+    <string name="router_configure_step_net_gear_3">3. In the Wireless Network (5GHz a/n/ac) area, set Name (SSID) to xxx-5G , where xxx indicates the Wi-Fi name. Saving setting.</string>
+
+    <string name="router_configure_step_asus_1">1. In the Advanced Settings area, click Wireless .</string>
+    <string name="router_configure_step_asus_2">2. On the General tab page, check whether Enable Smart Connect is On . If Smart Connect is enabled, disable it to separate the SSIDs for the 2.4 GHz and 5 GHz bands.</string>
+    <string name="router_configure_step_asus_3">3. In the Band drop-down list, select 2.4GHz and then set Network Name (SSID) to xxx-2.4G , where xxx indicates the Wi-Fi name. Save the setting.</string>
+    <string name="router_configure_step_asus_4">4. In the Band drop-down list, select 5GHz and then set Network Name (SSID) to xxx-5G . Save the setting.</string>
+
+    <string name="router_configure_step_d_link_1">1、On the D-Link home page, click the Settings tab and select Wireless.</string>
+    <string name="router_configure_step_d_link_2">2、In the 2.4GHz area, set Wi-Fi Name (SSID) to xxx-2.4G; and in the 5GHz area, set Wi-Fi Name (SSID) to xxx-5G, where xxx indicates the Wi-Fi name.</string>
+    <string name="router_configure_step_d_link_3">3、The last step is to Save the settings。</string>
+
+    <string name="router_configure_top_tip_tp_link_1">By default, the TP-Link router Wi-Fi names (SSID) for the 2.4 GHz and 5 GHz bands are the same. To distinguish the SSIDs for the two bands, follow these steps:</string>
+    <string name="router_configure_step_tp_link_1">1. In the lower-right corner of the page, click Setting .</string>
+    <string name="router_configure_step_tp_link_2">2. Click Wireless .</string>
+    <string name="router_configure_step_tp_link_3">3. In the 2.4G Wireless area, set SSID to （XXX）-2.4G , where xxx indicates the Wi-Fi name. Saving setting.</string>
+    <string name="router_configure_step_tp_link_4">4. In the 5G Wireless area, set SSID to （XXX）-5G , where xxx indicates the Wi-Fi name. Saving setting.</string>
+    <string name="router_configure_bottom_tip_tp_link_1">When the preceding settings are complete, the new Wi-Fi names will appear on the Wi-Fi settings page of your mobile phone.</string>
+    <string name="router_configure_bottom_tip_tp_link_2">Note: After the Wi-Fi names are changed, you need to reconnect the devices that use this wireless router. The password remains the same if it has not been changed.</string>
+
+    <!-- InputDeviceIdActivity -->
+    <string name="input_device_id_title">Manual Input</string>
+    <string name="input_device_id_max_len_tip">Die Geräte-ID darf 32 Bit nicht überschreiten</string>
+
+    <!-- SwitchConnectionModeActivity -->
+    <string name="switch_connection_mode_title">Verbindungsmodus wechseln</string>
+    <string name="switch_connection_mode_tip_1">Um den Verbindungsmodus zu wechseln, müssen Sie die Reset-Taste der Kamera lange drücken und die Kamera dann erneut hinzufügen, um eine Verbindung herzustellen.</string>
+    <string name="switch_connection_mode_tip_1_hc_320">
+        Der aktuelle Verbindungsmodus ist %1$s.\n\n
+        Wenn Sie den Verbindungsmodus ändern möchten, können Sie die Kamera zurücksetzen und ca. 20 Sekunden warten, bis die Anzeigelampe rot blinkt. Fahren Sie dann mit dem nächsten Schritt fort.
+    </string>
+    <string name="switch_connection_mode_tip_2">Wie in der Abbildung gezeigt, wird die Kamera zurückgesetzt, nachdem Sie das Rücksetzloch 5 Sekunden lang gedrückt gehalten haben.</string>
+    <string name="switch_connection_mode_found_ap_direct_connection">Das WIFI der Kamera wurde erfolgreich verbunden. Möchten Sie sofort auf die Kamera zugreifen?</string>
+    <string name="switch_connection_mode_ap_direct_connection_error">Die AP-Verbindung wurde getrennt. Bitte überprüfen Sie und versuchen Sie erneut, die Verbindung herzustellen.</string>
+    <string name="switch_connection_mode_confirm_btn">Die Kamera wird zurückgesetzt und das rote Licht blinkt</string>
+
+    <!-- DeviceScanFailActivity -->
+    <string name="device_scan_fail_title">Abnormale Verbindung</string>
+    <string name="device_scan_fail_tip">
+        1. Warten Sie 10 Minuten, bevor Sie die Kamera erneut für die Netzwerkkonfiguration hinzufügen.\n
+        %1$s\n\n
+        2. Wenn die oben genannten Vorgänge ungültig sind, fügen Sie bitte einen Screenshot dieser Seite bei und wenden Sie sich an den technischen Support %2$s, um das Problem zu lösen.
+    </string>
+    <string name="device_scan_fail_confirm_btn">Zurück zur Startseite</string>
+
+    <!-- ConnectBluetoothActivity -->
+    <string name="connect_bluetooth_title">Connect Camera Bluetooth</string>
+    <string name="connect_bluetooth_tip_1">1. Please make sure the camera is powered on</string>
+    <string name="connect_bluetooth_tip_2">2. Search and connect the camera\'s Bluetooth</string>
+    <string name="connect_bluetooth_confirm_connect">Connect</string>
+
+    <!-- BluetoothScanActivity -->
+    <string name="bluetooth_scan_title">Bluetooth-Verbindung der Kamera</string>
+    <string name="bluetooth_scan_state_waiting">Warten auf die Bluetooth-Verbindung der Kamera ...</string>
+    <string name="bluetooth_scan_state_scanning">Scannen nach Bluetooth der Kamera ...</string>
+    <string name="bluetooth_scan_state_result">Verfügbare Kameras</string>
+    <string name="bluetooth_scan_perm_reject_declare_title">Bluetooth-Verbindung fehlgeschlagen</string>
+    <string name="bluetooth_scan_perm_reject_declare_content">
+        Osaio stellt über Bluetooth eine Verbindung zur Kamera her\n\n
+        · Um nach Bluetooth der Kamera zu suchen, benötigt Osaio Zugriff auf Ihre Standortberechtigungen. Schalten Sie auch Bluetooth ein. Es wird nur für den Kameraanschluss verwendet.\n\n
+        · Bitte stellen Sie erneut eine Verbindung her und genehmigen Sie die Zugriffsanfrage.
+    </string>
+    <string name="bluetooth_scan_perm_reject_declare_reconnect">Wieder verbinden</string>
+    <string name="bluetooth_scan_item_connect_btn">Verbinden</string>
+    <string name="bluetooth_scan_location_request_title">Bitte schalten Sie die Ortungsdienste</string>
+    <string name="bluetooth_scan_location_request_content">Osaio verwendete es nur, um nach Kameras in der Nähe zu suchen</string>
+    <string name="bluetooth_scan_location_request_allow">Gehen Sie zu Aktivieren</string>
+    <string name="bluetooth_scan_request_location_perm_title">Zugriffsanforderung</string>
+    <string name="bluetooth_scan_request_location_perm_content">Osaio fordert den Zugriff auf Ihren Standort an und aktiviert Bluetooth, um nur Kameras in der Nähe zu durchsuchen.</string>
+    <string name="bluetooth_scan_no_found_title">Kamera Bluetooth nicht gefunden</string>
+    <string name="bluetooth_scan_no_found_content">
+        1. Bitte stellen Sie sicher, dass die Kamera eingeschaltet ist. Sie können die Kamera neu starten und prüfen, ob die Anzeigelampe leuchtet.\n\n\
+        2. Wenn die Kamera eingeschaltet ist, Bluetooth jedoch nicht gefunden wird, setzen Sie die Kamera zurück. Warten Sie ca. 20 Sekunden, bis die Anzeigelampe rot blinkt, und versuchen Sie es erneut.
+    </string>
+    <string name="bluetooth_scan_no_found_research">Erneut suchen</string>
+    <string name="bluetooth_scan_operation_tip_fail">Bluetooth-Verbindung fehlgeschlagen.Bitte versuchen Sie es erneut</string>
+    <string name="bluetooth_scan_operation_tip_success">Bluetooth-Verbindung ist erfolgreich</string>
+    <string name="bluetooth_scan_operation_tip_setting_fail">Operation fehlgeschlagen. Bitte versuchen Sie es erneut</string>
+    <string name="bluetooth_scan_operation_tip_unbind">Die Kamera befindet sich in einem anderen Verbindungsmodus. Bitte zurücksetzen Sie die Kamera</string>
+    <string name="bluetooth_scan_operation_tip_unbind_confirm">I got it</string>
+    <string name="bluetooth_scan_operation_tip_disconnect_title">Bluetooth getrennt</string>
+    <string name="bluetooth_scan_operation_tip_disconnect_content">Das Bluetooth wurde von Ihrem Gerät getrennt. Bitte suchen und verbinden Sie Ihr Gerät erneut</string>
+    <string name="bluetooth_scan_operation_tip_disconnect_confirm">Wieder verbinden</string>
+    <string name="bluetooth_scan_operation_tip_bound">Die Kamera ist bereits an ein Konto gebunden. Bitte setzen Sie die Kamera zurück, um fortzufahren.</string>
+    <string name="bluetooth_scan_operation_tip_bound_by_self">The camera is already bound.</string>
+
+    <!-- ModifyCameraPasswordActivity -->
+    <string name="modify_camera_password_title">Ändern Sie das Hotspot-Passwort</string>
+    <string name="modify_camera_password_tip">Nachdem Sie eine Verbindung zum Hotspot der Kamera hergestellt haben, können Sie auf die Kamera zugreifen. \nSpeichern Sie nach dem Ändern des Passworts das neue Passwort, um ein Vergessen zu vermeiden.</string>
+    <string name="modify_camera_password_ssid">SSID: %1$s</string>
+    <string name="modify_camera_password_defaut_pw">Voreingestelltes Paswort: %1$s</string>
+    <string name="modify_camera_password_confirm_change">Confirm the changes</string>
+    <string name="modify_camera_password_invalid">Ihr Passwort muss 8-16 englische Buchstaben, Symbole oder Zahlen enthalten</string>
+    <string name="modify_camera_password_different">Das neue Passwort stimmt nicht mit dem bestätigten Passwort überein. Bitte überprüfen Sie es</string>
+    <string name="modify_camera_skip">Überspringen</string>
+
+    <!-- ConnectApDeviceActivity -->
+    <string name="connect_ap_device_forgot_pw">Passwort vergessen?</string>
+    <string name="connect_ap_device_forgot_pw_title">Passwort vergessen</string>
+    <string name="connect_ap_device_forgot_pw_message">Wenn Sie das Passwort des Kamera-Hotspots vergessen haben, können Sie die Kamera zurücksetzen und zur Homepage zurückkehren, um die Verbindung wiederherzustellen.</string>
+    <!-- FlashLightActivity -->
+    <string name="flash_light_tip">Wenn der Alarm ausgelöst wird, der Arbeitsmodus des weißen Lichts</string>
+    <string name="flash_light_full_color_night_vision_title">Vollfarbmodus</string>
+    <string name="flash_light_full_color_night_vision_tag">Das weiße Licht ist im Nachtsichtmodus eingeschaltet, um das Licht aufzufüllen</string>
+    <string name="flash_light_flash_warning_title">Alarmmodus</string>
+    <string name="flash_light_flash_warning_tag">"Wenn der Alarm im Nachtsichtmodus ausgelöst wird, leuchtet das weiße Licht "</string>
+    <string name="flash_light_close_title">Schwarz-Weiß-Nachtsichtmodus</string>
+    <string name="flash_light_close_tag">Schalten Sie das weiße Licht im Nachtsichtzustand nicht ein, verwenden Sie das Infrarotlicht zum Schießen</string>
+
+    <!-- FileSettingActivity -->
+    <string name="file_setting_title">Datei Einstellungen</string>
+    <string name="file_setting_mode">Modus</string>
+    <string name="file_setting_snap_number">Anzahl der Serienaufnahmen</string>
+    <string name="file_setting_record_time">Videoaufnahmezeit</string>
+
+    <!-- FileSettingConfigureActivity -->
+    <string name="file_setting_configure_mode_tip_1">The current networking mode is WAN mode, and it does not currently support viewing pictures on the APP, you can view it by removing the SD card from the camera</string>
+    <string name="file_setting_configure_mode_tip">Stellen Sie das von der Kamera aufgenommene Dateiformat ein</string>
+    <string name="file_setting_configure_snap_number_tip">Die Anzahl der Fotos, die jedes Mal kontinuierlich aufgenommen werden, wenn die Kamera Fotos aufzeichnet.</string>
+    <string name="file_setting_configure_record_time_tip">Stellen Sie die Dauer jeder Videoaufnahme ein</string>
+
+    <!-- PhotoMediaActivity -->
+    <string name="photo_media_empty">Es wurden keine von der Kamera aufgenommenen Bilder gefunden</string>
+    <string name="photo_media_loading">Wird geladen...</string>
+    <string name="photo_media_no_sd">SD-Karte nicht gefunden</string>
+    <string name="photo_media_retry">Laden fehlgeschlagen, klicken Sie, um es erneut zu versuchen</string>
+    <string name="photo_media_save_photo_success">Erfolgreich auf dem Telefon gespeichert</string>
+
+    <!-- OtaUpdateTipActivity -->
+    <string name="ota_update_tip_title">Upgrade-Richtlinien</string>
+    <string name="ota_update_tip_guide_title">1.Wechseln Sie den Verbindungsmodus</string>
+    <string name="ota_update_tip_guide_tip">Bitte schließen Sie die Kamera an, gehen Sie zu "Einstellungen >  Verbindungsmodus wechseln" und schalten Sie den Verbindungsmodus der Kamera auf der Einstellungsseite auf "Fernzugriffsmodus". Die Kamera muss auf das Netzwerk zugreifen, um die Firmware für das Upgrade herunterzuladen. \nWenn Sie keinen Router haben, können Sie mit Ihrem Mobiltelefon auch einen Hotspot für die Kamera ausgeben, um eine Verbindung herzustellen.</string>
+    <string name="ota_update_tip_guide_title_1">2.Schließen Sie die Kamera erneut an und starten Sie das Upgrade, wenn Sie dazu aufgefordert werden</string>
+    <string name="ota_update_tip_guide_tip_1">Nach dem Ändern des Verbindungsmodus müssen Sie möglicherweise die APP neu starten. Wechseln Sie zur Echtzeitansichtseite der Kamera, und Sie können gemäß den Eingabeaufforderungen ein Upgrade durchführen.</string>
+
+    <!-- ChangeDevicePasswordActivity -->
+    <string name="change_device_password_old_password_error">Alter Passwort-Fehler, bitte erneut eingeben</string>
+    <string name="change_device_password_reconnect_device_title">Erfolgreich modifiziert</string>
+    <string name="change_device_password_reconnect_device_content">Die Verbindung wurde getrennt und die Kamera muss wieder verbunden werden</string>
+    <string name="change_device_password_reconnect_device_confirm_btn">Schließen Sie die Kamera wieder an</string>
+
+    <!-- FirstStartInstructionActivity -->
+    <string name="first_start_instruction_title">Bedingungen und Datenschutzhinweis</string>
+    <string name="first_start_instruction_tip">
+        Wir legen großen Wert auf den Schutz Ihrer persönlichen Daten und Ihrer Privatsphäre. Um Ihre persönlichen Rechte und Interessen besser zu schützen, lesen Sie bitte die %1$s und %2$s sorgfältig durch, bevor Sie unsere Produkte nutzen, und stellen Sie sicher, dass Sie über 13 Jahre alt sind.\n\n
+        Wenn Sie nicht zustimmen, können Sie unsere Produkte und Dienstleistungen nicht nutzen.
+    </string>
+    <string name="first_start_instruction_agree">Zustimmen</string>
+    <string name="first_start_instruction_reject">Verlassen</string>
+
+    <!-- StartUpGuideActivity -->
+    <string name="start_up_guide_slogan">Es sind mehrere Marken und Geräte verfügbar,Die Ihr Leben allmählich verbessern</string>
+    <string name="start_up_guide_copy_right">Powered by Osaio</string>
+    <string name="start_up_guide_next">Fang an zu erleben</string>
+
+    <!-- permission -->
+    <string name="location_request_tip">Location is turned off. Some Android phones require it enabled in order to scan for Bluetooth LE devices.</string>
+    <string name="bluetooth_location_permission_request_tip">Osaio benötigt die Standortberechtigung, um nach Bluetooth-Geräten zu suchen.</string>
+    <string name="bluetooth_request_tip">Osaio wants to turn on Bluetooth</string>
+    <string name="perm_deny_tip_title">Permission denied</string>
+
+    <!-- Dialog -->
+    <string name="dialog_tip_title">Prompt</string>
+    <string name="dialog_ble_authorization_title">Authorization code :</string>
+    <string name="dialog_ble_authorization_code_hint">Please enter your name</string>
+    <string name="dialog_ble_rename_device_title">Enter the Bluetooth name</string>
+
+    <!-- HybridWebViewActivity -->
+    <string name="hybrid_wx_uninstall_content">WeChat-Client wird nicht erkannt, bitte versuchen Sie es nach der Installation erneut.</string>
+    <string name="hybrid_wx_uninstall_install">Jetzt installieren</string>
+
+    <!-- ApiCode -->
+    <string name="api_code_1109">Das Gerät wurde vom Benutzer nicht gebunden.</string>
+
+
+    <!--Router-->
+    <string name="router_remove_schedule_tip">Sind Sie sicher, dass Sie es löschen wollen?</string>
+    <string name="router_time_settings">Zeit-Einstellungen</string>
+    <string name="router_save">Speichern</string>
+    <string name="router_firmware_version">The firmware version of the router is too low. Please upgrade the firmware first.</string>
+    <string name="router_wifi_setting">Wi-Fi Einstellungen</string>
+    <string name="router_wifi_connect_fail">Verbindung fehlgeschlagen</string>
+    <string name="router_wifi_connect_fail_msg">APP ist nicht mit dem Router-Wi-Fi verbunden, kann nicht auf den Router zugreifen, bitte verbinden Sie APP mit dem Router-Wi-Fi</string>
+    <string name="router_use_password_of_2">Verwenden Sie das Passwort von 2.4G Wi-Fi</string>
+    <string name="router_2g_wifi">2.4G WiFi</string>
+    <string name="router_5g_wifi">5G WiFi</string>
+    <string name="router_hidden_ssid">Versteckte SSID</string>
+    <string name="router_input_error">Input error</string>
+    <string name="router_wifi_password">Wi-Fi Passwort</string>
+    <string name="router_support_wpa3_encryption">Unterstützung der WPA3-Verschlüsselung</string>
+    <string name="router_smart_intergrated_ssid">Intelligente integrierte SSID</string>
+    <string name="router_smart_intergrated_ssid_tip">Sowohl 2,4G-Wi-Fi als auch 5G-Wi-Fi verwenden denselben Wi-Fi-Namen</string>
+    <string name="router_admin_password_tip">Wi-Fi-Passwort als Admin-Passwort des Routers verwenden</string>
+    <string name="router_wifi_name_ssid">Wi-Fi-Netzwerkname</string>
+    <string name="router_wifi_name">Wi-Fi-Netzwerkname</string>
+    <string name="router_s_admin_password">Router Admin Passwort</string>
+    <string name="router_share_wifi_with_qr_code">Wi-Fi mit QR-Code freigeben</string>
+    <string name="router_network_exception">Netzwerkverbindung abnormal</string>
+    <string name="router_user_name">Benutzer Name</string>
+    <string name="router_password">Passwort</string>
+    <string name="router_device_name">Router Name</string>
+    <string name="router_i_got_it">Ich hab\'s</string>
+    <string name="router_not_connect">APP ist nicht mit dem Router-Wi-Fi verbunden, kann nicht auf den Router zugreifen, bitte verbinden Sie APP mit dem Router-Wi-Fi</string>
+    <string name="router_forget_password">Passwort vergessen？</string>
+    <string name="router_how_to_reset">Wie zurücksetzt</string>
+    <string name="router_connected_fail">Verbindung fehlgeschlagen</string>
+
+
+    <string name="router_exit">Beenden</string>
+    <string name="router_retry">Wiederholen</string>
+    <string name="router_update">Upgrade-Tipps</string>
+    <string name="router_remove_device_dialog_info">Dieser Router wird aus der Geräteliste entfernt und kann dann nicht mehr mit dieser APP verwaltet werden. Sind Sie sicher, dass Sie den Router entfernen müssen?</string>
+    <string name="router_remove_router">Gerät löschen</string>
+    <string name="router_reboot_dialog_msg">Der Neustart des WLAN-Routers dauert ca. 2 Minuten, möglicherweise müssen Sie sich nach dem Neustart erneut mit dem Router verbinden. Sind Sie sicher, dass Sie das Gerät neu starten müssen?</string>
+    <string name="router_reboot_dialog_info">Router neustarten</string>
+    <string name="router_turn_off_remote_off_dialog_msg">The device has turned off remote access, please connect to the rouThe device has turned off remote access, please connect to</string>
+    <string name="router_connect_router_to_access_dialog_msg">APP ist nicht mit dem Router-Wi-Fi verbunden, kann nicht auf den Router zugreifen, bitte verbinden Sie APP mit dem Router-Wi-Fi</string>
+    <string name="router_firmware_upgrade_dialog_title">Upgrade-Tipps</string>
+    <string name="router_firmware_upgrade_dialog_msg">Das Upgrade wird einige Minuten dauern. Bitte vermeiden Sie es, den Router während \n zu benutzen.</string>
+    <string name="router_setting_backup_prompt">Hinweis</string>
+    <string name="router_config_success_tip">Configuration succeeded. The new SSID and password will take effect in about 1 minute. Please reconnect your mobile phone to the router Wi-Fi later. </string>
+    <string name="router_protected">geschützt werden</string>
+    <string name="router_refuse">Abfall</string>
+    <string name="router_agree">Besuch zustimmen</string>
+    <string name="router_ago">zuvor</string>
+
+    <!--ConfigurationRouterActivity-->
+    <string name="router_config_title">Konfigrationsanleitung</string>
+    <string name="router_config_static_ip">überspringen</string>
+    <string name="router_config_dhcp">Automatische IP (DHCP)</string>
+    <string name="router_config_pppoe">PPPoE(vom ISP)</string>
+    <string name="router_config_backup_tip">Backup-Einstellungen gefunden. Möchten Sie sie verwenden?</string>
+    <string name="router_config_wan_connect_type">WAN-Verbindung Typ</string>
+    <string name="router_config_2g_wifi_name">2.4G WLAN-Name</string>
+    <string name="router_config_5g_wifi_name">5G WLAN-Name</string>
+    <string name="router_config_backup">Sicherung verwenden</string>
+    <string name="router_config_use_new_config">Neue Konfiguration verwenden</string>
+
+
+    <!--ConnectionDeviceDetailsActivity-->
+    <string name="router_device_detail_name">Gerätename</string>
+    <string name="router_device_detail_title">Gerätedetails</string>
+    <string name="router_device_detail_brand">Die Marke</string>
+    <string name="router_device_detail_ip_address">IP-Adresse</string>
+    <string name="router_device_detail_mac_address">MAC Adresse</string>
+
+
+    <!--ConnectionRouterActivity-->
+    <string name="router_connect_result_device_title">Gerät anschließen</string>
+    <string name="router_connect_result_get_info_fail">Informationen konnten nicht abgerufen werden, bitte versuchen Sie es erneut</string>
+    <string name="router_connect_result_no_network">Das Netzwerk ist nicht verbunden, bitte überprüfen Sie das Netzwerk</string>
+    <string name="router_connect_result_title">Erfolgreich verbunden!</string>
+    <string name="router_connect_result_tip">Willkommen bei Osaio router!</string>
+    <string name="router_connect_result_privacy_and_licnese">Ich habe die %1$s und %2$s gelesen und stimme ihnen zu.</string>
+
+
+    <!--RecoverRouterBackupActivity-->
+    <string name="router_admin_password">Router Admin Passwort</string>
+    <string name="router_admin_password_title">Admin Passwort</string>
+    <string name="router_admin_password_error">%1$s ist fehlerhaft</string>
+    <string name="router_admin_forget_password">Passwort vergessen？</string>
+    <string name="router_admin_tips_password">The default password is printed on the router cover.</string>
+    <string name="router_add_parent_control_select_device">Gerät auswählen</string>
+    <string name="router_config_dialog_forget_msg">Wenn Sie Ihr Passwort vergessen haben, können Sie es wieder hinzufügen, indem Sie das Gerät zurücksetzen und zur Startseite zurückkehren. Das Standardpasswort finden Sie auf dem Gehäuse des Geräts.</string>
+
+
+    <!--RouterBackupInfoForPhoneActivity-->
+    <string name="router_setting_backup">Backup einstellen</string>
+    <string name="router_setting_backup_local_backup">Lokales Backup</string>
+    <string name="router_setting_backup_msg">Sichern Sie diese Einstellungen auf dem Telefon, dann können Sie diese Einstellungen schnell verwenden, wenn Sie diesen Router neu konfigurieren oder durch einen neuen Router ersetzen.</string>
+
+
+    <!--RouterBindToDeviceActivity-->
+    <string name="router_bind_device_title">Geräte binden</string>
+    <string name="router_bind_device_msg">Geräte an das Konto binden</string>
+    <string name="router_firmware_upgrade">Firmware-Upgrade</string>
+    <string name="router_firmware_upgrade_upgrading">Firmware-Update läuft</string>
+    <string name="router_firmware_upgrade_tip">Das Upgrade wird einige Minuten dauern. Bitte vermeiden Sie es, den Router während \n zu benutzen.</string>
+    <string name="router_firmware_upgrade_info2">Bitte schalten Sie das Gerät während des Upgrade-Vorgangs nicht aus/zurück, da dies das Gerät beschädigt.</string>
+    <string name="router_firmware_upgrade_dialog_info">Das Update auf die neue Firmware dauert ein paar Minuten. Und Ihr Telefon wird während der Aktualisierung vom Router getrennt. Bitte unterbrechen Sie die Stromversorgung des Routers während des Updates NICHT, da dies sonst zu Schäden am Gerät führen kann.</string>
+
+    <!--RouterConnectionWifiActivity-->
+    <string name="router_router_connect">Mit Router Wi-Fi verbinden</string>
+    <string name="router_router_connect_wifi_msg">Wi-Fi des Routers ist verbunden und der Router ist bereits in der Geräteliste vorhanden</string>
+    <string name="router_router_attention">Hinweis: Bitte stellen Sie sicher, dass der Router eingeschaltet und mit dem Internet verbunden ist.</string>
+    <string name="router_router_go_to_connect">Go to Connect</string>
+    <string name="router_router_can_not_search_wifi">Router Wi-Fi nicht gefunden?</string>
+    <string name="router_router_unconnect_tip_one">1. Connect your phone to the router\'s Wi-Fi in your phone\'s WLAN or Wi-Fi settings.The default SSID of Osaio router is such as GNCC-XXXX or GNCC-5G-XXXX.\n2.Return to Osaio APP and continue.</string>
+    <string name="router_router_connect_to_get_router_info">Bitte versuchen Sie erneut, die Router-Informationen zu erhalten.</string>
+    <string name="router_router_get_info_fail">Nicht bekommen</string>
+
+
+    <!--RouterDetalisActivity-->
+    <string name="router_detail_router">Router</string>
+    <string name="router_detail_unit_kbps">kbps</string>
+    <string name="router_detail_unit_mbps">Mbps</string>
+    <string name="router_detail_download_rate">Download-Rate</string>
+    <string name="router_detail_upload_rate">Upload-Rate</string>
+    <string name="router_detail_connect_device">Geräte Verbunden</string>
+    <string name="router_detail_parental_control">Kinderschutz</string>
+    <string name="router_detail_wifi_manager">Wi-Fi-Management</string>
+    <string name="router_detail_guest_wifi">Gast-WiFi</string>
+    <string name="router_detail_net_setting">Internet-Einstellungen</string>
+    <string name="router_detail_time_setting">Zeit-Einstellungen</string>
+
+
+    <!--RouterDetalisSetActivity-->
+    <string name="router_detail_setting_title">Router-Einstellungen</string>
+    <string name="router_detail_setting_router_name">Router Name</string>
+    <string name="router_detail_setting_device_information">Gerät-Informationen</string>
+    <string name="router_detail_setting_led_indicator">Router-LED-Anzeige</string>
+    <string name="router_detail_setting_on">ON</string>
+    <string name="router_setting_detail_firmware_version">Firmware Version</string>
+    <string name="router_detail_setting_reboot_router">Router neustarten</string>
+    <string name="router_detail_setting_remove_device">Gerät löschen</string>
+
+
+    <!--RouterDeviceAccessControlActivity-->
+    <string name="router_access_control_setting">Router-Einstellungen</string>
+    <string name="router_access_control_safe_level">Sicheres Niveau:Mittleres</string>
+    <string name="router_access_control_password_mode">Passwort-Modus</string>
+    <string name="router_access_control_authorization_mode">Berechtigungs-modus</string>
+    <string name="router_access_control_no_list">Es ist kein Gerät in der Liste</string>
+
+
+    <!--RouterDeviceConnectActivity-->
+    <string name="router_devices_connected">Gerät anschließen</string>
+
+
+    <!--RouterDeviceConnectSetActivity-->
+    <string name="router_connect_setting">Zugriffsmodus</string>
+    <string name="router_connect_setting_download">Download-Rate:</string>
+    <string name="router_connect_setting_upload_rate">Upload-Rate:</string>
+    <string name="router_connect_setting_connected">Verbindung</string>
+    <string name="router_connect_setting_device_name">Gerätename</string>
+    <string name="router_connect_setting_intert_access_enable">Zugriff auf Netzwerk zulassen</string>
+    <string name="router_connect_setting_devices_detail">Geräte-Details</string>
+    <string name="router_connect_setting_parental_control">Kinderschutz</string>
+
+
+    <!--RouterGuestWifiActivity-->
+    <string name="router_guest_wifi_tip_two">Guest Wi-Fi bietet einen Internetzugang für Gäste, erlaubt aber keinen Zugriff auf Ihr lokales Netzwerk.</string>
+    <string name="router_guest_wifi_guest_wifi">Gast-WiFi</string>
+
+
+    <!--RouterInfoActivity-->
+    <string name="router_info_name">Router Name</string>
+    <string name="router_info_model">Router model</string>
+    <string name="router_info_mac_address">MAC Adresse</string>
+    <string name="router_info_device_id">Serien-Nummer</string>
+    <string name="router_info_public_ip_address">LAN IP Addresse</string>
+    <string name="router_info_ip_address_alternate">WAN IP Addresse</string>
+    <string name="router_info_dns_preferred">DNS Server</string>
+    <string name="router_info_online_duration">Online Zeit</string>
+    <string name="router_info_remove_device">Gerät löschen</string>
+
+
+    <!--RouterInternetModeSettingActivity-->
+    <string name="router_internet_setting_title">Internet-Einstellungen</string>
+    <string name="router_internet_setting_normal">Internet Connected.You may %1$s this step if you don\'t need to change connection type</string>
+    <string name="router_internet_setting_jump">überspringen</string>
+    <string name="router_internet_setting_error">Bitte stellen Sie sicher, dass die %1$s-Regel lautet: %2$s</string>
+    <string name="router_internet_setting_ip_error">IP-Adresse</string>
+    <string name="router_internet_setting_subnet_mask_error">Subnetz-Maske</string>
+    <string name="router_internet_setting_gateway_error">Gateway</string>
+    <string name="router_internet_setting_primary_dns_error">Primärer DNS</string>
+    <string name="router_internet_setting_secondary_dns_error">Sekundärer DNS</string>
+    <string name="router_internet_setting_pptip_ip_error">PPTP-Adresse</string>
+    <string name="router_internet_setting_pptp_mask_error">PPTP-mask</string>
+    <string name="router_internet_setting_pptp_gateway_error">PPTP-gateway</string>
+    <string name="router_internet_setting_address_mode">Adress-Modus</string>
+    <string name="router_internet_setting_ip_address">IP-Adresse</string>
+    <string name="router_internet_setting_subnet_mask">Subnetz-Maske</string>
+    <string name="router_internet_setting_gateway">Gateway</string>
+    <string name="router_internet_setting_primary_dns">Primärer DNS</string>
+    <string name="router_internet_setting_secondary_dns">Sekundärer DNS</string>
+    <string name="router_internet_setting_server_address">Server-Adresse</string>
+    <string name="router_internet_setting_auto_detect">Automatische Wahl</string>
+    <string name="router_internet_setting_mppe">MPPE</string>
+    <string name="router_internet_setting_mppc">MPPC</string>
+    <string name="router_internet_setting_dhcp">Automatische IP(DHCP)</string>
+    <string name="router_internet_setting_static_ip">Statische IP</string>
+    <string name="router_internet_setting_pppoe">PPPoE(vom ISP)</string>
+
+    <!--RouterNotOnlineActivity-->
+    <string name="router_not_network_line_recheck">Erneut testen</string>
+
+
+    <!--RouterOfflineHelpActivity-->
+    <string name="router_offline_help">Router Offline-Hilfe</string>
+    <string name="router_offline_msg">Wenn der Router offline ist, können Sie Folgendes versuchen:</string>
+    <string name="router_offline_tip_one">1. Vergewissern Sie sich, dass das Gerät eingeschaltet ist（Schauen Sie, ob die LED-Anzeige leuchtet).</string>
+    <string name="router_offline_tip_two">2. Versuchen Sie, diesem Wi-Fi-Netzwerk beizutreten und sehen Sie, was passiert.</string>
+    <string name="router_offline_tip_three">3. Prüfen Sie, ob das Ethernet-Kabel zwischen Ihrem Router und Ihrem Modem oder dem oberen Router gut verbunden ist.</string>
+    <string name="router_offline_tip_four">4. Schalten Sie den Router aus und starten Sie ihn neu.</string>
+    <string name="router_offline_tip_five">5. Wenn das Problem weiterhin besteht, wenden Sie sich an Ihren ISP-Anbieter oder an uns.</string>
+
+
+    <!--RouterParentalControlActivity-->
+    <string name="router_parental_control">Kinderschutz</string>
+    <string name="router_parental_control_delete_device">Once removed，this device will access Internet without protection.Are you sure?</string>
+    <string name="router_parental_control_allow_internet">Steuern Sie den Internetzeitraum des Geräts</string>
+
+
+    <!--RouterSetWifiManagerActivity-->
+    <string name="router_wifi_management">Wi-Fi-Management</string>
+    <string name="router_wifi_management_tip">Scannen Sie diesen QR-Code, um dem Gast-Wi-Fi-Netzwerk beizutreten mit dem QR-Code-Reader auf Ihrem Telefon.</string>
+    <string name="router_wifi_management_help_android_tip_one">Wenn Sie ein Android-Telefon verwenden, benutzen Sie bitte den QR-Code-Reader des Webbrowsers.</string>
+    <string name="router_wifi_management_help_android_tip_two">Der QR-Code-Reader befindet sich rechts neben der Eingabeleiste.</string>
+    <string name="router_wifi_management_help_ios_tip_one">Wenn Sie ein IPhone verwenden, verwenden Sie bitte den QR-Code-Reader des Control Centers, um den QR-Code zu scannen. Sie sollten den QR-Code-Reader zuerst zum Control Center hinzufügen.</string>
+    <string name="router_wifi_management_help_ios_tip_two">Wischen Sie vom unteren Bildschirmrand nach oben, um das Kontrollzentrum anzuzeigen und den QR-Code-Reader zu finden.</string>
+    <string name="router_timezone_current_time">Aktuelle Zeit des Routers</string>
+    <string name="router_timezone_copy_mobilephone_time">Uhrzeit des Handys kopieren</string>
+    <string name="router_timezone_sync_to_network">Automatische Synchronisierung mit der Netzwerk-Zeit</string>
+
+
+    <!--ResetRouterHelpActivity-->
+    <string name="router_how_to_reset_the_router">Wie zurücksetzt</string>
+    <string name="router_how_to_reset_the_router_tip_one">1. Vergewissern Sie sich, dass der Router eingeschaltet ist, und suchen Sie die Reset-Taste oder das Reset-Loch auf der Rückseite des Routers.</string>
+    <string name="router_how_to_reset_the_router_tip_two">2. Halten Sie die Reset-Taste für ca. 5-8 Sekunden gedrückt, bis die LED des Routers erlischt.</string>
+    <string name="router_how_to_reset_the_router_tip_three">3. Der Router wird neu gestartet und auf die Werkseinstellungen zurückgesetzt, was ca. 2 Minuten dauert.</string>
+    <string name="router_how_to_reset_the_router_tip_final">Sie müssen den Router während des Rücksetzvorgangs eingeschaltet lassen, um Schäden an der Router-Firmware und Ausfälle zu vermeiden.</string>
+
+    <!--Teckin-->
+    <string name="device">Gerät</string>
+    <string name="group">Gruppe</string>
+    <string name="add_device">Gerät hinzufügen</string>
+    <string name="create_group">Create Group</string>
+    <string name="manage_home">Benutzer</string>
+    <string name="auto_control">Selbstkontrolle</string>
+    <string name="create_group_middle_tip">Sie haben nicht genügend Geräte hinzugefügt, um eine Gruppe zu erstellen.</string>
+    <string name="click_obtain">Click Obtain</string>
+    <string name="enable_location">Standortdienste aktivieren</string>
+    <string name="enable_location_tips">Ortungsdienste werden angefordert. Erlauben Sie Osaio, auf den Gerätestandort zuzugreifen?</string>
+    <string name="electrical">Elektrische Anlage</string>
+    <string name="lighting">Beleuchtung</string>
+    <string name="indoor_plug">Indoor-Stecker</string>
+    <string name="outdoor_plug">Outdoor-Stecker</string>
+    <string name="floor_lamp">Stehlampe</string>
+    <string name="strip_light">Lichtleiste</string>
+    <string name="bulb">Glühbirne</string>
+    <string name="wall_switch">Schalter</string>
+    <string name="ez_mode">Wi-Fi-Verbindung</string>
+    <string name="ap_mode">Hotspot-Verbindung</string>
+    <string name="indicator_tips">Bitte stellen Sie sicher, dass Ihr Gerät eingeschaltet ist und sich innerhalb der Wi-Fi-Reichweite befindet, und warten Sie, bis die Anzeigelamp blinkt.</string>
+    <string name="blub_tips">Bitte stellen Sie sicher, dass Ihr Gerät eingeschaltet ist und sich innerhalb der Wi-Fi-Reichweite befindet, und warten Sie, bis die Glühbirne blinkt.</string>
+    <string name="ez_flash">Blinkt schnell</string>
+    <string name="ez_not_flash">Blinkt es nicht schnell?</string>
+    <string name="ap_flash">Blinkt langsam</string>
+    <string name="ap_not_flash">Blinkt es nicht langsam?</string>
+    <string name="location_permision">Aktivieren Sie die Standortberechtigung, um Ihr WLAN automatisch abzurufen. Andernfalls geben Sie Ihren WLAN-Namen manuell ein, um fortzufahren.</string>
+    <string name="location_permision_ap">Aktivieren Sie die Standortberechtigung, um Ihr WLAN automatisch abzurufen.</string>
+    <string name="enter_name">Name eingeben</string>
+    <string name="get_ssid_failed">Fehler belocation_permisionim Abrufen des Wi-Fi-Namens. Bitte geben Sie Ihren WLAN-Namen manuell ein, um fortzufahren.</string>
+    <string name="scan_rest_switch_guide_info_2">2. Halten Sie den Netzschalter mindestens 7 Sekunden lang gedrückt.</string>
+    <string name="scan_rest_switch_guide_info_4">4. Halten Sie den Netzschalter erneut mindestens 7 Sekunden lang gedrückt, bis die Anzeige langsam blinkt.</string>
+    <string name="light_scan_reset_device_guide_info_1">1.Schalten Sie das Gerät aus, warten Sie ca. 10 Sekunden und schalten Sie es dann ein.</string>
+    <string name="light_scan_reset_device_guide_info_2">2.Schalten Sie das Gerät aus, ein, aus, ein, aus und ein.</string>
+    <string name="light_scan_reset_device_guide_info_3">3.Bestätigen Sie, dass die Anzeige schnell blinkt.</string>
+    <string name="light_scan_reset_device_guide_info_4">4. Öffnen Sie den Schließschalter und wiederholen Sie den Vorgang 2-3 Mal. Glühbirne blinkt langsam.</string>
+    <string name="light_strip_reset_device_guide_info_1">1.Schalten Sie das Gerät aus, warten Sie ca. 10 Sekunden und schalten Sie es dann ein.</string>
+    <string name="light_strip_scan_reset_device_guide_info_4">4. Öffnen Sie den Schließschalter und wiederholen Sie den Vorgang 2–3 Mal. Der Lichtstreifen blinkt langsam.</string>
+    <string name="connect_in_AP_mode">Stellen Sie eine Verbindung im AP-Modus her</string>
+    <string name="scan_rest_device_guide_info_1">1. Ziehen Sie den Netzstecker und warten Sie ca. 10 Sekunden, bevor Sie das Gerät einschalten.</string>
+    <string name="scan_rest_device_guide_info_2">2. Halten Sie den Netzschalter mindestens 5 Sekunden lang gedrückt.</string>
+    <string name="scan_rest_device_guide_info_3">3.Bestätigen Sie, dass die Anzeige schnell blinkt.</string>
+    <string name="scan_rest_feeder_guide_info_3">3.Bestätigen Sie, dass das Licht langsam blinkt.</string>
+    <string name="scan_rest_device_guide_info_4">4. Halten Sie den Netzschalter erneut mindestens 5 Sekunden lang gedrückt, bis die Anzeige langsam blinkt.</string>
+    <string name="reset_successful">Zurücksetzen erfolgreich</string>
+    <string name="reset_device">Rückstelleinrichtung</string>
+    <string name="add_camera_input_wifi_24g_tip">2.4GHz Wi-Fi</string>
+    <string name="add_camera_input_wifi_pas_24g_tip">2.4G</string>
+    <string name="no_password">Kein Passwort</string>
+    <string name="no_password_detail_tip">Möchten Sie wirklich eine Verbindung ohne Passwort herstellen?</string>
+    <string name="only_support_24G">Vergewissern Sie sich, dass das verbundene Netzwerk %1$s ist. Osaio unterstützt keine 5G- oder öffentlichen Netzwerke, die eine Authentifizierung erfordern.%2$s</string>
+    <string name="not_connect">Nicht verbunden</string>
+    <string name="not_connect_middle_tip">Ihr Telefon ist nicht mit einem Netzwerk verbunden. Stellen Sie eine Verbindung zu einem 2,4-G-WLAN her.</string>
+    <string name="connect_btn_title">VERBINDEN</string>
+    <string name="connecting">Verbinden...</string>
+    <string name="scan_failed_guide_info_1">1.Bitte überprüfen Sie Ihren Router und stellen Sie sicher, dass er ordnungsgemäß funktioniert.</string>
+    <string name="scan_failed_guide_info_2">2.Bitte stellen Sie sicher, dass das verbundene Netzwerk 2,4 G ist und geben Sie das richtige WLAN-Passwort ein.</string>
+    <string name="scan_failed_guide_info_3">3.Weitere Tipps finden Sie unter %s.</string>
+    <string name="scan_failed_guide_info_4">4.Sie können auch eine alternative Option ausprobieren, um eine Verbindung über den Zugriffspunkt des Geräts herzustellen.</string>
+    <string name="scan_failed_guide_info_5">5.Wenn keine dieser Arbeiten ausgeführt wird, wenden Sie sich bitte an app-support@osaio.net</string>
+    <string name="scan_device_how_to_reset">Versuchen Sie es nochmal</string>
+    <string name="pairing_please_wait">Pairing ... Bitte warten</string>
+    <string name="paired_failed">Pairing fehlgeschlagen</string>
+    <string name="not_exist_device">Ups ... falsches Gerät</string>
+    <string name="not_exist_device_tip1">Wir unterstützen das von Ihnen hinzugefügte Produkt nicht und werden die Produktreihe später erweitern. Die Oasio app unterstützt derzeit nur die SP10、SP11、SP20、SP21、SP22、SP23、SP27、SB50、SB53、SB60、SS30N、SS31、SS33、SS36、SR40、SR41、SR42、SR43、SR46、SL02、FL41-Produkte. Wenn Sie Fragen haben, wenden Sie sich bitte an app-support@osaio.net.</string>
+    <string name="not_exist_device_tip2">Bitte setzen Sie das Gerät zurück und vergessen Sie es.</string>
+    <string name="paired_ok">Pairing erfolgreich</string>
+    <string name="connecting_succeeded">Verbindung erfolgreich hergestellt</string>
+    <string name="scan_rest_device_guide_info_5">1.Verbinden Sie Ihr Telefon mit dem Hotspot des Geräts in den Einstellungen Ihres Telefons.</string>
+    <string name="scan_rest_device_guide_info_6">2. Kehren Sie zur App zurück und fahren Sie mit dem Pairing fort.</string>
+    <string name="name_your_light">Nennen Sie Ihre Glühbirne</string>
+    <string name="name_your_power_strip">Name Steckdosenleiste</string>
+    <string name="name_your_switch">Benennen Sie Ihren Switch</string>
+    <string name="name_your_light_strip">Nennen Sie Ihren Lichtstreifen</string>
+    <string name="name_your_modulator">Nennen Sie Ihren Lichtmodulator</string>
+    <string name="name_your_plug">Nennen Sie Ihren Stecker</string>
+    <string name="rename_plug">Name</string>
+    <string name="device_name_can_not_blank">Der Gerätename darf nicht leer sein.</string>
+    <string name="name_too_long">Bitte erstellen Sie einen kürzeren Namen.</string>
+    <string name="current_network">Aktuelles Netzwerk</string>
+    <string name="change">VERÄNDERUNG</string>
+    <string name="forget_this_device">Vergiss dieses Gerät</string>
+    <string name="permissions_required">Berechtigungen erforderlich</string>
+    <string name="creat_group_detail_info">Geräte derselben Kategorie können gleichzeitig gruppiert und gesteuert werden.</string>
+    <string name="selected_device_empty">Kein Gerät.</string>
+    <string name="plug">Steckdose</string>
+    <string name="light">LICHT</string>
+    <string name="select_least_one_device">Wählen Sie mindestens ein Gerät aus</string>
+    <string name="name_your_group">Nennen Sie Ihre Gruppe</string>
+    <string name="name">Name</string>
+    <string name="dev_sharing">Gerätefreigabe</string>
+    <string name="home_manager">Heimmanager</string>
+    <string name="add_home">Homepage hinzufügen</string>
+    <string name="add_home_tip">Bitte geben Sie einen Familiennamen ein</string>
+    <string name="owners">Besitzer</string>
+    <string name="add_schedule">Hinzufügen</string>
+    <string name="guests">Gäste</string>
+    <string name="devices">Geräte</string>
+    <string name="home">Haus</string>
+    <string name="name_your_home">Benennen Sie das Haus</string>
+    <string name="add_owner_tip">Diese Person hat Zugang auf alle Geräte, die zu "%1$s" hinzugefügt wurden.</string>
+    <string name="location">Ort</string>
+    <string name="send_invitation">Einladung senden</string>
+    <string name="add_member">Mitglied hinzufügen</string>
+    <string name="add_guest">Gast hinzufügen</string>
+    <string name="confirm_email">Bestätigungs-E-Mail</string>
+    <string name="share_dev_detail_info">Teilen Sie den Zugang von Geräten mit Personen außerhalb Ihrer \"%1$s\".</string>
+    <string name="email_address_is_not_valid">Bitte geben Sie eine gültige E-Mail-Adresse ein.</string>
+    <string name="email_not_match">Die E-Mail-Adressen stimmen nicht überein.</string>
+    <string name="have_added_guest">Sie haben diesen Benutzer hinzugefügt</string>
+    <string name="different_region_can_not_sharing">Leider unterstützen wir derzeit keine Zugriffsfreigabe zwischen verschiedenen Ländern.</string>
+    <string name="add_access">Zugang hinzufügen</string>
+    <string name="select_share_device_tip">Wählen Sie die Geräte aus, die Sie mit Gast teilen möchten.</string>
+    <string name="add_owner">Besitzer hinzufügen</string>
+    <string name="my_profile">Persönliche Informationen</string>
+    <string name="member">Mitglied</string>
+    <string name="owner">Inhaber</string>
+    <string name="remove_access">Zugriff entfernen</string>
+    <string name="remove_access_tip">Möchten Sie %1$s wirklich als %2$s entfernen?</string>
+    <string name="remove">Löschen</string>
+    <string name="home_settings">Starteinstellungen</string>
+    <string name="remove_home">Home entfernen</string>
+    <string name="home_remove_tip">Möchten Sie dieses Home wirklich entfernen? Alle Geräte, Besitzer, Gäste und Daten werden gelöscht. Bitte beachten Sie, dass Sie mindestens ein Zuhause benötigen, um die Funktionen der App nutzen zu können.</string>
+    <string name="profile">Informationen</string>
+    <string name="guest">Gast</string>
+    <string name="device_singular">%1$d Gerät</string>
+    <string name="device_plural">%1$d Geräte</string>
+    <string name="delete_uppercase">LÖSCHEN</string>
+    <string name="shared_access">Geteilter Zugang</string>
+    <string name="member_device_remove_tip">Möchten Sie den Zugriff von %1$s auf Gerät %2$s wirklich entfernen?</string>
+    <string name="account_setting">Kontoeinstellungen</string>
+    <string name="change_profile">Profilbild ändern</string>
+    <string name="media_login">Medien-Anmeldung</string>
+    <string name="change_psd">Passwort ändern</string>
+    <string name="access">Zugriff</string>
+    <string name="shared">Geteilt</string>
+    <string name="group_name">Gruppenname</string>
+    <string name="manage_devices">Geräte verwalten</string>
+    <string name="group_schedule">Gruppenzeitplan</string>
+    <string name="dismiss_group">Gruppe schließen</string>
+    <string name="group_remove_tip">Möchten Sie die Gruppe %1$s wirklich schließen? Gruppenpläne und Daten werden gelöscht.</string>
+    <string name="choose">Wählen</string>
+    <string name="select_all">Wählen Sie Alle</string>
+    <string name="edit_upper">BEARBEITEN</string>
+    <string name="on_uppercase">An</string>
+    <string name="off_uppercase">Aus</string>
+    <string name="travel">REISE</string>
+    <string name="sun">Son.</string>
+    <string name="mon">Mon.</string>
+    <string name="tues">Die.</string>
+    <string name="wed">Mit.</string>
+    <string name="thurs">Don.</string>
+    <string name="fri">Fre.</string>
+    <string name="sat">Sam.</string>
+    <string name="once">Einmal</string>
+    <string name="schedule_action_top_tip">Schalten Sie Ihr Gerät zu einer bestimmten Zeit ein oder aus.</string>
+    <string name="schedule_action_at">um</string>
+    <string name="normal_timer">EIN / AUS</string>
+    <string name="timer_mutually_exclusive_tip">Error</string>
+    <string name="device_off_line_tip">Gerät ist offline, bitte überprüfen Sie Ihr Netzwerk</string>
+    <string name="information">Information</string>
+    <string name="firmware">Firmware</string>
+    <string name="thrid_party_control">unterstützt Steuerelemente von Drittanbietern</string>
+    <string name="alexa">Amazon Alexa</string>
+    <string name="ifttt">IFTTT</string>
+    <string name="google_assistant">Google Assistant</string>
+    <string name="connect_to_alexa">Stellen Sie eine Verbindung zu Alexa her</string>
+    <string name="connect_to_ifttt">Stellen Sie eine Verbindung zu IFTTT her</string>
+    <string name="connect_to_assistant">Stellen Sie eine Verbindung zum Assistenten her</string>
+    <string name="device_remove_tip">Möchten Sie %1$s wirklich von Ihrem Zuhause entfernen? Sie können diese Aktion nicht rückgängig machen.</string>
+    <string name="remove_device">Löschen</string>
+    <string name="updating">AKTUALISIERUNG</string>
+    <string name="firmware_update_title">Firmware Update</string>
+    <string name="firmware_update_tip">Firmware-Update %1$s ist verfügbar. Möchten Sie jetzt ein Upgrade durchführen?</string>
+    <string name="upgrade_upper">AKTUALISIERUNG</string>
+    <string name="reset_factory_settings">Auf %1$s zurücksetzen</string>
+    <string name="factory_settings">Werkseinstellungen</string>
+    <string name="device_settings_reset">Werkseinstellungen zurückgesetzt</string>
+    <string name="device_settings_reset_info">Möchten Sie wirklich die Werkseinstellungen wiederherstellen? NDas Zurücksetzen dauert ca. 2 Minuten.</string>
+    <string name="name_your_plugs">Nennen Sie Ihre Stecker</string>
+    <string name="add_dev_sharing">Gerätefreigabe hinzufügen</string>
+    <string name="model">Modell</string>
+    <string name="device_id">Geräte ID</string>
+    <string name="ip">IP</string>
+    <string name="mac_address">MAC</string>
+    <string name="hide_upper_case">VERBERGEN</string>
+    <string name="copy_upper_case">KOPIEREN</string>
+    <string name="copy_success">Erfolgreich in das Pasteboard kopiert</string>
+
+    <!--createsmart-->
+    <string name="tap_to_run">Tap-to-Run</string>
+    <string name="automation">Automation</string>
+    <string name="launch_tap">Executer un scénario manuel</string>
+    <string name="weather_changes">Lorsque la météo change</string>
+    <string name="smart_scheudle">Programmation</string>
+    <string name="status_changes">Lorsque le statut de l\'appareil change</string>
+    <string name="run_device">Exécuter l\'appareil</string>
+    <string name="select_smart">Selectionner l\'appareil intelligente</string>
+    <string name="delay">Retarder</string>
+    <string name="smart">Intelligent</string>
+    <string name="management">Gestion</string>
+    <string name="set_condition">Définir une condition</string>
+    <string name="set_task">Créer une tâche</string>
+    <string name="create_smart">Créer une appareil intelligente</string>
+    <string name="enable_automation">Activer ou Désactiver la Automatisation</string>
+    <string name="select_function">Choisir une fonctionnalité</string>
+    <string name="create_new_smart">Créer un nouvel</string>
+    <string name="launch_not_add">Executer un scénario manuel ne peut pas être ajouté dans une scene de scénario</string>
+    <string name="condition">Condition</string>
+    <string name="task">Tâches</string>
+    <string name="style">Style</string>
+    <string name="edit_name">Editer le nom</string>
+    <string name="select_launch">Choisir Executer un scénario manuel</string>
+    <string name="select_automation">Choisir Automatisation Scene</string>
+    <string name="disable">Désactiver</string>
+    <string name="enable">Activer</string>
+    <string name="current_city">Ville actuelle</string>
+    <string name="repeat">Repeter</string>
+    <string name="repeat_tips">L\'action ne sera exécutée qu\'une seule fois si vous ne la sélectionnez pas.</string>
+    <string name="exe_time">Temps d\'exécution</string>
+    <string name="select_condition">Selectionner la condition</string>
+    <string name="select_task">Sélectionner une tâche</string>
+    <string name="effective_time">Durée effective</string>
+    <string name="all_day">Toute la journée</string>
+    <string name="daytime">Journée</string>
+    <string name="at_night">Nuit</string>
+    <string name="customize">Personnalisée</string>
+    <string name="full_time">24 heures</string>
+    <string name="sunrise_set">Du lever du soleil au coucher du soleil</string>
+    <string name="sunset_rise">Du coucher du soleil au levé du soleil</string>
+    <string name="custom_time">Période définie par l\'utilisateur</string>
+    <string name="discard_change">Annuler les modifications</string>
+    <string name="no">non</string>
+    <string name="discard">Jeter</string>
+    <string name="all_met">Quand toutes les conditions sont remplies</string>
+    <string name="any_met">Lorsque l\'une des conditions est remplie</string>
+    <string name="add_condition">Ajouter une condition</string>
+    <string name="add_task">Ajouter une tâche</string>
+    <string name="please_choose">Merci de choisir</string>
+    <string name="set_time_delay">Régler la temporisation</string>
+    <string name="tap_start">Scénario manuel: Démarrer</string>
+    <string name="auto_disable">Automatisation:Désactiver</string>
+    <string name="auto_enable">Automatisation:Activer</string>
+    <string name="scene_edit">Annuler</string>
+    <string name="remove_scene">Êtes vous sur de supprimer ? </string>
+    <string name="sys_notification">System Notification</string>
+    <string name="same_day">même jour</string>
+    <string name="next_day">Journée suivante</string>
+    <string name="condition_cannot_be_added">La condition ne peut pas être ajoutée quand " executer le scenario</string>
+    <string name="delay_last_tip">Le délai ne peut pas être la dernière tâche exécutée</string>
+    <string name="humidity">Sèche (0%-40%) \nComfortable (40%-70%) \nHumide (70%-100%)</string>
+    <string name="condition_conflict_tip">Les conditions ci-dessus ne peuvent pas être définies en même temps</string>
+    <string name="condition_not_support">Cette condition n\'est pas prise en charge</string>
+    <string name="schedule">Zeitplan</string>
+    <string name="delete">SPEICHERN</string>
+    <string name="save_upper_case">SPEICHERN</string>
+    <string name="all_device">Alle Geräte</string>
+    <string name="countdown_one_min">Countdown at least 1min</string>
+    <string name="from">Von</string>
+    <string name="to">Zu</string>
+    <string name="day">+1 Tag</string>
+    <string name="location_tips">Öffnen Sie die Standortberechtigung, um das Gerätenetzwerk zu konfigurieren, und helfen Sie der APP, Wetterinformationen abzurufen</string>
+
+    <string name="plug_lower">Steckdose</string>
+    <string name="power_strip">steckdosenleiste</string>
+    <string name="switch_teckin">schalter</string>
+    <string name="dimmer_switch">Dimmschalter</string>
+    <string name="pet_feeder">Futterhäuschen</string>
+    <string name="ble_wifi">(Bluetooth＋Wi-Fi)</string>
+    <string name="small_appliances">Elektrische Kleingeräte</string>
+    <string name="add_camera_scan_qr_sub_tip_1">2.Wenn die Geräteanzeige grün wird oder die Kamera einen Ton von sich gibt, bedeutet dies, dass die Verbindung erfolgreich war.</string>
+    <string name="name_your_device">Benennen Sie Ihr Gerät</string>
+
+    <string name="contact_us">Kontaktiere uns</string>
+    <string name="new_message">New message</string>
+    <string name="all">alle</string>
+    <string name="refresh_device">Zum Aktualisieren des Geräts nach unten ziehen</string>
+    <string name="refreshing_device">Aktualisieren der Geräteinformationen</string>
+    <string name="refresh_success">Erfolgreich aktualisieren</string>
+    <string name="refresh_fail">Aktualisierung fehlgeschlagen, bitte überprüfen Sie das Netzwerk</string>
+    <string name="nice_to_meet_you">Nice to meet you</string>
+    <string name="welcome_back">Welcome back</string>
+    <string name="smart_home">Intelligentes Zuhause</string>
+    <string name="air_purifier">Luftreiniger</string>
+    <string name="reset_air_purifier_tips2">2.Langes Drücken von Taste für Umgebungslicht bis Wi-Fi-Symbol blinkt</string>
+    <string name="reset_air_purifier_tips3">3.Bestätigen Sie, dass das WLAN-Symbol schnell blinkt.</string>
+    <string name="close_record_detected">Erkanntes Ereignis nur beim Ausschalten aufzeichnen</string>
+    <string name="on_recording_all">24/7-Loop-Aufnahme, wenn eingeschaltet</string>
+    <string name="website">Webseite</string>
+    <string name="location_service_unopened">Der Ortungsdienst ist deaktiviert.</string>
+    <string name="location_service_open">Aktivieren Sie den Standortdienst, damit die App die Wetterdaten abrufen kann</string>
+    <string name="disagree_close_app">Sie können die App ablehnen und deaktivieren, dies wird Sie jedoch beeinflussen, die App und den Dienst zu nutzen.</string>
+    <string name="test_environment">Test Environment</string>
+    <string name="enter_test_environment">Enter test environment</string>
+    <string name="exit_test_environment">Exit test environment</string>
+
+    <!--涂鸦配网-->
+    <string name="pop_tuya_ble_title">Ausrüstung finden</string>
+    <string name="pop_tuya_ble_sure_add">Dieses!</string>
+    <string name="pop_tuya_ble_device_more">Mehr Ausrüstung</string>
+    <string name="pop_tuya_ble_device_tips">Wenn Ihr Gerät immer noch nicht gefunden wird, setzen Sie das Gerät bitte zurück und versuchen Sie es erneut oder versuchen Sie, das Gerät manuell auszuwählen</string>
+    <string name="blue_mode">Ble-Modus</string>
+    <string name="pop_tuya_ble_search_title">Suche nach Bluetooth-Geräten in der Nähe</string>
+    <string name="pop_tuya_ble_search_empty">Gerät nicht gefunden?</string>
+    <string name="pop_tuya_ble_manually_select">Sélectionner manuellement l\'appareil</string>
+    <string name="add_air_purifier_tips">Bitte schalten Sie das Gerät ein und halten Sie die Umgebungslichttaste 3 Sekunden lang gedrückt, bis Sie einen Ton hören</string>
+    <string name="hear_sound">Höre den Ton</string>
+    <string name="no_sound">Keinen Ton?</string>
+    <string name="smart_thing">Smart Things</string>
+    <string name="connect_to_smartthings">Stellen Sie eine Verbindung zu SmartThings her</string>
+    <string name="bluetooth_scan_operation_tip_disconnect_ok">OK</string>
+    <string name="bluetooth_scan_operation_tip_disconnect">Schalten Sie Ihr mobiles Bluetooth ein, um Geräte zu erkennen</string>
+    <string name="bluetooth_scan_operation_tip_open">Anmachen</string>
+    <string name="bluetooth_scan_operation_tip_disconnect_location">Aktivieren Sie Ihren mobilen Standort, um Geräte zu erkennen</string>
+    <string name="setting_temp_unit">Temperatureinheit</string>
+    <string name="third_skill_title">Steuern Sie intelligente Geräte per Sprache</string>
+    <string name="third_skill_tip">Sie können auch Fähigkeiten von Drittanbietern auf der Einstellungsseite des Geräts zuordnen</string>
+</resources>

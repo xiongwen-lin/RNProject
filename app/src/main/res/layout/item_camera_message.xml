@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/setting_item_state_list">
+
+    <TextView
+        android:id="@+id/tvMsgDay"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/dp_20"
+        android:lines="1"
+        android:text="22"
+        android:textColor="@color/theme_text_color"
+        android:textSize="@dimen/sp_10"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/smlContainer"
+        app:layout_constraintStart_toEndOf="@+id/ivMsgTimePoint"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMsgTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_0"
+        android:lines="1"
+        android:text="09:08"
+        android:textColor="@color/theme_text_color"
+        android:textSize="@dimen/sp_11"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="@+id/ivMsgTimePoint"
+        app:layout_constraintEnd_toStartOf="@+id/ivMsgTimePoint"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivMsgTimePoint" />
+
+    <ImageView
+        android:id="@+id/ivMsgTimePoint"
+        android:layout_width="@dimen/dp_4"
+        android:layout_height="@dimen/dp_4"
+        android:src="@drawable/button_round_blue_state"
+        app:layout_constraintBottom_toBottomOf="@+id/smlContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/smlContainer" />
+
+    <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+        android:id="@+id/smlContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_3"
+        android:background="@drawable/button_white_state_list_radius_16"
+        android:clickable="true"
+        android:elevation="@dimen/dp_2"
+        android:paddingBottom="@dimen/dp_0"
+        app:ios="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivMsgTimePoint"
+        app:layout_constraintTop_toBottomOf="@+id/tvMsgDay"
+        app:leftSwipe="true"
+        app:swipeEnable="false">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/devMsgContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_0"
+            android:translationZ="@dimen/dp_3">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/dp_13"
+                android:text="Camera sharing"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_14"
+                android:translationZ="@dimen/dp_4"
+                app:layout_constraintEnd_toStartOf="@id/rlItemRightContainer"
+                app:layout_constraintHorizontal_weight="13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/ivUnread"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tvTitle"
+                android:layout_alignBottom="@id/tvTitle"
+                android:layout_toRightOf="@+id/tvTitle"
+                android:src="@drawable/solid_circle_blue"
+                android:translationZ="@dimen/dp_4"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvTitle"
+                android:layout_alignBottom="@+id/tvTitle"
+                android:layout_marginStart="@dimen/dp_4"
+                android:layout_toRightOf="@+id/ivUnread"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text="10:09"
+                android:textColor="@color/theme_white"
+                android:textSize="10sp"
+                android:translationZ="@dimen/dp_4"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMsg"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/dp_4"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="@dimen/dp_13"
+                android:layout_toLeftOf="@id/rlItemRightContainer"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="@color/theme_subtext_color"
+                android:textSize="@dimen/sp_10"
+                android:translationZ="@dimen/dp_4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tvTitle"
+                app:layout_constraintStart_toStartOf="@id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+            <TextView
+                android:id="@+id/tvGoToView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvTitle"
+                android:layout_alignBottom="@+id/tvTitle"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:text="@string/message_go_to_video"
+                android:textColor="@color/theme_green"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:translationZ="@dimen/dp_4"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/rlItemRightContainer"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="@dimen/dp_0"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_1"
+                android:layout_marginEnd="@dimen/dp_1"
+                android:layout_marginBottom="@dimen/dp_1"
+                android:translationZ="@dimen/dp_4"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="10"
+                app:layout_constraintStart_toEndOf="@id/tvTitle"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.nooie.common.widget.RoundedImageView.RoundedImageView
+                    android:id="@+id/ivGoToView"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_marginRight="@dimen/dp_0"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_preview_thumbnail"
+                    android:translationZ="@dimen/dp_5"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:riv_corner_radius_bottom_left="@dimen/dp_16"
+                    app:riv_corner_radius_bottom_right="@dimen/dp_16"
+                    app:riv_corner_radius_top_left="@dimen/dp_16"
+                    app:riv_corner_radius_top_right="@dimen/dp_16" />
+
+                <ImageView
+                    android:id="@+id/ivDelSelect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_8"
+                    android:paddingEnd="@dimen/dp_22"
+                    android:paddingBottom="@dimen/dp_8"
+                    android:src="@drawable/circle"
+                    android:translationZ="@dimen/dp_5"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/btnDevMsgDelete"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="match_parent"
+            android:background="@color/input_text_color"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/settings_delete"
+            android:textColor="@color/theme_green"
+            android:textSize="@dimen/sp_10"
+            android:textStyle="bold" />
+
+    </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/createScheduleMenuBar"
+        layout="@layout/menu_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layout_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bg_bule_route_internet_set"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingStart="@dimen/dp_20"
+                android:paddingEnd="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_weight="3"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/startTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12:36"
+                        android:gravity="center"
+                        android:textSize="@dimen/sp_28">
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Start time"
+                        android:gravity="center">
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_weight="1">
+
+                    <View
+                        style="@style/divider_thin" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/endTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12:36"
+                        android:gravity="center"
+                        android:textSize="@dimen/sp_28">
+                    </TextView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="End time"
+                        android:gravity="center">
+                    </TextView>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/dp_30"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout_time">
+
+                <LinearLayout
+                    android:id="@+id/containerCreateScheduleFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_24">
+
+                    <TextView
+                        android:id="@+id/tvFromLabel"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:lineSpacingMultiplier="1.6"
+                        android:lines="1"
+                        android:textSize="@dimen/sp_12" />
+                    <!--android:text="@string/create_detection_schedule_from"-->
+
+                    <com.contrarywind.view.WheelView
+                        android:id="@+id/wheelCsFromStartHour"
+                        android:layout_width="@dimen/dp_45"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dp_5"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_weight="1"
+                        app:wheelview_dividerColor="@color/transparent"
+                        app:wheelview_textColorCenter="@color/theme_green"
+                        app:wheelview_textColorOut="@color/theme_gray" />
+
+                    <com.contrarywind.view.WheelView
+                        android:id="@+id/wheelCsFromStartMinutes"
+                        android:layout_width="@dimen/dp_45"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="@dimen/dp_5"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        app:wheelview_dividerColor="@color/transparent"
+                        app:wheelview_textColorCenter="@color/theme_green"
+                        app:wheelview_textColorOut="@color/theme_gray" />
+
+                    <TextView
+                        android:id="@+id/tvDay1"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:lines="1"
+                        android:text=""
+                        android:textSize="@dimen/sp_12" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/containerCreateScheduleTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp_24">
+
+                    <TextView
+                        android:id="@+id/tvToLabel"
+                        android:layout_width="@dimen/dp_30"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/transparent"
+                        android:gravity="center"
+                        android:lineSpacingMultiplier="1.6"
+                        android:lines="1"
+                        android:textSize="@dimen/sp_12" />
+                    <!--android:text="@string/create_detection_schedule_to"-->
+
+                    <com.contrarywind.view.WheelView
+                        android:id="@+id/wheelCsToStartHour"
+                        android:layout_width="@dimen/dp_45"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="@dimen/dp_5"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        app:wheelview_dividerColor="@color/transparent"
+                        app:wheelview_textColorCenter="@color/theme_green"
+                        app:wheelview_textColorOut="@color/theme_gray" />
+
+                    <com.contrarywind.view.WheelView
+                        android:id="@+id/wheelCsToStartMinutes"
+                        android:layout_width="@dimen/dp_45"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingTop="@dimen/dp_5"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        app:wheelview_dividerColor="@color/transparent"
+                        app:wheelview_textColorCenter="@color/theme_green"
+                        app:wheelview_textColorOut="@color/theme_gray" />
+
+                    <TextView
+                        android:id="@+id/tvDay2"
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/transparent"
+                        android:gravity="end|center_vertical"
+                        android:lines="1"
+                        android:paddingRight="@dimen/dp_8"
+                        android:text=""
+                        android:textColor="@color/theme_white"
+                        android:textSize="@dimen/sp_12" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.afar.osaio.widget.SelectWeekView
+                android:id="@+id/swvCreateSchedule"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_23"
+                android:layout_marginTop="@dimen/dp_32"
+                android:layout_marginEnd="@dimen/dp_23"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layout" />
+
+            <com.afar.osaio.widget.FButton
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_44"
+                android:layout_marginStart="@dimen/dp_50"
+                android:layout_marginTop="@dimen/dp_32"
+                android:layout_marginEnd="@dimen/dp_50"
+                android:layout_marginBottom="@dimen/dp_50"
+                android:paddingLeft="@dimen/dp_22"
+                android:paddingRight="@dimen/dp_22"
+                android:text="@string/router_save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <!--<TextView
+                android:id="@+id/tvCreateScheduleLooperTips"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_23"
+                android:layout_marginTop="@dimen/dp_36"
+                android:layout_marginEnd="@dimen/dp_23"
+                android:ellipsize="end"
+                android:text="@string/create_detection_schedule_tip"
+                android:textColor="@color/gray_a1a1a1"
+                android:textSize="@dimen/sp_15"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/swvCreateSchedule" />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</LinearLayout>

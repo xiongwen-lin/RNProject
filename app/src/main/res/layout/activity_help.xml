@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include layout="@layout/menu_bar" />
+
+    <View
+        style="@style/divider_thin"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/containerUserManual"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/setting_item_state_list"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/help_user_manual" />
+
+        <View style="@style/stretch_space" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/right_arrow_gray" />
+    </LinearLayout>
+
+    <View
+        style="@style/divider_thin"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp" />
+
+    <LinearLayout
+        android:id="@+id/containerFAQ"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/setting_item_state_list"
+        android:orientation="horizontal"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/help_faq" />
+
+        <View style="@style/stretch_space" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4dp"
+            android:src="@drawable/right_arrow_gray" />
+    </LinearLayout>
+
+    <View
+        style="@style/divider_thin"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp" />
+
+</LinearLayout>

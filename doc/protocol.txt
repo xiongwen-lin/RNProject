@@ -1,0 +1,118 @@
+// action
+CMD_GET = 0x01
+CMD_SET = 0x02
+
+// key                             		   		value
+KEY_LED  			0x01		 0x00(OFF) | 0x01(ON) 
+KEY_RECORD_AUDIO  		0x02		 0x00(OFF) | 0x01(ON)    
+KEY_MOT_DETECT_WEEK_PLAN  	0x03	        time11 + time12 + ... + time71 + time72
+KEY_MOT_DETECT_PLAN_MON  	0x04	     	time1 + time2
+KEY_MOT_DETECT_PLAN_TUES  	0x05	     	time1 + time2
+KEY_MOT_DETECT_PLAN_WED  	0x06	     	time1 + time2
+KEY_MOT_DETECT_PLAN_THUR  	0x07	     	time1 + time2
+KEY_MOT_DETECT_PLAN_FRI  	0x08	     	time1 + time2
+KEY_MOT_DETECT_PLAN_SAT  	0x09	     	time1 + time2
+KEY_MOT_DETECT_PLAN_SUN  	0x0A	     	time1 + time2
+
+KEY_MOT_DETECT_PLAN_MON_SWITCH	0x0B		 0x00(OFF) | 0x01(ON) 
+KEY_MOT_DETECT_PLAN_TUES_SWITCH	0x0C		 0x00(OFF) | 0x01(ON) 
+KEY_MOT_DETECT_PLAN_WED_SWITCH	0x0D		 0x00(OFF) | 0x01(ON)  
+KEY_MOT_DETECT_PLAN_THUR_SWITCH	0x0E		 0x00(OFF) | 0x01(ON)  
+KEY_MOT_DETECT_PLAN_FRI_SWITCH	0x0F		 0x00(OFF) | 0x01(ON) 
+KEY_MOT_DETECT_PLAN_SAT_SWITCH	0x10		 0x00(OFF) | 0x01(ON)  
+KEY_MOT_DETECT_PLAN_SUN_SWITCH	0x11		 0x00(OFF) | 0x01(ON) 
+KEY_LOOP_RECORD			0x12		 0x00(OFF) | 0x01(ON) 
+
+KEY_MODEL  			0x13     	 	model的byte
+KEY_RECENT_SDCARD_RECORDS  	0x14     	 每一位表示一天是否有录像
+KEY_SLEEP_STATE  		0x15     	 0x00(OFF) | 0x01(ON)
+KEY_MOTION_TRACKING             0x16             0x01(ON) | 0x00(OFF)
+
+
+KEY_SUD_DETECT_WEEK_PLAN  	0x17	        time11 + time12 + ... + time71 + time72
+KEY_SUD_DETECT_PLAN_MON  	0x18	     	time1 + time2
+KEY_SUD_DETECT_PLAN_TUES  	0x19	     	time1 + time2
+KEY_SUD_DETECT_PLAN_WED  	0x1A	     	time1 + time2
+KEY_SUD_DETECT_PLAN_THUR  	0x1B	     	time1 + time2
+KEY_SUD_DETECT_PLAN_FRI  	0x1C	     	time1 + time2
+KEY_SUD_DETECT_PLAN_SAT  	0x1D	     	time1 + time2
+KEY_SUD_DETECT_PLAN_SUN  	0x1E	     	time1 + time2
+
+KEY_SUD_DETECT_PLAN_MON_SWITCH	0x1F		 0x00(OFF) | 0x01(ON)
+KEY_SUD_DETECT_PLAN_TUES_SWITCH	0x20		 0x00(OFF) | 0x01(ON) 
+KEY_SUD_DETECT_PLAN_WED_SWITCH	0x21		 0x00(OFF) | 0x01(ON)  
+KEY_SUD_DETECT_PLAN_THUR_SWITCH	0x22		 0x00(OFF) | 0x01(ON)  
+KEY_SUD_DETECT_PLAN_FRI_SWITCH	0x23		 0x00(OFF) | 0x01(ON) 
+KEY_SUD_DETECT_PLAN_SAT_SWITCH	0x24		 0x00(OFF) | 0x01(ON)  
+KEY_SUD_DETECT_PLAN_SUN_SWITCH	0x25		 0x00(OFF) | 0x01(ON)
+
+// code
+0x00 -> OK
+0x01 -> ERROR
+
+len 	-> 占1byte
+action 	-> 占1byte
+key     -> 占1byte
+time    -> 占2byte
+用1bit表示某一天是否有录像，0 -> 无  1 -> 有
+
+////////////////////////////////
+使用Big-Endian -> 高子节先传
+
+KEY_RECORD_WEEK_PLAN的value格式：
+time1(周一开始) + time2(周一结束) + time3(周二开始) + time4(周二结束) + ... + time(周日开始) + time(周日结束) 
+30 - 60  ->  表示当天00：30 到 01：00这段时间录影
+time_start == time_end表示当天无录影计划
+
+len不包含自身长度
+
+example:
+获取指示灯状态 req: 0x02 01 01   	-> 			rsp: 0x03 01 01 01
+          	  req: len + action + key  -> 	rsp -> len + action + key + value
+
+关闭指示灯状态 req：0x03 02 01 00 	          ->		rsp: 0x03 02 01 00
+              req: len + action + key + value   ->		rsp: len + action + key + code
+
+获取周侦测通知计划 req： 0x02 01 03			-> 		rsp: 0x1E 01 03 11 11 12 12 21 21 22 22 31 31 32 32 41 41 42 42 51 51 52 52 61 61 62 62 71 71 72 72
+			  req: len + action + key 	-> 		rsp: len + action + key + value
+
+设置周侦测通知计划 req: 0x1E 02 03 11 11 12 12 21 21 22 22 31 31 32 32 41 41 42 42 51 51 52 52 61 61 62 62 71 71 72 72  ->  rsp: 0x03 02 03 00
+ 			  req: len + action + key + value                                                              		   ->  rsp: len + action + key + code
+
+获取Monday侦测通知计划 req: 0x02 01 04 -> rsp: 0x06 01 04 11 11 12 12
+          	      req: len + action + key -> rsp -> len + action + key + value
+
+设置Monday侦测通知计划 req: 0x06 02 04 11 11 12 12   ->  rsp: 0x03 02 04 00
+				  req: len + action + key + value  ->	rsp: len + action + key + code
+
+获取model req： 0x02 01 0B 		->			rsp: 0x03 01 0B 01
+          req: len + action  + key  ->      rsp: len + action + key + value
+
+////////////////////////////////////////SLEEP/////////////////////////////////////////////////
+获取Sleep状态 req: 0x02 01 15   	-> 			rsp: 0x03 01 15 01
+          	  req: len + action + key  -> 	rsp -> len + action + key + value
+
+关闭Sleep状态 req：0x03 02 15 00 	          ->		rsp: 0x03 02 15 00
+              req: len + action + key + value   ->		rsp: len + action + key + code
+
+Sleep, 和其他的LED有所不同：
+0: 代表有云服务的关
+1: 代表有云服务的开
+2: 代表没有云服务的关
+3: 代表没有呀云服务的开
+
+
+////////////////////////////////////获取SDCARD录像记录//////////////////////////////////////////
+获取从20181017开始，前15天记录，则是20181003...20181014，20181015，20181016，20181017
+
+req -> 0x07 01 14 14 12 0A 0C 0F
+rsp -> 0x05 01 14 FF 00
+
+rsp中FF -> 1111 1111: 表示前8天都有记录
+rsp中00 -> 0000	0000: 表示后八天没有记录
+
+
+
+
+///////////////////////////////////////////////NOTE/////////////////////////////////////////////////
+- 通过set/get channel name来实现私有协议，由于get的时候只能携带一个int参数，所有get的时候，只把key传过去

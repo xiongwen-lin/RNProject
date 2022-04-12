@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:background="@drawable/white_dialog_radius_10"
+        android:minHeight="120dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="23dp"
+            android:gravity="center"
+            android:text="@string/add_camera_create_custom"
+            android:textSize="17sp"
+            app:layout_constraintBottom_toTopOf="@+id/etInput"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--android:digits="@string/rule_edit"-->
+        <AutoCompleteTextView
+            android:id="@+id/etInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="54dp"
+            android:layout_marginEnd="23dp"
+            android:layout_marginBottom="23dp"
+            android:ems="10"
+            android:hint="@string/add_camera_customize_hint_text"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:paddingRight="60dp"
+            android:singleLine="true"
+            android:theme="@style/NooieAutocompleteTextStyle"
+            app:layout_constraintBottom_toTopOf="@+id/btnOk"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <ImageView
+            android:id="@+id/ivClearName"
+            android:layout_width="60dp"
+            android:layout_height="0dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/close_icon_state_list"
+            app:layout_constraintBottom_toBottomOf="@+id/etInput"
+            app:layout_constraintEnd_toEndOf="@+id/etInput"
+            app:layout_constraintTop_toTopOf="@+id/etInput" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.afar.osaio.widget.FButton
+            android:id="@+id/btnCancel"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_36"
+            android:layout_marginStart="@dimen/dp_40"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:background="@drawable/button_cancel_radius_22"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17"
+            android:text="@string/cancel"
+            android:textColor="@color/theme_green_subtext_color"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.afar.osaio.widget.FButton
+            android:id="@+id/btnOk"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_36"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:paddingLeft="@dimen/dp_17"
+            android:paddingRight="@dimen/dp_17"
+            android:text="@string/save"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

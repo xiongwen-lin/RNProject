@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerDeviceSetting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/third_skill_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dp_100"
+         android:gravity="center_horizontal"
+        />
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_marginTop="@dimen/dp_50"
+    android:layout_height="@dimen/dp_400"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:padding="@dimen/dp_40"
+    android:gravity="center"
+    >
+
+    <LinearLayout
+        android:id="@+id/llSupportAlexa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle_theme_green"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_35"
+        android:paddingTop="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_35"
+        android:paddingBottom="@dimen/dp_26"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:src="@drawable/alexa_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/third_skill_alexa"
+            android:textColor="@color/theme_subtext_color"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llSupportSmartThing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_180"
+
+        android:background="@drawable/circle_theme_green"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_30"
+        android:paddingEnd="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_30"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:src="@drawable/ic_smart_things" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/smart_thing"
+            android:textColor="@color/theme_subtext_color"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/llSupportGoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/circle_theme_green"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_30"
+        android:paddingEnd="@dimen/dp_20"
+
+        android:paddingBottom="@dimen/dp_30"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/dp_10"
+            android:src="@drawable/google_assistant_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:text="@string/google_assistant"
+            android:textColor="@color/theme_subtext_color"
+            android:textSize="@dimen/sp_12" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tvResetFactory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp_80"
+                android:text="@string/third_skill_tip"
+                android:textColor="@color/theme_subtext_color"
+                android:textSize="@dimen/sp_12"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/dp_104"
+                android:layout_marginStart="@dimen/dp_62"
+                android:layout_marginEnd="@dimen/dp_62"
+                />
+            <com.afar.osaio.widget.FButton
+                android:id="@+id/btnDeviceNext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_47"
+                android:layout_marginStart="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_60"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="@dimen/dp_50"
+
+                android:text="@string/done"
+                android:textSize="@dimen/sp_18" />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

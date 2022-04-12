@@ -1,0 +1,97 @@
+gradle.ext.dependencieInfo = []
+
+/**
+ * 获取时间 yyyyMMdd
+ * @return 时间字符串
+ */
+static String releaseTime() {
+    return new Date().format("yyyyMMdd", TimeZone.getDefault())
+}
+
+/**
+ * 获取时间 yyyyMMdd
+ * @return 时间字符串
+ */
+static String getFormatDate() {
+    return new Date().format("yyyyMMdd_HHmmss", TimeZone.getDefault())
+}
+
+static def getGitHeadRefsSuffix() {
+    try {
+        // .git/HEAD描述当前目录所指向的分支信息，内容示例："ref: refs/heads/master\n"
+        def headFile = new File('.git/HEAD')
+        if (headFile.exists()) {
+            String[] strings = headFile.getText('UTF-8').split(" ")
+            if (strings.size() > 1) {
+                String refFilePath = '.git/' + strings[1]
+                // 根据HEAD读取当前指向的hash值，路径示例为：".git/refs/heads/master"
+                def refFile = new File(refFilePath.replace("\n", ""))
+                // 索引文件内容为hash值+"\n"，
+                // 示例："90312cd9157587d11779ed7be776e3220050b308\n"
+                return refFile.getText('UTF-8').substring(0, 7)
+            }
+        }
+    } catch (Exception e) {
+        e.printStackTrace()
+    }
+    return ""
+}
+
+//NOTE: 打包aar，在变体release下才打包
+void packagingAAR(project, android) {
+    android.libraryVariants.all { variant ->
+        if (variant.buildType.name == "release") {
+            //def keystorePropertiesFile = rootProject.file("upload.properties")
+            //def keystoreProperties = new Properties()
+            //keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+            // 修改aar名称
+            variant.outputs.all { output ->
+                //outputFileName = "${project.name}-V${android.defaultConfig.versionName}_${android.defaultConfig.versionCode}-${getGitHeadRefsSuffix}-${getFormatDate()}${isEmpty(variant.flavorName) ? "" : "-${variant.flavorName}"}-${variant.buildType.name}.aar"
+                //def ARTIFACTIDName = keystoreProperties['ARTIFACTID']
+                outputFileName = "${project.name}-release-v${android.defaultConfig.versionName}.aar"
+                //def fileName = project.name + "-" + +android.defaultConfig.versionName + ".aar"
+                def fileName = outputFileName
+                outputFileName = fileName
+            }
+
+            /*
+            // 复制aar到指定目录
+            variant.assemble.doLast {
+                variant.outputs.all { output ->
+                    // 输出目录在：项目目录/build/outputs/aar/日期-gitCommit/
+                    //def outputPath = [project.rootDir.absolutePath, "build", "outputs", "aar", releaseTime() + "-" + getGitHeadRefsSuffix()].join(File.separator)
+                    //def outputPath = [project.rootDir.absolutePath, "ApemanAPI", "aar_release"].join(File.separator)
+
+                    //存在对应Module下
+                    //def moduleName = keystoreProperties['ARTIFACTID']
+                    //def outputPath = [project.rootDir.absolutePath,moduleName, "aar_release"].join(File.separator)
+
+                    //存在根目录下aar_release文件夹中
+                    //def outputPath = [project.rootDir.absolutePath, "aar_release"].join(File.separator)
+                    def outputPath = [project.absolutePath, "aar_release"].join(File.separator)
+                    copy {
+                        from output.outputFile
+                        into outputPath
+                    }
+                    // 输入依赖语句
+                    gradle.dependencieInfo.add("api(name: '${output.outputFile.name.replace('.aar', '')}', ext: 'aar')")
+                    println("${gradle.dependencieInfo.join("\n")}")
+                }
+            }
+            */
+        }
+    }
+}
+
+ext {
+    // yyyyMMdd 时间
+    releaseTime = this.&releaseTime
+    // yyyyMMdd_HHmmss 时间
+    getFormatDate = this.&getFormatDate
+    // 获取当前git commit点
+    getGitHeadRefsSuffix = this.&getGitHeadRefsSuffix
+    // 打包AAR
+    packagingAAR = this.&packagingAAR
+}
+

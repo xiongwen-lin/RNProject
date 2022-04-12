@@ -1,0 +1,7 @@
+# ninja log v5
+0	93	0	CMakeFiles/nooie-encrypt.dir/encryption/encryption.c.o	391ec58d4c32bbcd
+0	118	0	CMakeFiles/nooie-encrypt.dir/nooie-jni.c.o	f49e1adfaf184c69
+0	260	0	CMakeFiles/nooie-encrypt.dir/base/encrypt/md5.c.o	7518d9d4a9a98da3
+260	287	0	/Users/fqiao/Documents/apeman/pro/nooie-smart-android/distribution/nooie/lib/armeabi-v7a/libnooie-encrypt.so	ba0c654ecf898b27
+0	108	0	CMakeFiles/nooie-encrypt.dir/nooie-jni.c.o	f49e1adfaf184c69
+108	178	0	/Users/fqiao/Documents/apeman/pro/nooie-smart-android/distribution/nooie/lib/armeabi-v7a/libnooie-encrypt.so	ba0c654ecf898b27

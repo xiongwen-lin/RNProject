@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vPresetPointAddItemContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivPresetPointItemAddBg"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_5"
+        android:src="@drawable/button_gray_state_list_radius_5"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivPresetPointItemAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/preset_point_add"
+        app:layout_constraintBottom_toBottomOf="@id/ivPresetPointItemAddBg"
+        app:layout_constraintEnd_toEndOf="@id/ivPresetPointItemAddBg"
+        app:layout_constraintStart_toStartOf="@id/ivPresetPointItemAddBg"
+        app:layout_constraintTop_toTopOf="@id/ivPresetPointItemAddBg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

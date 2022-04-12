@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/lookDeviceMb"
+        layout="@layout/menu_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/btnLookSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ble_lock_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lookDeviceMb"
+        android:layout_marginTop="@dimen/dp_60"
+        />
+
+    <com.afar.osaio.widget.NormalTextIconView
+        android:id="@+id/tivPassword"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_65"
+        app:layout_constraintEnd_toStartOf="@id/tivRecording"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnLookSwitch" />
+
+    <com.afar.osaio.widget.NormalTextIconView
+        android:id="@+id/tivRecording"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/tivAuthorization"
+        app:layout_constraintStart_toEndOf="@id/tivPassword"
+        app:layout_constraintTop_toTopOf="@id/tivPassword" />
+
+    <com.afar.osaio.widget.NormalTextIconView
+        android:id="@+id/tivAuthorization"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tivRecording"
+        app:layout_constraintTop_toTopOf="@id/tivPassword" />
+
+    <com.afar.osaio.widget.NormalTextIconView
+        android:id="@+id/tivRename"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_40"
+        app:layout_constraintEnd_toStartOf="@id/tivUser"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tivPassword" />
+
+    <com.afar.osaio.widget.NormalTextIconView
+        android:id="@+id/tivUser"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/tivBluetooth"
+        app:layout_constraintStart_toEndOf="@id/tivRename"
+        app:layout_constraintTop_toTopOf="@id/tivRename" />
+
+    <com.afar.osaio.widget.NormalTextIconView
+        android:id="@+id/tivBluetooth"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tivUser"
+        app:layout_constraintTop_toTopOf="@id/tivRename" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

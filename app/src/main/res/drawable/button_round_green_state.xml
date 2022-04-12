@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <shape>
+            <gradient android:endColor="@color/ipc_message_color" android:startColor="@color/ipc_message_color" />
+            <corners android:radius="@dimen/dp_4" />
+        </shape>
+    </item>
+</selector>

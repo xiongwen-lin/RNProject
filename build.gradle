@@ -1,0 +1,158 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    ext {
+        // 控制组件的是否单独调试
+        debugDeviceComponent = false
+        debugUserComponent = false
+        debugMessageComponent = false
+        debugMineComponent = false
+        debugRouterComponent = false
+        debugIpcControlComponent = false
+        debugCustomService = false
+        debugYRIpcManagerModuleComponent = false
+        debugTuyaComponent = false
+    }
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        //jcenter { url "http://jcenter.bintray.com/"}
+        maven {
+            url "https://maven-other.tuya.com/repository/maven-releases/"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.0.3'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31'
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.3'
+
+        // FCM -> Firebase Cloud Message
+        classpath 'com.google.gms:google-services:4.3.5'
+
+        //greendao
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.3.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        //jcenter { url "http://jcenter.bintray.com/"}
+
+        // https://github.com/Aspsine/SwipeToLoadLayout
+        maven { url "https://jitpack.io" }
+        maven { url "https://maven-other.tuya.com/repository/maven-releases/" }
+//        maven { url 'https://maven.google.com' }
+//        maven { url 'https://maven.aliyun.com/repository/google' }
+//        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+//        maven { url 'https://repo1.maven.org/maven2/' }
+        //Osiao Maven Repo
+//        maven {
+//            allowInsecureProtocol = true
+//            url 'http://172.16.26.46:8081/repository/osaio/'
+//        }
+////        Apeman API Repo
+//        maven {
+//            allowInsecureProtocol = true
+//            url 'http://172.16.26.46:8081/repository/Apeman/'
+//        }
+//        maven {
+//            allowInsecureProtocol = true
+//            url 'http://172.16.26.46:8081/repository/Osiao/'
+//        }
+        maven {
+            // All of React Native (JS, Android binaries) is installed from npm
+            url "$rootDir/node_modules/react-native/android"
+        }
+        maven {
+            // Android JSC is installed from npm
+            url("$rootDir/node_modules/jsc-android/dist")
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        maven {
+            credentials {
+                username '5f57417ae1cf498f37073050'
+                password 'A_bqaG[c]6Zz'
+            }
+            url 'https://packages.aliyun.com/maven/repository/2031294-release-n0AxCt/'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdkVersion = 30
+    buildToolsVersion = "30.0.2"
+    minSdkVersion = 21
+    targetSdkVersion = compileSdkVersion
+
+    supportVersion = "28.0.0"
+
+    core_ktx = "androidx.core:core-ktx:1.3.2"
+    livedata_core_ktx = "androidx.lifecycle:lifecycle-livedata-core-ktx:2.2.0"
+    kotlin_stdlib = "org.jetbrains.kotlin:kotlin-stdlib:1.6.0"
+
+    appcompat = "androidx.appcompat:appcompat:1.2.0"
+    constraint_layout = "androidx.constraintlayout:constraintlayout:2.0.2"
+    recycleview = "androidx.recyclerview:recyclerview:1.1.0"
+    design = "com.google.android.material:material:1.2.1"
+    exifinterface = "androidx.exifinterface:exifinterface:1.0.0"
+    flexbox = "com.google.android:flexbox:2.0.1"
+    fragment = "androidx.fragment:fragment:1.3.6"
+    core_ui = "androidx.legacy:legacy-support-core-ui:1.0.0"
+    localbroadcastmanager = "androidx.localbroadcastmanager:localbroadcastmanager:1.0.0"
+    multidex = "androidx.multidex:multidex:2.0.1"
+    transition = "androidx.transition:transition:1.0.0"
+    espresso_core = "androidx.test.espresso:espresso-core:3.3.0"
+    junit = "junit:junit:4.12"
+
+    glide = "com.github.bumptech.glide:glide:4.10.0"
+    glide_processor = "com.github.bumptech.glide:compiler:4.10.0"
+    event_bus = "org.greenrobot:eventbus:3.2.0"
+    greendao = "org.greenrobot:greendao:3.3.0"
+    sqlcipher = "net.zetetic:android-database-sqlcipher:4.2.0@aar"
+    okhttp = "com.squareup.okhttp3:okhttp:4.9.1"
+    okhttp_log_interceptor = "com.squareup.okhttp3:logging-interceptor:4.9.1"
+    retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
+    retrofit_converter = "com.squareup.retrofit2:converter-gson:2.9.0"
+    retrofit_adapter = "com.squareup.retrofit2:adapter-rxjava:2.9.0"
+    rxjava = "io.reactivex:rxjava:1.1.1"
+    rxandroid = "io.reactivex:rxandroid:1.1.0"
+    butterknife = "com.jakewharton:butterknife:10.2.3"
+    butterknife_processor = "com.jakewharton:butterknife-compiler:10.2.3"
+    firebase_core = "com.google.firebase:firebase-core"
+    firebase_messaging = "com.google.firebase:firebase-messaging"
+    firebase_auth = "com.google.firebase:firebase-auth"
+    firebase_analytics = "com.google.firebase:firebase-analytics"
+    umsdk_common = "com.umeng.umsdk:common:2.1.0"
+    umsdk_utdid = "com.umeng.umsdk:utdid:1.1.5.3"
+    umsdk_push = "com.umeng.umsdk:push:6.0.1"
+    mmkv = "com.tencent:mmkv-static:1.2.1"
+//    protobuf = "com.google.protobuf:protobuf-lite:3.0.1"
+    protobuf = "com.google.protobuf:protobuf-javalite:3.14.0"
+    gson = "com.google.code.gson:gson:2.4"
+
+    tinypinyin = "com.github.promeg:tinypinyin:1.0.0"
+    android_gif_drawable = "pl.droidsonroids.gif:android-gif-drawable:1.2.23"
+    dexoptfix = "com.cantalou:dexoptfix:1.0.2"
+    alerter = "com.github.tapadoo:alerter:7.2.4"
+    nordicsemi_scanner = "no.nordicsemi.android.support.v18:scanner:1.4.3"
+    nordicsemi_log = "no.nordicsemi.android:log:2.2.0"
+    nordicsemi_ble_common = "no.nordicsemi.android:ble-common:2.2.0"
+    nordicsemi_ble = "no.nordicsemi.android:ble:2.2.4"
+    nordicsemi_dfu = "no.nordicsemi.android:dfu:1.10.3"
+    immersionbar = "com.gyf.immersionbar:immersionbar:3.0.0"
+    pager_lib = "com.yc:PagerLib:1.0.1"
+    js_bridge = "com.github.caixingcun:JsBridge:2.1.3"
+}
+

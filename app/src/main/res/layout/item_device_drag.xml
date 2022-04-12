@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/itemDeviceDragContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_2">
+
+    <com.nooie.common.widget.RoundedImageView.RoundedImageView
+        android:id="@+id/ivDeviceThumb"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginStart="@dimen/dp_21"
+        android:layout_marginEnd="@dimen/dp_21"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_preview"
+        app:layout_constraintDimensionRatio="H,3:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/dp_10" />
+
+    <TextView
+        android:id="@+id/tvDeviceName"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingStart="@dimen/dp_23"
+        android:paddingEnd="@dimen/dp_23"
+        android:singleLine="true"
+        android:text="Living Room"
+        android:textColor="@color/theme_white"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintBottom_toBottomOf="@id/ivDeviceThumb"
+        app:layout_constraintEnd_toStartOf="@id/ivDeviceSortDragIcon"
+        app:layout_constraintStart_toStartOf="@id/ivDeviceThumb"
+        app:layout_constraintTop_toTopOf="@id/ivDeviceThumb" />
+
+    <ImageView
+        android:id="@+id/ivDeviceSortDragIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:src="@drawable/device_sort_drag_icon"
+        app:layout_constraintBottom_toBottomOf="@id/ivDeviceThumb"
+        app:layout_constraintEnd_toEndOf="@id/ivDeviceThumb"
+        app:layout_constraintTop_toTopOf="@id/ivDeviceThumb" />
+
+    <View
+        android:id="@+id/vDeviceShadowBottom"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_6"
+        android:layout_marginStart="@dimen/dp_21"
+        android:layout_marginEnd="@dimen/dp_21"
+        android:background="@drawable/drag_item_shadow_bg"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDeviceName" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

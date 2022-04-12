@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/menu_bar"
+        android:id="@+id/titlebar"/>
+
+    <LinearLayout
+        android:id="@+id/containerInfoModel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_21"
+        android:layout_marginEnd="@dimen/dp_21">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/theme_text_color"
+            android:text="@string/model" />
+
+        <View style="@style/stretch_space" />
+
+        <TextView
+            android:id="@+id/tvInfoModel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/theme_subtext_color"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/model_thin"
+        style="@style/divider_thin"
+        android:layout_marginLeft="@dimen/dp_21"
+        android:layout_marginRight="@dimen/dp_21" />
+
+    <LinearLayout
+        android:id="@+id/containerInfoName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:background="@drawable/setting_item_state_list"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_24"
+        android:paddingRight="@dimen/dp_24"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/name" />
+
+        <View style="@style/stretch_space" />
+
+        <TextView
+            android:id="@+id/tvInfoName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sp_13" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/divider_thin"
+        android:layout_marginLeft="@dimen/dp_21"
+        android:layout_marginRight="@dimen/dp_21"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/containerInfoOwner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:background="@drawable/setting_item_state_list"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_21"
+        android:paddingRight="@dimen/dp_21"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/owner" />
+
+        <View style="@style/stretch_space" />
+
+        <TextView
+            android:id="@+id/tvInfoOwner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sp_13" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/divider_thin"
+        android:layout_marginLeft="@dimen/dp_21"
+        android:layout_marginRight="@dimen/dp_21"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/containerInfoDeviceId"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/dp_21"
+        android:layout_marginEnd="@dimen/dp_21">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/theme_text_color"
+            android:text="@string/device_id" />
+
+        <View style="@style/stretch_space" />
+
+        <TextView
+            android:id="@+id/tvInfoDeviceId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/theme_subtext_color" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_20"
+            android:layout_height="@dimen/dp_20"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:src="@drawable/right_arrow_gray_teckin" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/divider_thin"
+        android:layout_marginLeft="@dimen/dp_21"
+        android:layout_marginRight="@dimen/dp_21" />
+
+    <LinearLayout
+        android:id="@+id/containerInfoIp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/dp_21"
+        android:layout_marginEnd="@dimen/dp_21">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/theme_text_color"
+            android:text="@string/ip" />
+
+        <View style="@style/stretch_space" />
+
+        <TextView
+            android:id="@+id/tvInfoIp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/theme_subtext_color" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/divider_thin"
+        android:layout_marginLeft="@dimen/dp_21"
+        android:layout_marginRight="@dimen/dp_21" />
+
+    <LinearLayout
+        android:id="@+id/containerMac"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_55"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/dp_21"
+        android:layout_marginEnd="@dimen/dp_21">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sp_15"
+            android:textColor="@color/theme_text_color"
+            android:text="@string/mac_address" />
+
+        <View style="@style/stretch_space" />
+
+        <TextView
+            android:id="@+id/tvMac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/theme_subtext_color" />
+
+    </LinearLayout>
+
+    <View
+        style="@style/divider_thin"
+        android:layout_marginLeft="@dimen/dp_21"
+        android:layout_marginRight="@dimen/dp_21" />
+
+</LinearLayout>

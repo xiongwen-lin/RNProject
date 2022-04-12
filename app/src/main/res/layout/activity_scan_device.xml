@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/menu_bar"
+        android:id="@+id/titlebar"/>
+
+    <com.afar.osaio.smart.electrician.widget.RoundProgressBar
+        android:id="@+id/roundProgressBar"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_150"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlebar"
+        app:rpb_centerBackgroundColor="@color/white"
+        app:rpb_centerTextColor="@color/theme_text_color"
+        app:rpb_centerTextSize="@dimen/sp_20"
+        app:rpb_countDownTimeInMillis="100000"
+        app:rpb_drawOutsideWrapper="true"
+        app:rpb_outsideWrapperColor="@color/outsideWrapper"
+        app:rpb_progressDirection="forward"
+        app:rpb_sweepStartAngle="180"
+        app:rpb_sweepStrokeColor="@color/theme_green"
+        app:rpb_sweepStrokeWidth="@dimen/dp_5" />
+
+    <TextView
+        android:id="@+id/tvConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginTop="@dimen/dp_70"
+        android:text="@string/connecting"
+        android:textColor="@color/theme_text_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roundProgressBar" />
+
+    <ScrollView
+        android:id="@+id/scanFailedContainer"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:scrollbars="none"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titlebar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvScanFailedGuideInfo1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_23"
+                android:layout_marginTop="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/dp_23"
+                android:gravity="center_horizontal"
+                android:text="@string/scan_failed_guide_info_1"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/tvScanFailedGuideInfo2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_23"
+                android:layout_marginTop="@dimen/dp_23"
+                android:layout_marginEnd="@dimen/dp_23"
+                android:gravity="center_horizontal"
+                android:text="@string/scan_failed_guide_info_2"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/tvScanFailedGuideInfo3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_23"
+                android:layout_marginTop="@dimen/dp_23"
+                android:layout_marginEnd="@dimen/dp_23"
+                android:gravity="center_horizontal"
+                android:text="@string/scan_failed_guide_info_3"
+                android:textSize="@dimen/sp_15" />
+
+            <com.afar.osaio.widget.FButton
+                android:id="@+id/btnScanReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_62"
+                android:layout_marginTop="@dimen/dp_35"
+                android:layout_marginEnd="@dimen/dp_62"
+                android:text="@string/scan_device_how_to_reset" />
+
+            <View style="@style/stretch_space_vertical" />
+
+            <TextView
+                android:id="@+id/tvScanFailedGuideInfo4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_23"
+                android:layout_marginTop="@dimen/dp_35"
+                android:layout_marginEnd="@dimen/dp_23"
+                android:gravity="center_horizontal"
+                android:text="@string/scan_failed_guide_info_4"
+                android:textSize="@dimen/sp_15" />
+
+            <com.afar.osaio.widget.FButton
+                android:id="@+id/btnScanConnectAp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_62"
+                android:layout_marginTop="@dimen/dp_35"
+                android:layout_marginEnd="@dimen/dp_62"
+                android:text="@string/connect_in_AP_mode" />
+
+            <TextView
+                android:id="@+id/tvScanFailedGuideInfo5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_23"
+                android:layout_marginTop="@dimen/dp_35"
+                android:layout_marginEnd="@dimen/dp_23"
+                android:gravity="center_horizontal"
+                android:text="@string/scan_failed_guide_info_5"
+                android:textSize="@dimen/sp_15" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

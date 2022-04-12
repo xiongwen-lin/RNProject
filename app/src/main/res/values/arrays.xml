@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="internetmode">
+        <item>@string/router_internet_setting_dhcp</item>
+        <item>@string/router_internet_setting_static_ip</item>
+        <item>@string/router_internet_setting_pppoe</item>
+        <!--<item>PPTP</item>
+        <item>L2TP</item>-->
+    </string-array>
+
+    <string-array name="addressmode">
+        <item>Dvnamic</item>
+        <item>Static</item>
+    </string-array>
+</resources>

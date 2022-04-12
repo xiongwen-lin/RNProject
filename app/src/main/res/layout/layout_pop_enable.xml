@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_toast_bg"
+    android:orientation="vertical">
+
+    <View style="@style/stretch_space" />
+
+    <LinearLayout
+        android:id="@+id/containerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.afar.osaio.widget.FButton
+            android:id="@+id/btnDisable"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_55"
+            android:background="@drawable/button_white_top_radius_9"
+            android:text="@string/disable"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/sp_16" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginStart="@dimen/dp_21"
+            android:layout_marginEnd="@dimen/dp_21"
+            android:background="@color/theme_text_color" />
+
+        <com.afar.osaio.widget.FButton
+            android:id="@+id/btnEnable"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_55"
+            android:background="@color/white"
+            android:text="@string/enable"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/sp_16" />
+
+        <com.afar.osaio.widget.FButton
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_55"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@color/white"
+            android:text="@string/cancel"
+            android:textColor="@color/theme_text_color"
+            android:textSize="@dimen/sp_15" />
+
+    </LinearLayout>
+
+</LinearLayout>

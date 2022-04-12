@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/menuBar"
+        layout="@layout/menu_bar" />
+
+    <LinearLayout
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_50"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dp_24"
+        android:paddingRight="@dimen/dp_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuBar">
+
+        <com.contrarywind.view.WheelView
+            android:id="@+id/wheelStartHour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:wheelview_dividerColor="@color/wheel_blue"
+            app:wheelview_textColorCenter="@color/theme_text_color"
+            app:wheelview_textColorOut="@color/theme_text_colorout"
+            app:wheelview_textSize="@dimen/sp_23" />
+
+        <com.contrarywind.view.WheelView
+            android:id="@+id/wheelStartMinutes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:wheelview_dividerColor="@color/wheel_blue"
+            app:wheelview_textColorCenter="@color/theme_text_color"
+            app:wheelview_textColorOut="@color/theme_text_colorout"
+            app:wheelview_textSize="@dimen/sp_23" />
+
+        <com.contrarywind.view.WheelView
+            android:id="@+id/wheelStartSecond"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:wheelview_dividerColor="@color/wheel_blue"
+            app:wheelview_textColorCenter="@color/theme_text_color"
+            app:wheelview_textColorOut="@color/theme_text_colorout"
+            app:wheelview_textSize="@dimen/sp_23" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

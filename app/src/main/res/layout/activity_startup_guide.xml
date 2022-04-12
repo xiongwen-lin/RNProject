@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivStartUpGuideLogo"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:src="@drawable/bg_boot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvStartUpGuideCopyRight" />
+
+        <TextView
+            android:id="@+id/tvStartUpGuideSlogan"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_72"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:gravity="center"
+            android:text="@string/start_up_guide_slogan"
+            android:textColor="@color/black_010C11"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivStartUpGuideLogo" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/vStartUpGuideBrandLogoList"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_30"
+            android:visibility="gone"
+            app:alignContent="flex_start"
+            app:alignItems="flex_start"
+            app:flexDirection="row"
+            app:flexWrap="wrap"
+            app:justifyContent="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStartUpGuideSlogan">
+
+            <ImageView
+                android:id="@+id/ivStartUpGuideBrandLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/start_up_guide_brand_victure"
+                app:layout_flexBasisPercent="20%"
+                app:layout_order="1" />
+
+            <ImageView
+                android:id="@+id/ivStartUpGuideBrandLogoOfGncc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/start_up_guide_brand_gncc"
+                app:layout_flexBasisPercent="20%"
+                app:layout_order="2" />
+
+            <ImageView
+                android:id="@+id/ivStartUpGuideBrandLogoOfTeckin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/start_up_guide_brand_teckin"
+                app:layout_flexBasisPercent="20%"
+                app:layout_order="3" />
+
+            <ImageView
+                android:id="@+id/ivStartUpGuideBrandLogoOfXbro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/start_up_guide_brand_xbro"
+                app:layout_flexBasisPercent="20%"
+                app:layout_order="4" />
+
+            <ImageView
+                android:id="@+id/ivStartUpGuideBrandLogoOfPorik"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/start_up_guide_brand_porik"
+                android:visibility="gone"
+                app:layout_flexBasisPercent="20%"
+                app:layout_order="5" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <TextView
+            android:id="@+id/tvStartUpGuideCopyRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_18"
+            android:layout_marginEnd="@dimen/dp_42"
+            android:text="@string/start_up_guide_copy_right"
+            android:textColor="@color/gray_1a1a1a"
+            android:textSize="@dimen/sp_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.afar.osaio.widget.FButton
+            android:id="@+id/btnStartUpGuideNext"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginStart="@dimen/dp_42"
+            android:layout_marginTop="@dimen/dp_120"
+            android:layout_marginEnd="@dimen/dp_42"
+            android:paddingLeft="@dimen/dp_21"
+            android:paddingRight="@dimen/dp_21"
+            android:text="@string/start_up_guide_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/button_green_state_list_radius_22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStartUpGuideSlogan" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

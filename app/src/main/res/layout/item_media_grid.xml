@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivMediaThumb"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_0"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_preview_thumbnail"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivMediaVideoIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="center"
+        android:src="@drawable/playback_start_icon"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivMediaThumb"
+        app:layout_constraintEnd_toEndOf="@id/ivMediaThumb"
+        app:layout_constraintStart_toStartOf="@id/ivMediaThumb"
+        app:layout_constraintTop_toTopOf="@id/ivMediaThumb" />
+
+    <ImageView
+        android:id="@+id/btnMediaSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:scaleType="center"
+        android:src="@drawable/edit_select_icon"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/ivMediaThumb"
+        app:layout_constraintEnd_toEndOf="@id/ivMediaThumb" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

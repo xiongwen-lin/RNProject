@@ -1,0 +1,9 @@
+<resources>
+    <!-- 顶部按钮栏高度 -->
+
+    <!-- 顶部按钮padding -->
+
+    <!-- 顶部按钮文字大小 -->
+    <!-- 选项文字大小 -->
+    <dimen name="pickerview_textsize">20sp</dimen>
+</resources>

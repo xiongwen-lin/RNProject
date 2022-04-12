@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/menuBar"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        android:layout_marginBottom="@dimen/dp_10"
+        app:layout_constraintBottom_toTopOf="@+id/btn_testagain"
+        app:layout_constraintTop_toBottomOf="@+id/menuBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleTips"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:text="@string/router_offline_msg"
+                android:textColor="@color/theme_text_color"
+                app:layout_constraintTop_toBottomOf="@+id/menuBar"/>
+
+            <TextView
+                android:id="@+id/tvTips1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:text="@string/router_offline_tip_one"
+                android:textColor="@color/black_80010c11"
+                app:layout_constraintTop_toBottomOf="@+id/titleTips"/>
+
+            <TextView
+                android:id="@+id/tvTips2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:text="@string/router_offline_tip_two"
+                android:textColor="@color/black_80010c11"
+                app:layout_constraintTop_toBottomOf="@+id/tvTips1"/>
+
+            <TextView
+                android:id="@+id/tvTips3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:text="@string/router_offline_tip_three"
+                android:textColor="@color/black_80010c11"
+                app:layout_constraintTop_toBottomOf="@+id/tvTips2"/>
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:src="@drawable/connection_mode_lan"
+                app:layout_constraintTop_toBottomOf="@+id/tvTips3"/>
+
+            <TextView
+                android:id="@+id/tvTips5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:text="@string/router_offline_tip_four"
+                android:textColor="@color/black_80010c11"
+                app:layout_constraintTop_toBottomOf="@+id/ivIcon"/>
+
+            <TextView
+                android:id="@+id/tvTips4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_15"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:text="@string/router_offline_tip_five"
+                android:textColor="@color/black_80010c11"
+                app:layout_constraintTop_toBottomOf="@+id/tvTips5"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.afar.osaio.widget.FButton
+        android:id="@+id/btn_testagain"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_44"
+        android:layout_marginStart="@dimen/dp_50"
+        android:layout_marginEnd="@dimen/dp_50"
+        android:paddingLeft="@dimen/dp_22"
+        android:paddingRight="@dimen/dp_22"
+        android:text="@string/router_not_network_line_recheck"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/layout_skip" />
+
+    <LinearLayout
+        android:id="@+id/layout_skip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_jumpover"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:text="@string/modify_camera_skip"
+            android:gravity="center"
+            android:textColor="@color/theme_green_subtext_color"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

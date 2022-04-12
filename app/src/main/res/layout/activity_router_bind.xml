@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/menuBar"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bind_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_50"
+        android:text="@string/router_bind_device_msg"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuBar" />
+
+    <com.afar.osaio.widget.RoundProgress
+        android:id="@+id/roundProgress"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dp_60"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bind_device"
+        app:roundColor="@color/playback_EBEBEB"
+        app:roundProgressColor="@color/theme_green"
+        app:roundWidth="12dp"
+        app:roundtextColor="@color/theme_text_color"
+        app:roundtextSize="16sp"
+        app:textIsDisplayable="true" />
+
+    <TextView
+        android:id="@+id/firmware_upgrading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/router_firmware_upgrade_upgrading"
+        android:gravity="center"
+        android:textColor="@color/theme_text_color"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roundProgress" />
+
+    <TextView
+        android:id="@+id/firmware_upgrading_tip1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/router_firmware_upgrade_tip"
+        android:gravity="center"
+        android:textColor="@color/gray_6B7487"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firmware_upgrading" />
+
+    <TextView
+        android:id="@+id/firmware_upgrading_tip2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginEnd="15dp"
+        android:drawablePadding="5dp"
+        android:text="@string/router_firmware_upgrade_info2"
+        android:gravity="start"
+        android:textColor="@color/rea_FF0000"
+        android:visibility="gone"
+        app:drawableStartCompat="@drawable/ic_power"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firmware_upgrading_tip1" />
+
+    <ImageView
+        android:id="@+id/connectionIcon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roundProgress" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

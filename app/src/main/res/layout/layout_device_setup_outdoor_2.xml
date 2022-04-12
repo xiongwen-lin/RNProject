@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+    <ImageView
+        android:id="@+id/ivTopImage"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginTop="@dimen/dp_19"
+        android:scaleType="centerCrop"
+        android:src="@drawable/device_setup_outdoor_fix_step_1"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDeviceSetupOutdoorStepTip1"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_19"
+        android:gravity="center"
+        android:text="@string/device_settup_outdoor_step_tip_1"
+        android:textSize="@dimen/sp_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivTopImage" />
+
+    <ImageView
+        android:id="@+id/ivLeftImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_0"
+        android:layout_marginTop="@dimen/dp_29"
+        android:scaleType="centerCrop"
+        android:src="@drawable/device_setup_outdoor_fix_step_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDeviceSetupOutdoorStepTip1" />
+
+    <TextView
+        android:id="@+id/tvDeviceSetupOutdoorStepTip2"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_29"
+        android:text="@string/device_settup_outdoor_step_tip_2"
+        android:textSize="@dimen/sp_12"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLeftImage" />
+
+    <ImageView
+        android:id="@+id/ivRightImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_53"
+        android:scaleType="centerCrop" android:visibility="gone"
+        android:src="@drawable/device_setup_outdoor_fix_step_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivLeftImage" />
+
+    <TextView
+        android:id="@+id/tvDeviceSetupOutdoorStepTip3"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_19" android:visibility="gone"
+        android:text="@string/device_settup_outdoor_step_tip_3"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toEndOf="@+id/ivRightImage"
+        app:layout_constraintStart_toStartOf="@+id/ivRightImage"
+        app:layout_constraintTop_toBottomOf="@+id/ivRightImage" />
+</androidx.constraintlayout.widget.ConstraintLayout>

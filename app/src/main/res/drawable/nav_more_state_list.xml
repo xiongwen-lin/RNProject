@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_nav_more" android:state_enabled="false" />
+    <item android:drawable="@drawable/ic_nav_bg" android:state_pressed="true" />
+    <item android:drawable="@drawable/ic_nav_more"></item>
+</selector>

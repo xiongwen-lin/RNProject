@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_toast_bg"
+    android:orientation="vertical">
+
+    <View style="@style/stretch_space" />
+
+    <LinearLayout
+        android:id="@+id/containerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_244"
+        android:background="@drawable/style_background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dp_18"
+            android:text="@string/add_task"
+            android:textSize="@dimen/sp_18" />
+
+        <LinearLayout
+            android:id="@+id/llRunDevice"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_24"
+            android:paddingRight="@dimen/dp_24">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/run_device" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="@string/run_device"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_16" />
+
+            <View style="@style/stretch_space" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/scene_right_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSelectSmart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_24"
+            android:paddingRight="@dimen/dp_24">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/select_smart" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="@string/select_smart"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_16" />
+
+            <View style="@style/stretch_space" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/scene_right_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDelay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_60"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dp_24"
+            android:paddingRight="@dimen/dp_24">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/delay" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/dp_10"
+                android:text="@string/delay"
+                android:textColor="@color/theme_text_color"
+                android:textSize="@dimen/sp_16" />
+
+            <View style="@style/stretch_space" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/scene_right_arrow" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

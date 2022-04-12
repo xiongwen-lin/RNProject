@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/vLpSuitAddDeviceContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_16"
+    android:layout_marginTop="@dimen/dp_24"
+    android:layout_marginEnd="@dimen/dp_16"
+    android:background="@drawable/button_white_with_round_11"
+    android:elevation="@dimen/dp_3">
+
+    <ImageView
+        android:id="@+id/ivLpSuitAddDeviceIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_22"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:src="@drawable/device_icon_gateway_cam"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLpSuitAddDeviceTitle"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_25"
+        android:layout_marginEnd="@dimen/dp_4"
+        android:text="@string/add_lp_suit_gateway_title"
+        android:textColor="@color/theme_text_color"
+        android:textSize="@dimen/sp_16"
+        app:layout_constraintBottom_toTopOf="@id/tvLpSuitAddDeviceDesc"
+        app:layout_constraintEnd_toStartOf="@id/ivLpSuitAddDeviceAddIcon"
+        app:layout_constraintStart_toEndOf="@id/ivLpSuitAddDeviceIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivLpSuitAddDeviceAddIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_0"
+        android:layout_marginEnd="@dimen/dp_32"
+        android:src="@drawable/add_normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvLpSuitAddDeviceTitle"
+        app:layout_constraintTop_toTopOf="@id/tvLpSuitAddDeviceTitle" />
+
+    <TextView
+        android:id="@+id/tvLpSuitAddDeviceDesc"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_32"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:text="@string/add_lp_suit_gateway_desc"
+        android:textColor="@color/gray_a1a1a1"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivLpSuitAddDeviceIcon"
+        app:layout_constraintTop_toBottomOf="@id/tvLpSuitAddDeviceTitle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <include
+        android:id="@+id/detectionZoneMenuBar"
+        layout="@layout/menu_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDetectionZoneTip"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_23"
+        android:layout_marginTop="@dimen/dp_34"
+        android:layout_marginEnd="@dimen/dp_23"
+        android:text="@string/detection_zone_tip"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/detectionZoneMenuBar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/vDetectionZoneSwitchContainer"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_23"
+        android:layout_marginTop="@dimen/dp_66"
+        android:layout_marginEnd="@dimen/dp_23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDetectionZoneTip">
+
+        <TextView
+            android:id="@+id/tvDetectionZoneSwitch"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:lines="1"
+            android:text="@string/detection_zone_label"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/sbDetectionZoneSwitch"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.suke.widget.SwitchButton
+            android:id="@+id/sbDetectionZoneSwitch"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_25"
+            android:layout_gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:sb_background="@color/theme_switch_btn_bg"
+            app:sb_border_width="@dimen/dp_0"
+            app:sb_button_color="@color/theme_white"
+            app:sb_checked="false"
+            app:sb_checked_color="@color/theme_green"
+            app:sb_checkline_color="@color/theme_white"
+            app:sb_show_indicator="false"
+            app:sb_uncheck_color="@color/theme_white" />
+
+        <View
+            style="@style/divider_thin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/ivDetectionTarget"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_marginStart="@dimen/dp_21"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_21"
+        android:src="@drawable/default_preview"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="H,16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vDetectionZoneSwitchContainer" />
+
+    <com.steelkiwi.cropiwa.SelectAreaIwaView
+        android:id="@+id/iwaSelectArea"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        android:layout_weight="1"
+        android:visibility="visible"
+        app:ci_dynamic_aspect_ratio="false"
+        app:layout_constraintBottom_toBottomOf="@id/ivDetectionTarget"
+        app:layout_constraintEnd_toEndOf="@id/ivDetectionTarget"
+        app:layout_constraintStart_toStartOf="@id/ivDetectionTarget"
+        app:layout_constraintTop_toTopOf="@id/ivDetectionTarget" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

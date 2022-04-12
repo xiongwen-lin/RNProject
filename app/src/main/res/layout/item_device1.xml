@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_11"
+    android:layout_marginTop="@dimen/dp_15"
+    android:layout_marginEnd="@dimen/dp_15"
+    android:background="@drawable/ucrop_shape_device_rectangle_background"
+    android:elevation="3dp"
+    android:translationZ="3dp">
+
+    <com.nooie.common.widget.RoundedImageView.RoundedImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@color/ucrop_color_default_crop_frame"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/dp_10" />
+
+    <com.nooie.common.widget.RoundedImageView.RoundedImageView
+        android:id="@+id/ivThumbnail"
+        android:layout_width="@dimen/dp_60"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginStart="@dimen/dp_28"
+        android:layout_marginTop="@dimen/dp_28"
+        android:layout_marginBottom="@dimen/dp_28"
+        android:src="@drawable/device_add_icon_lp_device_with_router"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></com.nooie.common.widget.RoundedImageView.RoundedImageView>
+
+    <com.nooie.common.widget.RoundedImageView.RoundedImageView
+        android:id="@+id/ivThumbnailCover"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/dp_10"></com.nooie.common.widget.RoundedImageView.RoundedImageView>
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_15"
+        android:layout_marginEnd="@dimen/dp_8"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="--"
+        android:textColor="@color/theme_text_color"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintBottom_toTopOf="@id/isOnline"
+        app:layout_constraintEnd_toStartOf="@id/ivRouterDeviceItemArrow"
+        app:layout_constraintStart_toEndOf="@id/ivThumbnail"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <!--<ImageView
+        android:id="@+id/ivDeviceNamePoint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginEnd="@dimen/dp_3"
+        android:src="@drawable/device_title_point_default"
+        app:layout_constraintEnd_toStartOf="@+id/isOnLine"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <View
+        android:id="@+id/ivDeviceNamePoint"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginTop="@dimen/dp_0"
+        android:layout_marginEnd="@dimen/dp_3"
+        android:background="@drawable/round"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/isOnline"
+        app:layout_constraintStart_toStartOf="@id/tvName"
+        app:layout_constraintTop_toTopOf="@id/isOnline" />
+
+    <TextView
+        android:id="@+id/isOnline"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_0"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_0"
+        android:singleLine="true"
+        android:text="@string/online"
+        android:textColor="@color/theme_text_color"
+        android:textSize="@dimen/sp_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/tvName"
+        app:layout_constraintStart_toEndOf="@id/ivDeviceNamePoint"
+        app:layout_constraintTop_toBottomOf="@id/tvName"></TextView>
+
+    <ImageView
+        android:id="@+id/ivRouterDeviceItemArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_20"
+        android:src="@drawable/right_arrow_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
